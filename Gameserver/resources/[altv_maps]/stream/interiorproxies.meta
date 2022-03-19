@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SInteriorOrderData>
+  <startFrom value="2200" />
+  <proxies>
+    <Item>int_clawles_sheriff_milo_</Item>
+    <Item>hei_cs1_16_interior_v_sheriff2_milo_</Item>
+    <Item>fluorine4305_cityholl_g_milo_</Item>
+    <Item>fluorine4305_cityholl_milo_</Item>
+    <Item>gabz_pillbox_dlc_milo_</Item>
+    <Item>gabz_pillbox_milo_</Item>
+    <Item>hei_dt1_19_interior_0_heist_police_dlc_milo_</Item>
+    <Item>int_bank_milo_</Item>
+    <Item>nutt_mosleys_milo_</Item>
+    <Item>qnx_jud_milo_</Item>
+    <Item>breze_benefactor_milo_</Item>
+    <Item>yumehei_sc1_03_interior_v_shop_247_milo_</Item>
+    <Item>yumehei_bh1_15_interior_v_clotheshi_milo_</Item>
+    <Item>yumehei_bh1_13_interior_v_hairdresser_milo_</Item>
+    <Item>yumehei_dt1_23_interior_v_genbank_milo_</Item>
+    <Item>yumehei_hw1_02_interior_v_tattoo_milo_</Item>    
+    <Item>ran_ch2_03c_interior_v_ranch_milo_</Item>    
+    <Item>interior_dynasty_milo_</Item>
+  </proxies>
+</SInteriorOrderData>

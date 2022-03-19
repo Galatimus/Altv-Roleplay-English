@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SInteriorOrderData>
+    <startFrom value="2000"/>
+    <proxies>
+    	<Item>ajaxon_hei_ap1_04_interior_v_carmod_milo_</Item>
+    	<Item>apa_bt1_02_interior_v_carmod_milo_</Item>
+    	<Item>ajaxon_burton_lsc_milo_</Item>
+    	<Item>breze_benefactor_milo_</Item>
+    	<Item>classic_fraklager_mlo</Item>
+    	<Item>classic_moneywash_mlo</Item>
+    	<Item>classic_weedfarm_mlo</Item>
+    	<Item>verpi_dv_school_milo_</Item>
+    	<Item>interior_dynasty_milo_</Item>
+    	<Item>fluorine4305_cityholl_milo_</Item>
+    	<Item>fluorine4305_cityholl_g_milo_</Item>
+    	<Item>gabz_pillbox_dlc_milo_</Item>
+    	<Item>gabz_pillbox_milo_</Item>
+    	<Item>hei_dt1_19_interior_0_heist_police_dlc_milo_</Item>
+    	<Item>gabz_mrpd_milo_</Item>
+    </proxies>
+</SInteriorOrderData>

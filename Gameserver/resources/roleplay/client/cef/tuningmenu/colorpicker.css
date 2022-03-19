@@ -1,0 +1,59 @@
+/* Common stuff */
+.picker-wrapper, 
+.slide-wrapper {
+    position: relative;
+    float: left;
+    margin-left: 48vh;
+}
+.picker-indicator,
+.slide-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+.picker,
+.slide {
+    cursor: crosshair;
+    float: left;
+}
+
+/* Default skin */
+
+.cp-default {
+    margin-left: 3.3vh;
+    margin-top: 0.7vh;
+    display: inline-block;
+}
+.cp-default .slide {
+    width: 2.5vh;
+    height: 18vh;
+}
+.cp-default .slide-wrapper {
+    margin-top: -7.2vh;
+    transform: rotate(90deg);
+    margin-left: 55.8vh;
+}
+.cp-default .picker-indicator {
+    width: 0.3vh;
+    height: 0.3vh;
+    border: 0.1vh solid darkblue;
+    border-radius: 0.3vh;
+    opacity: .5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: alpha(opacity=50);
+    background-color: white;
+}
+.cp-default .slide-indicator {
+    width: 100%;
+    height: 0.4vh;
+    left: -0.29vh;
+    opacity: .6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    filter: alpha(opacity=60);
+    border: 0.27vh solid lightblue;
+    border-radius: 0.28vh;
+    background-color: white;
+}

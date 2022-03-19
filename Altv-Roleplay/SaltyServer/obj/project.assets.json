@@ -1,0 +1,272 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "AltV.Net/9.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/AltV.Net.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/AltV.Net.dll": {}
+        }
+      },
+      "AltV.Net.Async/9.0.4": {
+        "type": "package",
+        "dependencies": {
+          "AltV.Net": "9.0.4",
+          "System.Threading.Channels": "5.0.0"
+        },
+        "compile": {
+          "lib/net6.0/AltV.Net.Async.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/AltV.Net.Async.dll": {}
+        }
+      },
+      "AltV.Net.Client/9.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/AltV.Net.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/AltV.Net.Client.dll": {}
+        }
+      },
+      "AltV.Net.EntitySync/1.13.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Channels": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/AltV.Net.EntitySync.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/AltV.Net.EntitySync.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "System.Threading.Channels/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AltV.Net/9.0.4": {
+      "sha512": "nBCzW5LeK8BThi7qM0D36t5c0LCdxGUxPW4Lcs0mf3EVjnrcsBu1u3VJwoR4FK3Hj41XsRQWszqZqRTcqL114w==",
+      "type": "package",
+      "path": "altv.net/9.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "altv.net.9.0.4.nupkg.sha512",
+        "altv.net.nuspec",
+        "icon.png",
+        "lib/net6.0/AltV.Net.dll",
+        "license.txt"
+      ]
+    },
+    "AltV.Net.Async/9.0.4": {
+      "sha512": "4bzJz2e36CXRFEXPdfHKPf56uqxHaCa1UsJbMJJ6TbF9r44cG2sGL0cpjaKnTJGLcJ/AVRliUHC9HARid/11LQ==",
+      "type": "package",
+      "path": "altv.net.async/9.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "altv.net.async.9.0.4.nupkg.sha512",
+        "altv.net.async.nuspec",
+        "icon.png",
+        "lib/net6.0/AltV.Net.Async.dll",
+        "license.txt"
+      ]
+    },
+    "AltV.Net.Client/9.0.4": {
+      "sha512": "EPpvG9LCCymFDs0tXn0lKTrM2FOYhroLn9TS9w/K95B0uGsRttmrPDEoD+cocC6hzkZbKfSoG4w8zJiGRR0gRQ==",
+      "type": "package",
+      "path": "altv.net.client/9.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "altv.net.client.9.0.4.nupkg.sha512",
+        "altv.net.client.nuspec",
+        "icon.png",
+        "lib/net5.0/AltV.Net.Client.dll",
+        "license.txt"
+      ]
+    },
+    "AltV.Net.EntitySync/1.13.0": {
+      "sha512": "b0DkilzzJqXd0PTI7h9f/k5OVDKn60h95NU3z13y3Nz+pxlgS2V1lSE8MbVwqkdFr2Jl+3dZUwRAOs9Ic77Sbg==",
+      "type": "package",
+      "path": "altv.net.entitysync/1.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "altv.net.entitysync.1.13.0.nupkg.sha512",
+        "altv.net.entitysync.nuspec",
+        "icon.png",
+        "lib/net5.0/AltV.Net.EntitySync.dll",
+        "license.txt"
+      ]
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "System.Threading.Channels/5.0.0": {
+      "sha512": "RLBIxntLaG9pRmmuVDwY1kc8Bvp/FQzSxPU+19VekkScKkWtVP9r8bLhm28ama3usc816UBrmkg3vv3jUea/hw==",
+      "type": "package",
+      "path": "system.threading.channels/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Threading.Channels.dll",
+        "lib/net461/System.Threading.Channels.xml",
+        "lib/netcoreapp3.0/System.Threading.Channels.dll",
+        "lib/netcoreapp3.0/System.Threading.Channels.xml",
+        "lib/netstandard1.3/System.Threading.Channels.dll",
+        "lib/netstandard1.3/System.Threading.Channels.xml",
+        "lib/netstandard2.0/System.Threading.Channels.dll",
+        "lib/netstandard2.0/System.Threading.Channels.xml",
+        "lib/netstandard2.1/System.Threading.Channels.dll",
+        "lib/netstandard2.1/System.Threading.Channels.xml",
+        "system.threading.channels.5.0.0.nupkg.sha512",
+        "system.threading.channels.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "AltV.Net >= 9.0.4",
+      "AltV.Net.Async >= 9.0.4",
+      "AltV.Net.Client >= 9.0.4",
+      "AltV.Net.EntitySync >= 1.13.0",
+      "Newtonsoft.Json >= 13.0.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\mauke\\.nuget\\packages\\": {},
+    "E:\\Programme\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\Git-Hub\\Altv-Roleplay\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
+      "projectName": "SaltyChat.Server",
+      "projectPath": "E:\\Git-Hub\\Altv-Roleplay\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
+      "packagesPath": "C:\\Users\\mauke\\.nuget\\packages\\",
+      "outputPath": "E:\\Git-Hub\\Altv-Roleplay\\Altv-Roleplay\\SaltyServer\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "E:\\Programme\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\mauke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "AltV.Net": {
+            "target": "Package",
+            "version": "[9.0.4, )"
+          },
+          "AltV.Net.Async": {
+            "target": "Package",
+            "version": "[9.0.4, )"
+          },
+          "AltV.Net.Client": {
+            "target": "Package",
+            "version": "[9.0.4, )"
+          },
+          "AltV.Net.EntitySync": {
+            "target": "Package",
+            "version": "[1.13.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

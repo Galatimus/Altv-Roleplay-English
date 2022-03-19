@@ -1,0 +1,15 @@
+E:\Altv-test\Gameserver\resources\SaltyClient\Server\SaltyChat.Server.deps.json
+E:\Altv-test\Gameserver\resources\SaltyClient\Server\SaltyChat.Server.runtimeconfig.json
+E:\Altv-test\Gameserver\resources\SaltyClient\Server\SaltyChat.Server.dll
+E:\Altv-test\Gameserver\resources\SaltyClient\Server\SaltyChat.Server.pdb
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\SaltyChat.Server.csproj.AssemblyReference.cache
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\SaltyChat.Server.GeneratedMSBuildEditorConfig.editorconfig
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\SaltyChat.Server.AssemblyInfoInputs.cache
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\SaltyChat.Server.AssemblyInfo.cs
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\SaltyChat.Server.csproj.CoreCompileInputs.cache
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\SaltyChat.Server.csproj.CopyComplete
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\SaltyChat.Server.dll
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\refint\SaltyChat.Server.dll
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\SaltyChat.Server.pdb
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\SaltyChat.Server.genruntimeconfig.cache
+E:\Altv-test\Altv-Roleplay\SaltyServer\obj\Debug\ref\SaltyChat.Server.dll

@@ -1,0 +1,340 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../utils/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Loginscreen</title>
+</head>
+
+<body>
+    <div class="box" id="mainbox">
+        <!--<p class="alphatext">Closed Alpha</p>
+        <span id="registertext" onclick="showArea('register');">Noch nicht angemeldet? Registrieren!</span>-->
+        <img class="Pic" src="../utils/img/features_second_bg_02.png">
+        <hr class="cut">
+        <div class="box2">
+            <p id="error"></p>
+            <div id="LoginArea">
+                <p class="logintitle">LOGIN</p>
+
+                <div class="inputgroup">
+                    <!--<i class="fa fa-user icon"></i>-->
+                    <input id="email" type="text" maxlength="32" placeholder="Benutzername" spellcheck="false">
+                </div>
+
+                <div class="inputgroup">
+                    <!--<i class="fa fa-key icon"></i>-->
+                    <input id="password" type="password" maxlength="32" placeholder="Passwort" spellcheck="false">
+                </div>
+
+                <button id="loginbtn" type="button" class="btn btn-outline-secondary loginbtn">ANMELDEN</button><br><br>
+                <button id="noidlol" type="button" class="btn btn-outline-secondary registerbtn" onclick="showArea('register');">REGISTRIEREN</button>
+                <!--<p class="infotext">Solltest du dein Passwort vergessen haben, kannst du dies über unser Forum zur&uuml;cksetzen. Andernfalls wende dich an unseren Ticket Support!</p>-->
+            </div>
+            <div id="RegisterArea">
+                <p class="logintitle">REGISTRIEREN</p>
+
+                <div class="inputgroup">
+                    <!--<i class="fa fa-user icon"></i>-->
+                    <input id="registername" type="text" maxlength="32" placeholder="Username eingeben..." spellcheck="false">
+                </div>
+
+                <div class="inputgroup">
+                    <!--<i class="fa fa-envelope icon"></i>-->
+                    <input id="registeremail" type="text" maxlength="32" placeholder="E-Mail eingeben..." spellcheck="false">
+                </div>
+
+                <div class="inputgroup">
+                    <!--<i class="fa fa-key icon"></i>-->
+                    <input id="registerpassword" type="password" maxlength="32" placeholder="Passwort eingeben..." spellcheck="false">
+                </div>
+
+                <div class="inputgroup">
+                    <!--<i class="fa fa-key icon"></i>-->
+                    <input id="registerpasswordrepeat" type="password" maxlength="32" placeholder="Passwort wiederholen..." spellcheck="false">
+                </div>
+
+                <button id="registerbtn" type="button" class="btn btn-outline-secondary loginbtn">REGISTRIEREN</button><br><br>
+                <button id="noidlol" type="button" class="btn btn-outline-secondary registerbtn" onclick="showArea('login');">ANMELDEN</button>
+            </div>
+            <div id="CharSelectArea">
+                <p class="logintitle" style="font-size: 1.25rem; margin-bottom: 0.2rem;">CHARAKTERAUSWAHL</p>
+                <p class="infotext" style="font-size: 0.9rem">Um fortzufahren wähle einen Charakter aus oder erstelle einen.</p>
+
+                <ul id="charlist" class="list-group charlist"></ul>
+
+                <div id="chardeatharea">
+                    <div class="dropdown">
+                        <input class="dropdown-selector" type="checkbox" />
+                        <div class="dropdown-caption">
+                            <i class="fas fa-angle-double-down dropdown"></i> Gestorbene Charaktere
+                        </div>
+                        <div id="chardeathlist" class="dropdown-content"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="SpawnSelectArea">
+                <p class="logintitle" style="font-size: 1.25rem; margin-bottom: 0.2rem;">SPAWNAUSWAHL</p>
+                <p class="infotext" style="font-size: 0.9rem">Um fortzufahren wähle einen Ort deiner Wahl an dem du spawnen möchtest.<br>Jeder Ort hat einen anderen Anfang, bedenke gut welchen du wählst.</p>
+
+                <ul id="SpawnSelectList"></ul>
+            </div>
+        </div>
+        <!--<p class="partnertitle">HOSTED BY</p>
+        <img class="grey" src="../utils/img/altvlogo.svg">
+        <img class="grey" src="../utils/img/avoro.png">-->
+    </div>
+
+    <div class="modal fade" id="killCharacterModalCenter" tabindex="-1" role="dialog" aria-labelledby="killCharacterModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="killCharacterModalCenterLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Möchtest du den oben genannten Charakter wirklich töten? <br>Diese Entscheidung ist entgültig und kann <strong>nicht</strong> durch den Support rückgängig gemacht werden.
+
+                    <br><br>Achtung: Dein Gießkannen-Abonnement bei Hamudi-Josef-Zalami wird aufgehoben und du kannst keine Zigaretten mehr mit @Lando rauchen.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondaryred" data-dismiss="modal">Abbrechen</button>
+                    <button type="button" class="btn btn-primarygreen" data-dismiss="modal" onclick="DeleteCharFinally();">Charakter endgültig töten</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../utils/jquery-3.4.1.min.js"></script>
+    <script src="../utils/popper.min.js"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/anime.min.js"></script>
+    <script src="../utils/640357ffb4.js"></script>
+</body>
+
+<script>
+    var playbtn_selecteduid = 0;
+    var maxAvailableChars = 1;
+
+    $(function() {
+        $('#killCharacterModalCenter').on('show.bs.modal', function(e) {
+            var button = $(e.relatedTarget)
+
+            var charid = button.data("charid");
+            playbtn_selecteduid = charid;
+            var charname = button.data("charname");
+            var modal = $(this);
+            modal.find('.modal-title').text('Charakter ' + charname + ' (' + charid + ') wirklich töten?');
+        });
+    });
+
+    $(document).ready(function() {
+        setTimeout(() => {
+            alt.emit('Client:Login:cefIsReady');
+        }, 1500);
+    });
+
+    function showArea(area) {
+        $("#error").fadeOut(500);
+        $(".box").fadeOut(800, function() {
+            $("#mainbox").css("width", "600");
+            $("#LoginArea").hide();
+            $("#CharSelectArea").hide();
+            $("#SpawnSelectArea").hide();
+            $("#RegisterArea").hide();
+            $("#registertext").hide();
+
+            $(".box").fadeTo(800, 1, function() {});
+            $(".box").fadeIn(800);
+
+            switch (area) {
+                case "login":
+                    $("#LoginArea").fadeIn(800);
+                    $("#registertext").fadeIn();
+                    break;
+                case "register":
+                    $("#RegisterArea").fadeIn(800);
+                    break;
+                case "charselect":
+                    $("#CharSelectArea").fadeIn(800);
+                    break;
+                case "spawnselect":
+                    $("#mainbox").css("left", "auto");
+                    $("#mainbox").css("width", "750");
+                    $("#SpawnSelectArea").fadeIn(800);
+                    break;
+            }
+        });
+    }
+
+    function setSpawnSelectTyp(firstspawn) {
+        var SpawnListHTML = "";
+        if (firstspawn == 'true' || firstspawn == true) {
+            //erster Spawn
+            SpawnListHTML = "<li class='airport' onclick='SelectSpawnPlace(`lsairport`);'>Airport</li>";
+
+            $("#SpawnSelectList").html(SpawnListHTML);
+        } else if (firstspawn == 'false' || firstspawn == false) {
+            //letzte Pos
+            SpawnListHTML = "<li class='lastpos' onclick='SelectSpawnPlace(`lastpos`);'>Letzte Position</li>";
+            $("#SpawnSelectList").html(SpawnListHTML);
+        }
+    }
+
+    // Login Button
+    $("#loginbtn").click(function() {
+        var emailvalue = $("#email").val().replace(/^\s+|\s+$/g, "");
+        var passvalue = $("#password").val().replace(/^\s+|\s+$/g, "");
+
+        if (emailvalue.length <= 0) {
+            showError("Du hast keinen Username eingegeben.");
+            return;
+        }
+
+        if (passvalue.length <= 0) {
+            showError("Du hast kein Passwort eingegeben.");
+            return;
+        }
+
+        alt.emit('Client:Login:sendLoginDataToServer', emailvalue, passvalue);
+    });
+
+    $("#registerbtn").click(function() {
+        var namevalue = $("#registername").val().replace(/^\s+|\s+$/g, ""),
+            emailvalue = $("#registeremail").val().replace(/^\s+|\s+$/g, ""),
+            passvalue = $("#registerpassword").val().replace(/^\s+|\s+$/g, ""),
+            passrepvalue = $("#registerpasswordrepeat").val().replace(/^\s+|\s+$/g, "");
+
+        if (namevalue.length <= 0) {
+            showError("Du hast keinen Usernamen angegeben.");
+            return;
+        }
+
+        if (emailvalue.length <= 0) {
+            showError("Du hast keine E-Mail Adresse angegeben.");
+            return;
+        }
+
+        if (passvalue.length <= 0) {
+            showError("Du hast kein Passwort eingegeben.");
+            return;
+        }
+
+        if (passrepvalue.length <= 0) {
+            showError("Du hast kein Passwort eingegeben.");
+            return;
+        }
+
+        alt.emit('Client:Register:sendRegisterDataToServer', namevalue, emailvalue, passvalue, passrepvalue);
+    });
+
+    function SetCharSelectAreaCharacter(charArray) {
+        var charAlive = "",
+            charDeath = "";
+        var charAliveCount = 0;
+        charArray = JSON.parse(charArray);
+        for (var i in charArray) {
+            var charFullName = charArray[i].charname;
+
+            if (charArray[i].death === false) {
+                //Charakter am leben
+                charAlive += "<li class='list-group-item'><span onclick='CharSelectAreaAction(`view`, " + charArray[i].charId + ");' class='name'>" + charArray[i].charname + "</span>";
+                charAlive += "<button class='btn charbtn delete' data-toggle='modal' data-target='#killCharacterModalCenter' data-charname='" + charFullName + "' data-charid='" + charArray[i].charId + "'><i class='fa fa-times'></i> Töten</button>" +
+                    "<button class='btn charbtn play' onclick='CharSelectAreaAction(`play`, `" + charArray[i].charId + "`, `" + charArray[i].firstjoin + "`);'><i class='fa fa-play'></i> Spielen</button></li>";
+                charAliveCount++;
+            } else {
+                //Charakter tot
+                charDeath += "<li onclick='CharSelectAreaAction(`view`, " + charArray[i].charId + ");'><span>" + charArray[i].charname + "</span></li>";
+            }
+        }
+
+        if (charAliveCount < maxAvailableChars) {
+            charAlive += "<li class='list-group-item'><span class='name'>Kein Charakter vorhanden</span>" +
+                "<button class='btn charbtn play' onclick='CharSelectAreaAction(`create`);'><i class='fa fa-plus'></i> Erstellen</button></li>";
+        }
+
+        $("#charlist").html(charAlive);
+
+        if (charDeath == "") {
+            $("#chardeatharea").hide();
+        } else {
+            $("#chardeatharea").show();
+            $("#chardeathlist").html(charDeath);
+        }
+    }
+
+
+    function SelectSpawnPlace(spawnstr) {
+        if (playbtn_selecteduid == 0 || spawnstr == null || spawnstr == "") return;
+        alt.emit('Client:Charselector:spawnChar', playbtn_selecteduid, spawnstr);
+
+        $(".box").fadeOut(50, function() {
+            alt.emit('Client:Login:DestroyCEF');
+        });
+    }
+
+    function CharSelectAreaAction(action, value, value2) {
+        if (action == "view") {
+            anime({
+                targets: '#mainbox',
+                left: 50
+            });
+            alt.emit("Client:Charselector:PreviewCharacter", value);
+            return;
+        }
+
+        if (action == "play") {
+            playbtn_selecteduid = value;
+            setSpawnSelectTyp(value2);
+            showArea("spawnselect");
+            return;
+        }
+
+        if (action == "create") {
+            $(".box").fadeOut(800, function() {
+                alt.emit("Client:Charcreator:OpenCreator");
+                return;
+            });
+        }
+    }
+
+    function DeleteCharFinally() {
+        if (playbtn_selecteduid == 0) return;
+        alt.emit("Client:Charselector:KillCharacter", playbtn_selecteduid);
+        playbtn_selecteduid = 0;
+    }
+
+    function showError(msg) {
+        $(".box").fadeIn(800);
+        $("#error").text(msg);
+        $("#error").fadeIn(800);
+    }
+
+    alt.on("CEF:Login:showError", (msg) => {
+        showError(msg);
+    });
+
+    alt.on("CEF:Charselector:sendCharactersToCEF", (charArray) => {
+        SetCharSelectAreaCharacter(charArray);
+    });
+
+    alt.on("CEF:Login:showArea", (area) => {
+        showArea(area);
+    });
+
+    alt.on("CEF:Login:setStorage", (name, password) => {
+        $("#email").val(`${name}`);
+        $("#password").val(`${password}`);
+    });
+</script>
+
+</html>

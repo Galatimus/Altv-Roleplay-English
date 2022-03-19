@@ -1,0 +1,533 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select:none;
+    -moz-user-select:-moz-none;
+    -ms-user-select:none;
+    user-select:none;
+    -webkit-user-drag: none;
+}
+
+#Schluesseldienst-main {
+    width: 50vh;
+    height: 70vh;
+    margin-top: 15vh;
+    margin-left: 2vh;
+    background: #000000;
+    border-radius: 1vh;
+}
+
+#Schluesseldienst-main>h2 {
+  background-image: linear-gradient(to right, rgba(201, 16, 16, 0.8) 0%, rgba(140, 140, 140, 0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+}
+
+#Schluesseldienst-main>p.closebtn {
+  display: table;
+    color: #ffffff;
+    text-align: left;
+    position: absolute;
+    margin-top: 0px;
+    background: rgba(204, 33, 33, 0);
+    border-top-left-radius: 7.9px;
+    padding-left: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 14px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #00000000;
+    opacity: .4;
+    border-top: none;
+    border-left: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+#Schluesseldienst-main>p.closebtn:hover {
+  cursor: pointer;
+  background: rgba(255, 0, 0, 0.336);
+  color: #fff;
+  opacity: 1;
+}
+
+#Schluesseldienst-main>div.info>span.info {
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  float: left;
+}
+#Schluesseldienst-main>div.info>span.info2 {
+  margin-top: -5px;
+  width: 55%;
+  color: white;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  float: left;
+}
+#Schluesseldienst-main>div.info>button.change {
+  width: 35%;
+  margin-top: 20px;
+  height: 35px;
+  border: 3px solid #ffffff00;
+  
+  border-left-color: rgba(201, 16, 16, 0.8);
+  border-right-color: rgba(201, 16, 16, 0.8);
+  border-bottom-color: #0a0a0a;
+  border-top-color: #0a0a0a;
+  border-radius: 7px;
+  background-color: #0f0f0f;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #d2d2d2;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 0.8rem;
+  float: right;
+  text-align: center;
+  margin-right: -35%;
+}
+#Schluesseldienst-main>div.info>button.change:hover {
+  background: #0f0f0f;
+    border-left-color: rgba(201, 16, 16, 0.8);
+    border-right-color: rgba(201, 16, 16, 0.8);
+    border-bottom-color: #222222;
+    border-top-color: #222222;
+    cursor: pointer;
+}
+#Schluesseldienst-main>div.info {
+  background-color: #1b173f00;
+  border-radius: 7px;
+  width: 90%;
+  height: 15%;
+  margin-left: 2.5vh;
+}
+#Schluesseldienst-main>div.info>input.change {
+  float: right;
+  
+  outline: none;
+  border: 1px solid #ffffff21;
+  background: rgba(0, 0, 0, 0.2);
+  width: 35%;
+  border-radius: 4px;
+  text-align: center;
+  color: #d2d2d2;
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 2vw;
+  font-weight: bold;
+}
+
+#Schluesseldienst-main>div.Info3 {
+  margin-top: 20px;
+  width: 90%;
+  /* background-color: #181c22; */
+  margin-left: 25px;
+}
+
+#Schluesseldienst-main>div.Info3>span.Informa {
+  color: rgba(255, 255, 255, 0.555);
+  margin-top: 10px;
+}
+
+#Schluesseldienst-main>hr.hr1 {
+  margin-top: 10%;
+  margin-bottom: -20px;
+  width: 90%;
+  border: 0;
+  border-top: 1px solid rgba(201, 16, 16, 0.8);
+}
+#Schluesseldienst-main>hr.hr2 {
+  margin-top: 10%;
+  width: 90%;
+  border: 0;
+  border-top: 1px solid rgba(201, 16, 16, 0.8);
+}
+#Schluesseldienst-main>hr.hr0 {
+  margin-bottom: 10%;
+  margin-top: -55px;
+  width: 90%;
+  border: 0;
+  border-top: 1px solid rgba(201, 16, 16, 0.8);
+}
+
+/* FELD 2 */
+#Schluesseldienst-main>div.info2>span.info {
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  float: left;
+}
+#Schluesseldienst-main>div.info2>span.info2 {
+  margin-top: -5px;
+  width: 55%;
+  color: white;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  float: left;
+}
+#Schluesseldienst-main>div.info2>button.remove {
+  width: 35%;
+  margin-top: 20px;
+  height: 35px;
+  border: 3px solid #ffffff00;
+  
+  border-left-color: rgba(201, 16, 16, 0.8);
+  border-right-color: rgba(201, 16, 16, 0.8);
+  border-bottom-color: #0a0a0a;
+  border-top-color: #0a0a0a;
+  border-radius: 7px;
+  background-color: #0f0f0f;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #d2d2d2;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 0.8rem;
+  float: right;
+  text-align: center;
+  margin-right: -35%;
+}
+#Schluesseldienst-main>div.info2>button.remove:hover {
+  background: #0f0f0f;
+    border-left-color: rgba(201, 16, 16, 0.8);
+    border-right-color: rgba(201, 16, 16, 0.8);
+    border-bottom-color: #222222;
+    border-top-color: #222222;
+    cursor: pointer;
+}
+#Schluesseldienst-main>div.info2 {
+  background-color: #1b173f00;
+  border-radius: 7px;
+  width: 90%;
+  height: 15%;
+  margin-left: 2.5vh;
+  margin-top: 15%;
+}
+#Schluesseldienst-main>div.info2>input.remove {
+  float: right;
+  
+  outline: none;
+  border: 1px solid #ffffff21;
+  background: rgba(0, 0, 0, 0.2);
+  width: 35%;
+  border-radius: 4px;
+  text-align: center;
+  color: #d2d2d2;
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 2vw;
+  font-weight: bold;
+}
+
+#Schluesseldienst-title {
+    font-size: 3vh;
+    color: white;
+    text-align: center;
+    padding-top: 2vh;
+    margin-top: -7vh;
+    margin-bottom: 8vh;
+}
+
+#Schluesseldienst-main-list-item {
+    list-style: none;
+    color: white;
+    background-color: #2e3440;
+    width: 45vh;
+    height: 3vh;
+    margin-bottom: 1vh;
+    text-align: center;
+    margin-left: -0.7vh;
+    font-size: 2vh;
+    padding-top: 0.7vh;
+    border-radius: 0vh;
+}
+
+#Schluesseldienst-main-list-item:hover {
+    cursor: pointer;
+}
+
+#Schluesseldienst-main-list, .male, .female {
+    overflow-y: scroll;
+    max-height: 57vh;
+    margin-top: -3vh;
+    margin-left: 3vh;
+}
+
+::-webkit-scrollbar {
+    width: 0.6vh;
+}
+
+::-webkit-scrollbar-track {
+    background: #888;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6d6d6d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(85, 85, 85);
+}
+
+.fa-arrow-alt-circle-left {
+    color: white;
+    font-size: 3.5vh;
+    padding-bottom: 2vh;
+}
+
+.fa-arrow-alt-circle-left:hover {
+    cursor: pointer;
+}
+
+h2 {
+    margin-block-start: -4vh;
+    margin-block-end: 5.75vh;
+}
+
+.male, .female {
+    max-height: 62.5vh;
+    margin-top: -8.5vh;
+}
+
+.undertitle {
+    color: white;
+    margin-top: 3vh;
+}
+
+input {
+   outline: none;
+   background-color: transparent;
+   color: white;
+   border: none;
+   text-align: right;
+   width: 4vh;
+}
+
+asdas {
+    color: white;
+    font: 400 1.5vh Arial;
+    margin-top: 3.05vh;
+}
+
+.undertitle {
+  font-size: 2vh;
+  text-align: center;
+}
+
+.clothesstore-item-input {
+  margin-left: -16.35vh;
+  margin-top: 1vh;
+  font-size: 1.5vh;
+}
+
+.clothesstore-item-maindiv {
+  margin-left: 14.7vh;
+  margin-top: -1vh;
+}
+
+.clothesstore-item-img {
+  width: 4.5vh;
+  margin-left: -10.5vh;
+}
+
+.maindiv-bg {
+  background-color: #181c22;
+  width: 45vh;
+  height: 9vh;
+  margin-left: -12.5vh;
+  margin-top: -8.4vh;
+  margin-bottom: -1.5vh;
+}
+
+.scrolldiv {
+  overflow-y: scroll;
+  height: 55vh;
+  margin-top: -3vh;
+}
+
+.Schluesseldienst-item-div {
+  margin-top: 2.3vh;
+}
+
+#Schluesseldienst-item-oberbekleidung {
+  margin-top: 4vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline:0;
+}
+
+svg {
+    width: 3vh;
+    height: 4vh;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.left {
+  margin-left: 4vh;
+}
+
+.right {
+  margin-left: 15vh;
+}
+
+.left:hover polyline,
+.left:focus polyline {
+  stroke-width: 3;
+}
+
+.left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+  stroke-width: 3;
+}
+
+.right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}
+
+p {
+  margin-block-end: 0em;
+  margin-inline-end: 0px;
+  display: block;
+  margin-block-start: 1em;
+  margin-inline-start: 0px;
+}
+
+.Schluesseldienst-icon {
+  margin-left: 27.25vh;
+  margin-top: -6.4vh;
+  font-size: 1.75vh;
+  --fa-secondary-color: rgb(255, 0, 0);
+  color: black;
+  background-color: white;
+  border: white solid 0.5vh;
+  border-radius: 3vh;
+  position: relative;
+}
+
+.Schluesseldienst-icon-scnd {
+  margin-left: 27.25vh;
+  margin-top: -7.6vh;
+  font-size: 1.75vh;
+  --fa-secondary-color: rgb(255, 0, 0);
+  color: black;
+  background-color: white;
+  border: white solid 0.5vh;
+  border-radius: 3vh;
+  position: relative;
+}
+
+
+.Schluesseldienst-icon:hover, .Schluesseldienst-icon-scnd:hover {
+  cursor: pointer;
+}
+
+#clothesstore-item-oberbekleidung {
+  margin-top: -2vh;
+}
+
+
+
+
+/* TEXTURE MENU */
+#clothesstore-texture-menu {
+  width: 40vh;
+  height: 11vh;
+  background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+  position: absolute;
+  margin-left: 7.1vh;
+  border-radius: 0.8vh;
+  margin-top: -9vh;
+}
+
+#texturemenu-title {
+  margin-top: 1vh;
+  text-align: center;
+  color: white;
+  font-size: 1.4vh;
+}
+
+.clothesstore-texture-menu-maindiv {
+  background-color: #2e3440;
+  margin: auto;
+  width: 40vh;
+  height: 8vh;
+  margin-top: -5vh;
+  border-bottom-left-radius: 0.8vh;
+  border-bottom-right-radius: 0.8vh;
+}
+
+.texturearrow {
+  cursor: pointer;
+  margin-top: 2vh;
+}
+
+.textureleft {
+  margin-left: 8vh;
+}
+
+.textureright {
+  margin-left: 15vh;
+}
+
+.textureleft:hover polyline,
+.textureleft:focus polyline {
+  stroke-width: 3;
+}
+
+.textureleft:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.textureright:hover polyline,
+.textureright:focus polyline {
+  stroke-width: 3;
+}
+
+.textureright:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+#clothesstore-texture-input {
+  position: absolute;
+  margin-top: 3vh;
+}
+
+#clothesstore-texture-maxinputvalue {
+  position: absolute;
+  margin-left: -12.5vh;
+}

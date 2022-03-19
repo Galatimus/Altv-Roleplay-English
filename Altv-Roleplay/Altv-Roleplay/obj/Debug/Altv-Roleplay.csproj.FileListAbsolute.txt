@@ -1,0 +1,288 @@
+D:\Alt-V Server\Server\resources\roleplay\Altv-Roleplay.deps.json
+D:\Alt-V Server\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+D:\Alt-V Server\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+D:\Alt-V Server\Server\resources\roleplay\Altv-Roleplay.dll
+D:\Alt-V Server\Server\resources\roleplay\Altv-Roleplay.pdb
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+D:\GitLab space\valearp\Server\resources\roleplay\Altv-Roleplay.deps.json
+D:\GitLab space\valearp\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+D:\GitLab space\valearp\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+D:\GitLab space\valearp\Server\resources\roleplay\Altv-Roleplay.dll
+D:\GitLab space\valearp\Server\resources\roleplay\Altv-Roleplay.pdb
+D:\GitLab space\valearp\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+D:\GitLab space\valearp\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+D:\GitLab space\valearp\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+D:\GitLab space\valearp\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+D:\GitLab space\valearp\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\GitLab\valearp-selled\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\GitLab\valearp-selled\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\GitLab\valearp-selled\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\GitLab\valearp-selled\Server\resources\roleplay\Altv-Roleplay.dll
+C:\GitLab\valearp-selled\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\GitLab\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\GitLab\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\GitLab\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\GitLab\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\GitLab\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\Jasper Commandeur\Desktop\Mappe\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\Jasper Commandeur\Desktop\Mappe\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\Jasper Commandeur\Desktop\Mappe\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\Jasper Commandeur\Desktop\Mappe\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\Jasper Commandeur\Desktop\Mappe\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\Jasper Commandeur\Desktop\Mappe\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\Jasper Commandeur\Desktop\Code\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\Jasper Commandeur\Desktop\Code\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\Jasper Commandeur\Desktop\Code\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\Jasper Commandeur\Desktop\Code\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\Jasper Commandeur\Desktop\Code\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\Jasper Commandeur\Desktop\Code\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+D:\GitLab space\valearp-selled\Server\resources\roleplay\Altv-Roleplay.deps.json
+D:\GitLab space\valearp-selled\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+D:\GitLab space\valearp-selled\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+D:\GitLab space\valearp-selled\Server\resources\roleplay\Altv-Roleplay.dll
+D:\GitLab space\valearp-selled\Server\resources\roleplay\Altv-Roleplay.pdb
+D:\GitLab space\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+D:\GitLab space\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+D:\GitLab space\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+D:\GitLab space\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+D:\GitLab space\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+D:\GitLab space\valearp-selled\Mappe\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\Timo\Downloads\Server für sinoox\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\Timo\Downloads\ServerAltv\script-a\script-a\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\Timo\Downloads\ScriptA\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\Timo\Downloads\ScriptA\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\Timo\Downloads\ScriptA\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\Timo\Downloads\ScriptA\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\Timo\Downloads\ScriptA\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\Timo\Downloads\ScriptA\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\Timo\Downloads\ScriptA\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\Timo\Downloads\ScriptA\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\Timo\Downloads\ScriptA\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\Timo\Downloads\ScriptA\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\Timo\Downloads\ScriptA\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\Timo\Downloads\ScriptA\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\Timo\Downloads\ScriptA\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\Timo\Downloads\script-a\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\Timo\Downloads\script-a\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\Timo\Downloads\script-a\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\Timo\Downloads\script-a\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\Timo\Downloads\script-a\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\Timo\Downloads\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\Timo\Downloads\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\Timo\Downloads\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\Timo\Downloads\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\Timo\Downloads\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\Timo\Downloads\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\Timo\Downloads\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\Timo\Downloads\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+D:\Github\script-a\Server\resources\roleplay\Altv-Roleplay.deps.json
+D:\Github\script-a\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+D:\Github\script-a\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+D:\Github\script-a\Server\resources\roleplay\Altv-Roleplay.dll
+D:\Github\script-a\Server\resources\roleplay\Altv-Roleplay.pdb
+D:\Github\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+D:\Github\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+D:\Github\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+D:\Github\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+D:\Github\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+D:\Github\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+D:\Github\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+D:\Github\script-a\Mappe - Visual Studio\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+B:\#001 AltV Server\script-a-master\Server\resources\roleplay\Altv-Roleplay.deps.json
+B:\#001 AltV Server\script-a-master\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+B:\#001 AltV Server\script-a-master\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+B:\#001 AltV Server\script-a-master\Server\resources\roleplay\Altv-Roleplay.dll
+B:\#001 AltV Server\script-a-master\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\itzlu\Source\Repos\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\itzlu\Source\Repos\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\itzlu\Source\Repos\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\itzlu\Source\Repos\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\itzlu\Source\Repos\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\itzlu\Source\Repos\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\itzlu\Source\Repos\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\itzlu\Source\Repos\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\itzlu\source\repos\Server-A\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\itzlu\source\repos\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\itzlu\source\repos\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\itzlu\source\repos\Server-A\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\itzlu\source\repos\Server-A\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\Administrator\Desktop\Server-A\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\Administrator\Desktop\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\Administrator\Desktop\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Server-A\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\Administrator\Desktop\Server-A\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\Administrator\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\Administrator\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\Administrator\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\Administrator\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\hiruk\Desktop\Server-A\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\hiruk\Desktop\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\hiruk\Desktop\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\hiruk\Desktop\Server-A\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\hiruk\Desktop\Server-A\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\hiruk\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\hiruk\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\hiruk\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\hiruk\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\hiruk\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\hiruk\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\hiruk\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\hiruk\Desktop\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\Administrator\Desktop\[Endless-Roleplay]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\hiruk\Desktop\[Script-A-Server]\Server-A\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\Server-A - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\itzlu\OneDrive\Dokumente\GitHub\kaufkopie - Kopie\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\Administrator\Desktop\Server\Server\resources\roleplay\Altv-Roleplay.deps.json
+C:\Users\Administrator\Desktop\Server\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+C:\Users\Administrator\Desktop\Server\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Server\Server\resources\roleplay\Altv-Roleplay.dll
+C:\Users\Administrator\Desktop\Server\Server\resources\roleplay\ref\Altv-Roleplay.dll
+C:\Users\Administrator\Desktop\Server\Server\resources\roleplay\Altv-Roleplay.pdb
+C:\Users\Administrator\Desktop\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+C:\Users\Administrator\Desktop\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+C:\Users\Administrator\Desktop\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\ref\Altv-Roleplay.dll
+C:\Users\Administrator\Desktop\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+C:\Users\Administrator\Desktop\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+J:\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csprojAssemblyReference.cache
+J:\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.GeneratedMSBuildEditorConfig.editorconfig
+J:\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+J:\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+J:\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+J:\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+J:\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\ref\Altv-Roleplay.dll
+J:\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+J:\Server\Server\resources\roleplay\Altv-Roleplay.deps.json
+J:\Server\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+J:\Server\Server\resources\roleplay\Altv-Roleplay.runtimeconfig.dev.json
+J:\Server\Server\resources\roleplay\Altv-Roleplay.dll
+J:\Server\Server\resources\roleplay\ref\Altv-Roleplay.dll
+J:\Server\Server\resources\roleplay\Altv-Roleplay.pdb
+J:\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+J:\Server\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.AssemblyReference.cache
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.GeneratedMSBuildEditorConfig.editorconfig
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfoInputs.cache
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.AssemblyInfo.cs
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CoreCompileInputs.cache
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.dll
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.pdb
+E:\Altv-test\Gameserver\resources\roleplay\Altv-Roleplay.deps.json
+E:\Altv-test\Gameserver\resources\roleplay\Altv-Roleplay.runtimeconfig.json
+E:\Altv-test\Gameserver\resources\roleplay\Altv-Roleplay.dll
+E:\Altv-test\Gameserver\resources\roleplay\Altv-Roleplay.pdb
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.csproj.CopyComplete
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\refint\Altv-Roleplay.dll
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\Altv-Roleplay.genruntimeconfig.cache
+E:\Altv-test\Altv-Roleplay\Altv-Roleplay\obj\Debug\ref\Altv-Roleplay.dll

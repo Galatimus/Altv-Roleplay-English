@@ -1,0 +1,2070 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PM';
+    src: url('../utils/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PT';
+    src: url('../utils/fonts/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSR';
+    src: url('../utils/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('../utils/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+body {
+    user-select: none;
+    display: flex;
+    background: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+
+div.TabletBG {
+    position: absolute;
+    background: url(img/tabletbg.png);
+    background-repeat: no-repeat;
+    background-size: 1150px 750px;
+    height: 760px;
+    width: 1150px;
+    z-index: 100;
+    border-radius: 12px;
+    /* display: none; */
+}
+
+div.Tablet {
+    position: absolute;
+    z-index: 100;
+    height: 618px;
+    width: 1023px;
+    left: 64px;
+    top: 65px;
+}
+
+div.Tablet>div.Taskbar {
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #0c0c0c59;
+}
+
+div.Tablet>div.Taskbar>i.fas.fa-wifi,
+div.Tablet>div.Taskbar>i.fas.fa-battery-three-quarters {
+    color: #d2d2d2;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+div.Tablet>div.Taskbar>span#time {
+    color: #d2d2d2;
+    font-family: PT;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding-left: 10px;
+}
+
+div.Tablet>div.Tablet-UseableArea {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    height: 589px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#HomeApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-LifeInvader,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-NewTransactionArea,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory,
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area-NewNote,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-InviteNewMember,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Are>div#FactionManagerApp-Area-InviteNewMember,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Are>div#FactionManagerApp-Area-ViewAllMembers,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Are>div#FactionManagerApp-Area-RankManage,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewDispatches,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-GiveWeaponLicense,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions,
+div.Tablet>div.Tablet-UseableArea>div#DispatchApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewDispatches,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewDispatches {
+    display: none;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview {
+    display: flex;
+    justify-content: center;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#DispatchApp-Area {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 2%;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#DispatchApp-Area>div.DispatchApp-Area-FactionBox {
+    position: relative;
+    width: 38%;
+    height: 30%;
+    background: rgba(0, 0, 0, 0.5);
+    float: left;
+    margin-left: 1%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000a3;
+    opacity: .65;
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(1);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#DispatchApp-Area>div.DispatchApp-Area-FactionBox:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.02);
+    filter: grayscale(0);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#DispatchApp-Area>div.DispatchApp-Area-FactionBox>span {
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    color: #d2d2d2;
+    font-family: PEL;
+    font-weight: bold;
+    opacity: 1;
+    font-size: 13px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#DispatchApp-Area>textarea {
+    outline: none;
+    border: 1px solid #020202fc;
+    text-align: left;
+    padding: 2%;
+    margin-left: 20%;
+    margin-top: 4%;
+    width: 60%;
+    height: 18%;
+    max-height: 18%;
+    background: rgba(0, 0, 0, 0.45);
+    max-width: 60%;
+    font-size: 15px;
+    color: #d2d2d2;
+    font-family: PEL;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#DispatchApp-Area>textarea::placeholder {
+    color: #d2d2d2a3;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area,
+div.Tablet>div.Tablet-UseableArea>div#DispatchApp-Area {
+    width: 100%;
+    height: 100%;
+    background: rgb(20, 21, 25) !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group {
+    background: rgba(0, 0, 0, 0.15);
+    margin-top: 2rem;
+    width: 680px;
+    left: 50px;
+    height: 280px;
+    position: relative;
+    border: 1px solid #00000066;
+    border-radius: 4px;
+    max-height: 285px;
+    overflow-y: auto;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group {
+    height: 425px !important;
+    max-height: 425px !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group {
+    height: 375px !important;
+    max-height: 375px !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.left,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.left,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container.left {
+    position: relative;
+    max-width: 33%;
+    margin-left: 0;
+    left: 0;
+    padding-left: 0;
+    border-right: 2px solid #a1252533;
+    height: 100%;
+    float: left;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.left {
+    max-width: 31.5%;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container.left {
+    max-width: 14% !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.mid,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.mid,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container.mid {
+    position: relative;
+    max-width: 33%;
+    margin-left: 24px;
+    left: 0px;
+    padding-left: 0;
+    border-right: 2px solid #a1252533;
+    float: left;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.mid {
+    max-width: 10% !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container.mid {
+    max-width: 30% !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.right,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container.midright,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.midright {
+    position: relative;
+    max-width: 30%;
+    margin-left: 0px;
+    left: 0px;
+    padding-left: 0;
+    float: left;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.right,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container.right {
+    position: relative;
+    max-width: 22%;
+    margin-left: 0px;
+    left: 0px;
+    padding-left: 0;
+    float: left;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container.right {
+    max-width: 32% !important;
+}
+
+ul#FactionManagerApp-Area-ViewAllMembers-List>li.list-group-item>div.container>p {
+    font-size: 14px;
+}
+
+ul#FactionManagerApp-Area-ViewAllMembers-List>li.list-group-item>div.container>p>b {
+    font-size: 15px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.midright {
+    border-right: 2px solid #a1252533;
+    max-width: 32%;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container.midright {
+    border-right: 2px solid #a1252533;
+    max-width: 20% !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container>hr,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container>hr {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+    width: 180px;
+    border: 0.35px solid #a12521d1;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container>p,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container>p,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container>p {
+    color: #d2d2d2;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container>p>b,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container>p>b,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container>p>b {
+    color: #a22525;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item {
+    background: rgba(0, 0, 0, 0);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: inline-table;
+    padding: 2% 2%;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.right>button {
+    padding: .05rem .25rem;
+    font-size: .65rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.right>button.red {
+    background: #e43d3dbd !important;
+    outline: none;
+    border: none;
+    color: #d2d2d2;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>ul.list-group>li.list-group-item>div.container.right>button:hover {
+    transform: scale(1.08);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#HomeApp-Area>ul.list-group {
+    display: block;
+    float: left;
+    position: absolute;
+    left: 15px;
+    top: 70px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#HomeApp-Area>ul.list-group>li.list-group-item {
+    background: #3131319e;
+    float: left;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    width: 125px;
+    text-align: center;
+    padding-bottom: 4px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    box-shadow: 1px 4px 22px rgba(25, 25, 25, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.hide {
+    background: none !important;
+    border: none !important;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+}
+
+.hide:hover {
+    cursor: none !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#HomeApp-Area>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background: #4a48489e;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#HomeApp-Area>ul.list-group>li.list-group-item>span {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 0.85rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#HomeApp-Area>ul.list-group>li.list-group-item>img {
+    margin-bottom: 0.3rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#HomeApp-Area>div.DateBox {
+    background: rgba(255, 255, 255, 0.05);
+    width: 375px;
+    height: 90px;
+    bottom: 10px;
+    position: absolute;
+    left: 10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #0000005e;
+    box-shadow: 1px 4px 22px rgba(25, 25, 25, 0.8);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#HomeApp-Area>div.DateBox>span#datetime {
+    color: #afafaf;
+    font-family: PEL;
+    font-size: 1.8rem;
+    position: absolute;
+    left: 12px;
+    bottom: 34px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#HomeApp-Area>div.DateBox>span#datedate {
+    color: #d4d4d4;
+    font-family: PT;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-Overview>ul#event-entry-list,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 50px;
+    overflow-y: auto;
+    max-height: 535px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list {
+    top: 46px !important;
+    max-height: 542px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-Overview>ul#event-entry-list>div.card,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card {
+    float: left;
+    margin-left: 38px;
+    background: rgba(255, 255, 255, 0.04) !important;
+    max-width: 28rem;
+    min-width: 28rem;
+    margin-bottom: 0.5rem;
+    overflow-y: auto;
+    max-height: 16.2rem;
+    min-height: 16.2rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 250px;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 1.5rem;
+    padding-right: 3.8rem;
+    border-radius: 10px;
+    margin-left: 18px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>ul.list-group {
+    top: 170px !important;
+    padding-right: 1.5rem !important;
+    padding: 1.5rem !important;
+    max-width: 95%;
+    margin-left: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.box {
+    border-radius: 0px !important;
+    box-shadow: 5px 5px 10px -2px rgba(33, 33, 33, 0.3) !important;
+    float: left;
+    padding: 0.8rem;
+    margin-left: 305px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.34);
+    max-width: 19rem;
+    min-width: 19rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.box>.btn-create {
+    background-color: #333333 !important;
+    color: #d2d2d2;
+    transition: all 0.5s ease-in-out;
+    margin-top: 0.5rem;
+    padding: 4px;
+    font-family: PEL;
+    font-size: 14px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group {
+    top: 110px;
+    overflow-y: auto;
+    max-height: 400px;
+    min-height: 400px;
+    min-height: 400px;
+    min-width: 890px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box>ul.list-group {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    padding-left: 2rem;
+    margin-left: 60px !important;
+    top: 180px !important;
+    padding-right: 4.5rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>ul.list-group>p,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>ul.list-group>p,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>ul.list-group>p,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>ul.list-group>p,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>ul.list-group>p,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>ul.list-group>p,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>ul.list-group>p {
+    color: #ffffff;
+    text-align: center;
+    font-family: PEL;
+    font-size: 1.15rem;
+    margin-top: -0.8rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>ul.list-group {
+    top: 95px !important;
+    max-width: 880px !important;
+    padding-top: 0.2rem;
+    padding-bottom: 15px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.newnote {
+    border-radius: 0px !important;
+    box-shadow: 5px 5px 10px -2px rgba(33, 33, 33, 0.3) !important;
+    float: left;
+    padding: 0.8rem;
+    margin-left: 18px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    min-height: 265px;
+    width: 245px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.12);
+    color: #32353b;
+    font-size: 2rem;
+    border: 2px dashed #363940d9;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.newnote:hover {
+    cursor: pointer;
+    background: #00ff964f !important;
+    color: #ffffff9c;
+    border-color: #ffffffc7;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note {
+    border-radius: 0px !important;
+    box-shadow: 5px 5px 10px -2px rgba(33, 33, 33, 0.3) !important;
+    float: left;
+    padding: 0.8rem;
+    margin-left: 18px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note>button.btn-delete {
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    background: #822424;
+    float: left;
+    margin-top: 6px;
+    color: #ffffff;
+    border: 1px solid #000000b8;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note>button.btn-delete:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    background: #a52323e0 !important;
+    filter: grayscale(0);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note.schwarz {
+    background: #00000057 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note.schwarz>textarea {
+    color: #ffffffc7;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note.weiß {
+    background: #ffffffcf !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note.gelb {
+    background: #FFFD75 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note.rot {
+    background: #ff7575 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note.grün {
+    background: #89ff75 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note.blau {
+    background: #75d1ff !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item>textarea.title,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.box>textarea.title {
+    background-color: transparent;
+    padding-top: 14px;
+    width: 100%;
+    color: #2f2f2f;
+    line-height: 1;
+    font-size: 20px;
+    border-radius: 2px;
+    font-family: "Gloria Hallelujah", cursive;
+    padding-left: 10px;
+    border: none;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item>textarea.text,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.box>textarea.text {
+    background-color: transparent;
+    border: none;
+    font-family: "Gloria Hallelujah", cursive;
+    color: #2f2f2f;
+    width: 100%;
+    padding-top: 14px;
+    padding-left: 10px;
+    line-height: 1;
+    min-height: 150px;
+    max-height: 150px;
+    font-size: 16px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item>textarea.title::placeholder,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item>textarea.text::placeholder,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.box>textarea.title::placeholder,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.box>textarea.text::placeholder {
+    color: #2f2f2f;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note.schwarz>textarea.title::placeholder,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item.note.schwarz>textarea.text::placeholder {
+    color: #ffffffc7;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item>textarea.title:focus,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-Overview>ul.list-group>li.list-group-item>textarea.text:focus,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.box>textarea.title:focus,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.box>textarea.text:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#HomeApp-Area>ul.list-group>li.list-group-item>img {
+    width: 32px !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>ul.list-group>li.list-group-item>img {
+    width: 46px !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item {
+    background: #313131e3 !important;
+    float: left;
+    padding: 2rem;
+    padding-bottom: 0rem;
+    margin-left: 35px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.42);
+    transition: all 0.3s ease-in-out;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>ul.list-group>li.list-group-item,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>ul.list-group>li.list-group-item {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item {
+    width: auto !important;
+    background: #131519 !important;
+    border-radius: 6px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: 25px;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    margin-top: 0.6rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>button.btn-circle.btn-sm,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.colorbox>button.btn-circle.btn-sm {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    font-size: 8px;
+    text-align: center;
+    margin-top: 0.8rem;
+    border: 2px solid #ffffff1a;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.colorbox>p {
+    color: #fff;
+    font-family: PEL;
+    text-transform: uppercase;
+    background: rgb(19, 21, 25);
+    padding: 3px;
+    margin-bottom: 3px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>button.btn-red {
+    background: rgb(195, 27, 27);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.colorbox>button.btn-red {
+    background: #ff7575;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>button.btn-green {
+    background: rgb(27, 195, 88);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.colorbox>button.btn-green {
+    background: #89ff75;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>button.btn-yellow {
+    background: rgba(243, 238, 14);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.colorbox>button.btn-yellow {
+    background: #FFFD75;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>button.btn-black {
+    background: rgba(8, 8, 8, 0.9);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.colorbox>button.btn-black {
+    background: #00000057;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>button.btn-white {
+    background: rgb(255, 255, 255);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.colorbox>button.btn-white {
+    background: #ffffffcf;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.colorbox>button.btn-primary {
+    background: #75d1ff !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group {
+    top: 115px !important;
+    border-radius: 4px;
+    background: rgba(101, 101, 101, 0.04);
+    padding-right: 3rem;
+    padding-left: 1.5rem;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+    max-height: 27rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>img {
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>ul.list-group>li.list-group-item {
+    padding: 1rem;
+    padding-top: 1rem;
+    margin-left: 50px;
+    padding-bottom: 0rem;
+    margin-top: 10px;
+    filter: grayscale(0.7);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>ul.list-group>li.list-group-item.install:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: grayscale(0);
+    background: #23a55de0 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>ul.list-group>li.list-group-item.uninstall:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background: #a52323e0 !important;
+    filter: grayscale(0);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>ul.list-group>li.list-group-item>p,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>ul.list-group>li.list-group-item>p,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>ul.list-group>li.list-group-item>p,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>ul.list-group>li.list-group-item>p,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>ul.list-group>li.list-group-item>p,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>ul.list-group>li.list-group-item>p,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>ul.list-group>li.list-group-item>p,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box>ul.list-group>li.list-group-item>p,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>ul.list-group>li.list-group-item>p.title {
+    color: #fff;
+    padding-top: 12px;
+    font-family: PEL;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>p.title {
+    color: #fff;
+    padding-top: 0px;
+    font-family: PT;
+    font-size: 1.05rem;
+    margin-bottom: -1rem;
+    margin-top: -0.5rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>button.btn-vehstore {
+    background-color: #33333373 !important;
+    color: #dedede;
+    font-size: 14px;
+    font-family: PEL;
+    transition: all 0.5s ease-in-out;
+    margin-top: 1rem;
+    padding: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: -0.8rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>button.btn-vehstore:hover {
+    cursor: pointer;
+    background: #23a55de0 !important;
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>ul.list-group>li.list-group-item>p.desc {
+    color: #d0d0d0;
+    padding-top: 0px;
+    font-family: PEL;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 0;
+    padding-left: 4px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>ul.list-group>li.list-group-item>p.title {
+    margin-bottom: 0rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>ul.list-group>li.list-group-item>p.description {
+    color: #fff;
+    font-family: PT;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>ul.list-group>li.list-group-item:hover,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    background: #23a55de0 !important;
+    transform: scale(1.05);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    background: #a52323e0 !important;
+    transform: scale(1.05);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    background: #bf763f !important;
+    transform: scale(1.05);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    background: #2d67b3 !important;
+    transform: scale(1.05);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    background: #2d67b3 !important;
+    transform: scale(1.05);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    background: #2d67b3 !important;
+    transform: scale(1.05);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    background: #2d67b3 !important;
+    transform: scale(1.05);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box>ul.list-group>li.list-group-item:nth-child(1):hover {
+    background: #a52323e0 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box>ul.list-group>li.list-group-item:nth-child(2):hover {
+    background: #9223a5e0 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box>ul.list-group>li.list-group-item:nth-child(3):hover {
+    background: #2368a5e0 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>div.card {
+    background: rgba(255, 255, 255, 0.04) !important;
+    box-shadow: 1px 2px 6px rgba(25, 25, 25, 0.8) !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>div.card {
+    top: 40px;
+    min-width: 32rem;
+    max-width: 32rem;
+    max-height: 11.5rem;
+    min-height: 11.5rem;
+    border-left: .25rem solid #23a55d !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>div.card,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>div.card {
+    max-height: 8rem !important;
+    min-height: 8rem !important;
+    top: 25px !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>div.card {
+    border-left: .25rem solid #a55b23 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>div.card {
+    border-left: .25rem solid #235ba5 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>div.card {
+    border-left: .25rem solid #235ba5 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>div.card {
+    border-left: .25rem solid #235ba5 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>div.card {
+    border-left: .25rem solid #235ba5 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>div.card {
+    border-left: .25rem solid #a52323e0 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>p {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 1.25rem;
+    padding-top: 8px;
+    text-align: center;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card {
+    min-width: 28rem;
+    max-width: 28rem;
+    max-height: 12rem;
+    min-height: auto;
+    margin-left: 40px;
+    margin-bottom: 14px;
+    background: rgba(255, 255, 255, 0.04) !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card>div.card-body {
+    padding-bottom: 1rem !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card.green {
+    border-left: .25rem solid #23a55d !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card.green>div.card-body>p.card-text>b {
+    color: #23a55d !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card.red {
+    border-left: .25rem solid #a52f23 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card.red>div.card-body>p.card-text>b {
+    color: #a52f23 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-Overview>ul#event-entry-list>div.card>div.card-header,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>div.card>div.card-header,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>div.card>div.card-header,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>div.card>div.card-header,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>div.card>div.card-header,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>div.card>div.card-header,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>div.card>div.card-header,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>div.card>div.card-header,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card>div.card-header {
+    font-size: 0.9rem;
+    font-family: PEL;
+    letter-spacing: 0.1px;
+    padding-left: 0.8rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-Overview>ul#event-entry-list>div.card>div.card-body {
+    padding-bottom: 0rem;
+    margin-top: -0.45rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-Overview>ul#event-entry-list>div.card>div.card-body>h6.card-title,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>div.card>div.card-body>h6.card-title,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>div.card>div.card-body>h6.card-title,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>div.card>div.card-body>h6.card-title,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>div.card>div.card-body>h6.card-title,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>div.card>div.card-body>h6.card-title,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>div.card>div.card-body>h6.card-title,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>div.card>div.card-body>h6.card-title,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card>div.card-body>h6.card-title {
+    font-family: OSR;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-Overview>ul#event-entry-list>div.card>div.card-body>p.card-text,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>div.card>div.card-body>p.card-text,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>div.card>div.card-body>p.card-text,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>div.card>div.card-body>p.card-text,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>div.card>div.card-body>p.card-text,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>div.card>div.card-body>p.card-text,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>div.card>div.card-body>p.card-text,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>div.card>div.card-body>p.card-text,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card>div.card-body>p.card-text {
+    font-family: PEL;
+    font-size: 0.95rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>div.card>div.card-body,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>div.card>div.card-body,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>div.card>div.card-body,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>div.card>div.card-body,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>div.card>div.card-body,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>div.card>div.card-body,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>div.card>div.card-body {
+    padding-bottom: 0rem;
+}
+
+.border-left-warning {
+    border-left: .25rem solid #c87b1c!important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-Overview>button.eventcreate,
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>button.eventcreate {
+    background-color: #74e66c82;
+    border-color: #000000b8;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container {
+    overflow-y: auto;
+    max-height: 426px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table {
+    width: 870px;
+    margin-left: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.67) !important;
+    text-align: center;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table {
+    margin-left: 10px !important;
+    border: 2px solid rgba(0, 0, 0, 0.67) !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr>td {
+    max-width: 28rem !important;
+    font-size: 0.85rem;
+    vertical-align: middle;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>tbody>tr>td>button.btn,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr>td>button.btn {
+    border: 2px solid #217a4bcc !important;
+    color: #217a4b;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr>td>button.btn {
+    border: 2px solid #1f2120cc !important;
+    color: #dce2df;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    background: #131519a3;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>tbody>tr>td>button.btn:hover {
+    cursor: pointer;
+    background: #217a4b;
+    border-color: #00000066 !important;
+    color: #c7c7c7;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr>td>button.btn:hover {
+    cursor: pointer;
+    background: #2d65cc61;
+    border-color: #00000066 !important;
+    color: #c7c7c7;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>thead {
+    background: #20844de0;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>thead {
+    background: #191919;
+    border-bottom: 2px solid #0e0e0e !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>tbody>tr,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-weight: normal;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>tbody>tr>td,
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>tbody>tr>th,
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>thead>tr>td,
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>thead>tr>th,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>thead>tr>td,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>thead>tr>th,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr>td,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr>th {
+    border-right: 1px solid #0000009e !important;
+    border-right-style: dashed !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>thead>tr>th,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>thead>tr>th {
+    font-weight: normal;
+    color: #d2d2d2;
+    font-family: OSR;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>tbody>tr,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr {
+    border-top: 1px solid #0000006b !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>tbody>tr:nth-of-type(odd) {
+    background: rgba(0, 0, 0, 0.4) !important;
+}
+
+
+/* div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr:nth-of-type(odd) {
+    background: repeating-linear-gradient( 30deg, #29f38838, #2bbb6f57 10px, #217a4b8f 10px, #217a4b8f 20px) !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr:nth-of-type(even) {
+    background: repeating-linear-gradient( 30deg, #b31b1b9e, #e024246b 10px, #af1e1e82 10px, #af1e1e82 20px) !important;
+} */
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>tbody>tr:nth-of-type(even) {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>thead>tr>th,
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>div.container>table>tbody>tr>th,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>tbody>tr>th,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>div.container>table>thead>tr>th {
+    border: none;
+}
+
+.table td,
+.table th {
+    border-top: none !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box {
+    background: rgba(255, 255, 255, 0.025);
+    height: 540px;
+    width: 930px;
+    top: 25px;
+    position: absolute;
+    left: 50px;
+    border-radius: 7px;
+    text-align: center;
+    border: 1px solid #0000004f;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>p.title {
+    font-family: PT;
+    color: #eae7e7;
+    font-size: 1.45rem;
+    font-weight: bold;
+    padding-top: 20px;
+    margin-bottom: 0rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>p.title {
+    padding-top: 15px !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#VehiclesApp-Area>div.box>p.description,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-Overview>div.box>p.description,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-AppStore>div.box>p.description,
+div.Tablet>div.Tablet-UseableArea>div#InternetApp-Area>div#InternetApp-Area-VehicleStore>div.box>p.description,
+div.Tablet>div.Tablet-UseableArea>div#TutorialApp-Area>div.box>p.description,
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>p.description {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-NewTransactionArea>div.box,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-InviteNewMember>div.box,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-InviteNewMember>div.box,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson>div.box,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense>div.box,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate>div.box,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewDispatches>div.box,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewDispatches>div.box,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewDispatches>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-GiveWeaponLicense>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box {
+    background: rgba(255, 255, 255, 0.025);
+    height: 525px;
+    width: 800px;
+    top: 36px;
+    position: absolute;
+    left: 100px;
+    border-radius: 7px;
+    text-align: center;
+    border: 1px solid #0000004f;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson>div.box,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense>div.box,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate>div.box,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewDispatches>div.box,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewDispatches>div.box,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewDispatches>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box {
+    width: 975px !important;
+    left: 25px !important;
+    top: 20px !important;
+    height: 550px !important;
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewDispatches>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewDispatches>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewDispatches>div.box>p.title,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>p.title {
+    color: #d2d2d2;
+    margin-top: 15px;
+    font-size: 18px;
+    font-family: PEL;
+    margin-bottom: 0.5rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson>div.box>input,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson>div.box>input,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense>div.box>input,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense>div.box>input,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>input,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate>div.box>input,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate>div.box>input {
+    outline: none;
+    border: 1px solid #0e0e0e;
+    text-align: center;
+    color: #929292;
+    font-family: PEL;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 4px;
+    width: 30%;
+    margin-right: 5px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson>div.box>button,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson>div.box>button,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense>div.box>button,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense>div.box>button,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>button,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate>div.box>button,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate>div.box>button {
+    border: 1px solid transparent;
+    background: #3e3e3e;
+    font-family: PEL;
+    color: #d2d2d2;
+    opacity: .5;
+    transition: all 0.3s ease-in-out;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson>div.box>button:hover,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson>div.box>button:hover,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense>div.box>button:hover,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense>div.box>button:hover,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate>div.box>button:hover,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>button:hover,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate>div.box>button:hover {
+    color: #ececec;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background: #27965e;
+    opacity: .9;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>ul.list-group {
+    background: rgba(255, 255, 255, 0.02);
+    width: 80%;
+    height: 100px;
+    margin-left: 10%;
+    max-width: 80%;
+    overflow-y: auto;
+    max-height: 100px;
+    border: 1px solid #00000078;
+}
+
+ul#JusticeApp-Area-ViewBankTransactions-HistoryList {
+    max-height: 180px !important;
+    height: 180px !important;
+}
+
+ul#JusticeApp-Area-ViewBankTransactions-HistoryList>li>div.container.left {
+    color: #d2d2d2;
+    float: left;
+    padding: 0 !important;
+    max-width: 25%;
+    border-right: .25rem solid #4777d038;
+    padding-right: 10px !important;
+    font-family: PEL;
+    font-size: 13px;
+}
+
+ul#JusticeApp-Area-ViewBankTransactions-HistoryList>li>div.container.left>p:nth-child(1) {
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+ul#JusticeApp-Area-ViewBankTransactions-HistoryList>li>div.container.left.text {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>ul.list-group>li {
+    background: rgba(255, 255, 255, 0.02);
+    height: 50%;
+    max-height: 50%;
+    width: 100%;
+    max-width: 100%;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>ul.list-group>li>p {
+    font-family: PEL;
+    color: #d2d2d2;
+    float: left;
+    margin-bottom: 0;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>ul.list-group>li>button {
+    float: right;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>ul.list-group>li:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.01);
+    border-bottom: 1px solid #0000007a;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>ul.list-group>li {
+    height: 200px !important;
+    max-height: 200px !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson>div.box>div.container:nth-child(odd),
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson>div.box>div.container:nth-child(odd),
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense>div.box>div#LSPDApp-Area-SearchLicense-List>div.container:nth-child(odd),
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense>div.box>div#JusticeApp-Area-SearchLicense-List>div.container:nth-child(odd),
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate>div.box>div.container:nth-child(odd),
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate>div.box>div.container:nth-child(odd),
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container:nth-child(odd),
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container:nth-child(odd),
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container:nth-child(odd),
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container:nth-child(odd),
+div#LSPDApp-Area-ViewDispatches-List>div.container:nth-child(odd),
+div#MDApp-Area-ViewDispatches-List>div.container:nth-child(odd),
+div#ACLSApp-Area-ViewDispatches-List>div.container:nth-child(odd) {
+    background: #23232378;
+    padding: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #0e0e0e;
+}
+
+div#LSPDApp-Area-ViewDispatches-List>div.container>div.left,
+div#MDApp-Area-ViewDispatches-List>div.container>div.left,
+div#ACLSApp-Area-ViewDispatches-List>div.container>div.left {
+    height: 100%;
+    width: 28%;
+    display: flow-root;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #00000080;
+    float: left;
+}
+
+div#LSPDApp-Area-ViewDispatches-List>div.container>div.leftmid,
+div#MDApp-Area-ViewDispatches-List>div.container>div.leftmid,
+div#ACLSApp-Area-ViewDispatches-List>div.container>div.leftmid {
+    width: 40%;
+}
+
+div#LSPDApp-Area-ViewDispatches-List>div.container>div.left>button,
+div#MDApp-Area-ViewDispatches-List>div.container>div.left>button,
+div#ACLSApp-Area-ViewDispatches-List>div.container>div.left>button {
+    margin-top: 15%;
+    margin-left: 2%;
+}
+
+div#LSPDApp-Area-ViewDispatches-List>div.container>div.leftmid>p.title,
+div#MDApp-Area-ViewDispatches-List>div.container>div.leftmid>p.title,
+div#ACLSApp-Area-ViewDispatches-List>div.container>div.leftmid>p.title {
+    padding-top: 7% !important;
+}
+
+div#LSPDApp-Area-ViewDispatches-List>div.container>div.left>p,
+div#MDApp-Area-ViewDispatches-List>div.container>div.left>p,
+div#ACLSApp-Area-ViewDispatches-List>div.container>div.left>p {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 14px
+}
+
+div#LSPDApp-Area-ViewDispatches-List>div.container>div.left>p.title,
+div#MDApp-Area-ViewDispatches-List>div.container>div.left>p.title,
+div#ACLSApp-Area-ViewDispatches-List>div.container>div.left>p.title {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-weight: bold;
+    padding-top: 10%;
+    margin-bottom: 0;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson>div.box>div.container:nth-child(even),
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson>div.box>div.container:nth-child(even),
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense>div.box>div#LSPDApp-Area-SearchLicense-List>div.container:nth-child(even),
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense>div.box>div#JusticeApp-Area-SearchLicense-List>div.container:nth-child(even),
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate>div.box>div.container:nth-child(even),
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate>div.box>div.container:nth-child(even),
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container:nth-child(even),
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container:nth-child(even),
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container:nth-child(even),
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container:nth-child(even),
+div#LSPDApp-Area-ViewDispatches-List>div.container:nth-child(even),
+div#MDApp-Area-ViewDispatches-List>div.container:nth-child(even),
+div#ACLSApp-Area-ViewDispatches-List>div.container:nth-child(even) {
+    background: #2f2f2f78;
+    padding: 15px;
+    border-bottom: 1px solid #0e0e0e;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container,
+div#LSPDApp-Area-ViewDispatches-List>div.container,
+div#MDApp-Area-ViewDispatches-List>div.container,
+div#ACLSApp-Area-ViewDispatches-List>div.container,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container {
+    float: left;
+    max-height: 25%;
+    height: 25%;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container>div.left,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container>div.left,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container>div.left,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container>div.left {
+    float: left;
+    max-width: 25%;
+    border-right: 3px outset #2c68c142;
+    padding-right: 25px;
+    margin-right: 20px;
+    height: 100%;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container>div.leftmid,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container>div.leftmid {
+    float: left;
+    max-width: 20%;
+    width: 20%;
+    border-right: 3px outset #2c68c142;
+    padding-right: 20px;
+    margin-right: 20px;
+    height: 100%;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.name,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.name,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.name,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.name {
+    float: left;
+    max-width: 25%;
+    width: 25%;
+    border-right: 3px outset #2c68c142;
+    padding-right: 20px;
+    margin-right: 20px;
+    height: 100%;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid>p,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid>p,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container>div.leftmid>p,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container>div.leftmid>p {
+    color: #d2d2d2;
+    font-family: PEL;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid>p.name,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid>p.name,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container>div.leftmid>p.name,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container>div.leftmid>p.name {
+    color: #d2d2d2;
+    text-align: center;
+    font-family: PEL;
+    margin-top: 25px;
+    margin-bottom: 5px
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: none;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex>button,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex>button,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex>button,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex>button {
+    border: 1px solid #06060670;
+    background: #171717;
+    color: #d2d2d2;
+    padding: 1rem;
+    opacity: .5;
+    transition: all 0.3s ease-in-out;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-ViewFactionVehicles>div.box>div#LSPDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex>button:hover,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-ViewFactionVehicles>div.box>div#MDApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex>button:hover,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-ViewFactionVehicles>div.box>div#ACLSApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex>button:hover,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewFactionVehicles>div.box>div#JusticeApp-Area-ViewFactionVehicles-List>div.container>div.leftmid.flex>button:hover {
+    color: #d2d2d2;
+    transform: scale(1.1);
+    background: #3c88ca85;
+    opacity: .9;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson>div.box>div.container>p,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson>div.box>div.container>p,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense>div.box>div#LSPDApp-Area-SearchLicense-List>div.container>p,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense>div.box>div#JusticeApp-Area-SearchLicense-List>div.container>p,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate>div.box>div.container>p,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate>div.box>div.container>p {
+    color: #d2d2d2;
+    font-family: PEL;
+    text-align: right;
+    padding-left: 25px;
+    margin-bottom: 0;
+    padding-right: 25px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchPerson>div.box>div.container>p>b,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchPerson>div.box>div.container>p>b,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchLicense>div.box>div#LSPDApp-Area-SearchLicense-List>div.container>p>b,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchLicense>div.box>div#JusticeApp-Area-SearchLicense-List>div.container>p>b,
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-SearchVehiclePlate>div.box>div.container>p>b,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-SearchVehiclePlate>div.box>div.container>p>b {
+    float: left;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box>p,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-GiveWeaponLicense>div.box>p,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-ViewBankTransactions>div.box>p,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-NewTransactionArea>div.box>p,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-InviteNewMember>div.box>p,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-InviteNewMember>div.box>p,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-ViewAllMembers>div.box>p,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>p,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>p {
+    font-family: PT;
+    color: #eae7e7;
+    font-size: 1.45rem;
+    font-weight: bold;
+    margin-top: 0.55rem;
+    padding-top: 15px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box>div.inputgroup,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-GiveWeaponLicense>div.box>div.inputgroup,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-NewTransactionArea>div.box>div.inputgroup,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-InviteNewMember>div.box>div.inputgroup,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-InviteNewMember>div.box>div.inputgroup {
+    margin-bottom: 0.65rem;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box>div.inputgroup>input#eventsapp-date,
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box>div.inputgroup>input#eventsapp-clock,
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box>div.inputgroup>input#eventsapp-location,
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box>div.inputgroup>input#eventsapp-eventtype,
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box>div.inputgroup>input#eventsapp-title,
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box>div.inputgroup>input#eventsapp-callnumber,
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box>div.inputgroup>input#eventsapp-info,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-NewTransactionArea>div.box>div.inputgroup>input#bankingapp-banknumber,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-NewTransactionArea>div.box>div.inputgroup>input#bankingapp-transactiontext,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-NewTransactionArea>div.box>div.inputgroup>input#bankingapp-moneyamount,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-InviteNewMember>div.box>div.inputgroup>input#companyapp-name,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-InviteNewMember>div.box>div.inputgroup>input#factionmanagerapp-name,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-InviteNewMember>div.box>div.inputgroup>input#factionmanagerapp-dienstnummer,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-GiveWeaponLicense>div.box>div.inputgroup>input {
+    background: #232527;
+    outline: none;
+    border: 1px solid #0c0c0c;
+    font-family: PT;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #a7a4a4;
+    margin-left: -5px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    text-align: center;
+    width: 380px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group>li.list-group-item>div.container.right>input {
+    background: #b5464457;
+    outline: none;
+    border: 1px solid #0c0c0c;
+    font-family: PT;
+    font-weight: bold;
+    font-size: 12px;
+    color: #b5b5b5;
+    margin-left: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+    width: 50%;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-CreateEvent>div.box>div.inputgroup>i.icon,
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-GiveWeaponLicense>div.box>div.inputgroup>i.icon,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-NewTransactionArea>div.box>div.inputgroup>i.icon,
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-InviteNewMember>div.box>div.inputgroup>i.icon,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-InviteNewMember>div.box>div.inputgroup>i.icon {
+    background: #c87b1c;
+    color: #ffffffcf;
+    font-size: 1.25rem;
+    border: 1px solid #0c0c0c;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    line-height: 20px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-GiveWeaponLicense>div.box>div.inputgroup>i.icon {
+    background: #ea6627e0 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-InviteNewMember>div.box>div.inputgroup>i.icon {
+    background: #a52323e0 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-InviteNewMember>div.box>div.inputgroup>i.icon {
+    background: #bf763f !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-NewTransactionArea>div.box>div.inputgroup>i.icon {
+    background: #23a55de0 !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#EventsApp-Area>div#EventsApp-Area-Overview>ul#event-entry-list>div.card>div.card-body>p.card-text>b,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>div.card>div.card-body>p.card-text>b,
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-ViewBankHistory>ul#bankapp-bankhistory-list>div.card>div.card-body>p.card-text>b {
+    font-family: OSL;
+    color: #c87b1c;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#BankingApp-Area>div#BankingApp-Area-Overview>div.card>div.card-body>p.card-text>b {
+    color: #23a55d !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#CompanyApp-Area>div#CompanyApp-Area-Overview>div.card>div.card-body>p.card-text>b {
+    font-family: OSL;
+    color: #c51b1b !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview>div.card>div.card-body>p.card-text>b {
+    font-family: OSL;
+    color: #bf763f !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#LSPDApp-Area>div#LSPDApp-Area-Overview>div.card>div.card-body>p.card-text>b,
+div.Tablet>div.Tablet-UseableArea>div#MDApp-Area>div#MDApp-Area-Overview>div.card>div.card-body>p.card-text>b,
+div.Tablet>div.Tablet-UseableArea>div#ACLSApp-Area>div#ACLSApp-Area-Overview>div.card>div.card-body>p.card-text>b {
+    font-family: OSL;
+    color: #3b74bf !important;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#JusticeApp-Area>div#JusticeApp-Area-Overview>div.card>div.card-body>p.card-text>b {
+    font-family: OSL;
+    color: #3b74bf !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #888;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3e3e3e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+p#EventsApp-CreateEvent-Error,
+p#BankingApp-NewTransactionArea-Error {
+    display: none;
+    font-size: 0.85rem !important;
+    color: #cc5050 !important;
+    margin-top: -2rem;
+    margin-bottom: -0.5rem;
+}
+
+.btn-bankhov,
+.btn-companyHov,
+.btn-factionManagerHov {
+    background-color: #333333 !important;
+    color: #d2d2d2;
+    transition: all 0.5s ease-in-out;
+    margin-top: 0.8rem;
+}
+
+.btn-rankup {
+    border-color: transparent;
+    background: #33bd6ab3;
+    font-weight: normal;
+    font-size: 14px;
+    color: #d2d2d2;
+    transition: all 0.3s ease-in-out;
+    padding: 3px 6px;
+    font-size: 14px;
+}
+
+.btn-rankdown {
+    border-color: transparent;
+    background: #bd3333b3;
+    font-weight: normal;
+    font-size: 14px;
+    color: #d2d2d2;
+    transition: all 0.3s ease-in-out;
+    padding: 3px 6px;
+    font-size: 14px;
+}
+
+.btn-rankremove {
+    border-color: transparent;
+    background: #e27333ad;
+    font-weight: normal;
+    font-size: 14px;
+    color: #d2d2d2;
+    transition: all 0.3s ease-in-out;
+    padding: 3px 6px;
+    font-size: 14px;
+}
+
+.btn-rankremove:hover,
+.btn-rankdown:hover,
+.btn-rankup:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    color: #d2d2d2;
+}
+
+.btn-eventhov {
+    background-color: #333333 !important;
+    color: #d2d2d2;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0.5rem;
+}
+
+.btn-justicehov {
+    background-color: #333333 !important;
+    color: #d2d2d2;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0.5rem;
+}
+
+.btn-justicehov:hover {
+    cursor: pointer;
+    background: #ea6627e0 !important;
+    transform: scale(1.02);
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    color: #fff;
+}
+
+.btn-eventhov:hover {
+    cursor: pointer;
+    background: #ff9a2194 !important;
+    transform: scale(1.02);
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    color: #fff;
+}
+
+.btn-bankhov:hover {
+    cursor: pointer;
+    background: #23a55de0 !important;
+    transform: scale(1.02);
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    color: #fff;
+}
+
+.btn-companyHov:hover {
+    cursor: pointer;
+    background: #a52323e0!important;
+    transform: scale(1.02);
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    color: #fff;
+}
+
+.btn-factionManagerHov:hover {
+    cursor: pointer;
+    background: #bf763f !important;
+    transform: scale(1.02);
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    color: #fff;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#NotesApp-Area>div.box>div#NotesApp-Area-NewNote>div.box>.btn-create:hover {
+    cursor: pointer;
+    background: #23a55de0 !important;
+    letter-spacing: 1px;
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    color: #fff;
+}
+
+div.TabletBG>button.btn-circle {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    padding: 0;
+    border-radius: 50%;
+}
+
+div.TabletBG>button.btn-circle i {
+    position: relative;
+    top: -1px;
+}
+
+div.TabletBG>button.btn-circle-sm {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 0.9rem;
+}
+
+div.TabletBG>button.btn-home {
+    position: absolute;
+    bottom: 28px;
+    right: 550px;
+    background-color: #323332;
+    border-color: #000000b5;
+    color: #8e8b8b;
+}
+
+div.TabletBG>button.btn-home:focus {
+    box-shadow: 0 0 0 0.2rem rgba(62, 70, 67, 0.25);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+

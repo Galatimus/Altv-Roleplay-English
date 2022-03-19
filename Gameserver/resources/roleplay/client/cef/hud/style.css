@@ -1,0 +1,6498 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PM';
+    src: url('../utils/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PT';
+    src: url('../utils/fonts/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSR';
+    src: url('../utils/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PriceDow';
+    src: url('../utils/fonts/pricedow.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('../utils/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DB';
+    src: url('../utils/fonts/db.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSSB';
+    src: url('../utils/fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BNT';
+    src: url('../utils/fonts/bnt.ttf') format('truetype');
+}
+
+@keyframes flickerAnimationn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 0.95;
+        transform: translateX(0%);
+    }
+}
+
+body {
+    -webkit-user-select: none;
+    user-select: none;
+    background: none;
+    /* background: url(../utils/img/bg2.jpg); */
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+#hudbox {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    background-color: #14131200;
+    border: 2px solid #ffd90000;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    border-radius: 5px;
+    width: 600;
+    height: 40;
+    margin-bottom: 15;
+    opacity: 0;
+}
+#hudbox2 {
+    bottom: 40%;
+    position: fixed;
+    right: -98px;
+    padding: none;
+}
+
+#hudbox2>#HealthBox,
+#hudbox2>#ArmorBox,
+#hudbox2>#foodbox,
+#hudbox2>#drinkbox,
+#hudbox2>#voicebox,
+#hudbox>#locationbox,
+#hudbox2>#VehicleSpeedBox,
+#hudbox2>#VehicleFuelBox,
+#hudbox2>#VehicleKMBox,
+p#locationtext,
+p#VehicleFuelBoxText,
+p#VehicleKMBoxText,
+p#VehicleSpeedBoxText,
+
+div#identityCardApplyForm,
+div#bankAccountManageForm,
+div#bankATMbox,
+div#bankATMbox-WithDrawArea,
+div#bankATMbox-DepositArea,
+div#bankATMbox-ViewTransactionArea,
+div#bankATMbox-BalanceArea,
+div#bankATMbox-PinArea,
+div#bankATMbox-OverviewArea,
+div#shopCEFBox,
+div#barberCEFBox,
+div#healthLowBorder,
+div#GarageCEFBox,
+div#VehicleShopCEFBox,
+div#jobCenterApplyForm,
+div#VehicleFuelstationCEFBox,
+div#ClothesShopCEFBox,
+div#bankFactionATMForm,
+div#GivePlayerBillCEFBox,
+div#RecievePlayerBillCEFBox,
+div#FactionStorageCEFBox,
+div#VehicleTrunkCEFBox,
+div#VehicleLicensingCEFBox,
+div#PlayerSearchInventoryCEFBox,
+div#GivePlayerLicenseCEFBox,
+div#Minijob-PilotCEFBox,
+div#Minijob-BusDriverCEFBox,
+div#HotelManageCEFBox,
+div#HouseEntranceCEFBox,
+div#TownhallHouseSelectorBox,
+div#Deathscreen-Box,
+div#HouseManageCEFBox,
+div#AnimationMenuBox,
+div#VehicleTuningMainMenuBox,
+div#Smartphone-Box,
+div#ProcessingBox,
+div#TattooShopHUD,
+div#RotationHUD,
+div#pluginScreen,
+div#changeVehOwnerHUD,
+div#laborHUD,
+div#storageHUD{
+    opacity: 0;
+} 
+
+
+#hudbox2>#HealthBox,
+#hudbox2>#ArmorBox,
+#hudbox>#locationbox,
+#hudbox2>#VehicleSpeedBox,
+#hudbox2>#VehicleFuelBox,
+#hudbox2>#VehicleKMBox,
+p#locationtext,
+p#VehicleFuelBoxText,
+p#VehicleKMBoxText,
+p#VehicleSpeedBoxText,
+
+div#identityCardApplyForm,
+div#bankAccountManageForm,
+div#bankATMbox,
+div#bankATMbox-WithDrawArea,
+div#bankATMbox-DepositArea,
+div#bankATMbox-ViewTransactionArea,
+div#bankATMbox-BalanceArea,
+div#bankATMbox-PinArea,
+div#bankATMbox-OverviewArea,
+div#shopCEFBox,
+div#barberCEFBox,
+div#healthLowBorder,
+div#GarageCEFBox,
+div#VehicleShopCEFBox,
+div#jobCenterApplyForm,
+div#VehicleFuelstationCEFBox,
+div#ClothesShopCEFBox,
+div#ClothesShopCEFBox2,
+div#ClothesShopCEFBox3,
+div#ClothesShopCEFBox4,
+div#ClothesShopCEFBox5,
+div#bankFactionATMForm,
+div#GivePlayerBillCEFBox,
+div#RecievePlayerBillCEFBox,
+div#FactionStorageCEFBox,
+div#VehicleTrunkCEFBox,
+div#VehicleLicensingCEFBox, 
+div#PlayerSearchInventoryCEFBox,
+div#GivePlayerLicenseCEFBox,
+div#Minijob-PilotCEFBox,
+div#Minijob-BusDriverCEFBox,
+div#HotelManageCEFBox,
+div#HouseEntranceCEFBox,
+div#TownhallHouseSelectorBox,
+div#Deathscreen-Box,
+div#HouseManageCEFBox,
+div#AnimationMenuBox,
+div#VehicleTuningMainMenuBox,
+div#VehicleTuningMenuColorSelection,
+div#Smartphone-Box,
+div#ProcessingBox,
+div#TattooShopHUD,
+div#RotationHUD, 
+div#pluginScreen,
+div#changeVehOwnerHUD,
+div#laborHUD,
+div#storageHUD {
+    display: none;
+}
+
+#hudbox2>#voicebox {
+    width: 200;
+    padding: 6.6px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #2e3440;
+    position: center;
+    /* margin-bottom: 125%; */
+    margin-bottom: 1%;
+    margin-top: 0;
+    margin-left: 85;
+    height: 30;
+    border: 2px solid #00000000;
+}
+#hudbox2>#voicebox>#imgbox{
+    width: 40;
+    padding: 6.6px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    border: 2px solid #ffd90000;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-top: 6.5;
+    height: 29.9999;
+    margin-left: 10;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+#hudbox2>#voicebox>#hr {
+    width: 60px;
+    z-index: 200;
+    transform: translate(-50%, -50%);    
+    border: 2px solid #00000000;
+    border-radius: 2px;
+    background: #dce02f8a;
+    height: 5;
+    margin-left: 65;
+    margin-bottom: 25;
+    margin-top: -30;
+}
+
+
+#hudbox2>#foodbox{
+    width: 200;
+    padding: 6.6px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #2e3440;
+    position: center;
+    /* margin-bottom: 125%; */
+    margin-bottom: 1%;
+    margin-top: 0;
+    margin-left: 85;
+    height: 30;
+    border: 2px solid #00000000;
+}
+#hudbox2>#foodbox>#imgbox{
+    width: 40;
+    padding: 6.6px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    border: 2px solid #ffd90000;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-top: 6.5;
+    height: 29.9999;
+    margin-left: 10;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+#hudbox2>#foodbox>#hr {
+    z-index: 200;
+    transform: translate(-50%, -50%);    
+    border: 2px solid #00000000;
+    border-radius: 2px;
+    background: #008111fd;
+    height: 5;
+    width: 150;
+    margin-left: 110;
+    margin-bottom: 25;
+    margin-top: -30;
+}
+
+#hudbox2>#drinkbox{
+    width: 200;
+    padding: 6.6px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #2e3440;
+    position: center;
+    /* margin-bottom: 125%; */
+    margin-bottom: 1%;
+    margin-top: 0;
+    margin-left: 85;
+    height: 30;
+    border: 2px solid #00000000;
+}
+#hudbox2>#drinkbox>#imgbox{
+    width: 40;
+    padding: 6.6px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    border: 2px solid #ffd90000;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-top: 6.5;
+    height: 29.9999;
+    margin-left: 10;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+#hudbox2>#drinkbox>#hr {
+    width: 150;
+    z-index: 200;
+    transform: translate(-50%, -50%);    
+    border: 2px solid #00000000;
+    border-radius: 2px;
+    background: #008111fd;
+    height: 5;
+    margin-left: 110;
+    margin-bottom: 25;
+    margin-top: -30;
+}
+#hudbox2>#VehicleSpeedBox {
+    width: 200;
+    padding: 6.6px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #2e3440;
+    position: center;
+    /* margin-bottom: 125%; */
+    margin-bottom: 1%;
+    margin-top: 0;
+    margin-left: 85;
+    height: 30;
+    border: 2px solid #00000000;
+}
+#hudbox2>#VehicleSpeedBox>#imgbox{
+    width: 40;
+    padding: 6.6px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    border: 2px solid #ffd90000;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-top: 6.5;
+    height: 29.9999;
+    margin-left: 10;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+
+#hudbox2>#MoneyBox {
+    width: 200;
+    padding: 6.6px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #2e3440;
+    position: center;
+    /* margin-bottom: 125%; */
+    margin-bottom: 1%;
+    margin-top: 0;
+    margin-left: 85;
+    height: 30;
+    border: 2px solid #00000000;
+}
+#hudbox2>#MoneyBox>#imgbox{
+    width: 40;
+    padding: 6.6px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    border: 2px solid #ffd90000;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-top: 6.5;
+    height: 29.9999;
+    margin-left: 10;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+    
+}
+#hudbox2>#VehicleSpeedBoxText>#imgbox {
+    height: 200;
+}
+
+/*/HEALTH/*/
+#hudbox2>#HealthBox {
+    width: 200;
+    padding: 6.6px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #2e3440;
+    position: center;
+    /* margin-bottom: 125%; */
+    margin-bottom: 1%;
+    margin-top: 0;
+    margin-left: 85;
+    height: 30;
+    border: 2px solid #00000000;
+}
+#hudbox2>#HealthBox>#imgbox{
+    width: 40;
+    padding: 6.6px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    border: 2px solid #ffd90000;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-top: 6.5;
+    height: 29.9999;
+    margin-left: 10;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+/*/ARMOR/*/
+#hudbox2>#ArmorBox {
+    width: 200;
+    padding: 6.6px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #2e3440;
+    position: center;
+    /* margin-bottom: 125%; */
+    margin-bottom: 1%;
+    margin-top: 0;
+    margin-left: 85;
+    height: 30;
+    border: 2px solid #00000000;
+}
+#hudbox2>#ArmorBox>#imgbox{
+    width: 40;
+    padding: 6.6px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    border: 2px solid #ffd90000;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-top: 6.5;
+    height: 29.9999;
+    margin-left: 10;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+
+
+#hudbox2>#VehicleFuelBox {
+    width: 200;
+    padding: 6.6px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #2e3440;
+    position: center;
+    /* margin-bottom: 125%; */
+    margin-bottom: 1%;
+    margin-top: 0;
+    margin-left: 85;
+    height: 30;
+    border: 2px solid #00000000;
+}
+#hudbox2>#VehicleFuelBox>#imgbox{
+    width: 40;
+    padding: 6.6px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    border: 2px solid #ffd90000;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-top: 6.5;
+    height: 29.9999;
+    margin-left: 10;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+#hudbox2>#VehicleFuelBox>#hr {
+    width: 175;
+    z-index: 200;
+    transform: translate(-50%, -50%);    
+    clip-path: polygon(2% 0%, 100% 0%, 98% 100%, 0% 100%);
+    border: 2px solid #00000000;
+    border-radius: 2px;
+    background: #008111fd;
+    /* background: #b8d800fd; */
+    /* background: #ffae00fd; */
+    /* background: #ff6600fd; */
+    /* background: #ff2200; */
+    /* background: #ff0000fd; */
+    height: 10;
+    margin-left: 125; 
+    margin-bottom: 25;
+    margin-top: -13;
+}
+
+
+#hudbox2>#VehicleKMBox {
+    width: 200;
+    padding: 6.6px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #2e3440;
+    position: center;
+    /* margin-bottom: 125%; */
+    margin-bottom: 1%;
+    margin-top: 0;
+    margin-left: 85;
+    height: 30;
+    border: 2px solid #00000000;
+}
+#hudbox2>#VehicleKMBox>#imgbox{
+    width: 40;
+    padding: 6.6px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    border: 2px solid #ffd90000;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-top: 6.5;
+    height: 29.9999;
+    margin-left: 10;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+
+
+#hudbox>#locationbox{
+    width: 50;
+    padding: 6.6px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    position: relative;
+    margin-top: 17;
+    margin-bottom: -0.5rem;
+    left: 150%;
+
+}
+#hudbox>#VehicleSpeedBox,
+#hudbox>#VehicleFuelBox,
+#hudbox>#VehicleKMBox {
+    width: auto;
+    padding: 6.6px;
+    z-index: 101;
+    background: #ffffff9f;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    position: relative;
+    margin-top: 13;
+    margin-bottom: -10;
+    left: 50;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+#hudbox2>#drinkbox>#imgbox>img,
+#hudbox2>#foodbox>#imgbox>img,
+#hudbox2>#voicebox>#imgbox>img,
+#hudbox2>#VehicleSpeedBox>#imgbox>img,
+#hudbox2>#VehicleFuelBox>#imgbox>img,
+#hudbox2>#VehicleKMBox>#imgbox>img {
+    width: 20px;
+    margin-top: -3;
+    margin-left: 2;
+}
+
+#hudbox>#VehicleSpeedBox {
+    bottom: 0px;
+    left: 560px;
+    position: absolute;
+}
+
+
+img#waterMarkImage {
+    width: 94px;
+    bottom: 0px;
+    position: absolute;
+    right: 4px;
+}
+div#changeVehOwnerHUD>input {
+    outline: none;
+    border: 1px solid #ffffff21;
+    border-left-color: #8d0000;
+    border-right-color: #8d0000;
+    background: rgba(0, 0, 0, 0.2);
+    width: 80%;
+    border-radius: 4px;
+    text-align: center;
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-size: 14px;
+    height: 1.5vw;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+    font-weight: bold;
+}
+
+
+div#TattooShopHUD>span,
+div#changeVehOwnerHUD>span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background: #ffffff75;
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    opacity: .6;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+div#TattooShopHUD>span:hover,
+div#changeVehOwnerHUD>span:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+div#changeVehOwnerHUD>p.desc {
+    color: #c7c5c5;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-bottom: 3vh;
+    font-weight: bold;
+}
+
+div#TattooShopHUD>p.title,
+div#changeVehOwnerHUD>p.title {
+    font-family: BNT;
+    color: #d2d2d2;
+    font-size: 24px;
+    background: #000000;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-image: linear-gradient(-200deg, #8d0000, #3f3f3f);
+    padding: 4px;
+    border-bottom: 1px solid #353535;
+}
+
+div#changeVehOwnerHUD {
+    width: 300px;
+    position: absolute;
+    background: #000000e5;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 1px 4px 22px rgb(25 25 25 / 80%) !important;
+    right: 50px;
+    top: 18vw;
+    height: 15vw;
+}
+
+div#TattooShopHUD {
+    width: 600px;
+    position: absolute;
+    background: #000000e5;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 1px 4px 22px rgba(25, 25, 25, 0.8) !important;
+    right: 50px;
+    top: 10vw;
+    height: 27vw;
+}
+
+ul#TattooShopHUD-TattooList {
+    overflow: auto;
+}
+
+ul#TattooShopHUD-TattooList>li>button {
+    font-size: 12px;
+    background: #1f1f1f;
+    border-radius: 4px;
+    border: 1px solid #101010;
+    opacity: .7;
+    transition: all 0.3s ease-in-out;
+}
+
+ul#TattooShopHUD-TattooList>li>button.blue:hover {
+    background: #205694 !important;
+}
+
+ul#TattooShopHUD-TattooList>li>button:hover {
+    background: #209449;
+    opacity: 1;
+}
+
+ul#TattooShopHUD-TattooList>li>span {
+    color: #d2d2d2;
+    font-family: OSR;
+    font-size: 14px;
+    float: left;
+    border-right: 1px solid #3c3c3c;
+    width: 8vw;
+    text-align: center;
+}
+
+ul#TattooShopHUD-TattooList>li>button {
+    margin-left: 5px;
+}
+
+ul#TattooShopHUD-TattooList>li>span {
+    width: 12vw !important;
+}
+
+div#TattooShopHUD>ul#TattooShopHUD-HomeList>li>p {
+    color: #d2d2d2;
+}
+
+div#TattooShopHUD-TattooList {
+    display: none;
+}
+
+div#TattooShopHUD>ul#TattooShopHUD-HomeList>li:hover {
+    opacity: 1;
+    background-color: #4e6cac;
+}
+
+div#TattooShopHUD>ul {
+    display: block;
+    margin-left: 0.5vw;
+    position: relative;
+    height: 28vw;
+    max-height: 28vw;
+    overflow-y: auto;
+}
+
+div#TattooShopHUD>ul#TattooShopHUD-TattooList>li {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    padding: 1.25rem 1.25rem !important;
+}
+
+div#TattooShopHUD>ul#TattooShopHUD-HomeList>li {
+    padding: 1.25rem 1.25rem !important;
+    width: 9vw;
+    float: left;
+    border-radius: 4px !important;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    background: #1d1d1d;
+    border: 1px solid #060606;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    padding-bottom: 0px !important;
+    transition: all 0.3s ease-in-out;
+    opacity: .7;
+}
+
+ul#TattooShopHUD-TattooList {
+    margin-left: 0 !important;
+}
+
+ul#TattooShopHUD-TattooList>li:nth-child(odd) {
+    background: #101010;
+}
+
+ul#TattooShopHUD-TattooList>li:nth-child(even) {
+    background: #191919;
+}
+
+div#Deathscreen-Box {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* N E W */
+
+
+
+#hudbox2>#HealthBox>#hr {
+    width: 0;
+    z-index: 201;
+    transform: translate(-50%, -50%);    
+    border: 2px solid #00000000;
+    border-radius: 2px;
+    background: #00a11bfd;
+    height: 5;
+    margin-left: 37;
+    margin-bottom: 100;
+    margin-top: -30;
+    /*/COPYRIGHT/*/
+}
+#hudbox2>#ArmorBox>#hr {
+    width: 0;
+    z-index: 200;
+    transform: translate(-50%, -50%);    
+    border: 2px solid #00000000;
+    border-radius: 2px;
+    background: #198ae6fd;
+    height: 5;
+    margin-left: 37;
+    margin-bottom: 25;
+    margin-top: -30;
+}
+
+
+p#MoneyBoxText {
+    left: 0 !important;
+    margin-bottom: 173;
+    /* margin-bottom: 272; */
+    margin-left: 10%;
+    z-index: 101;
+}
+
+p#HealthBoxText {
+    left: 0 !important;
+    margin-bottom: 239;
+    margin-left: 10%;
+    z-index: 101;
+}
+p#ArmorBoxText {
+    left: 0 !important;
+    margin-bottom: 206;
+    margin-left: 10%;
+    z-index: 101;
+}
+
+p#locationtext {
+    left: -410% !important;
+    margin-top: 2;
+    margin-bottom: 11;
+}
+#hudbox>#VehicleFuelBox {
+    bottom: 0;
+    position: absolute;
+    left: 410px;
+}
+
+#hudbox>#VehicleKMBox {
+    left: 710px !important;
+    bottom: 0;
+    position: absolute;
+}
+
+p#HealthBoxText,
+p#ArmorBoxText,
+p#MoneyBoxText,
+p#locationtext,
+p#VehicleSpeedBoxText{
+    bottom: 69.5px;
+    left: 28px;
+    position: absolute;
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-weight: bold;
+    width: auto;
+}
+p#VehicleFuelBoxText{
+    bottom: 4.5px;
+    left: 28px;
+    position: absolute;
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-weight: bold;
+    width: auto;
+}
+p#VehicleKMBoxText {
+    bottom: 36.5px;
+    left: 28px;
+    position: absolute;
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-weight: bold;
+    width: auto;
+}
+
+ul#InteractionMenu-List {
+    display: block;
+    position: relative;
+    left: 800px;
+    top: 440px;
+    list-style-type: none;
+    max-width: 650px;
+    margin: 0;
+    max-width: 300px;
+}
+
+ul#InteractionMenu-List>li {
+    position: absolute;
+    background-color: #2e3440;
+    opacity: .95;
+    color: #d2d2d2;
+    text-align: center;
+    border-radius: 25%;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    border: 2px solid #0a0a0ab8;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul#InteractionMenu-List>li:hover {
+    transform: scale(1.03);
+    border-left: #5969e7 2px solid;
+    border-right: #9e55ce 2px solid;
+    border-bottom: #5969e7 2px solid;
+    border-top: #9e55ce 2px solid;
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+    cursor: pointer;
+    opacity: 1;
+}
+
+ul#InteractionMenu-List>li>img {
+    height: 64px;
+    width: 64px;
+}
+
+ul#InteractionMenu-List>li>p {
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+ul#InteractionMenu-List>li:nth-child(1) {
+    background-color: #17171700;
+    color: #fff;
+    filter: grayscale(0.5);
+    border: 2px solid #00000000;
+    width: 100px;
+    height: 100px;
+    max-height: 100px;
+    max-width: 100;
+    margin-left: -8px;
+    margin-top: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul#InteractionMenu-List>li:nth-child(1)>p {
+    font-size: 15px;
+    word-break: break-word;
+}
+
+
+
+#identityCardApplyForm {
+    width: 450px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #141414;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    padding-bottom: 12px;
+}
+
+div#jobCenterApplyForm {
+    width: 700px;
+    top: 20%;
+    left: 50%;
+    margin-left: -400px;
+    padding: 20px;
+    position: absolute;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 8px;
+}
+
+div#VehicleFuelstationCEFBox {
+    width: 400px;
+    top: 20%;
+    left: 20%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0);
+}
+
+div#GivePlayerBillCEFBox,
+div#RecievePlayerBillCEFBox {
+    width: 450;
+    top: 20%;
+    left: 50%;
+    margin-left: -250px;
+    padding: 20px;
+    position: absolute;
+    background: #141414;
+    text-align: center;
+    border-radius: 8px;
+}
+
+div#FactionStorageCEFBox,
+div#VehicleTrunkCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #141414;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+}
+
+div#PlayerSearchInventoryCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #141414;
+    text-align: center;
+    border-radius: 8px;
+}
+
+div#VehicleLicensingCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #141414;
+    text-align: center;
+    border-radius: 8px;
+}
+
+div#HotelManageCEFBox,
+div#HouseEntranceCEFBox,
+div#TownhallHouseSelectorBox,
+div#HouseManageCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 8px;
+}
+
+div#GivePlayerLicenseCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #141414;
+    text-align: center;
+    border-radius: 8px;
+}
+
+div#Minijob-PilotCEFBox,
+div#Minijob-BusDriverCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #141414;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+}
+
+div#ClothesShopCEFBox {
+    width: 400px;
+    top: 20%;
+    left: 50px;
+    padding: 20px;
+    position: absolute;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    max-height: 560px;
+    overflow-y: auto;
+    display: none;
+}
+div#ClothesShopCEFBox>p.ClothesShopCEFBoxTitle {
+    color: #ffffff;
+    font-family: sans-serif;
+}
+div#ClothesShopCEFBox2 {
+    width: 400px;
+    top: 20%;
+    left: 50px;
+    padding: 20px;
+    position: absolute;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    max-height: 560px;
+    overflow-y: auto;
+}
+div#ClothesShopCEFBox3 {
+    width: 400px;
+    top: 20%;
+    left: 50px;
+    padding: 20px;
+    position: absolute;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    max-height: 560px;
+    overflow-y: auto;
+}
+div#ClothesShopCEFBox4 {
+    width: 400px;
+    top: 20%;
+    left: 50px;
+    padding: 20px;
+    position: absolute;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    max-height: 560px;
+    overflow-y: auto;
+}
+div#ClothesShopCEFBox5 {
+    width: 400px;
+    top: 20%;
+    left: 50px;
+    padding: 20px;
+    position: absolute;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    max-height: 560px;
+    overflow-y: auto;
+}
+
+#bankAccountManageForm {
+    width: 650px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #141414;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    padding-bottom: 12px;
+    border: 2px solid #58acfa00;
+}
+
+div#bankFactionATMForm {
+    width: 650px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #141414;
+    text-align: center;
+    border-radius: 6px;
+    padding-bottom: 12px;
+    border: 2px solid #58acfa00;
+}
+
+#bankATMbox {
+    width: 650px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    padding-bottom: 12px;
+    border: 2px solid #58acfa00;
+}
+
+#identityCardApplyForm>p.title,
+#bankAccountManageForm>p.title,
+div#bankFactionATMForm>p.title,
+#bankATMbox>p.title {
+    color: #fff;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+#jobCenterApplyForm>p.title,
+div#VehicleFuelstationCEFBox>p.title,
+div#GivePlayerBillCEFBox>p.title,
+div#RecievePlayerBillCEFBox>p.title,
+div#FactionStorageCEFBox>p.title,
+div#VehicleTrunkCEFBox>p.title,
+div#VehicleLicensingCEFBox>p.title,
+div#PlayerSearchInventoryCEFBox>p.title,
+div#GivePlayerLicenseCEFBox>p.title,
+div#Minijob-PilotCEFBox>p.title,
+div#Minijob-BusDriverCEFBox>p.title,
+div#HotelManageCEFBox>p.title,
+div#HouseEntranceCEFBox>p.title,
+div#TownhallHouseSelectorBox>p.title,
+div#HouseManageCEFBox>p.title {
+    font-size: 20px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+}
+
+div#HouseEntranceCEFBox>p.title.green {
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+div#GivePlayerLicenseCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+div#Minijob-PilotCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+div#Minijob-BusDriverCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+div#VehicleLicensingCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+}
+
+div#PlayerSearchInventoryCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+}
+
+div#GivePlayerBillCEFBox>p.title,
+div#RecievePlayerBillCEFBox>p.title,
+div#FactionStorageCEFBox>p.title,
+div#VehicleTrunkCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #58acfa) !important;
+}
+
+div#ClothesShopCEFBox>p.title {
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+}
+div#ClothesShopCEFBox2>p.title {
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+}
+div#ClothesShopCEFBox3>p.title {
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+}
+div#ClothesShopCEFBox4>p.title {
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+}
+div#ClothesShopCEFBox5>p.title {
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+}
+
+#jobCenterApplyForm>p.description {
+    color: #bebebe;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#jobCenterApplyForm>hr,
+div#VehicleFuelstationCEFBox>hr,
+div#GivePlayerBillCEFBox>hr,
+div#RecievePlayerBillCEFBox>hr,
+div#FactionStorageCEFBox>hr,
+div#VehicleTrunkCEFBox>hr,
+div#VehicleLicensingCEFBox>hr,
+div#PlayerSearchInventoryCEFBox>hr,
+div#GivePlayerLicenseCEFBox>hr,
+div#Minijob-PilotCEFBox>hr,
+div#Minijob-BusDriverCEFBox>hr,
+div#HotelManageCEFBox>hr,
+div#HouseEntranceCEFBox>hr,
+div#TownhallHouseSelectorBox>hr,
+div#HouseManageCEFBox>hr {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce);
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: .75;
+}
+
+div#HouseEntranceCEFBox>hr.green {
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce);
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+div#GivePlayerLicenseCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce) !important;
+    border-image-slice: 1 !important;
+}
+
+div#Minijob-PilotCEFBox>hr,
+div#Minijob-BusDriverCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce) !important;
+    border-image-slice: 1 !important;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container {
+    background: #1b1b1bc4;
+    width: 90%;
+    border: 1px solid #404ecd;
+    display: table;
+    padding: 10px;
+    padding-left: 15px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    opacity: .5;
+    transition: all 0.3s ease-in-out;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container>p.title {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-weight: bold;
+    float: left;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List {
+    overflow-y: auto;
+    max-height: 375px;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container>p.subtitle {
+    float: left;
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 14px;
+    margin-left: 20px;
+    width: 65%;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container>p.subtitle>font {
+    float: right;
+    font-weight: bold;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container>img {
+    float: left;
+    width: 156px;
+}
+
+div#Minijob-BusDriverCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #58acfa, #58acfa) !important;
+    border-image-slice: 1 !important;
+}
+
+div#VehicleLicensingCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #58acfa, #58acfa) !important;
+    border-image-slice: 1 !important;
+}
+
+div#PlayerSearchInventoryCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #58acfa, #58acfa) !important;
+    border-image-slice: 1 !important;
+}
+
+div#VehicleLicensingCEFBox>p.description,
+div#GivePlayerLicenseCEFBox>p.description,
+div#Minijob-PilotCEFBox>p.description,
+div#Minijob-BusDriverCEFBox>p.description,
+div#HotelManageCEFBox>p.description,
+div#HouseEntranceCEFBox>p.description,
+div#TownhallHouseSelectorBox>p.description,
+div#HouseManageCEFBox>p.description {
+    color: #bebebe;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group {
+    background: rgba(23, 23, 23, 0.7);
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 2px solid #58acfa00;
+    max-height: 285px;
+    overflow-y: auto;
+    display: block;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item {
+    position: relative;
+    height: 70px;
+    border-top: 1px solid #58acfa;
+    width: 100%;
+    max-height: 70px;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item:nth-child(odd) {
+    background: rgb(27, 27, 27);
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item:nth-child(1) {
+    border-top: none;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item:nth-child(even) {
+    background: rgb(39, 39, 39);
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container.left {
+    height: 100%;
+    width: 32%;
+    float: left;
+    border-right: 2px solid #58acfa;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container.mid {
+    height: 100%;
+    width: 25%;
+    float: left;
+    border-right: 2px solid #58acfa;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container.right {
+    height: 100%;
+    width: 40%;
+    float: left;
+}
+
+button.btn-anmelden {
+    border-color: #0e0e0e;
+    color: #d2d2d2;
+    background: rgb(21, 21, 21);
+    opacity: .5;
+    font-size: 14px;
+    text-align: center;
+    float: left;
+    transition: all 0.3s ease-in-out;
+    margin-right: 5px;
+}
+
+button.btn-abmelden {
+    border-color: #0e0e0e;
+    color: #d2d2d2;
+    background: rgb(21, 21, 21);
+    opacity: .5;
+    font-size: 14px;
+    text-align: center;
+    float: left;
+    transition: all 0.3s ease-in-out;
+}
+
+button.btn-anmelden:hover {
+    cursor: pointer;
+    color: #d2d2d2;
+    transform: scale(1.05);
+    background: rgb(35, 148, 91);
+    opacity: 1;
+}
+
+button.btn-abmelden:hover {
+    cursor: pointer;
+    color: #d2d2d2;
+    transform: scale(1.05);
+    background: rgb(148, 35, 35);
+    opacity: 1;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container.right>input {
+    outline: none;
+    border: 1px solid #58acfa;
+    background: rgba(0, 0, 0, 0.2);
+    width: 60%;
+    border-radius: 4px;
+    text-align: center;
+    color: #58acfa;
+    float: left;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container>p.title {
+    color: #58acfa;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: auto;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container>p.name {
+    color: #bebebe;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+div#GivePlayerBillCEFBox>hr,
+div#RecievePlayerBillCEFBox>hr,
+div#FactionStorageCEFBox>hr,
+div#VehicleTrunkCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce) !important;
+    border-image-slice: 1 !important;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group,
+div#VehicleTrunkCEFBox>div.container>ul.list-group,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group,
+div#GivePlayerLicenseCEFBox>ul.list-group,
+div#HotelManageCEFBox>ul.list-group {
+    background: #1e232cb4;
+    height: 210px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 2px solid #000102;
+    max-height: 210;
+    overflow-y: auto;
+    display: block;
+}
+
+div#HotelManageCEFBox>ul.list-group {
+    height: 450px !important;
+    max-height: 450px !important;
+}
+
+div#HotelManageCEFBox>ul.list-group {
+    border: none !important;
+    border: 2px solid #000102;
+}
+
+div#Minijob-PilotCEFBox>ul.list-group {
+    background: transparent;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    max-height: 150px;
+    overflow: hidden;
+    display: block;
+}
+
+div#GivePlayerLicenseCEFBox>ul.list-group {
+    height: 300px;
+    max-height: 300px;
+}
+
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group {
+    height: 310px !important;
+    max-height: 310px !important;
+}
+
+div#GivePlayerLicenseCEFBox>ul.list-group>li.list-group-item>p {
+    color: #58acfa;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item,
+div#GivePlayerLicenseCEFBox>ul.list-group>li.list-group-item,
+div#Minijob-PilotCEFBox>ul.list-group>li.list-group-item,
+div#HotelManageCEFBox>ul.list-group>li.list-group-item {
+    width: 30%;
+    margin-left: 2%;
+    margin-top: 1%;
+    background: #2e3440;
+    border: 2px solid #58acfa00;
+    border-radius: 4px;
+    float: left;
+    padding: 0px 0px;
+    padding-top: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 10px;
+    max-height: 135px;
+    height: 135px;
+    margin-bottom: 1%;
+    transition: all 0.3s ease-in-out;
+}
+
+div#HotelManageCEFBox>ul.list-group>li.list-group-item {
+    width: 278px !important;
+    margin-left: 16px !important;
+    border: 2px solid #2e344000 !important;
+    background: #2e3440 !important;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 200px;
+    max-height: 200px !important;
+}
+
+div#HotelManageCEFBox>ul.list-group>li.list-group-item>p.title {
+    color: #eaeaea;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    margin-top: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding-top: 4px;
+    border-bottom: 2px solid #0a0a0a00 !important;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container>p {
+    color: #ffffff;
+    font-family: PEL;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1.3px solid black;
+    border-bottom: 0;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container:nth-last-of-type(1)>p {
+    border-bottom: 1.3px solid black !important;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container:nth-last-of-type(1) {
+    margin-bottom: 15px;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>button {
+    cursor: pointer;
+    font-family: sans-serif;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    margin-left: 5px;
+    justify-content: center;
+    align-items: center;
+    border: 3px;
+    background: #202631;
+    width: 85px;
+    border-color: #00000000;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>button.green {
+    background: #202631 !important;
+    cursor: pointer;
+    font-family: sans-serif;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    margin-left: 5px;
+    justify-content: center;
+    align-items: center;
+    border: 3px;
+    width: 85px;
+    border-color: #00000000;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>button:hover {
+    /* transform: scale(1.03); */
+    border-left: #5969e7 3px solid;
+    border-right: #9e55ce 3px solid;
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+    cursor: pointer;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container>p.red {
+    background: #c73340eb;
+    border: 3px;
+    border-color: #00000000;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container>p.green {
+    background: #33c76799;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container>p>font {
+    float: right;
+    padding-right: 10px;
+}
+
+div#HotelManageCEFBox>ul.list-group>li.list-group-item>p.rentstate {
+    color: #d2d2d2;
+    font-family: sans-serif;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 15px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #08080800;
+}
+
+div#HotelManageCEFBox>ul>li>p.rentstate:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.34);
+}
+
+div#HotelManageCEFBox>ul>li>p.rentstate:nth-child(even) {
+    background: rgba(23, 23, 23, 0.34);
+}
+
+div#HotelManageCEFBox>ul>li>p.rentstate:nth-last-child(4) {
+    margin-bottom: 8px !important;
+}
+
+div#HotelManageCEFBox>ul.list-group>li.list-group-item>p.rentstate>i {
+    padding-right: 6px;
+}
+
+div#HotelManageCEFBox>ul.list-group>li.list-group-item>p.rentstate>font {
+    float: right;
+    padding-top: 2px;
+    font-size: 14px;
+    padding-right: 6px;
+    color: #e83838;
+}
+
+div#HotelManageCEFBox>ul>li>button.btn-sm.btn-danger {
+    background: #252525;
+    border: 1px solid #15151500;
+    opacity: .25;
+    width: 40px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+div#HotelManageCEFBox>ul>li>button.btn-sm.btn-danger:hover {
+    opacity: 1;
+    border-color: rgba(0, 0, 0, 0);
+    border-left: 0px;
+    border-right: 0px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+}
+
+div#Minijob-PilotCEFBox>ul.list-group>li.list-group-item {
+    background: rgb(19, 19, 19);
+    border: 2px solid #00000029;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    transition: all 0.3s;
+    filter: grayscale(1);
+}
+
+div#Minijob-PilotCEFBox>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    filter: grayscale(0);
+    transform: scale(1.08);
+}
+
+div#Minijob-PilotCEFBox>ul.list-group>li.list-group-item>p.title {
+    background-image: linear-gradient(to right, #58acfa, #155999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-bottom: -40;
+}
+
+div#Minijob-PilotCEFBox>ul.list-group>li.list-group-item>p.veh {
+    color: #58acfa;
+    font-family: sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+div#GivePlayerLicenseCEFBox>ul.list-group>li.list-group-item:hover {
+    opacity: 1;
+    cursor: pointer;
+    background: rgba(54, 191, 103, 0.78);
+    transform: scale(1.05);
+}
+
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item {
+    padding-top: 15px !important;
+    max-height: 140px;
+    height: 140px;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item>img,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item>img,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item>img {
+    width: 32px;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item>button,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item>button,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item>button {
+    border-color: #58acfa;
+    background: #3a3a3a;
+    font-size: 13px;
+    opacity: .6;
+    transition: all 0.3s ease-in-out;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item>button:hover,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item>button:hover,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item>button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background: #58acfa;
+    border-color: #3a3a3a;
+    opacity: 1;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item>input,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item>input,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item>input {
+    width: 40%;
+    outline: none;
+    border: 1px solid #58acfa;
+    background: #2b2b2b;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: sans-serif;
+    font-size: 13px;
+    text-align: center;
+    color: #58acfa;
+    font-weight: bold;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item>p.name,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item>p.name,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item>p.name {
+    color: #58acfa;
+    font-family: sans-serif;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+div#FactionStorageCEFBox>div.container>p.title,
+div#VehicleTrunkCEFBox>div.container>p.title {
+    color: #58acfa;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-bottom: 0.35rem;
+}
+
+div#GivePlayerBillCEFBox>div.container>p,
+div#RecievePlayerBillCEFBox>div.container>p {
+    color: #58acfa;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-bottom: 0.35rem;
+}
+
+div#GivePlayerBillCEFBox>div.container>input#GivePlayerBillCEFBox-AmountInput,
+div#GivePlayerBillCEFBox>div.container>input#GivePlayerBillCEFBox-ReasonInput,
+div#RecievePlayerBillCEFBox>div.container>input#RecievePlayerBillCEFBox-NameInput,
+div#RecievePlayerBillCEFBox>div.container>input#RecievePlayerBillCEFBox-AmountInput,
+div#RecievePlayerBillCEFBox>div.container>input#RecievePlayerBillCEFBox-ReasonInput {
+    outline: none;
+    border: 1px solid #131212;
+    background: rgba(51, 51, 51, 0.82);
+    text-align: center;
+    color: #58acfa;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-bottom: 1.25rem;
+    padding: 2px 0px;
+}
+
+div#GivePlayerBillCEFBox>button.btn,
+div#RecievePlayerBillCEFBox>button.btn {
+    cursor: pointer;
+    border-color: #1d1d1d;
+    font-family: sans-serif;
+    color: #58acfa;
+    font-weight: bold;
+    background: #2d2d2de0;
+    padding: 5px 10px;
+    font-size: 14px;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+div#GivePlayerBillCEFBox>button.btn:hover,
+div#RecievePlayerBillCEFBox>button.btn:hover {
+    cursor: pointer;
+    color: #2d2d2de0;
+    font-weight: bold;
+    background: #58acfa;
+}
+
+
+/*CEF*/
+div#ClothesShopCEFBox>hr,
+div#ClothesShopCEFBox>div.container>hr {
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: .75;
+}
+
+div#ClothesShopCEFBox>div.container>hr {
+    border-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border-image-slice: 1;
+}
+
+div#ClothesShopCEFBox>div.container>p.title {
+    color: #ffffff;
+    font-family: sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-left: -50;
+    margin-bottom: -15;
+}
+
+div#ClothesShopCEFBox>div.container>p.name {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+div#ClothesShopCEFBox>div.container>img {
+    float: left;
+    width: 30;
+    position: absolute;
+    left: 35px;
+    margin-bottom: 25px;
+    margin-top: -5;
+}
+
+div#ClothesShopCEFBox>div.container>button.enter {
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    margin-left: 250;
+    font-size: 20px;
+    border-radius: 2px;
+    width: 50;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox>div.container>button.buybtn {
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    opacity: .5;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 60px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox>div.container>button.clothbtn:hover{
+    cursor: pointer;
+    color: #58acfa;
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+div#ClothesShopCEFBox>div.container>button.buybtn:hover {
+    cursor: pointer;
+    color: #58acfa;
+    background-image: linear-gradient(to right, #175305, #d2d2d2);
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+/*CEF2*/
+div#ClothesShopCEFBox2>hr,
+div#ClothesShopCEFBox2>div.container>hr {
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: .75;
+}
+
+div#ClothesShopCEFBox2>div.container>hr {
+    border-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border-image-slice: 1;
+}
+
+div#ClothesShopCEFBox2>div.container>p.title {
+    color: #ffffff;
+    font-family: sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+div#ClothesShopCEFBox2>div.container>p.name {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+div#ClothesShopCEFBox2>div.container>img {
+    float: left;
+    width: 50;
+    position: absolute;
+    left: 35px;
+    margin-bottom: 25px;
+    margin-top: -5;
+}
+
+div#ClothesShopCEFBox2>div.container>button.clothbtn {
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    border-radius: 2px;
+    width: 50;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox2>div.container>button.buybtn {
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    opacity: .5;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 60px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox2>div.container>button.clothbtn:hover{
+    cursor: pointer;
+    color: #ffffff ;
+    background-image: linear-gradient(to right, #5969e7, #5969e7);
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+div#ClothesShopCEFBox2>div.container>button.buybtn:hover {
+    cursor: pointer;
+    color: #58acfa;
+    background-image: linear-gradient(to right, #094b00, #094b00);
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+/*CEF3*/
+div#ClothesShopCEFBox3>hr,
+div#ClothesShopCEFBox3>div.container>hr {
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: .75;
+}
+
+div#ClothesShopCEFBox3>div.container>hr {
+    border-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border-image-slice: 1;
+}
+
+div#ClothesShopCEFBox3>div.container>p.title {
+    color: #ffffff;
+    font-family: sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+div#ClothesShopCEFBox3>div.container>p.name {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+div#ClothesShopCEFBox3>div.container>img {
+    float: left;
+    width: 50;
+    position: absolute;
+    left: 35px;
+    margin-bottom: 25px;
+    margin-top: -5;
+}
+
+div#ClothesShopCEFBox3>div.container>button.clothbtn {
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    border-radius: 2px;
+    width: 50;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox3>div.container>button.buybtn {
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    opacity: .5;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 60px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox3>div.container>button.clothbtn:hover{
+    cursor: pointer;
+    color: #58acfa;
+    background-image: linear-gradient(to right, #5969e7, #5969e7);
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+div#ClothesShopCEFBox3>div.container>button.buybtn:hover {
+    cursor: pointer;
+    color: #58acfa;
+    background-image: linear-gradient(to right, #094b00, #094b00);
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+/*CEF4*/
+div#ClothesShopCEFBox4>hr,
+div#ClothesShopCEFBox4>div.container>hr {
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: .75;
+}
+
+div#ClothesShopCEFBox4>div.container>hr {
+    border-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border-image-slice: 1;
+}
+
+div#ClothesShopCEFBox4>div.container>p.title {
+    color: #ffffff;
+    font-family: sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+div#ClothesShopCEFBox4>div.container>p.name {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+div#ClothesShopCEFBox4>div.container>img {
+    float: left;
+    width: 50;
+    position: absolute;
+    left: 35px;
+    margin-bottom: 25px;
+    margin-top: -5;
+}
+
+div#ClothesShopCEFBox4>div.container>button.clothbtn {
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    border-radius: 2px;
+    width: 50;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox4>div.container>button.buybtn {
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    opacity: .5;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 60px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox4>div.container>button.clothbtn:hover{
+    cursor: pointer;
+    color: #58acfa;
+    background-image: linear-gradient(to right, #5969e7, #5969e7);
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+div#ClothesShopCEFBox4>div.container>button.buybtn:hover {
+    cursor: pointer;
+    color: #58acfa;
+    background-image: linear-gradient(to right, #094b00, #094b00);
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+/*CEF5*/
+div#ClothesShopCEFBox5>hr,
+div#ClothesShopCEFBox5>div.container>hr {
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: .75;
+}
+
+div#VehicleShopCEFBox>hr,
+div#ClothesShopCEFBox5>div.container>hr {
+    border-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border-image-slice: 1;
+}
+
+div#ClothesShopCEFBox5>div.container>p.title {
+    color: #ffffff;
+    font-family: sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+div#ClothesShopCEFBox5>div.container>p.name {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+div#ClothesShopCEFBox5>div.container>img {
+    float: left;
+    width: 50;
+    position: absolute;
+    left: 35px;
+}
+
+div#ClothesShopCEFBox5>div.container>button.clothbtn {
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    border-radius: 2px;
+    width: 50;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox5>div.container>button.buybtn {
+    background-image: linear-gradient(to right, #5969e7, #9e55ce );
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    opacity: .5;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 60px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox5>div.container>button.clothbtn:hover{
+    cursor: pointer;
+    color: #58acfa;
+    background-image: linear-gradient(to right, #5969e7, #5969e7);
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+div#ClothesShopCEFBox5>div.container>button.buybtn:hover {
+    cursor: pointer;
+    color: #58acfa;
+    background-image: linear-gradient(to right, #094b00, #094b00);
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+div#VehicleFuelstationCEFBox>div.container>p.subtitle {
+    text-align: left;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+div#VehicleFuelstationCEFBox>div.container>p.subtitle>font {
+    float: right;
+    color: #fff;
+    font-weight: bold;
+}
+
+div#VehicleFuelstationCEFBox>div.container>p.title {
+    font-size: 16px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#identityCardApplyForm>p.description,
+#bankAccountManageForm>p.description,
+div#bankFactionATMForm>p.description,
+#bankATMbox>p.description {
+    color: #fff;
+    font-size: 12px;
+    padding-left: 12px;
+    font-family: sans-serif;
+    padding-right: 12px;
+}
+
+#identityCardApplyForm>hr {
+    border-top: 1px solid #58acfa;
+    width: 400px;
+}
+
+#bankAccountManageForm>hr,
+#bankATMbox>hr {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce);
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+#identityCardApplyForm>.inputgroup {
+    margin-bottom: 0.75rem;
+}
+
+#identityCardApplyForm>.inputgroup>.icon {
+    display: inline;
+    background: #e5324a00;
+    color: #58acfa;
+    font-size: 15px;
+    margin-right: -50;
+    border: 1px solid #0c0c0c00;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+#identityCardApplyForm>.inputgroup>#identityCardApplyFormCharname,
+#identityCardApplyForm>.inputgroup>#identityCardApplyFormGender,
+#identityCardApplyForm>.inputgroup>#identityCardApplyFormAdress,
+#identityCardApplyForm>.inputgroup>#identityCardApplyFormBirthdate,
+#identityCardApplyForm>.inputgroup>#identityCardApplyFormBirthplace {
+    background: #00000066;
+    outline: none;
+    border: 1px solid #0c0c0c;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #58acfa;
+    margin-left: -5px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+#identityCardApplyForm>img#sendIdentityCardApplyForm {
+    width: 186px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform: rotate(6deg);
+    opacity: .5;
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(.7);
+}
+
+#identityCardApplyForm>img#sendIdentityCardApplyForm:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: rotate(0deg);
+    transform: scale(1.15);
+    filter: grayscale(0);
+}
+
+#bankAccountManageForm>ul.list-group,
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group,
+div#bankFactionATMForm>ul.list-group {
+    float: left;
+    background: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-left: 10px;
+    display: block;
+}
+
+div#bankFactionATMForm>ul.list-group {
+    padding: 0 !important;
+}
+
+div#jobCenterApplyForm>ul.list-group {
+    float: left;
+    background: #202631;
+    padding: 15px;
+    padding-top: 0px;
+    border-radius: 8px;
+    margin-left: -6px;
+    display: block;
+    max-width: 675px;
+    min-width: 675px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    max-height: 460px;
+    overflow-y: auto;
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group {
+    float: left;
+    background: rgba(51, 51, 51, 0.192);
+    padding: 5px;
+    padding-top: 0px;
+    border-radius: 8px;
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    max-height: 460px;
+    overflow-y: auto;
+}
+
+div#jobCenterApplyForm>ul.list-group>li.list-group-item>i.fa.fa-check {
+    position: absolute;
+    color: #fff;
+    background: #fff;
+    padding: 5px;
+    border-top-right-radius: 2px;
+    right: 0;
+    border-bottom-left-radius: 4px;
+    top: 0;
+    text-align: center;
+    border: 1px solid #58acfa00;
+    border-top: none;
+    border-right: none;
+    opacity: .2;
+    transition: all 0.5s ease-in-out;
+}
+
+div#jobCenterApplyForm>ul.list-group>li.list-group-item>i.fa.fa-check:hover {
+    cursor: pointer;
+    opacity: .8;
+    transform: scale(1.05);
+}
+
+div#shopCEFBox>ul.list-group {
+    float: left;
+    background: #2e3440;
+    padding: 12px;
+    border-radius: 8px;
+    display: block;
+    max-height: 410px;
+    overflow-y: auto;
+    border: 2px groove #58acfa00;
+    width: 590px !important;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group,
+div#bankFactionATMForm>ul.list-group {
+    margin-bottom: -15px;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item {
+    background: #202631 !important;
+    float: left;
+    padding: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 350;
+    max-height: 35px;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    border: 2px groove #58acfa00;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div#jobCenterApplyForm>ul.list-group>li.list-group-item {
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);;
+    float: left;
+    padding: 15px;
+    margin-left: 10px;
+    text-align: center;
+    border-right-color: rgba(0, 0, 0, 0);
+    border-right: 0px !important;
+    border-left: 0px !important;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.42);
+    transition: all 0.3s ease-in-out;
+    border: 2px groove #58acfa00;
+    width: 208px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group>li.list-group-item {
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%)  !important;
+    float: left;
+    padding: 15px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+    transition: all 0.3s ease-in-out;
+    border: 2px groove #131212c9;
+    width: 312px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: all 0.1s ease-in-out;
+    filter: grayscale(.8);
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group>li.list-group-item>img {
+    margin-top: 5px;
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group>li.list-group-item:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group>li.list-group-item:hover>p {
+    color: #fff;
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group>li.list-group-item>p {
+    margin-bottom: 0;
+    margin-top: 15px;
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+div#VehicleFuelstationCEFBox>div.container>form {
+    margin-block-end: 0.25rem;
+}
+
+div#jobCenterApplyForm>ul.list-group>li.list-group-item>p.title {
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+div#jobCenterApplyForm>ul.list-group>li.list-group-item>hr {
+    margin-top: -6px;
+    border-color: #2e3440;
+}
+
+div#jobCenterApplyForm>ul.list-group>li.list-group-item>p.subtitle>font.content {
+    color: #fff;
+    float: right;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+div#jobCenterApplyForm>ul.list-group>li.list-group-item>p.subtitle {
+    color: #bebebe;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>img {
+    width: 25px;
+    margin-bottom: 5px;
+    margin-top: -12;
+    margin-left: -315;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>p.name {
+    color: #d2d2d2;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 5;
+    margin-top: -27;
+    font-size: 14px;
+    /* margin-left: -160; */
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>p.price {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-top: -34;
+    font-weight: bold;
+    z-index: 10001;
+    margin-left: 250;
+    background: #181d27;
+    border: 1px solid #ffd90000;
+    width: 75;
+    border-radius: 5px;
+}
+
+div#shopCEFBox>hr {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce);
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: .75;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>input {
+    outline: none;
+    border: none;
+    height: 35;
+    width: 100px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 4px;
+    background: #202631;
+    border: 1px solid #58acfa00;
+    margin-top: -40;
+    margin-left: 350;
+    z-index: 1000001;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>button {
+    font-size: 16;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6;
+    height: 35;
+    border-radius: 4px;
+    padding-bottom: 6px;
+    margin-top: -40;
+    margin-left: 455;
+    width: 60px;
+    border: none;
+    background-color: #202631;
+    color: #fff;
+    margin-right: -5px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>button:hover {
+    transform: scale(1.03);
+    border-left: #5969e7 2px solid;
+    border-right: #9e55ce 2px solid;
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+    /* cursor: pointer; */
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item,
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item,
+div#bankFactionATMForm>ul.list-group>li.list-group-item {
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%) !important;
+    float: left;
+    padding: 1rem;
+    margin-left: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.42);
+    transition: all 0.3s ease-in-out;
+    border: 2px groove #2c2f31;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item,
+div#bankFactionATMForm>ul.list-group>li.list-group-item {
+    padding: 2rem !important;
+    margin-left: 50px !important;
+    width: 200px !important;
+    opacity: .4;
+    padding-bottom: 0rem !important;
+    margin-bottom: 20px;
+    border-color: #2c2f31 !important;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item {
+    margin-left: 40px !important;
+    width: 230px !important;
+    border-color: #58acfa !important;
+    opacity: .8;
+    padding-top: 15px !important;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item:hover {
+    opacity: .85;
+    cursor: pointer;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item>p.title,
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.title {
+    color: #fff;
+    padding-top: 12px;
+    font-family: sans-serif;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.title {
+    padding-top: 0px !important;
+    margin-bottom: 0.6vw;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.title:hover {
+    cursor: pointer;
+    border-color: #0c0c0c;
+    background: #ad3434;
+    letter-spacing: 1px;
+}
+
+input#bankFactionATMForm-DepositInput,
+input#bankFactionATMForm-WithDrawInput {
+    outline: none;
+    border: none;
+    background: rgba(95, 95, 95, 0.34);
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #58acfa;
+    font-family: sans-serif;
+    border: 1px solid #131313;
+    padding: 0.2rem 0rem;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item.new {
+    border: 2px dashed #58acfa;
+    height: 230px;
+    transition: all 0.5s ease-in-out;
+    color: #23262b;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item.new:hover {
+    background: #58acfa41 !important;
+    color: #d2d2d2 !important;
+    cursor: pointer;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item.new>i {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>p.title {
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #58acfa;
+    padding-bottom: 10px;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>p.floatleft {
+    float: left;
+    width: 50%;
+    text-align: left;
+    color: #d2d2d2;
+    font-size: 15px;
+    border-bottom: 1px solid #7373731c;
+    padding-bottom: 16px;
+    font-family: sans-serif;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>p.floatright {
+    float: left;
+    width: 50%;
+    text-align: right;
+    color: #58acfa;
+    font-size: 15px;
+    border-bottom: 1px solid #7373731c;
+    padding-bottom: 16px;
+    font-family: PT;
+    font-weight: bold;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>button {
+    margin-left: 8px;
+    padding: 9px;
+    font-size: 16px;
+    text-align: center;
+    background: #58acfa;
+    border-color: #242d28;
+    transition: all 0.3s ease-in-out;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>button:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+    background: #58acfa;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>button:focus {
+    box-shadow: 0 0 0 0.1rem rgba(50, 51, 50, 0.5);
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>input#bankATMBox-PinInput,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput {
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    padding-top: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.47);
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    border-radius: 6px;
+    border: 2px solid #252b28;
+    opacity: .35;
+    transition: all 0.5s ease-in-out;
+}
+
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput {
+    margin-top: 0 !important;
+    padding-bottom: 6px !important;
+    padding-top: 6px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>input#bankATMBox-PinInput::placeholder,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput::placeholder,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput::placeholder,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput::placeholder,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput::placeholder,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput::placeholder,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput::placeholder,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput::placeholder {
+    color: #fff;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>input#bankATMBox-PinInput:focus,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput:focus,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput:focus,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput:focus,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput:focus,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput:focus,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput:focus,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput:focus {
+    opacity: .8;
+    transform: scale(1.05);
+}
+
+div#bankATMbox>div#bankATMbox-DepositArea>p.title,
+div#bankATMbox>div#bankATMbox-WithDrawArea>p.title,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>p.title {
+    color: #fff;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>button#bankATMBox-PinInput-Button,
+div#bankATMbox>div#bankATMbox-DepositArea>button#bankATMBox-DepositArea-Button,
+div#bankATMbox>div#bankATMbox-WithdrawArea>button#bankATMBox-WithdrawArea-Button,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>button#bankATMBox-DoMoneyTransfer-Button {
+    border: 1px solid #51575c;
+    margin-top: 12px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 3px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 6px;
+    opacity: .5;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>button#bankATMBox-PinInput-Button:hover,
+div#bankATMbox>div#bankATMbox-DepositArea>button#bankATMBox-DepositArea-Button:hover,
+div#bankATMbox>div#bankATMbox-WithdrawArea>button#bankATMBox-WithdrawArea-Button:hover,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>button#bankATMBox-DoMoneyTransfer-Button:hover {
+    background: #2e3440;
+    border-left-color: #5969e7;
+    border-right-color: #9e55ce;
+    border-bottom-color: #282e3b;
+    border-top-color: #282e3b;
+    cursor: pointer;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List {
+    display: block;
+    float: left;
+    top: 46px;
+    max-height: 370px;
+    overflow-y: auto;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.green {
+    border-left: 5px solid #23a55d !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.red {
+    border-left: 5px solid #bf3f32 !important;
+    background: rgba(204, 70, 70, 0.32) !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.blue {
+    border-left: 5px solid #3287bf !important;
+    background: rgba(70, 133, 204, 0.32) !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card {
+    min-width: 600px;
+    max-width: 600px;
+    max-height: 190px;
+    min-height: 190px;
+    margin-left: 5px;
+    margin-bottom: 14px;
+    background: #25303a !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card>div.card-header {
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    letter-spacing: 0.1px;
+    padding-left: 0.8rem;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card>div.card-body>h6.card-title {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card>div.card-body>p.card-text {
+    font-family: sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.green>div.card-body>p.card-text>b {
+    color: #23a55d !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.red>div.card-body>p.card-text>b {
+    color: #bf3f32 !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.blue>div.card-body>p.card-text>b {
+    color: #3287bf !important;
+}
+
+div#bankATMbox>span#bankATMbox-CloseBankCef {
+    position: absolute;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-right-radius: 6px;
+    top: 0;
+    border-top-left-radius: 6px;
+    border: 1px solid #fff;
+    border-left: none;
+    border-top: none;
+    z-index: 100;
+}
+
+div#bankATMbox>span#bankATMbox-CloseBankCef:hover {
+    cursor: pointer;
+}
+div#bankATMbox>span#bankATMbox-CloseBankCef2 {
+    position: absolute;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    left: 138;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-right-radius: 6px;
+    top: 0;
+    border-top-left-radius: 6px;
+    border: 1px solid #fff;
+    border-left: none;
+    border-top: none;
+}
+
+
+div#bankATMbox>span#bankATMbox-CloseBankCef2:hover {
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+div#bankAccountManageForm>span.closeBankManageForm,
+div#shopCEFBox>span.closeBankManageForm,
+div#barberCEFBox>span.closeBarberCEF,
+div#bankFactionATMForm>span.closeBankManageForm {
+    background: rgba(0, 0, 0, 0);
+    color: #d2d2d2;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    position: absolute;
+    text-align: center;
+    left: -0;
+    top: -0;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 4px;
+    opacity: .80;
+    transition: all 0.5s ease-in-out;
+}
+
+div#bankAccountManageForm>span.closeBankManageForm:hover,
+div#shopCEFBox>span.closeBankManageForm:hover,
+div#barberCEFBox>span.closeBarberCEF:hover,
+div#bankFactionATMForm>span.closeBankManageForm:hover {
+    opacity: .8;
+    background: rgba(160, 28, 28, 0.68);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+div#shopCEFBox {
+    width: 625px;
+    top: 20%;
+    left: 150px;
+    padding: 10px;
+    position: absolute;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 6px;
+    padding-bottom: 12px;
+    border: 2px solid #1c62a400;
+}
+
+div#barberCEFBox {
+    width: 400px;
+    padding: 35px;
+    padding-left: 20px;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 215px;
+    transform: translate(-50%, -50%);
+    background: #000000e6;
+    border-radius: 6px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    padding-bottom: 12px;
+}
+
+div#barberCEFBox>p.title {
+    text-align: center;
+    color: #58acfa;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    margin-top: -10px;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-caption>i.fas.fa-angle-double-right.dropdown {
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    padding-left: 7px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+    margin-right: 0.25rem;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent {
+    background: rgba(10, 10, 10, 0.38);
+    padding-left: 8px;
+    padding-top: 6px;
+    border-bottom: 1px solid #252525;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent>p {
+    color: #58acfa;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.05rem;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel {
+    margin-bottom: -0.8rem;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel>form>input.slider,
+div#VehicleFuelstationCEFBox>div.container>form>input#VehicleFuelStationCEFBox-LiterSlider {
+    opacity: 0.5;
+    -webkit-appearance: none;
+    width: 298px;
+    height: 15px;
+    background: #232936;
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    border-radius: 2px
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel>form>input.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 20px;
+    background: linear-gradient(to left, #58acfa 0%, #58acfa 100%);
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+div#VehicleFuelstationCEFBox>div.container>form>input#VehicleFuelStationCEFBox-LiterSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 20px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel>form>output.numberfield,
+div#VehicleFuelstationCEFBox>div.container>form>output.numberfield {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0);
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #58acfa;
+    font-size: 0.85rem;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-radius: 4px;
+    margin-left: 10px;
+    top: -4px;
+    position: relative;
+}
+
+div#barberCEFBox>div.dropdown {
+    width: 360px;
+}
+
+div#barberCEFBox>div.dropdown div.dropdown-caption {
+    display: block;
+    box-sizing: border-box;
+    padding: 15px;
+    transition: all .25 ease;
+}
+
+div#barberCEFBox>div.dropdown .dropdown-selector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+
+div#barberCEFBox>button {
+    background: #58acfa00;
+    border: none;
+    color: #58acfa;
+    border: 2px solid #58acfa00;
+    opacity: .45;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: sans-serif;
+    width: 200px;
+    margin-left: 50%;
+    transform: translateX(-100px);
+    transition: all 0.3s ease-in-out;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+div#barberCEFBox>button:hover {
+    opacity: .9;
+    cursor: pointer;
+    font-weight: bold;
+    /* border: 3px solid #58acfa; */
+    border-left: 3px solid #5969e7;
+    border-right: 3px solid #9e55ce;
+    clip-path: polygon(7% 0%, 100% 0%, 93% 100%, 0% 100%);
+}
+
+div#barberCEFBox>div.dropdown div.dropdown-content {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    max-height: 0;
+    opacity: .5;
+    transition: all .25s ease;
+    overflow: hidden;
+}
+
+div#barberCEFBox>div.dropdown div.dropdown-content li {
+    list-style: none;
+    display: block;
+    padding: 15px;
+}
+
+div#barberCEFBox>div.dropdown .dropdown-selector:checked~.dropdown-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+div#barberCEFBox>div.dropdown {
+    font-family: Proxima Nova, Arial, sans-serif;
+    border-bottom: 1px solid #58acfa;
+    font-size: 14px;
+}
+
+div#barberCEFBox>div.dropdown .dropdown-caption {
+    line-height: 20px;
+    padding: 5px 10px;
+    color: #58acfa;
+    background: #7575752e;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 2px;
+}
+
+div#barberCEFBox>div.dropdown .dropdown-caption:after {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+    right: 17px;
+}
+
+div#barberCEFBox>.dropdown-selector:checked~.dropdown-caption:before {
+    -webkit-transform: rotateZ(135deg);
+    transform: rotateZ(135deg);
+}
+
+div#barberCEFBox>.dropdown-selector:checked~.dropdown-caption:after {
+    -webkit-transform: rotateZ(-135deg);
+    transform: rotateZ(-135deg);
+}
+
+div#healthLowBorder {
+    min-height: 100%;
+    border-color: darkred red;
+    border-style: inset;
+    border-width: 10px;
+    opacity: 0.4;
+}
+
+div#GarageCEFBox {
+    width: 615px;
+    padding: 35px;
+    top: 20%;
+    position: absolute;
+    z-index: 100;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 1px 4px 22px rgba(25, 25, 25, 0.8) !important;
+    padding-bottom: 0;
+    left: 20px;
+}
+
+div#GarageCEFBox>p#GarageCEFBOX-title {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: -15px;
+    background: rgba(70, 70, 70, 0);
+    font-size: 20px;
+    border-top-right-radius: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 12px;
+    border: 1px solid #33323240;
+}
+
+
+div#GarageCEFBox>hr {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #5969e7, #9e55ce);
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: .75;
+    width: 615;
+    margin-left: -35;
+}
+
+div#GarageCEFBox>div.secbox {
+    background: #333a46;
+    margin-left: -35px;
+    margin-right: -35px;
+    margin-top: -16px;
+    z-index: 100;
+    padding: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #58acfa00;
+    display: flow-root;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+div#GarageCEFBox>div.secbox>p.title {
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+    color: #dededb;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+div#GarageCEFBox>div.secbox>p.infotext {
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList {
+    margin-bottom: 0.5rem;
+    display: block;
+    float: left;
+    max-height: 350px;
+    width: 585;
+    overflow-y: auto;
+    background-color: #1a1f27;
+    border-radius: 5px;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item {
+    background: #2e3440;
+    padding: 0 0;
+    text-align: left;
+    margin-left: 0.8rem;
+    float: left;
+    max-width: 263px;
+    border-radius: 4px;
+    border: 1px solid #ffffff1a;
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(0.3);
+    margin-top: 0.4rem;
+    margin-right: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.iswhat1 {
+    color: rgb(0, 255, 0);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: right;
+    background: rgba(255, 255, 255, 0);
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #00000000;
+    border-top: none;
+    width: 125;
+    margin-top: 5px;
+}
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.iswhat2 {
+    color: rgb(255, 0, 0);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: right;
+    background: rgba(255, 255, 255, 0);
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #00000000;
+    border-top: none;
+    width: 125;
+    margin-top: 5px;
+}
+
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.iswhat1,
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.iswhat2 {
+    float: right;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehname{
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0);
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #00000000;
+    border-top: none;
+    width: 125;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehkz {
+    color: #c3bcbc;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0);
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #00000000;
+    border-top: none;
+    width: 125;
+    margin-top: -5px;
+    margin-right: 35px;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehname {
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-left: none;
+    float: left;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehkz {
+    float: right;
+    border-right: none;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>img {
+    width: 15%;
+    margin-left: 25px;
+    margin-bottom: 0px;
+    margin-top: 4px;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item.green:hover {
+    cursor: pointer;
+    border: 1px solid green;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item.red:hover {
+    cursor: pointer;
+    border: 1px solid red;
+}
+
+div#VehicleShopCEFBox {
+    width: 560px;
+    padding: 35px;
+    position: absolute;
+    z-index: 100;
+    background: #2e3440;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 1px 4px 22px rgba(25, 25, 25, 0.8) !important;
+    left: 35px;
+    top: 150px;
+}
+
+div#AnimationMenuBox {
+    width: 450px;
+    height: 700px;
+    position: absolute;
+    z-index: 100;
+    background: rgb(18, 18, 23);
+    border-radius: 6px;
+    box-shadow: 1px 4px 22px rgba(25, 25, 25, 0.8) !important;
+    right: 35px;
+    top: 150px;
+}
+
+div#AnimationMenuBox>p.title {
+    background-color: #c03939;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255, 255, 255, 0.80);
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    margin-bottom: 0;
+}
+
+div#AnimationMenuBox>ul {
+    overflow: auto;
+    max-height: 34vw;
+}
+
+div#AnimationMenuBox>ul>li {
+    position: relative;
+    height: 2.8vw !important;
+    border-bottom: 2px solid #1b1b1b;
+}
+
+div#AnimationMenuBox>ul>li:nth-child(odd) {
+    background: rgba(58, 58, 58, 0.62);
+}
+
+div#AnimationMenuBox>ul>li:nth-child(even) {
+    background: rgba(82, 82, 82, 0.62);
+}
+
+div#AnimationMenuBox>ul>li>span {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+div#AnimationMenuBox>ul>li>span:hover {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+div#AnimationMenuBox>ul>li>button {
+    float: right;
+    margin-left: 0.2vw;
+}
+
+div#AnimationMenuBox>ul>li>input {
+    float: right;
+    position: absolute;
+    width: 4vw;
+    right: 5vw;
+    height: 1.4vw;
+    background: rgba(53, 53, 53, 0.25);
+    text-align: center;
+    outline: none;
+    border: 2px solid rgba(6, 6, 6, 0.25);
+    font-family: PEL;
+    color: #d2d2d2;
+    font-size: 14px;
+}
+
+div#VehicleShopCEFBox>p.closebtn {
+    display: table;
+    color: #ffffff;
+    text-align: left;
+    margin-left: -35px;
+    margin-top: -35px;
+    background: rgba(0, 0, 0, 0);
+    border-top-left-radius: 6px;
+    padding-left: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 14px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #00000000;
+    opacity: .8;
+    border-top: none;
+    border-left: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+
+div#ClothesShopCEFBox2>p.backbtn:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #58acfa00;
+}
+
+
+div#ClothesShopCEFBox2>p.backbtn {
+    position: absolute;
+    color: #58acfa;
+    font-family: sans-serif;
+    text-align: center;
+    width: 100;
+    margin-left: 270;
+    background: rgba(0, 0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0;
+    border: 1px solid #58acfa00;
+    border-left: none;
+    border-top: none;
+}
+div#ClothesShopCEFBox3>p.backbtn:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #58acfa;
+}
+
+
+div#ClothesShopCEFBox3>p.backbtn {
+    position: absolute;
+    color: #58acfa;
+    font-family: sans-serif;
+    text-align: center;
+    width: 100;
+    margin-left: 270;
+    background: rgba(0, 0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0;
+    border: 1px solid #58acfa00;
+    border-left: none;
+    border-top: none;
+}
+div#ClothesShopCEFBox4>p.backbtn:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #58acfa;
+}
+
+
+div#ClothesShopCEFBox4>p.backbtn {
+    position: absolute;
+    color: #58acfa;
+    font-family: sans-serif;
+    text-align: center;
+    width: 100;
+    margin-left: 270;
+    background: rgba(0, 0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0;
+    border: 1px solid #58acfa00;
+    border-left: none;
+    border-top: none;
+}
+div#ClothesShopCEFBox5>p.backbtn:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #58acfa;
+}
+
+
+div#ClothesShopCEFBox5>p.backbtn {
+    position: absolute;
+    color: #58acfa;
+    font-family: sans-serif;
+    text-align: center;
+    width: 100;
+    margin-left: 270;
+    background: rgba(0, 0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0;
+    border: 1px solid #58acfa00;
+    border-left: none;
+    border-top: none;
+}
+
+div#jobCenterApplyForm>p.closebtn,
+div#VehicleFuelstationCEFBox>p.closebtn,
+div#ClothesShopCEFBox>p.closebtn,
+div#ClothesShopCEFBox2>p.closebtn,
+div#ClothesShopCEFBox3>p.closebtn,
+div#ClothesShopCEFBox4>p.closebtn,
+div#ClothesShopCEFBox5>p.closebtn,
+div#GarageCEFBox>p.closebtn,
+div#GivePlayerBillCEFBox>p.closebtn,
+div#RecievePlayerBillCEFBox>p.closebtn,
+div#FactionStorageCEFBox>p.closebtn,
+div#VehicleTrunkCEFBox>p.closebtn,
+div#VehicleLicensingCEFBox>p.closebtn,
+div#PlayerSearchInventoryCEFBox>p.closebtn,
+div#GivePlayerLicenseCEFBox>p.closebtn,
+div#Minijob-PilotCEFBox>p.closebtn,
+div#Minijob-BusDriverCEFBox>p.closebtn,
+div#HotelManageCEFBox>p.closebtn,
+div#HouseEntranceCEFBox>p.closebtn,
+div#HouseManageCEFBox>p.closebtn,
+div#TownhallHouseSelectorBox>p.closebtn {
+    display: table;
+    color: #ffffff;
+    text-align: left;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -20px;
+    background: rgba(204, 33, 33, 0);
+    border-top-left-radius: 6px;
+    padding-left: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 14px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #00000000;
+    opacity: .4;
+    border-top: none;
+    border-left: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+div#VehicleShopCEFBox>p.closebtn:hover,
+div#jobCenterApplyForm>p.closebtn:hover,
+div#VehicleFuelstationCEFBox>p.closebtn:hover,
+div#ClothesShopCEFBox>p.closebtn:hover,
+div#ClothesShopCEFBox2>p.closebtn:hover,
+div#ClothesShopCEFBox3>p.closebtn:hover,
+div#ClothesShopCEFBox4>p.closebtn:hover,
+div#ClothesShopCEFBox5>p.closebtn:hover,
+div#GarageCEFBox>p.closebtn:hover,
+div#GivePlayerBillCEFBox>p.closebtn:hover,
+div#RecievePlayerBillCEFBox>p.closebtn:hover,
+div#FactionStorageCEFBox>p.closebtn:hover,
+div#VehicleTrunkCEFBox>p.closebtn:hover,
+div#VehicleLicensingCEFBox>p.closebtn:hover,
+div#PlayerSearchInventoryCEFBox>p.closebtn:hover,
+div#GivePlayerLicenseCEFBox>p.closebtn:hover,
+div#Minijob-PilotCEFBox>p.closebtn:hover,
+div#Minijob-BusDriverCEFBox>p.closebtn:hover,
+div#HotelManageCEFBox>p.closebtn:hover,
+div#HouseEntranceCEFBox>p.closebtn:hover,
+div#HouseManageCEFBox>p.closebtn:hover,
+div#TownhallHouseSelectorBox>p.closebtn:hover {
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.336);
+    color: #fff;
+    opacity: 1;
+}
+
+div#VehicleShopCEFBox>img {
+    /* margin-top: -25px; */
+    width: 96px;
+}
+
+div#VehicleShopCEFBox>p#VehicleShopCEFBox-title {
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 15;
+    font-size: 16px;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList {
+    margin-top: 5px;
+    overflow-y: auto;
+    max-height: 450px;
+    min-height: 450px;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li {
+    padding: 0.2rem 0.75rem;
+    text-align: left;
+    border-radius: 4px;
+    min-height: 56px;
+    max-width: 460px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 6px;
+    left: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li:hover {
+    transform: scale(1.03);
+    border-left: #5969e7 2px solid;
+    border-right: #9e55ce 2px solid;
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+    cursor: pointer;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>img {
+    width: auto;
+    height: auto;
+    float: left;
+    margin-top: 18px;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>span {
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-left: 1rem;
+    top: 16px;
+    position: relative;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>span>b {
+    color: #919191;
+    font-weight: bold;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li:nth-child(odd) {
+    background: #1a1f27;
+    padding: 0.2rem 0.75rem;
+    text-align: left;
+    border-radius: 4px;
+}
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li:nth-child(odd):hover {
+    transform: scale(1.03);
+    border-left: #5969e7 2px solid;
+    border-right: #9e55ce 2px solid;
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+    cursor: pointer;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li:nth-child(even) {
+    background: #1a1f27;
+    padding: 0.2rem 0.75rem;
+    text-align: left;
+    border-radius: 4px;
+}
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li:nth-child(even):hover {
+    transform: scale(1.03);
+    border-left: #5969e7 2px solid;
+    border-right: #9e55ce 2px solid;
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+    cursor: pointer;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>span.buybtn {
+    color: #ffffff;
+    font-family: none;
+    font-size: unset;
+    margin-left: unset;
+    float: right;
+    border: 1px solid #00000085;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    top: 8px;
+    transition: all 0.5s ease-in-out;
+    margin-left: 5px;
+    opacity: .4;
+}
+
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>span.buybtn:hover {
+    cursor: pointer;
+    color: #d2d2d2;
+    opacity: 1;
+}
+
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>span.buybank {
+    color: #ffffff;
+    font-family: none;
+    font-size: unset;
+    margin-left: unset;
+    float: right;
+    border: 1px solid #00000085;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    top: 8px;
+    transition: all 0.5s ease-in-out;
+    margin-left: 5px;
+    opacity: .4;
+}
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>span.buybank:hover {
+    cursor: pointer;
+    color: #d2d2d2;
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #9e55ce;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5969e7;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8241ad;
+}
+
+div#HouseManageCEFBox>ul.nav.nav-tabs {
+    border-bottom: 1px transparent;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+div#HouseManageCEFBox>ul.nav.nav-tabs>li {
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    padding: 5px 15px 5px 15px;
+    border: 1px solid #000000b5;
+    color: #fff;
+    opacity: .25;
+    filter: grayscale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+div#HouseManageCEFBox>ul.nav.nav-tabs>li.active {
+    opacity: 1;
+    filter: grayscale(0);
+    color: #000
+}
+
+div#HouseManageCEFBox>ul.nav.nav-tabs>li>a {
+    color: #fff !important;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>h3,
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container>p.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container>p.title {
+    font-size: 16px !important;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>p {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container>input {
+    text-align: center;
+    background: #202631;
+    outline: none;
+    border: 1px solid #04040400;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 4px 0px 4px 0px;
+    max-width: 100px;
+    border-radius: 1px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container>button {
+    border-radius: 2px;
+    margin-left: 5px;
+    padding: 4px 8px 4px 8px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container {
+    margin-bottom: 25px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container>button.btn-success {
+    padding: 4px 15px 4px 15px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li {
+    position: relative;
+    width: 80%;
+    max-width: 80%;
+    padding: 4px 0px 4px 0px;
+    border-radius: 2px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li>p {
+    margin-bottom: 0;
+    color: #fff;
+    font-family: sans-serif;
+    opacity: .75;
+    float: left;
+    padding-left: 4%;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li:nth-child(odd) {
+    background: #2e3440;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li:nth-child(even) {
+    background: #202631;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li>button {
+    float: right;
+    margin-right: 2%;
+    opacity: .15;
+    transition: all 0.3s ease-in-out;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li>button:hover {
+    opacity: 1;
+}
+
+div#UserIdCard,
+div#UserFactionCard {
+    display: none;
+    animation: fadeInLeft 1.5s;
+    position: absolute;
+    top: 2vw;
+    background: url(../utils/img/idcard.png);
+    width: 24vw;
+    height: 13.25vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    right: 2%;
+    text-transform: uppercase;
+    font-size: 1.2vw;
+    border: 2px ridge;
+    /* border-image: linear-gradient(to right, #c34c4c 0%, #e83f3f 100%); */
+    border-image: linear-gradient(to right, #9e55ce 0%, #5969e7 100%);
+    border-image-slice: 1;
+    box-shadow: 1px 4px 22px rgba(56, 56, 56, 0.5);
+    opacity: 0.95;
+    overflow: hidden;
+}
+
+div#UserIdCard>span.nameTitle,
+div#UserIdCard>span.addresstitle,
+div#UserIdCard>span.birthdatetitle,
+div#UserFactionCard>span.birthdatetitle,
+div#UserIdCard>span.birthplacetitle,
+div#UserIdCard>span.signaturetitle,
+div#UserFactionCard>span.signaturetitle,
+div#UserFactionCard>span.nameTitle,
+div#UserFactionCard>span.ranknametitle,
+div#UserFactionCard>span.servicenumbertitle {
+    position: absolute;
+    color: #e83e56;
+    top: 2.5vw;
+    font-family: sans-serif;
+    font-size: 0.75vw;
+    font-weight: bold;
+    width: 9.4vw;
+    text-align: center;
+}
+
+div#UserIdCard>span.nameTitle,
+div#UserIdCard>span.addresstitle,
+div#UserFactionCard>span.nameTitle,
+div#UserFactionCard>span.ranknametitle {
+    left: 0.3vw;
+}
+
+div#UserIdCard>span.birthdatetitle,
+div#UserFactionCard>span.birthdatetitle,
+div#UserIdCard>span.birthplacetitle,
+div#UserFactionCard>span.servicenumbertitle {
+    right: 0.8vw;
+}
+
+div#UserIdCard>span.addresstitle,
+div#UserFactionCard>span.ranknametitle,
+div#UserIdCard>span.birthplacetitle,
+div#UserFactionCard>span.servicenumbertitle {
+    top: 6.4vw;
+}
+
+div#UserIdCard>span#UserIdCard-name,
+div#UserIdCard>span#UserIdCard-address,
+div#UserIdCard>span#UserIdCard-birthdate,
+div#UserFactionCard>span#UserFactionCard-birthdate,
+div#UserIdCard>span#UserIdCard-birthplace,
+div#UserIdCard>span#UserIdCard-signature,
+div#UserFactionCard>span#UserFactionCard-signature,
+div#UserFactionCard>span#UserFactionCard-name,
+div#UserFactionCard>span#UserFactionCard-rankname,
+div#UserFactionCard>span#UserFactionCard-serviceNumber {
+    position: absolute;
+    color: #fff;
+    top: 3.5vw;
+    width: 12vw;
+    font-family: sans-serif;
+    font-size: 0.65vw;
+    text-align: center;
+}
+
+div#UserIdCard>span#UserIdCard-name,
+div#UserFactionCard>span#UserFactionCard-name,
+div#UserIdCard>span#UserIdCard-address,
+div#UserFactionCard>span#UserFactionCard-rankname {
+    left: 0.0vw;
+}
+
+div#UserIdCard>span#UserIdCard-address,
+div#UserFactionCard>span#UserFactionCard-rankname,
+div#UserIdCard>span#UserIdCard-birthplace,
+div#UserFactionCard>span#UserFactionCard-serviceNumber {
+    top: 7.6vw;
+}
+
+div#UserIdCard>span#UserIdCard-birthdate,
+div#UserFactionCard>span#UserFactionCard-birthdate,
+div#UserIdCard>span#UserIdCard-birthplace,
+div#UserFactionCard>span#UserFactionCard-serviceNumber {
+    right: 0.5vw;
+}
+
+div#UserIdCard>span.signaturetitle,
+div#UserFactionCard>span.signaturetitle {
+    top: 10vw;
+    left: -0.5vw;
+}
+
+div#UserIdCard>span#UserIdCard-signature,
+div#UserFactionCard>span#UserFactionCard-signature {
+    font-family: DB;
+    top: 11.5vw;
+    left: -1.8vw;
+    width: 18vw;
+    font-weight: normal;
+    font-size: 0.55vw;
+    color: #ffffff;
+    text-align: center;
+}
+
+div#UserIdCard>span#UserIdCard-joinInfo,
+div#UserFactionCard>span#UserFactionCard-joinInfo {
+    position: absolute;
+    color: #ffffffb8;
+    bottom: 0.2vw;
+    right: -1vw;
+    width: 8vw;
+    font-family: PEL;
+    font-size: 0.62vw;
+    text-align: center;
+}
+
+ul#TownHallHouseSelector-List>li:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+}
+
+ul#TownHallHouseSelector-List>li:nth-child(even) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+ul#TownHallHouseSelector-List>li {
+    text-align: left;
+}
+
+ul#TownHallHouseSelector-List>li>span {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+}
+
+ul#TownHallHouseSelector-List>li>button {
+    float: right;
+    background: #505050;
+    border-color: #0000008a;
+    opacity: .35;
+    transition: all 0.3s ease-in-out;
+    margin-left: 5px;
+}
+
+ul#TownHallHouseSelector-List>li>button.btn-danger:hover {
+    background: #dc3545;
+    opacity: 1;
+}
+
+ul#TownHallHouseSelector-List>li>button.btn-success:hover {
+    opacity: 1;
+    background: #35dc68;
+}
+
+
+/* Tuning */
+
+div#VehicleTuningMainMenuBox {
+    position: absolute;
+    top: 22%;
+    width: 30%;
+    height: 60%;
+    background: #141414;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #4784cf 0%, #ca76ab 100%);
+    border-image-slice: 1;
+    box-shadow: 1px 4px 22px rgba(56, 56, 56, 0.5);
+    right: 3%;
+}
+
+div#VehicleTuningMainMenuBox>span.title {
+    position: absolute;
+    height: 8%;
+    text-align: center;
+    background: linear-gradient(to left, #ca76ab 0%, #4784cf 100%);
+    width: 100%;
+    top: 0%;
+    font-family: BNT;
+    color: #ececec;
+    font-size: 230%;
+}
+
+div#VehicleTuningMainMenuBox>.circlediv,
+div#VehicleTuningMenuColorSelection>.circlediv {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    height: 5%;
+    color: #d2d2d2;
+    width: 5.5%;
+    top: -0.2%;
+    border-bottom-left-radius: 6px;
+    font-size: 110%;
+    padding-top: 1%;
+    text-align: center;
+    right: -0.2%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+div#VehicleTuningMainMenuBox>.circlediv:hover,
+div#VehicleTuningMenuColorSelection>.circlediv:hover {
+    color: #4c4444;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+div#VehicleTuningMainMenuBox>ul {
+    position: absolute;
+    height: 92%;
+    width: 100%;
+    top: 8%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+div#VehicleTuningMainMenuBox>ul>li {
+    position: relative;
+    float: left;
+    height: 30%;
+    left: 3.5%;
+    width: 28%;
+    margin: 1.2% 0% 1.2% 2%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+    box-shadow: 1px 4px 22px rgba(56, 56, 56, 0.5);
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #4784cf 0%, #ca76ab 100%);
+    border-image-slice: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+div#VehicleTuningMainMenuBox>ul>li:hover .actionbtn {
+    display: block !important;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+div#VehicleTuningMainMenuBox>ul>li>img {
+    position: absolute;
+    width: 60%;
+    padding: 15% 0% 0% 20%;
+    margin: 25% 0% 0% 10%;
+}
+
+div#VehicleTuningMainMenuBox>ul>li>span.title,
+div#VehicleTuningMenuColorSelection>span.title {
+    position: absolute;
+    height: 18%;
+    padding-top: 3%;
+    width: 100%;
+    text-align: center;
+    font-family: BNT;
+    font-size: 112%;
+    color: #d2d2d2;
+    background: linear-gradient(to right, #4784cf99 0%, #ca76ab38 100%);
+}
+
+div#VehicleTuningMainMenuBox>ul>li>.far-div1,
+div#VehicleTuningMainMenuBox>ul>li>.far-div2 {
+    font-size: 175%;
+    position: absolute;
+    top: 46%;
+    color: #307aa7;
+}
+
+div#VehicleTuningMainMenuBox>ul>li>.far-div1 {
+    right: 3%;
+}
+
+div#VehicleTuningMainMenuBox>ul>li>.far-div1:hover {
+    cursor: pointer;
+    color: #30a74b;
+}
+
+div#VehicleTuningMainMenuBox>ul>li>.far-div2 {
+    left: 3%;
+}
+
+div#VehicleTuningMainMenuBox>ul>li>.far-div2:hover {
+    cursor: pointer;
+    color: #a73030;
+}
+
+div#VehicleTuningMainMenuBox>ul>li>span.actionbtn {
+    display: none;
+    position: absolute;
+    bottom: 0%;
+    height: 18%;
+    width: 100%;
+    padding-top: 3%;
+    text-align: center;
+    font-family: BNT;
+    font-size: 120%;
+    color: #d2d2d2;
+    background: linear-gradient(to right, #47cf6299 0%, #18692238 100%);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+div#VehicleTuningMainMenuBox>ul>li>span.actionbtn:hover {
+    background: linear-gradient(to right, #18692238 0%, #47cf6299 100%);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+div#VehicleTuningMenuColorSelection {
+    position: absolute;
+    top: 22%;
+    width: 22%;
+    height: 40%;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #4784cf 0%, #ca76ab 100%);
+    border-image-slice: 1;
+    box-shadow: 1px 4px 22px rgba(56, 56, 56, 0.5);
+    right: 34%;
+}
+
+div#VehicleTuningMenuColorSelection>span.title {
+    font-size: 180% !important;
+}
+
+div#VehicleTuningMenuColorSelection>div.inputArea {
+    position: absolute;
+    top: 20%;
+    background: rgba(156, 156, 156, 0.15);
+    height: 39%;
+    width: 34%;
+    right: 2%;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #4784cf 0%, #ca76ab 100%);
+    border-image-slice: 1;
+    box-shadow: 1px 4px 22px rgba(56, 56, 56, 0.5);
+}
+
+div#VehicleTuningMenuColorSelection>button {
+    position: relative;
+    top: 72%;
+    background-color: #4a4a4a;
+    font-family: OSR;
+    color: #d2d2d2;
+    font-size: 14px;
+    border-color: transparent;
+    opacity: .3;
+    transition: all 0.3s ease-in-out;
+}
+
+div#VehicleTuningMenuColorSelection>button:hover {
+    opacity: 1;
+    background-color: #29ac5b;
+}
+
+div#VehicleTuningMenuColorSelection>div.inputArea>span.title {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    font-family: BNT;
+    font-size: 120%;
+    padding-top: 2%;
+    color: #d2d2d2;
+    text-align: center;
+    background: linear-gradient(to left, #ca76ab91 0%, #4784cfc9 100%);
+}
+
+div#VehicleTuningMenuColorSelection>div.inputArea>input#rgbRvalField,
+div#VehicleTuningMenuColorSelection>div.inputArea>input#rgbGvalField,
+div#VehicleTuningMenuColorSelection>div.inputArea>input#rgbBvalField {
+    position: absolute;
+    height: 20%;
+    width: 58%;
+    border: none;
+    right: 5%;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    text-align: center;
+    font-family: OSL;
+    color: #d2d2d2;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+div#VehicleTuningMenuColorSelection>div.inputArea>input#rgbRvalField {
+    background: rgba(220, 29, 29, 0.44);
+    top: 24%;
+}
+
+div#VehicleTuningMenuColorSelection>div.inputArea>input#rgbGvalField {
+    background: rgba(29, 220, 124, 0.44);
+    top: 48%;
+}
+
+div#VehicleTuningMenuColorSelection>div.inputArea>input#rgbBvalField {
+    background: rgba(29, 104, 220, 0.44);
+    top: 72%;
+}
+
+div#VehicleTuningMenuColorSelection>div.inputArea>label#rgbRval,
+div#VehicleTuningMenuColorSelection>div.inputArea>label#rgbGval,
+div#VehicleTuningMenuColorSelection>div.inputArea>label#rgbBval {
+    position: absolute;
+    height: 20%;
+    width: 30%;
+    border: 2px solid black;
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+    left: 7%;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    text-align: center;
+    font-family: BNT;
+    color: #d2d2d2;
+    padding-top: 4.8%;
+    font-size: 100%;
+}
+
+div#VehicleTuningMenuColorSelection>div.inputArea>label#rgbRval {
+    background: rgba(220, 29, 29, 0.44);
+    top: 24%;
+}
+
+div#VehicleTuningMenuColorSelection>div.inputArea>label#rgbGval {
+    background: rgba(29, 220, 124, 0.44);
+    top: 48%;
+}
+
+div#VehicleTuningMenuColorSelection>div.inputArea>label#rgbBval {
+    background: rgba(29, 104, 220, 0.44);
+    top: 72%;
+}
+
+
+/* Color Picker Tuning */
+
+.picker-wrapper,
+.slide-wrapper {
+    position: relative;
+    float: left;
+}
+
+.picker-indicator,
+.slide-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.picker,
+.slide-wrapper>.slide {
+    cursor: crosshair;
+    float: left;
+}
+
+.cp-default {
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    background-color: rgba(255, 255, 255, 0.27);
+    padding: 3px;
+    box-shadow: 0 0 40px #000;
+    border-radius: 3px;
+    float: left;
+}
+
+.cp-default .picker {
+    width: 200px;
+    height: 200px;
+}
+
+.cp-default .slide {
+    width: 30px;
+    height: 200px;
+}
+
+.cp-default .slide-wrapper {
+    margin-left: 10px;
+}
+
+.cp-default .picker-indicator {
+    width: 5px;
+    height: 5px;
+    border: 2px solid darkblue;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    opacity: .5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: alpha(opacity=50);
+    background-color: white;
+}
+
+.cp-default .slide-indicator {
+    width: 100%;
+    height: 10px;
+    left: -4px;
+    opacity: .6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=60);
+    filter: alpha(opacity=60);
+    border: 4px solid lightblue;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+
+/* Hudlist */
+
+#pseudo-box-hudlist {
+    pointer-events: none;
+    position: absolute;
+    width: 25%;
+    min-width: 400px;
+    left: 2%;
+}
+
+#HUDlist-Box {
+    z-index: 10;
+    background-color: rgb(29, 29, 29);
+    position: relative;
+    min-height: 400px;
+    height: 100%;
+    right: 0;
+    width: 100%;
+    color: white;
+    display: none;
+}
+
+#HUDlist-labelbox,
+#HUDlist-carousel {
+    position: relative;
+    width: 100%;
+}
+
+#HUDlist-labelbox {
+    text-align: center;
+    height: 15%;
+    background: #981d20;
+    margin-bottom: 3%;
+}
+
+#HUDlist-labelbox>div {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#HUDlist-label {
+    position: absolute;
+    vertical-align: middle;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    font-size: 20px;
+    font-family: PEL;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 7%;
+}
+
+#HUDlist-carousel {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 80%;
+}
+
+#HUDlist-carousel div {
+    height: 100%;
+}
+
+#HUDlist-carousel div ul {
+    height: auto;
+}
+
+#HUDlist-carousel>div>div {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow: hidden !important;
+}
+
+#HUDlist-carousel div ul li {
+    outline: none !important;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+    color: white;
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: 10px;
+    border-right: 0;
+    border-left: 0;
+}
+
+#HUDlist-carousel div ul li.active {
+    background-color: rgb(197 30 34 / 74%);
+}
+
+
+/* Smartphone */
+
+.phone {
+    z-index: 100;
+    position: fixed;
+    min-height: 700px;
+    min-width: 345px;
+    bottom: 0px;
+    right: 0px;
+    padding: none;
+	margin-bottom: -56vh;
+    /* margin-bottom: 6vh; */
+}
+
+@media screen and (min-height: 1081px) and (max-height: 1440px) {
+    .phone-header-text {
+        font-size: 18px;
+    }
+    #phone-screen-call {
+        font-size: 25px !important;
+    }
+    .phone-scaleable {
+        font-size: 30px !important;
+    }
+    #phone-screen-sms {
+        font-size: 18px !important;
+    }
+}
+
+
+/* If the screen size is 1080px wide or less, set the font-size of <div> to 30px */
+
+@media screen and (max-height: 1080px) {
+    .phone-header-text {
+        font-size: 14px;
+    }
+    #phone-banner {
+        font-size: 14px;
+    }
+    .phone-scaleable {
+        font-size: 22px !important;
+    }
+    .phoneBackGroundSetting {
+        height: 35px;
+    }
+}
+
+.full-phone {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: none;
+    margin: none;
+}
+
+.in-phone {
+    position: absolute;
+    width: 88%;
+    height: 86%;
+    margin: 14% 6%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.in-screen-content {
+    position: absolute;
+    width: 80%;
+    height: 75%;
+    margin: 20% 10%;
+    background: transparent;
+}
+
+.phone-header-markdown {
+    z-index: 184;
+    height: 5%;
+    width: 100%;
+}
+
+.phone-sms-gradient {
+    background-image: linear-gradient(120deg, #65ee3b 0, #2bc740 100%);
+}
+
+.phone-sms-color-header {
+    background-color: rgb(36, 119, 108) !important;
+}
+
+.phone-sms-color-bg {
+    background-color: #2B9789;
+}
+
+.phone-sms-chat-pre {
+    width: 100%;
+    height: 12%;
+    padding: 2% 10%;
+}
+
+.phone-sms-chat-divider {
+    margin: 0 5%;
+}
+
+.phone-sms-chat-pre-name {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.phone-sms-chat-pre-text {
+    display: inline-block;
+}
+
+.phone-sms-chat-pre-time {
+    float: right;
+    display: inline-block;
+    color: grey;
+}
+
+.phone-sms-chat-pre-alert {
+    float: right;
+    display: inline-block;
+}
+
+#phone-screen-sms-header {
+    position: absolute;
+    z-index: 150;
+    color: white;
+    width: 100%;
+}
+
+#phone-chat-main-info {
+    margin: 5%;
+    padding: 10px;
+    width: 90%;
+    border-radius: 15px;
+    background-color: #FEF4C5;
+}
+
+.phone-chat-info {
+    overflow: hidden;
+    margin: 5% auto;
+    padding: 10px;
+    width: 90%;
+    border-radius: 15px;
+    background-color: #FEF4C5;
+    text-align: center;
+}
+
+.phone-chat-info-sm {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 2px;
+    width: 30%;
+    border-radius: 15px;
+    background-color: #FEF4C5;
+    text-align: center;
+    font-size: 14px;
+}
+
+#phone-chat-start {
+    position: absolute;
+    right: 4%;
+    bottom: 4%;
+    font-size: 25px;
+    padding: 5%;
+    border-radius: 50%;
+    background-color: lime;
+    color: white;
+}
+
+#phone-sms-header-chat {
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+    padding: 14px;
+}
+
+#phone-sms-header-chat>span,
+#phone-sms-header-chat>svg {
+    display: inline-block;
+}
+
+.phone-chat-header-text {
+    line-height: 50px;
+    height: 100%;
+}
+
+#phone-sms-chat-window {
+    height: 100%;
+}
+
+#phone-chat-display {
+    overflow: auto;
+    position: relative;
+    height: 90%;
+    padding: 5%;
+}
+
+.phone-chat-box {
+    width: 85%;
+    margin: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    word-break: break-word;
+}
+
+.phone-chat-time {
+    font-size: 12px;
+    color: grey;
+    position: absolute;
+    right: 4%;
+    bottom: -2px;
+}
+
+.phone-chat-other {
+    text-align: left;
+    float: left;
+}
+
+.phone-chat-other:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid white;
+    border-top: 10px solid white;
+    border-bottom: 10px solid transparent;
+    left: -19px;
+    top: 6px;
+}
+
+.phone-chat-me {
+    background-color: #DEF9C8;
+    text-align: left;
+    float: right;
+}
+
+.phone-chat-me:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #DEF9C8;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #DEF9C8;
+    border-bottom: 10px solid transparent;
+    right: -20px;
+    top: 6px;
+}
+
+#phone-chat-footer {
+    position: absolute;
+    width: 100%;
+    margin-top: auto;
+    bottom: 10px;
+    vertical-align: bottom;
+}
+
+#phone-chat-input-area {
+    margin: 0 3%;
+    padding: 1% 0;
+}
+
+#phone-chat-input {
+    display: inline-block;
+    width: 85%;
+    padding-right: 13%;
+}
+
+#phone-chat-emotes>span {
+    position: absolute;
+    display: inline;
+    right: 20%;
+    top: -28px;
+    transition: .3s;
+}
+
+#phone-chat-emotes>.dropdown-menu {
+    margin-right: 10%;
+    padding: 4%;
+}
+
+.emote {
+    color: #ffd900;
+}
+
+#emote-toggler:hover {
+    color: #ffd900;
+}
+
+#phone-sms-send {
+    margin: auto;
+    float: right;
+    display: block;
+    background-color: rgb(36, 119, 108)!important;
+}
+
+.phone-header-shadow {
+    box-shadow: 0 -3px 6px 4px gray;
+}
+
+#phone-screen-sms-header-upper {
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+#phone-screen-sms-header-upper-text {
+    float: left;
+    height: 100%;
+    line-height: 50px;
+}
+
+#phone-screen-sms-header-upper-buttons {
+    height: 100%;
+    box-sizing: content-box;
+    margin: 0 5%;
+    float: right;
+}
+
+#phone-sms-home-chats {
+    padding: 0;
+    padding-bottom: 20%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#phone-sms-home {
+    position: relative;
+    height: 100%;
+}
+
+#phone-sms-home-settings {
+    height: 34px;
+    text-align: center;
+    margin: 7px 0;
+    line-height: 60px;
+    color: inherit;
+    box-shadow: none !important;
+}
+
+.phone-number-disp {
+    font-family: PEL;
+    letter-spacing: 1px;
+}
+
+.phone-messenger-row {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+#phone-input-new-chat {
+    float: left;
+    display: inline-block;
+    width: 80%;
+    margin: 10px;
+    margin-left: 0;
+}
+
+#phone-button-newchat {
+    display: inline-block;
+    margin: 12.5px auto;
+    background-color: lime;
+    color: white;
+}
+
+#phone-screen-sms-header-nav {
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    list-style: none;
+}
+
+.phoneBackGroundSetting {
+    height: 75px;
+}
+
+.pseudo-box {
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+
+#phone-address-list {
+    position: relative;
+    overflow-y: auto;
+    height: auto;
+    padding-bottom: 300px;
+}
+
+.phone-address-item {
+    width: 100%;
+    padding: 5%;
+    border-bottom: 1px solid black;
+}
+
+.phone-address-nickname {
+    width: 70%;
+    display: inline-block;
+}
+
+.phone-address-phonenumber {
+    width: 20%;
+    display: inline-block;
+}
+
+/* BUSINESS */
+#phone-business-list {
+    position: relative;
+    overflow-y: auto;
+    height: auto;
+    padding-bottom: 300px;
+}
+
+.phone-business-item {
+    width: 100%;
+    padding: 5%;
+    border-bottom: 1px solid black;
+}
+
+.phone-business-nickname {
+    width: 70%;
+    display: inline-block;
+}
+.phone-business-rank {
+    width: 70%;
+    display: inline-block;
+}
+
+.phone-business-phonenumber {
+    width: 20%;
+    display: inline-block;
+}
+
+/* Verlauf */
+#phone-Verlauf-list {
+    position: relative;
+    overflow-y: auto;
+    height: auto;
+    padding-bottom: 300px;
+}
+
+.phone-Verlauf-item-red {
+    width: 100%;
+    padding: 5%;
+    border-bottom: 1px solid black;
+    background-color: #ff00004d;
+}
+.phone-Verlauf-item-green {
+    width: 100%;
+    padding: 5%;
+    border-bottom: 1px solid black;
+    background-color: #1eff004d;
+}
+
+
+.phone-Verlauf-phonenumber {
+    width: 25%;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.phone-Verlauf-nickname {
+    width: 85%;
+    font-size: 11px;
+    margin-left: 2px;
+    display: inline-block;
+}
+
+#phone-address-addOrEdit,
+#phone-address-view,
+#phone-address-home,
+#phone-business-addOrEdit,
+#phone-business-view,
+#phone-business-home,
+#phone-Verlauf-addOrEdit,
+#phone-Verlauf-view,
+#phone-Verlauf-home,
+#phone-screen-sms-home {
+    height: 95%;
+}
+
+#phone-sms-newchat {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.phone-sms-largeoffset {
+    padding-top: 86px;
+}
+
+.phone-sms-smalloffset {
+    padding-top: 50px;
+}
+
+.phone-sms-nav-item {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #2B9789;
+    padding: 10px 10%;
+    margin: auto;
+    opacity: .6;
+}
+
+.phone-sms-nav-item-active {
+    border-bottom: 2px solid white !important;
+    opacity: 1 !important;
+}
+
+.phone-scaleable {
+    font-size: 14px;
+}
+
+#phone-banner {
+    position: absolute;
+    display: none;
+    top: 0;
+    padding-top: 25px;
+    z-index: 180;
+    width: 100%;
+    color: white;
+    height: 50px;
+}
+
+#phone-notif {
+    position: absolute;
+    display: none;
+    top: 0;
+    padding-top: 40px;
+    z-index: 185;
+    width: 100%;
+    color: white;
+    background-color: black;
+    opacity: 0.9;
+    height: 100px;
+}
+
+#phone-notif-content,
+#phone-notif-app {
+    opacity: 3;
+    color: white;
+    text-align: center;
+}
+
+#phone-notif-app {}
+
+#phone-header {
+    pointer-events: none;
+    position: relative;
+    display: block;
+    z-index: 190;
+    top: 0;
+    height: 5%;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+#phone-footer {
+    z-index: 201 !important;
+    pointer-events: none;
+    position: relative;
+    display: block;
+    z-index: 190;
+    top: 95%;
+    height: 4.5%;
+    width: 100%;
+    opacity: .9;
+}
+
+#phone-home {
+    pointer-events: auto;
+    width: 13%;
+    padding: 4px 0%;
+    margin: 4px;
+    border-radius: 6px;
+    border: 0px solid #fff !important;
+    height: 7.5;
+    background: linear-gradient(to right, #2e3440 0%, #2e3440 100%);
+
+}
+
+/* .svg-inline--fa.fa-w-14 {
+    width: 4em;
+    padding-left: -21px;
+    padding: -1px 0%;
+    margin-top: -22px;
+    margin-left: 0px;
+} */
+
+#phone-clock {
+    color: white;
+    margin-top: 20%;
+}
+
+#phone-time {
+    font-size: 64px;
+    margin-bottom: -16px;
+}
+
+#phone-appspace {
+    position: relative;
+    z-index: 150;
+    top: 50px;
+    padding: none;
+    height: 40%;
+    padding: 3%;
+    width: 100%;
+}
+
+.phone-app {
+    z-index: 115;
+    display: inline-block;
+    text-align: center;
+    width: 68px;
+    height: 68px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25%;
+}
+
+.phone-app .badge {
+    z-index: 116;
+    font-size: 12px;
+    padding: 5px;
+    height: 22px;
+    width: 22px;
+    margin-top: -15px;
+    position: absolute;
+}
+
+#phone-app-police {
+    padding-left: 8px;
+}
+
+#phone-screen-police>div>h3 {
+    font-family: PEL;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#phone-police-main-head {
+    padding: 20% 10%;
+}
+
+#phone-police-main-footer {
+    height: 100%;
+    padding: 0 10%;
+}
+
+#phone-police-main-footer>.btn {
+    width: 100%;
+    margin: 0;
+    margin-top: 5%;
+    border-radius: 5px;
+    padding: 0.7rem 0;
+}
+
+#phone-police-querylist,
+#phone-police-wanteds,
+#phone-police-addwanteds,
+#phone-police-mostwanted {
+    display: none;
+}
+
+#phone-police-querylist-head,
+#phone-police-mostwanted-head {
+    position: relative;
+    width: 100%;
+}
+
+#phone-police-querylist-head>.background-police,
+#phone-police-mostwanted-head>.background-police {
+    width: 100%;
+    height: 7%;
+}
+
+.phone-police-overlay {
+    height: 95%;
+    width: 100%;
+    z-index: 120;
+    pointer-events: none;
+    position: absolute;
+}
+
+#phone-police-querylist-subhead {
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    top: 7%;
+    text-align: center;
+}
+
+.phone-police-return {
+    pointer-events: auto;
+    position: absolute;
+    top: 90%;
+    left: 2%;
+}
+
+.phone-police-addwanted {
+    pointer-events: auto;
+    position: absolute;
+    float: right;
+    top: 90%;
+    right: 2%;
+}
+
+#phone-police-querylist-main,
+#phone-police-mostwanted-main {
+    overflow-y: auto;
+    position: relative;
+    height: 93%;
+    width: 100%;
+    padding-bottom: 20%;
+    padding-top: 10%;
+}
+
+#phone-police-querylist-main>.btn,
+#phone-police-mostwanted-main>.btn {
+    text-transform: none;
+    padding: 10px;
+    width: 90%;
+    margin: 5%;
+    margin-top: 0;
+    text-align: left;
+}
+
+#phone-police-wanteds-header,
+#phone-police-addwanteds-header {
+    height: 6.7%;
+    color: white;
+    text-align: center;
+}
+
+#phone-police-wanteds-display {
+    width: 100%;
+    height: 88.3%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#phone-police-wanteds-total {
+    padding-top: 10px;
+    text-align: center;
+    height: 10%;
+    width: 100%;
+}
+
+#phone-police-wanteds-list {
+    padding-bottom: 20%;
+    height: 90%;
+}
+
+#phone-police-addwanteds-content {
+    height: 88.3%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 20%;
+}
+
+#phone-police-addwanteds-content>div {
+    width: 100%;
+}
+
+#phone-police-addwanteds-stgb>.btn,
+#phone-police-addwanteds-active>.btn {
+    text-transform: none;
+    padding: 10px;
+    width: 95%;
+    margin: 2.5%;
+    text-align: left;
+}
+
+#phone-police-addwanteds-stgb>.collapse {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+}
+
+#phone-police-addwanteds-stgb>.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+
+#phone-police-addwanteds-stgb>.collapse>.btn {
+    text-transform: none;
+    padding: 10px;
+    width: 90%;
+    margin: 2.5%;
+    margin-left: 7.5%;
+    text-align: left;
+}
+
+#phone-police-wanteds-list>.wanted-entry {
+    text-transform: none;
+    text-align: left;
+    padding: 2% 5%;
+    width: 95%;
+    margin: 0px 2.5% 10px 2.5%;
+    border: 1px solid #000000a1;
+}
+
+#phone-police-wanteds-list>.wanted-entry>.close {
+    float: right;
+    vertical-align: top;
+    top: 3px;
+    right: 3px;
+    opacity: .25;
+}
+
+#phone-police-wanteds-list>.wanted-entry>.close:hover {
+    opacity: 1;
+}
+
+.background-police-gradient {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(2, 0, 36, 1) 100%);
+}
+
+.background-police {
+    background: rgb(2, 0, 36);
+}
+
+.h-95 {
+    height: 95%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#phone-screen-radio .input-group {
+    width: 80%;
+}
+
+#phone-screen-radio .diode {
+    float: right;
+    margin-top: -38px;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    border: 1px solid #888;
+    background-image: linear-gradient(to top, #cfd9df 0, #e2ebf0 100%);
+}
+
+#phone-screen-radio .active {
+    background-image: linear-gradient(120deg, #d4fc79 0, #96e6a1 100%) !important;
+}
+
+.freq-tuning {
+    width: 75%;
+    margin: 5% 12.5%;
+}
+
+#phone-radio-frequency-frame {
+    margin: 10%;
+    width: 80%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 2px solid #888;
+    border-bottom: none;
+    background: white;
+    /*border-top-left-radius: 15px;
+    border-top-right-radius: 15px;*/
+    height: 50px;
+}
+
+#phone-radio-frequency-slider {
+    box-sizing: content-box;
+    margin: 0 30px;
+}
+
+#phone-radio-frequency-frame::-webkit-scrollbar {
+    height: 5px !important;
+}
+
+#phone-radio-frequency-frame::-webkit-scrollbar-thumb {
+    width: 15px;
+    background: red;
+}
+
+#phone-radio-frequency-frame::-webkit-scrollbar-track {
+    border-radius: 0 !important;
+}
+
+#freqTickmarks {
+    display: flex;
+    box-sizing: content-box;
+    margin: 0 20px;
+    margin-top: -5px;
+}
+
+#freqTickmarks option {
+    padding: 0;
+    font-size: 10px;
+    text-align: center;
+    width: 30px;
+}
+
+#phone-screen-home {
+    z-index: 110;
+}
+
+#phone-screen-call,
+#phone-screen-sms,
+#phone-screen-address,
+#phone-screen-business,
+#phone-screen-Verlauf,
+#phone-screen-debug,
+#phone-screen-police,
+#phone-screen-radio,
+#phone-screen-settings {
+    display: none;
+    z-index: 120;
+}
+
+.phone-grey-color-header {
+    background-image: linear-gradient(120deg, rgb(51, 51, 51) 0, rgb(26, 26, 26) 100%) !important;
+}
+
+.phone-blue-color-header {
+    background: linear-gradient(40deg, #4e8ff1, #303f9f) !important;
+}
+
+#phone-screen-calling {
+    display: none;
+    z-index: 130;
+}
+
+.phone-calling-button {
+    border-radius: 50% !important;
+    height: 74px;
+    width: 74px;
+    padding: 12px 12px !important;
+}
+
+.phone-header-text {
+    position: relative;
+    color: white;
+    opacity: 1;
+}
+
+.phone-align-right {
+    float: right;
+}
+
+.phone-inline {
+    display: inline;
+}
+
+.btn-rounded {
+    padding: 10px !important;
+    border-radius: 50%!important;
+}
+
+.btn-dial {
+    width: 50px;
+    height: 50px;
+    padding: 10px !important;
+    border-radius: 50%!important;
+}
+
+.phone-dial-table {
+    margin-top: 5%;
+    padding: none !important;
+    width: 100%;
+}
+
+.phone-dial-row {
+    width: 100%;
+    border: none;
+    padding: 0;
+}
+
+.image-based {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#phone-sms-chat {
+    background-image: url("../utils/img/phone/messenger.png") !important;
+    height: 100%;
+    width: 100%;
+}
+
+.layer1 {
+    /* Display */
+    z-index: 100;
+    background-image: url("../utils/img/phone/layer1.png");
+}
+
+.layer2 {
+    z-index: 101;
+    background-image: url("../utils/img/phone/brightmode.png");
+}
+
+#phone-screen-call {
+    background-image: url("../utils/img/phone/call.png");
+}
+
+.layer3 {
+    /* Casing */
+    z-index: 200;
+    background-image: url("../utils/img/phone/layer3.png");
+    pointer-events: none;
+}
+
+.layer4 {
+    z-index: 210;
+    background-image: url("../utils/img/phone/layer4.png");
+    pointer-events: none;
+    display: none;
+}
+
+
+/*switch*/
+
+.switch {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 30px;
+    padding: 3px;
+    margin: 0 10px 10px 0;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+    border-radius: 18px;
+    box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.switch-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    box-sizing: content-box;
+}
+
+.switch-label {
+    position: relative;
+    display: block;
+    height: inherit;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: #eceeef;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+    box-sizing: content-box;
+}
+
+.switch-label:before,
+.switch-label:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5em;
+    line-height: 1;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+    box-sizing: content-box;
+}
+
+.switch-label:before {
+    content: attr(data-off);
+    right: 11px;
+    color: #aaaaaa;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.switch-label:after {
+    content: attr(data-on);
+    left: 11px;
+    color: #FFFFFF;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.switch-input:checked~.switch-label {
+    background: #E1B42B;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.switch-input:checked~.switch-label:before {
+    opacity: 0;
+}
+
+.switch-input:checked~.switch-label:after {
+    opacity: 1;
+}
+
+.switch-handle {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+    background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+    border-radius: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-handle:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+    border-radius: 6px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+
+.switch-input:checked~.switch-handle {
+    left: 74px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Transition
+========================== */
+
+.switch-label,
+.switch-handle {
+    transition: All 0.3s ease;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+}
+
+
+/* Switch Flat
+==========================*/
+
+.switch-flat {
+    padding: 0;
+    background: #FFF;
+    background-image: none;
+}
+
+.switch-flat .switch-label {
+    background: #FFF;
+    border: solid 2px #eceeef;
+    box-shadow: none;
+}
+
+.switch-flat .switch-label:after {
+    color: #0088cc;
+}
+
+.switch-flat .switch-handle {
+    top: 6px;
+    left: 6px;
+    background: #dadada;
+    width: 22px;
+    height: 22px;
+    box-shadow: none;
+}
+
+.switch-flat .switch-handle:before {
+    background: #eceeef;
+}
+
+.switch-flat .switch-input:checked~.switch-label {
+    background: #FFF;
+    border-color: #0088cc;
+}
+
+.switch-flat .switch-input:checked~.switch-handle {
+    left: 72px;
+    background: #0088cc;
+    box-shadow: none;
+}
+
+
+
+/* Processing Box */
+
+#ProcessingBox {
+    margin-top: 4%;
+    width: 350;
+    height: auto;
+    position: fixed;
+    margin-left: 15%;
+    background-color: #2e3440;
+    border: #00000000 2px solid;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.ProcessingBoxLoop
+{
+    animation: spin1 2s infinite linear;
+    display: block;
+}
+.ProcessingBoxHammer {
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+.ProcessingBoxHammer:hover {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+/* .ProcessingBoxIconBox {   OLD 
+    border: rgb(255, 255, 255) 1px solid;
+    border-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    margin-top: -30px;
+    border-width: 1px;
+    margin-left: 150%;
+    align-items: center;
+    color: #fff;
+    width: 111%;
+    display: inline-block;
+} */
+
+.ProcessingBoxIconBox {         /*''NEU''*/
+    border: rgb(255, 255, 255) 1px solid;
+    border-radius: 5px;
+    width: 8%;
+    display: inline-block;
+}
+
+.ProcessingBoxIconBox:hover {
+    background: green; 
+}
+
+.ProcessingBoxNeededItemIMG {
+    margin-top: 7%;
+    width: 50%;
+}
+.ProcessingBoxNeededItemTwoIMG {
+    margin-top: 7%;
+    width: 50%;
+}
+.ProcessingBoxNeededItemThreeIMG {
+    margin-top: 7%;
+    width: 50%;
+}
+
+.ProcessingBoxZutaten {
+    border: #000000 1px solid;
+    border-radius: 5px;
+    /* width: 15%; */
+    margin-left: 3%;
+    text-align: center;
+    font-size: 89%;
+    margin-bottom: -50px;
+    width: 325;
+    min-height: 150px !important;
+    max-height: 450;
+}
+
+.ProcessingBoxProducedItem {
+    border: #ffffff 1px solid;
+    border-radius: 5px;
+    margin: 2%;
+}
+
+.ProcessingBoxUpperPart {
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+    width: 350;
+    height: 50px;
+    margin-left: -2px;
+    margin-top: -5px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px 5px 0 0;
+}
+
+.ProcessingBoxUpperPart>hr {
+    width: 80%;
+    background: #fff;
+    height: 1px;
+    margin-top: -19px;
+    border-radius: 5px;
+}
+
+.ProcessingBoxNeededItem, .ProcessingBoxNeededItemTwo, .ProcessingBoxNeededItemThree, #ProcessingBoxProducedItem {
+    margin: 3%;
+    color: white;
+    font-size: 110%;
+    min-height: 80px;
+    /* margin-left: -150px; */
+}
+
+.ProcessingBoxNeededItemTwo, .ProcessingBoxNeededItemThree {
+    margin-top: 2%;
+}
+
+.fa-arrow-down {
+    color: white !important;
+    size: 120%;
+    font-size: 120%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#ProcessingBoxNeededItems {
+    border: #ffffff 1px solid;
+    border-radius: 5px;
+    margin: 2%;
+    max-width: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+}
+#ProcessingBoxNeededItemsTwo {
+    border: #ffffff 1px solid;
+    border-radius: 5px;
+    margin: 2%;
+    margin-left: 112;
+    margin-top: -107;
+    max-width: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+}
+#ProcessingBoxNeededItemsThree {
+    border: #ffffff 1px solid;
+    border-radius: 5px;
+    margin: 2%;
+    margin-left: 217;
+    margin-top: -107;
+    max-width: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+#ProcessingBox {
+    position: relative;
+}
+#ProcessingBox #ProcessingBoxButtonBoxes {
+    position: absolute;
+    bottom: 2%;
+}
+
+#ProcessingBoxButtonBoxes, .ProcessingBoxTitle {
+    text-align: center;
+}
+
+.ProcessingBoxLoopBox {
+    margin-left: 2%;
+}
+
+.ProcessingIMG {
+    width: 100%;
+}
+
+.ProcessingBoxTitle {
+    font-size: 125%;
+    color: white;
+    margin-left: 2%;
+    margin-top: -5%;
+    text-align: center;
+}
+.ProcessingBoxTitle2 {
+    font-size: 101%;
+    color: white;
+    /* margin-left: 2%; */
+    margin-top: -5%;
+    text-align: center;
+}
+
+#ProcessingBoxLinie {
+    margin-left: 8% !important;
+    margin-right: 8% !important;
+    color: #ffffff !important;
+    font-size: 20px;
+    margin-top: -65;
+    margin-bottom: 100px;
+}
+
+/* #ProcessingBoxLinie {
+    color: #ffffff !important;
+    height: 1px;
+    font-size: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #5969e7 0%, #9e55ce 100%);
+} */
+
+#Processingbox>hr {
+    color: #FFF;
+}
+
+.ProcessingBocCloseBtn {
+    color: white;
+    margin-left: 0%;
+    margin-top: 1%;
+    size: 150%;
+}
+
+
+#ProcessingBoxMainfraim {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30%;
+    margin-right: 10%;
+}
+
+.ProcessingBoxMainfraimElement {
+    /*width: 15%;*/
+    border: rgb(255, 255, 255) 1px solid;
+    border-radius: 5px;
+    color: white;
+    /*font-size: 100%;*/
+    display: inline-block;
+}
+
+#ProcessingBoxMainfraim, .ProcessingBoxZutaten {
+    display: inline-block;
+}
+
+.ProcessingBoxMainfraimElementIMG {
+    width: 70%;
+    margin: 3% 3% 3% 3%;
+}
+
+.fa-arrow-right, .ProcessingBoxMainframePlus {
+    size: 180% !important;
+    font-size: 180%;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: white;
+}
+
+@-webkit-keyframes spin1 {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin1 {
+    0% { -moz-transform: rotate(0deg);}
+    100% { -moz-transform: rotate(360deg);}
+}
+@-o-keyframes spin1 {
+    0% { -o-transform: rotate(0deg);}
+    100% { -o-transform: rotate(360deg);}
+}
+@-ms-keyframes spin1 {
+    0% { -ms-transform: rotate(0deg);}
+    100% { -ms-transform: rotate(360deg);}
+}
+@-keyframes spin1 {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+} 
+
+/* Slider */
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slidecontainer>.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #1d1d1ddb;
+    outline: none;
+    opacity: 0.6;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slidecontainer>.slider:hover {
+    opacity: 1;
+}
+
+.slidecontainer>.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4c7aaf;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+
+/* Saltychat Blockscreen */
+
+.pluginScreen {
+    position: absolute;
+    background: rgb(53, 53, 53);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 202 !important;
+}
+.pluginScreenWindow {
+    background: rgb(0, 0, 0);
+    width: 300px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-51%);
+    border: 2px solid #01b0f0;
+    border-radius: 10px;
+    padding: 20px;
+    color: #eee;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    text-shadow: 1px 1px #000000;
+    font-weight: bold;
+}
+
+.SaltyBlockRestartGameBtn {
+    border: 2px solid #01b0f0;
+    border-radius: 10px;
+    padding: 5% 5% 5% 5%;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+/* L A P T O P*/
+
+
+div#Laptop {
+    opacity: 0;
+    display: none;
+}
+/* Laptop */
+/*
+div.Laptop {
+    position: absolute;
+    background: url(../utils/img/LaptopBackground.png);
+    background-repeat: no-repeat;
+    background-size: 85% 110%;
+    background-position: 50% 35%;
+    margin-bottom: 50%;
+    height: 100%;
+    width: 100%;
+}*/
+div.Laptop {
+    position: absolute;
+    background: url(../utils/img/LaptopBackground.png);
+    background-repeat: no-repeat;
+    background-size: 95% 120%;
+    background-position: 50% 50%;
+    margin-bottom: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+div#Laptop>div.LaptopSafezone {
+    position: relative;
+    height: 60%;
+    left: 21.3%;
+    width: 57.1%;
+    top: 17.9%;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox>ul {
+    position: absolute;
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 1;
+    padding-inline-start: 0;
+    width: 95%;
+    height: 90%;
+    top: 5%;
+    left: 2.5%;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox>ul>li {
+    position: relative;
+    float: left;
+    height: 19.5%;
+    width: 7%;
+    margin-top: 3%;
+    margin-left: 6%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox>ul>li>img {
+    position: absolute;
+    width: 32px;
+    top: 14px;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox>ul>li>span.name {
+    background-color: rgb(253 253 253 / 9%);
+    position: absolute;
+    width: 3.8vw;
+    top: 0vw;
+    text-align: center;
+    font-size: 80%;
+    font-family: PEL;
+    text-shadow: 0px 0px 8px #000000;
+    color: white;
+    padding-top: 3vw;
+    padding-bottom: 0.1vw;
+    border-radius: 0.2vw;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox>ul>li>div.cutline {
+    position: fixed;
+    background: #676767;
+    height: 1%;
+    width: 100%;
+    top: 55%;
+}

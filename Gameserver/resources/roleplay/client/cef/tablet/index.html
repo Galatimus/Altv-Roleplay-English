@@ -1,0 +1,2126 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+
+    <title>Tablet</title>
+</head>
+<body>
+    <div class="TabletBG">
+        <button onclick="showArea(`HomeApp-Area`);" class="btn btn-home btn-circle btn-circle-sm m-1"><i class="fa fa-fingerprint"></i></button>
+        <div class="Tablet">
+            <div class="Taskbar">
+                <i class="fas fa-wifi"></i>
+                <span id="time">12:30 Uhr</span>
+                <i class="fas fa-battery-three-quarters"></i>
+            </div>
+            <div class="Tablet-UseableArea">
+                <div id="HomeApp-Area">
+                    <ul id="HomeApp-AppList" class="list-group"></ul>
+                    <div class="DateBox">
+                        <span id="datetime">12:30 Uhr</span>
+                        <span id="datedate">Donnerstag, den 3. Juli 2019</span>
+                    </div>
+                </div>
+                <div id="InternetApp-Area">
+                    <!-- Internet App -->
+                    <div id="InternetApp-Area-Overview">
+                        <div class="box">
+                            <p class="title" style="padding-top: 80px">INTERNET</p>
+                            <p class="description">Neue Apps gefällig? Du brauchst ein neues Auto? Oder doch nur informieren? <br>Wähle eine der unten stehenden Kategorien aus um fortzufahren.</p>
+                            <ul class="list-group">
+                                <li class="list-group-item" onclick="openSubWindow(`InternetApp-Area-VehicleStore`);">
+                                    <img src="img/internetapp/shipped.png">
+                                    <p>Fahrzeug Shop</p>
+                                </li>
+                                <li class="list-group-item" onclick="openSubWindow(`InternetApp-Area-AppStore`);">
+                                    <img src="img/internetapp/play-store.png">
+                                    <p>App Store</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <img src="img/internetapp/map.png">
+                                    <p>Maps</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="InternetApp-Area-VehicleStore">
+                        <div class="box" style="height: 560px; top: 15px">
+                            <p class="title" style="padding-top: 25px">FAHRZEUG BESTELLEN</p>
+                            <p class="description">Erwerbe online ein Fahrzeug welches es beim örtlichen Händler nicht gibt.<br>Die Fahrzeugfarbe ist
+                                <font id="InternetApp-Area-VehicleStore-ColorText" style="font-weight: bold">weiß</font>, diese kannst du vor Kauf ändern.</p>
+
+                            <ul id="InternetApp-Area-VehicleStore-List" class="list-group"></ul>
+                        </div>
+                    </div>
+                    <div id="InternetApp-Area-AppStore">
+                        <div class="box" style="height: 550px; top: 20px">
+                            <p class="title">APP STORE</p>
+                            <p class="description">
+                                <font style="font-weight: bold" color="#40c777">Installiere</font> neue Apps oder
+                                <font style="font-weight: bold" color="#dc3535">deinstalliere</font> bestehende Applikationen. <br>Die Geb&uuml;hren werden von deinem Bankkonto abgezogen.</p>
+
+                            <ul id="AppStore-List" class="list-group"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="DispatchApp-Area">
+                    <div class="DispatchApp-Area-FactionBox" style="margin-left: 12%;" onclick="SendDispatchToFaction(2);">
+                        <span>Los Santos Police Department</span><br>
+                        <img src="img/police-car.png">
+                    </div>
+                    <div class="DispatchApp-Area-FactionBox" onclick="SendDispatchToFaction(3);">
+                        <span>Los Santos Fire Department</span>
+                        <img src="img/ambulance.png">
+                    </div>
+                    <div class="DispatchApp-Area-FactionBox" style="margin-left: 12%;" onclick="SendDispatchToFaction(6);">
+                        <span>United States Marshal Service</span>
+                        <img src="img/marshal-car.png">
+                    </div>
+                    <div class="DispatchApp-Area-FactionBox" onclick="SendDispatchToFaction(4);">
+                        <span>Auto Club Los Santos</span>
+                        <img src="img/tow-truck.png">
+                    </div>
+                    <textarea maxlength="64" id="DispatchApp-dispatchTextField" spellcheck="false" type="text" placeholder="Nachricht eingeben..." onkeypress="return event.charCode != 59 && event.charCode != 61"></textarea>
+                </div>
+
+                <div id="NotesApp-Area">
+                    <div class="box">
+                        <p class="title">NOTIZEN</p>
+                        <p class="description">Erstelle, lösche oder bearbeite Notizen. <br>Wähle beim Erstellen einen Titel, einen Text und eine passende Farbe aus.</p>
+
+                        <div id="NotesApp-Area-Overview">
+                            <ul id="NotesApp-List" class="list-group"></ul>
+                        </div>
+                        <div id="NotesApp-Area-NewNote">
+                            <div class="colorbox">
+                                <p>Ausgewählte Farbe:
+                                    <font id="NotesApp-NewNote-ColorText" style="font-weight: bold">schwarz</font>
+                                </p>
+                                <button type='button' class='btn btn-black btn-circle btn-sm' onclick="selectNoteColor(`schwarz`, this);"></button>
+                                <button type='button' class='btn btn-white btn-circle btn-sm' onclick="selectNoteColor(`weiß`, this);"></button>
+                                <button type='button' class='btn btn-primary btn-circle btn-sm' onclick="selectNoteColor(`blau`, this);"></button>
+                                <button type='button ' class='btn btn-red btn-circle btn-sm' onclick="selectNoteColor(`rot`, this);"></button>
+                                <button type='button ' class='btn btn-green btn-circle btn-sm' onclick="selectNoteColor(`grün`, this);"></button>
+                                <button type='button' class='btn btn-yellow btn-circle btn-sm' onclick='selectNoteColor(`gelb`, this);'></button><br>
+                            </div>
+                            <div class="box" id="NotesApp-Area-NewNote-NewNoteExample">
+                                <textarea class="title" id="NewNote-Title" spellcheck="false" placeholder="Titel eingeben.." maxlength="24"></textarea>
+                                <hr style="border-color: #2b2a2a54">
+                                <textarea class="text" id="NewNote-Text" spellcheck="false" placeholder="Beschreibung eingeben.." maxlength="64"></textarea>
+                                <button type="button" class="btn btn-create" onclick="NotesAppCreateNewNote();">ERSTELLEN</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="BankingApp-Area">
+                    <!-- Banking App -->
+                    <div id="BankingApp-Area-Overview">
+                        <div class="card text-white">
+                            <div id="bankingapp-overview-header" class="card-header">Bankkonto von Max Mustermann</div>
+                            <div class="card-body">
+                                <h6 class="card-title">Kontoinformationen</h6>
+                                <p id="bankingapp-overview-text" class="card-text"></p>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <p>Weitere Möglichkeiten</p>
+                            <li class="list-group-item" onclick="openSubWindow(`BankingApp-Area-NewTransactionArea`);">
+                                <img src="img/bank/statement.png">
+                                <p>Neue Transaktion</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`BankingApp-Area-ViewBankHistory`);">
+                                <img src="img/bank/transaction.png">
+                                <p>Kontohistorie</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="BankingApp-Area-NewTransactionArea">
+                        <!-- Neue Kontotransaktionsseite -->
+                        <div class="box" style="height: 380px; top: 100px;">
+                            <p>NEUE TRANSAKTION TÄTIGEN</p>
+                            <p id="BankingApp-NewTransactionArea-Error" style="margin-top: -1.8rem;">Dies ist eine Fehlermeldung.</p>
+                            <div class="inputgroup" style="margin-top: 1.5rem">
+                                <i class="fas fa-university icon"></i>
+                                <input id="bankingapp-banknumber" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="16" placeholder="Kontonummer eingeben.." spellcheck="false">
+                            </div>
+
+                            <div class="inputgroup">
+                                <i class="far fa-comment icon"></i>
+                                <input id="bankingapp-transactiontext" type="text" maxlength="20" placeholder="Verwendungszweck eingeben.." spellcheck="false">
+                            </div>
+
+                            <div class="inputgroup">
+                                <i class="fas fa-dollar-sign icon" style="padding-left: 17px; padding-right: 17px;"></i>
+                                <input id="bankingapp-moneyamount" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Betrag eingeben.." spellcheck="false">
+                            </div>
+
+                            <button type="button" id="createNewBankTransaction" class="btn btn-bankhov"><i class="fas fa-check" style="padding-right: 6px;"></i>Transaktion durchführen</button>
+                            <p style="font-size: 0.85rem; font-weight: 100; font-family: PEL;">Jede Transaktion auf ein anderes Konto zieht gewisse Gebühren mit sich.<br>Weitere Informationen zu den verschiedenen Gebühren erhalten Sie in Ihrer Bankfiliale.</p>
+                        </div>
+                    </div>
+                    <div id="BankingApp-Area-ViewBankHistory">
+                        <!-- Kontoauszüge -->
+                        <p>LETZTE TRANSAKTIONEN</p>
+                        <ul id="bankapp-bankhistory-list" class="list-group"></ul>
+                    </div>
+                </div>
+
+                <div id="CompanyApp-Area">
+                    <div id="CompanyApp-Area-Overview">
+                        <div class="card text-white">
+                            <div id="companyapp-overview-header" class="card-header">Standartunternehmen (FEHLER)</div>
+                            <div class="card-body">
+                                <h6 class="card-title">Unternehmensinformationen</h6>
+                                <p id="companyapp-overview-text" class="card-text"></p>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <p>Weitere Möglichkeiten</p>
+                            <li class="list-group-item" onclick="openSubWindow(`CompanyApp-Area-ViewAllMembers`);">
+                                <img src="img/multiple-users-silhouette.png">
+                                <p>Mitarbeiter einsehen</p>
+                            </li>
+                            <li class="list-group-item" onclick="CompanyAppLeaveCompany();">
+                                <img src="img/logout.png">
+                                <p>Unternehmen verlassen</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`CompanyApp-Area-InviteNewMember`);">
+                                <img src="img/invitation.png">
+                                <p>Mitarbeiter einstellen</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="CompanyApp-Area-ViewAllMembers">
+                        <div class="box" style="height: 380px; top: 100px;">
+                            <p style="margin-top: 0.5rem; margin-bottom: -1rem; font-size: 1.3rem;">MITARBEITER EINSEHEN</p>
+                            <ul id="CompanyApp-Area-ViewAllMembers-List" class="list-group"></ul>
+                        </div>
+                    </div>
+                    <div id="CompanyApp-Area-InviteNewMember">
+                        <div class="box" style="height: 380px; top: 100px;">
+                            <p style="margin-top: 2rem; margin-bottom: -1rem;">NEUEN MITARBEITER EINSTELLEN</p>
+                            <p style="font-size: 0.85rem; font-weight: 100; font-family: PEL;">Hier hast du die Möglichkeit einen Mitarbeiter einzustellen.<br>Dieser erhält dann Zugriff auf Funktionen des Unternehmens.</p>
+                            <div class="inputgroup" style="margin-top: 2.5rem;">
+                                <i class="fas fa-university icon"></i>
+                                <input id="companyapp-name" type="text" maxlength="32" placeholder="Namen eingeben.." spellcheck="false">
+                            </div>
+                            <button style="margin-top: 1rem;" type="button" id="companyAppInviteNewMember" class="btn btn-companyHov"><i class="fas fa-check" style="padding-right: 6px;"></i>Mitarbeiter einstellen</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="FactionManagerApp-Area">
+                    <div id="FactionManagerApp-Area-Overview">
+                        <div class="card text-white">
+                            <div id="factionmanagerapp-overview-header" class="card-header">Standartfraktion (FEHLER)</div>
+                            <div class="card-body">
+                                <h6 class="card-title">Fraktionsinformationen</h6>
+                                <p id="factionmanagerapp-overview-text" class="card-text"></p>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <p>Weitere Möglichkeiten</p>
+                            <li class="list-group-item" onclick="openSubWindow(`FactionManagerApp-Area-ViewAllMembers`);">
+                                <img src="img/multiple-users-silhouette.png">
+                                <p>Mitarbeiter einsehen</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`FactionManagerApp-Area-RankManage`);">
+                                <img src="img/bank/transaction.png">
+                                <p>Gehälter verwalten</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`FactionManagerApp-Area-InviteNewMember`);">
+                                <img src="img/invitation.png">
+                                <p>Mitarbeiter einstellen</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="FactionManagerApp-Area-ViewAllMembers">
+                        <div class="box">
+                            <p style="margin-top: 0.5rem; margin-bottom: -1rem; font-size: 1.3rem;">MITARBEITER EINSEHEN</p>
+                            <ul id="FactionManagerApp-Area-ViewAllMembers-List" class="list-group"></ul>
+                        </div>
+                    </div>
+                    <div id="FactionManagerApp-Area-InviteNewMember">
+                        <div class="box" style="height: 380px; top: 100px;">
+                            <p style="margin-top: 2rem; margin-bottom: -1rem;">NEUEN MITARBEITER EINSTELLEN</p>
+                            <p style="font-size: 0.85rem; font-weight: 100; font-family: PEL;">Hier hast du die Möglichkeit einen Mitarbeiter einzustellen.<br>Dieser erhält dann Zugriff auf Funktionen des Unternehmens.</p>
+                            <div class="inputgroup" style="margin-top: 2.5rem;">
+                                <i class="fas fa-user icon"></i>
+                                <input id="factionmanagerapp-name" type="text" maxlength="32" placeholder="Namen eingeben.." spellcheck="false">
+                            </div>
+                            <div class="inputgroup" style="margin-top: 0.5rem;">
+                                <i class="fas fa-list-ol icon"></i>
+                                <input id="factionmanagerapp-dienstnummer" type="number" maxlength="32" placeholder="Dienstnummer eingeben.." spellcheck="false" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            </div>
+                            <button style="margin-top: 1rem;" type="button" id="factionmanagerAppInviteNewMember" class="btn btn-factionManagerHov"><i class="fas fa-check" style="padding-right: 6px;"></i>Mitarbeiter einstellen</button>
+                        </div>
+                    </div>
+                    <div id="FactionManagerApp-Area-RankManage">
+                        <div class="box">
+                            <p style="margin-top: 0.5rem; margin-bottom: -1rem; font-size: 1.3rem;">GEHÄLTER VERWALTEN</p>
+                            <p style="font-size: 0.85rem; font-weight: 100; font-family: PEL; margin-bottom: -1rem;">Hier hast du die Möglichkeit die Gehälter deiner Fraktion anzupassen.<br>Ein Minimum von 1$ und ein Maximum von 10.000$ sind hier Minimal- und Maximalwerte.</p>
+
+                            <ul id="FactionManagerApp-Area-RankManage-List" class="list-group"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="JusticeApp-Area">
+                    <div id="JusticeApp-Area-Overview">
+                        <div class="card text-white">
+                            <div class="card-header">Department of Justice (1)</div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <b>Aktive Mitarbeiter: </b>
+                                    <font id="JusticeApp-Area-Overview-DutyMemberCount">-1</font>
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item" onclick="openSubWindow(`JusticeApp-Area-SearchPerson`);">
+                                <img src="img/multiple-users-silhouette.png">
+                                <p>Person überprüfen</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`JusticeApp-Area-SearchLicense`);">
+                                <img src="img/driving-license.png">
+                                <p>Lizenz <br>abfragen</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`JusticeApp-Area-SearchVehiclePlate`);">
+                                <img src="img/license.png">
+                                <p>Kennzeichen überprüfen</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`JusticeApp-Area-ViewBankTransactions`);">
+                                <img src="img/bank/transaction.png">
+                                <p>Bankdaten überprüfen</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`JusticeApp-Area-ViewFactionVehicles`);">
+                                <img src="img/parking.png">
+                                <p>Ausgeparkte Fahrzeuge</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`JusticeApp-Area-GiveWeaponLicense`);">
+                                <img src="img/gun.png">
+                                <p>Waffenschein vergeben</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="JusticeApp-Area-SearchPerson">
+                        <div class="box">
+                            <p class="title">NAME DER PERSON</p>
+                            <input id="JusticeApp-Area-SearchPerson-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+                            <button onclick="JusticeAppSearchPerson();" type="button" class="btn btn-sm">Suchen</button>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div class="container">
+                                <p><b>Name der Person:</b>
+                                    <font id="JusticeApp-Area-SearchPerson-charName">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Geschlecht:</b>
+                                    <font id="JusticeApp-Area-SearchPerson-gender">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Geburtsdatum:</b>
+                                    <font id="JusticeApp-Area-SearchPerson-birthdate">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Geburtsort:</b>
+                                    <font id="JusticeApp-Area-SearchPerson-birthplace">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Adresse:</b>
+                                    <font id="JusticeApp-Area-SearchPerson-address">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Beruf:</b>
+                                    <font id="JusticeApp-Area-SearchPerson-job">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Hauptkonto:</b>
+                                    <font id="JusticeApp-Area-SearchPerson-mainBankAccNr">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Einreisedatum:</b>
+                                    <font id="JusticeApp-Area-SearchPerson-firstJoinDate">-/-</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="JusticeApp-Area-SearchVehiclePlate">
+                        <div class="box">
+                            <p class="title">KENNZEICHEN EINGEBEN</p>
+                            <input id="JusticeApp-Area-SearchVehiclePlate-InputPlate" type="text" maxlength="32" placeholder="Kennzeichen eingeben.." spellcheck="false">
+                            <button onclick="JusticeAppSearchVehiclePlate();" type="button" class="btn btn-sm">Suchen</button>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div class="container">
+                                <p><b>Besitzer:</b>
+                                    <font id="JusticeApp-Area-SearchVehiclePlate-charName">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Fahrzeugname:</b>
+                                    <font id="JusticeApp-Area-SearchVehiclePlate-vehName">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Hersteller:</b>
+                                    <font id="JusticeApp-Area-SearchVehiclePlate-manufactor">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Kaufdatum:</b>
+                                    <font id="JusticeApp-Area-SearchVehiclePlate-buydate">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Kofferraumgröße:</b>
+                                    <font id="JusticeApp-Area-SearchVehiclePlate-trunk">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Tankgröße:</b>
+                                    <font id="JusticeApp-Area-SearchVehiclePlate-fuel">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Tankart:</b>
+                                    <font id="JusticeApp-Area-SearchVehiclePlate-fueltype">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Steuern:</b>
+                                    <font id="JusticeApp-Area-SearchVehiclePlate-taxes">-/-</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="JusticeApp-Area-SearchLicense">
+                        <div class="box">
+                            <p class="title">NAME DER PERSON</p>
+                            <input id="JusticeApp-Area-SearchLicense-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+                            <button onclick="JusticeAppSearchLicense();" type="button" class="btn btn-sm">Suchen</button>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div id="JusticeApp-Area-SearchLicense-List"></div>
+                        </div>
+                    </div>
+                    <div id="JusticeApp-Area-ViewFactionVehicles">
+                        <div class="box">
+                            <p class="title">AUSGEPARKTE FAHRZEUGE</p>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div id="JusticeApp-Area-ViewFactionVehicles-List"></div>
+                        </div>
+                    </div>
+                    <div id="JusticeApp-Area-ViewBankTransactions">
+                        <div class="box">
+                            <p class="title">KONTOAKTIVITÄTEN CHECKEN</p>
+                            <input id="JusticeApp-Area-ViewBankTransactions-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+                            <button onclick="JusticeAppSearchBankAccounts();" type="button" class="btn btn-sm">Suchen</button>
+                            <hr style="border-color: #0000004a; margin-bottom: -10;">
+                            <p class="title">KONTOAUSWAHL</p>
+                            <ul id="JusticeApp-Area-ViewBankTransactions-AccountList" class="list-group"></ul>
+                            <hr style="border-color: #0000004a; margin-bottom: -10;">
+                            <p class="title">KONTOVERLAUF</p>
+                            <ul id="JusticeApp-Area-ViewBankTransactions-HistoryList" class="list-group"></ul>
+                        </div>
+                    </div>
+                    <div id="JusticeApp-Area-GiveWeaponLicense">
+                        <div class="box">
+                            <p style="margin-top: 120px;">Waffenschein ausstellen</p>
+                            <div class="inputgroup">
+                                <i class="fas fa-align-left icon"></i>
+                                <input id="JusticeApp-Area-GiveWeaponLicense-InputName" type="text" maxlength="64" placeholder="Weitere Infos eingeben..." spellcheck="false">
+                            </div>
+                            <button type="button" onclick="JusticeAppGiveWeaponLicense();" class="btn btn-justicehov"><i class="fas fa-check" style="padding-right: 6px;"></i>Waffenschein ausstellen</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="LSPDApp-Area">
+                    <div id="LSPDApp-Area-Overview">
+                        <div class="card text-white">
+                            <div class="card-header">Los Santos Police Department (2)</div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <b>Aktuelle Notrufe: </b>
+                                    <font id="LSPDApp-Area-Overview-DispatchCount">-1</font><br>
+                                    <b>Aktive Mitarbeiter: </b>
+                                    <font id="LSPDApp-Area-Overview-DutyMemberCount">-1</font><br>
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item" onclick="openSubWindow(`LSPDApp-Area-SearchPerson`);">
+                                <img src="img/multiple-users-silhouette.png">
+                                <p>Person überprüfen</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`LSPDApp-Area-SearchLicense`);">
+                                <img src="img/driving-license.png">
+                                <p>Lizenz <br>abfragen</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`LSPDApp-Area-SearchVehiclePlate`);">
+                                <img src="img/license.png">
+                                <p>Kennzeichen überprüfen</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`FactionManagerApp-Area-InviteNewMember`);">
+                                <img src="img/phonegps.png">
+                                <p>Telefonnummer überprüfen</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`LSPDApp-Area-ViewDispatches`);">
+                                <img src="img/sos.png">
+                                <p>Aktuell aktive Notrufe</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`LSPDApp-Area-ViewFactionVehicles`);">
+                                <img src="img/parking.png">
+                                <p>Ausgeparkte Fahrzeuge</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="LSPDApp-Area-SearchPerson">
+                        <div class="box">
+                            <p class="title">NAME DER PERSON</p>
+                            <input id="LSPDApp-Area-SearchPerson-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+                            <button onclick="LSPDAppSearchPerson();" type="button" class="btn btn-sm">Suchen</button>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div class="container">
+                                <p><b>Name der Person:</b>
+                                    <font id="LSPDApp-Area-SearchPerson-charName">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Geschlecht:</b>
+                                    <font id="LSPDApp-Area-SearchPerson-gender">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Geburtsdatum:</b>
+                                    <font id="LSPDApp-Area-SearchPerson-birthdate">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Geburtsort:</b>
+                                    <font id="LSPDApp-Area-SearchPerson-birthplace">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Adresse:</b>
+                                    <font id="LSPDApp-Area-SearchPerson-address">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Beruf:</b>
+                                    <font id="LSPDApp-Area-SearchPerson-job">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Hauptkonto:</b>
+                                    <font id="LSPDApp-Area-SearchPerson-mainBankAccNr">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Einreisedatum:</b>
+                                    <font id="LSPDApp-Area-SearchPerson-firstJoinDate">-/-</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="LSPDApp-Area-SearchVehiclePlate">
+                        <div class="box">
+                            <p class="title">KENNZEICHEN EINGEBEN</p>
+                            <input id="LSPDApp-Area-SearchVehiclePlate-InputPlate" type="text" maxlength="32" placeholder="Kennzeichen eingeben.." spellcheck="false">
+                            <button onclick="LSPDAppSearchVehiclePlate();" type="button" class="btn btn-sm">Suchen</button>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div class="container">
+                                <p><b>Besitzer:</b>
+                                    <font id="LSPDApp-Area-SearchVehiclePlate-charName">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Fahrzeugname:</b>
+                                    <font id="LSPDApp-Area-SearchVehiclePlate-vehName">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Hersteller:</b>
+                                    <font id="LSPDApp-Area-SearchVehiclePlate-manufactor">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Kaufdatum:</b>
+                                    <font id="LSPDApp-Area-SearchVehiclePlate-buydate">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Kofferraumgröße:</b>
+                                    <font id="LSPDApp-Area-SearchVehiclePlate-trunk">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Tankgröße:</b>
+                                    <font id="LSPDApp-Area-SearchVehiclePlate-fuel">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Tankart:</b>
+                                    <font id="LSPDApp-Area-SearchVehiclePlate-fueltype">-/-</font>
+                                </p>
+                            </div>
+                            <div class="container">
+                                <p><b>Steuern:</b>
+                                    <font id="LSPDApp-Area-SearchVehiclePlate-taxes">-/-</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="LSPDApp-Area-SearchLicense">
+                        <div class="box">
+                            <p class="title">NAME DER PERSON</p>
+                            <input id="LSPDApp-Area-SearchLicense-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+                            <button onclick="LSPDAppSearchLicense();" type="button" class="btn btn-sm">Suchen</button>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div id="LSPDApp-Area-SearchLicense-List"></div>
+                        </div>
+                    </div>
+                    <!--<div id="LSPDApp-Area-ViewFactionVehicles">
+                        <div class="box">
+                            <p class="title">AUSGEPARKTE FAHRZEUGE</p>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div id="LSPDApp-Area-ViewFactionVehicles-List"></div>
+                        </div>
+                    </div>-->
+                    <div id="LSPDApp-Area-ViewDispatches">
+                        <div class="box">
+                            <p class="title">AKTUELLE NOTRUFE</p>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div id="LSPDApp-Area-ViewDispatches-List"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="MDApp-Area">
+                    <div id="MDApp-Area-Overview">
+                        <div class="card text-white">
+                            <div class="card-header">Los Santos Medical Department (4)</div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <b>Aktuelle Notrufe: </b>
+                                    <font id="MDApp-Area-Overview-DispatchCount">-1</font><br>
+                                    <b>Aktive Mitarbeiter: </b>
+                                    <font id="MDApp-Area-Overview-DutyMemberCount">-1</font><br>
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item" onclick="openSubWindow(`MDApp-Area-ViewDispatches`);">
+                                <img src="img/sos.png">
+                                <p>Aktuell aktive Notrufe</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`MDApp-Area-ViewFactionVehicles`);">
+                                <img src="img/parking.png">
+                                <p>Ausgeparkte Fahrzeuge</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="MDApp-Area-ViewFactionVehicles">
+                        <div class="box">
+                            <p class="title">AUSGEPARKTE FAHRZEUGE</p>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div id="MDApp-Area-ViewFactionVehicles-List"></div>
+                        </div>
+                    </div>
+                    <div id="MDApp-Area-ViewDispatches">
+                        <div class="box">
+                            <p class="title">AKTUELLE NOTRUFE</p>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div id="MDApp-Area-ViewDispatches-List"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ACLSApp-Area">
+                    <div id="ACLSApp-Area-Overview">
+                        <div class="card text-white">
+                            <div class="card-header">Auto Club Los Santos (4)</div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <b>Aktuelle Notrufe: </b>
+                                    <font id="ACLSApp-Area-Overview-DispatchCount">-1</font><br>
+                                    <b>Aktive Mitarbeiter: </b>
+                                    <font id="ACLSApp-Area-Overview-DutyMemberCount">-1</font><br>
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item" onclick="openSubWindow(`ACLSApp-Area-ViewDispatches`);">
+                                <img src="img/sos.png">
+                                <p>Aktuell aktive Notrufe</p>
+                            </li>
+                            <li class="list-group-item" onclick="openSubWindow(`ACLSApp-Area-ViewFactionVehicles`);">
+                                <img src="img/parking.png">
+                                <p>Ausgeparkte Fahrzeuge</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="ACLSApp-Area-ViewFactionVehicles">
+                        <div class="box">
+                            <p class="title">AUSGEPARKTE FAHRZEUGE</p>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div id="ACLSApp-Area-ViewFactionVehicles-List"></div>
+                        </div>
+                    </div>
+                    <div id="ACLSApp-Area-ViewDispatches">
+                        <div class="box">
+                            <p class="title">AKTUELLE NOTRUFE</p>
+                            <hr style="border-color: #0000004a; margin-bottom: 0;">
+                            <div id="ACLSApp-Area-ViewDispatches-List"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="EventsApp-Area">
+                    <!-- Events App -->
+                    <div id="EventsApp-Area-Overview">
+                        <button onclick="openSubWindow(`EventsApp-Area-CreateEvent`);" type="button" class="btn btn-success float-right eventcreate"><i class="fas fa-plus" style="padding-right: 6px;"></i>Event eintragen</button>
+                        <ul id="event-entry-list" class="list-group"></ul>
+                    </div>
+                    <div id="EventsApp-Area-CreateEvent">
+                        <div class="box">
+                            <p>EIN EVENT EINTRAGEN</p>
+                            <p id="EventsApp-CreateEvent-Error">Du hast ein falsches Datum ausgewählt.</p>
+                            <div class="inputgroup" style="margin-top: 1rem;">
+                                <i class="fas fa-pencil-alt icon"></i>
+                                <input id="eventsapp-title" type="text" maxlength="20" placeholder="Titel eingeben..." spellcheck="false">
+                            </div>
+                            <div class="inputgroup">
+                                <i class="fas fa-phone-alt icon"></i>
+                                <input id="eventsapp-callnumber" type="number" maxlength="13" placeholder="Telefonnr. eingeben (optional)" spellcheck="false" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            </div>
+                            <div class="inputgroup">
+                                <i class="far fa-calendar-alt icon"></i>
+                                <input id="eventsapp-date" type="text" maxlength="32" placeholder="Datum eingeben (01.01.2001)" spellcheck="false">
+                            </div>
+                            <div class="inputgroup">
+                                <i class="far fa-clock icon"></i>
+                                <input id="eventsapp-clock" type="text" maxlength="32" placeholder="Uhrzeit eingeben (12:00)" spellcheck="false">
+                            </div>
+                            <div class="inputgroup">
+                                <i class="fas fa-map-marker-alt icon" style="padding-left: 14px; padding-right: 14px;"></i>
+                                <input id="eventsapp-location" type="text" maxlength="32" placeholder="Standort eingeben..." spellcheck="false">
+                            </div>
+                            <div class="inputgroup">
+                                <i class="fas fa-certificate icon" style="padding-left: 10px; padding-right: 10px;"></i>
+                                <input id="eventsapp-eventtype" type="text" maxlength="20" placeholder="Art der Veranstaltung eingeben..." spellcheck="false">
+                            </div>
+                            <div class="inputgroup">
+                                <i class="fas fa-align-left icon"></i>
+                                <input id="eventsapp-info" type="text" maxlength="64" placeholder="Weitere Infos eingeben..." spellcheck="false">
+                            </div>
+                            <button type="button" id="createEventbtn" class="btn btn-eventhov"><i class="fas fa-check" style="padding-right: 6px;"></i>Event eintragen (250$)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="TutorialApp-Area">
+                    <div class="box">
+                        <p class="title">TUTORIAL</p>
+                        <p class="description">Um dir den Einstieg zu erleichtern möchten wir dir mit den unten gelisteten Quests helfen. <br><b style="color: #ce2020">ACHTUNG:</b> OOC-Anspielungen wie bspw. 'Dr&uuml;cke Taste E' sind im RP nicht zu verwenden und dienen lediglich
+                            der Einf&uuml;hrung.
+                        </p>
+
+                        <div class="container">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Titel</th>
+                                        <th scope="col">Aufgabe</th>
+                                        <th scope="col">Aktion</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="TutorialApp-EntryList">
+                                    <tr id="TutorialApp-OpenTablet">
+                                        <td>Tablet öffnen</td>
+                                        <td>Öffne dein Tablet indem du die Taste "F4" dr&uuml;ckst. Hier hast du die Möglichkeit auf verschiedene Apps zuzugreifen, welche du dir vorab im Internet erwerben kannst.</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr id="TutorialApp-OpenInventory">
+                                        <td>Inventar öffnen</td>
+                                        <td>Öffne dein Inventar indem du die Taste "I" dr&uuml;ckst, hier kannst du Gegenstände die du mit dir trägst einsehen, benutzen oder diese an andere, in der Nähe befindlichen Orte (bspw. Kofferräume) legen.</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr id="TutorialApp-GetIdentitycard">
+                                        <td>Identifizierung</td>
+                                        <td>Begebe dich zum Rathaus und beantrage deinen Personalausweis.</td>
+                                        <td><button onclick="VehiclesAppLocateVehicle(-545.085, -204.337);" class="btn"><i class="fas fa-map-marker-alt"></i></button></td>
+                                    </tr>
+                                    <tr id="TutorialApp-acceptJob">
+                                        <td>Die Tür vom Arbeitsamt</td>
+                                        <td>Begebe dich zum Rathaus und nehme einen Beruf deiner Wahl an.</td>
+                                        <td><button onclick="VehiclesAppLocateVehicle(-534.574, -166.223);" class="btn"><i class="fas fa-map-marker-alt"></i></button></td>
+                                    </tr>
+                                    <tr id="TutorialApp-createBankAccount">
+                                        <td>Dein erstes Konto</td>
+                                        <td>Besuche eine Bankfiliale deiner Wahl und eröffne kostenlos ein Konto. Ohne Konto kannst du somit keine Zahlungen erhalten.</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr id="TutorialApp-buyVehicle">
+                                        <td>Mobilität</td>
+                                        <td>Erwerbe dir ein Fahrzeug deiner Wahl.</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr id="TutorialApp-useGarage">
+                                        <td>Keine Schäden</td>
+                                        <td>Nutze eine Garage.</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="VehiclesApp-Area">
+                    <div class="box">
+                        <p class="title">FAHRZEUGE</p>
+                        <p class="description">In dieser App erhälst du eine &Uuml;bersicht aller deiner Fahrzeuge mit weiteren Informationen. <br>Besitzt dein Fahrzeug ein eingebautes GPS kannst du dieses hier orten.</p>
+
+                        <div class="container">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Kennzeichen</th>
+                                        <th scope="col">Letzte Garage</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Aktion</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="VehiclesApp-VehicleList">
+                                    <tr>
+                                        <th scope="row">-</th>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/anime.min.js"></script>
+    <script src="https://kit.fontawesome.com/640357ffb4.js"></script>
+</body>
+
+<script>
+    var curAppOpened = "none",
+        selectedVehStoreColor = "weiß",
+        selectedNoteColor = "schwarz",
+        globalSelectedCompanyID = 0,
+        globalSelectedFactionManagerFactionid = 0;
+        dispatchAudio = null;
+
+    $(document).ready(function() {
+        alt.emit("Client:Tablet:cefIsReady");
+        //$(".TabletBG").fadeIn(1200);
+        //showArea("HomeApp-Area");
+
+        updateTime();
+
+
+        //später entfernen, beispielwerte setzen
+        //Notizen Einträge setzen
+        // NotesAppAddNotesToList('[{ "id": 1, "color": "schwarz", "title": "Meine Notiz", "text": "ich bin eine Notiz ohne Zeilenumbruch." }, { "id": 2, "color": "weiß", "title": "Notiz", "text": "ich bin eine Notiz<br>mit mehreren<br>Zeilenumbrüchen." }, { "id": 3, "color": "gelb", "title": "ich bins tim", "text": "Ich heiße Jerome Grohmann.<br>Ich hab es im Leben geschafft!<br>Ich lebe auf der Straße und spiele einen krassen Gangsta!" }, { "id": 4, "color": "blau", "title": "Meine Notiz", "text": "ich bin eine Notiz ohne Zeilenumbruch." }, { "id": 5, "color": "rot", "title": "Notiz", "text": "ich bin eine Notiz<br>mit mehreren<br>Zeilenumbrüchen." }, { "id": 6, "color": "grün", "title": "ich bins tim", "text": "Ich heiße Jerome Grohmann.<br>Ich hab es im Leben geschafft!<br>Ich lebe auf der Straße und spiele einen krassen Gangsta!" }]');
+
+        //Fahrzeugshop Einträge setzen
+          SetInternetAppVehicleStoreContent('[{ "name": "Police Interceptor", "manufactor": "Vapid", "fueltype": "Benzin", "fuellimit": 80, "fuelusage": 2, "storage": 25, "seats": 4, "price": 7500, "hash": "1912215274" }, { "name": "Interceptor", "manufactor": "Vapid", "fueltype": "Diesel", "fuellimit": 40, "fuelusage": 4, "storage": 35, "seats": 4, "price": 9500, "hash": "1912215274" }, { "name": "Police Interceptor", "manufactor": "Vapid", "fueltype": "Benzin", "fuellimit": 80, "fuelusage": 2, "storage": 25, "seats": 4, "price": 7500, "hash": "1912215274" }, { "name": "Interceptor", "manufactor": "Vapid", "fueltype": "Diesel", "fuellimit": 40, "fuelusage": 4, "storage": 35, "seats": 4, "price": 9500, "hash": "1912215274" }, { "name": "Police Interceptor", "manufactor": "Vapid", "fueltype": "Benzin", "fuellimit": 80, "fuelusage": 2, "storage": 25, "seats": 4, "price": 7500, "hash": "1912215274" }, { "name": "Interceptor", "manufactor": "Vapid", "fueltype": "Diesel", "fuellimit": 40, "fuelusage": 4, "storage": 35, "seats": 4, "price": 9500, "hash": "1912215274" }]');
+
+        //Apps setzen
+        //SetInternetAppAppStoreContent('[{ "lspdapp": true, "justiceapp": false, "MDapp": true, "factionmanager": true, "banking": true, "news": true, "weather": true, "events": true, "vehicles": true, "company": true, "buyapp": true, "notices": true, "lifeinvader": true }]');
+
+        //Banking App einträge
+        // SetBankingAppContent('[{ "charname": "Jerome Grohmann", "banknumber": "1337 1337 1337", "bankmoney": "205.000", "banksubdivision": "Maze Bank" }]', '[{ "date": "03.09.2019", "time": "11:40", "type": "Einzahlung", "moneyamount": "25000", "location": "Strawberry Avenue", "banknumber": "", "text": "" }, { "date": "03.09.2019", "time": "11:45", "type": "Auszahlung", "moneyamount": "15000", "location": "Vespucci Kanäle", "banknumber": "", "text": "" }, { "date": "03.09.2019", "time": "11:50", "type": "Ausgehende Zahlung", "moneyamount": "7500", "location": "", "banknumber": "1337 311 123", "text": "weil ich es kann" }, { "date": "03.09.2019", "time": "11:55", "type": "Eingehende Zahlung", "moneyamount": "5000", "location": "", "banknumber": "1337 123 311", "text": "weil du es kannst" }, { "date": "03.09.2019", "time": "11:40", "type": "Einzahlung", "moneyamount": "25000", "location": "Strawberry Avenue", "banknumber": "", "text": "" }, { "date": "03.09.2019", "time": "11:45", "type": "Auszahlung", "moneyamount": "15000", "location": "Vespucci Kanäle", "banknumber": "", "text": "" }, { "date": "03.09.2019", "time": "11:50", "type": "Ausgehende Zahlung", "moneyamount": "7500", "location": "", "banknumber": "1337 311 123", "text": "weil ich es kann" }, { "date": "03.09.2019", "time": "11:55", "type": "Eingehende Zahlung", "moneyamount": "5000", "location": "", "banknumber": "1337 123 311", "text": "weil du es kannst" }]');
+
+        //Eventapp Einträge
+        // SetEventsAppEventEntrys('[{ "title": "Schwulen Party", "owner": "Jerome Grohmann", "callnumber": "555123456789", "location": "Bahama Mamas", "eventtype": "Club Party", "date": "03.09.2019", "time": "23:00", "info": "Wir freuen uns auf reichlichen Besuch, für Getränke und Snacks ist gesorgt - Abfahrt! PS: Neueröffnung von der App: Londoou." }, { "title": "Schwulen Party", "owner": "Jerome Grohmann", "callnumber": "555123456789", "location": "Bahama Mamas", "eventtype": "Club Party", "date": "03.09.2019", "time": "23:00", "info": "Wir freuen uns auf reichlichen Besuch, für Getränke und Snacks ist gesorgt - Abfahrt! PS: Neueröffnung von der App: Londoou." }, { "title": "Schwulen Party", "owner": "Jerome Grohmann", "callnumber": "555123456789", "location": "Bahama Mamas", "eventtype": "Club Party", "date": "03.09.2019", "time": "23:00", "info": "Wir freuen uns auf reichlichen Besuch, für Getränke und Snacks ist gesorgt - Abfahrt! PS: Neueröffnung von der App: Londoou." }, { "title": "Schwulen Party", "owner": "Jerome Grohmann", "callnumber": "555123456789", "location": "Bahama Mamas", "eventtype": "Club Party", "date": "03.09.2019", "time": "23:00", "info": "Wir freuen uns auf reichlichen Besuch, für Getränke und Snacks ist gesorgt - Abfahrt! PS: Neueröffnung von der App: Londoou." }, { "title": "Schwulen Party", "owner": "Jerome Grohmann", "callnumber": "555123456789", "location": "Bahama Mamas", "eventtype": "Club Party", "date": "03.09.2019", "time": "23:00", "info": "Wir freuen uns auf reichlichen Besuch, für Getränke und Snacks ist gesorgt - Abfahrt! PS: Neueröffnung von der App: Londoou." }, { "title": "Schwulen Party", "owner": "Jerome Grohmann", "callnumber": "555123456789", "location": "Bahama Mamas", "eventtype": "Club Party", "date": "03.09.2019", "time": "23:00", "info": "Wir freuen uns auf reichlichen Besuch, für Getränke und Snacks ist gesorgt - Abfahrt! PS: Neueröffnung von der App: Londoou." }]');
+
+        //VehiclesApp Einträge
+        //  SetVehiclesAppListEntrys('[{ "id": 1, "name": "Emperor", "plate": "AB-CD-EF", "lastgarage": "Paleto Bay", "parkstate": true, "hasgps": true }, { "id": 2, "name": "Stanier", "plate": "ABCD-EF", "lastgarage": "Sandy Shores", "parkstate": false, "hasgps": true }, { "id": 3, "name": "Schafter", "plate": "ABCDEF", "lastgarage": "International Airport", "parkstate": false, "hasgps": false }, { "id": 4, "name": "Police Interceptor", "plate": "hamudi", "lastgarage": "Mission Row", "parkstate": true, "hasgps": false }, { "id": 5, "name": "Emperor", "plate": "AB-CD-EF", "lastgarage": "Paleto Bay", "parkstate": true, "hasgps": true }, { "id": 6, "name": "Stanier", "plate": "ABCD-EF", "lastgarage": "Sandy Shores", "parkstate": false, "hasgps": true }, { "id": 7, "name": "Schafter", "plate": "ABCDEF", "lastgarage": "International Airport", "parkstate": false, "hasgps": false }]');
+    });
+
+    function showArea(area) {
+        if (area == "HomeApp-Area") {
+            openSubWindow("EventsApp-Area-Overview");
+            openSubWindow("BankingApp-Area-Overview");
+            openSubWindow("InternetApp-Area-Overview");
+            openSubWindow("NotesApp-Area-Overview");
+            openSubWindow("CompanyApp-Area-Overview");
+            openSubWindow("FactionManagerApp-Area-Overview");
+            openSubWindow("LSPDApp-Area-Overview");
+            openSubWindow("JusticeApp-Area-Overview");
+            openSubWindow("MDApp-Area-Overview");
+            openSubWindow("ACLSApp-Area-Overview");
+        }
+
+        if (curAppOpened != "none") {
+            $(`#${curAppOpened}`).fadeOut(400);
+        }
+        $(`#${area}`).fadeIn(800);
+        curAppOpened = area;
+    }
+
+    function openSubWindow(subwindow) {
+        switch (subwindow) {
+            case "InternetApp-Area-Overview":
+                $("#InternetApp-Area-Overview").fadeIn(500);
+                $("#InternetApp-Area-AppStore").fadeOut(100);
+                $("#InternetApp-Area-VehicleStore").fadeOut(100);
+                break;
+            case "InternetApp-Area-VehicleStore":
+                $("#InternetApp-Area-VehicleStore").fadeIn(500);
+                $("#InternetApp-Area-Overview").fadeOut(100);
+                $("#InternetApp-Area-AppStore").fadeOut(100);
+                break;
+            case "InternetApp-Area-AppStore":
+                $("#InternetApp-Area-AppStore").fadeIn(500);
+                $("#InternetApp-Area-Overview").fadeOut(100);
+                $("#InternetApp-Area-VehicleStore").fadeOut(100);
+                break;
+            case "NotesApp-Area-Overview":
+                $("#NotesApp-Area-Overview").fadeIn(500);
+                $("#NotesApp-Area-NewNote").fadeOut(100);
+                break;
+            case "NotesApp-Area-NewNote":
+                $("#NotesApp-Area-NewNote").fadeIn(500);
+                $("#NotesApp-Area-Overview").fadeOut(100);
+                break;
+            case "BankingApp-Area-Overview":
+                $("#BankingApp-Area-Overview").fadeIn(500);
+                $("#BankingApp-Area-NewTransactionArea").fadeOut(100);
+                $("#BankingApp-Area-ViewBankHistory").fadeOut(100);
+                break;
+            case "BankingApp-Area-NewTransactionArea":
+                $("#BankingApp-Area-NewTransactionArea").fadeIn(500);
+                $("#BankingApp-Area-Overview").fadeOut(100);
+                $("#BankingApp-Area-ViewBankHistory").fadeOut(100);
+                break;
+            case "BankingApp-Area-ViewBankHistory":
+                $("#BankingApp-Area-ViewBankHistory").fadeIn(500);
+                $("#BankingApp-Area-NewTransactionArea").fadeOut(100);
+                $("#BankingApp-Area-Overview").fadeOut(100);
+                break;
+            case "CompanyApp-Area-Overview":
+                $("#CompanyApp-Area-Overview").fadeIn(500);
+                $("#CompanyApp-Area-ViewAllMembers").fadeOut(100);
+                $("#CompanyApp-Area-InviteNewMember").fadeOut(100);
+                break;
+            case "CompanyApp-Area-ViewAllMembers":
+                $("#CompanyApp-Area-ViewAllMembers").fadeIn(500);
+                $("#CompanyApp-Area-Overview").fadeOut(100);
+                $("#CompanyApp-Area-InviteNewMember").fadeOut(100);
+                break;
+            case "CompanyApp-Area-InviteNewMember":
+                $("#CompanyApp-Area-InviteNewMember").fadeIn(500);
+                $("#CompanyApp-Area-ViewAllMembers").fadeOut(100);
+                $("#CompanyApp-Area-Overview").fadeOut(100);
+                break;
+            case "FactionManagerApp-Area-Overview":
+                $("#FactionManagerApp-Area-Overview").fadeIn(500);
+                $("#FactionManagerApp-Area-InviteNewMember").fadeOut(100);
+                $("#FactionManagerApp-Area-ViewAllMembers").fadeOut(100);
+                $("#FactionManagerApp-Area-RankManage").fadeOut(100);
+                break;
+            case "FactionManagerApp-Area-InviteNewMember":
+                $("#FactionManagerApp-Area-InviteNewMember").fadeIn(500);
+                $("#FactionManagerApp-Area-Overview").fadeOut(100);
+                $("#FactionManagerApp-Area-ViewAllMembers").fadeOut(100);
+                $("#FactionManagerApp-Area-RankManage").fadeOut(100);
+                break;
+            case "FactionManagerApp-Area-RankManage":
+                $("#FactionManagerApp-Area-RankManage").fadeIn(500);
+                $("#FactionManagerApp-Area-InviteNewMember").fadeOut(100);
+                $("#FactionManagerApp-Area-Overview").fadeOut(100);
+                $("#FactionManagerApp-Area-ViewAllMembers").fadeOut(100);
+                break;
+            case "FactionManagerApp-Area-ViewAllMembers":
+                $("#FactionManagerApp-Area-ViewAllMembers").fadeIn(500);
+                $("#FactionManagerApp-Area-RankManage").fadeOut(100);
+                $("#FactionManagerApp-Area-InviteNewMember").fadeOut(100);
+                $("#FactionManagerApp-Area-Overview").fadeOut(100);
+                break;
+            case "MDApp-Area-Overview":
+                $("#MDApp-Area-Overview").fadeIn(500);
+                $("#MDApp-Area-ViewDispatches").fadeOut(100);
+                $("#MDApp-Area-ViewFactionVehicles").fadeOut(100);
+                break;
+            case "MDApp-Area-ViewFactionVehicles":
+                $("#MDApp-Area-ViewFactionVehicles").fadeIn(500);
+                $("#MDApp-Area-Overview").fadeOut(100);
+                $("#MDApp-Area-ViewDispatches").fadeOut(100);
+                break;
+            case "MDApp-Area-ViewDispatches":
+                $("#MDApp-Area-ViewDispatches").fadeIn(500);
+                $("#MDApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#MDApp-Area-Overview").fadeOut(100);
+                break;
+            case "ACLSApp-Area-Overview":
+                $("#ACLSApp-Area-Overview").fadeIn(500);
+                $("#ACLSApp-Area-ViewDispatches").fadeOut(100);
+                $("#ACLSApp-Area-ViewFactionVehicles").fadeOut(100);
+                break;
+            case "ACLSApp-Area-ViewFactionVehicles":
+                $("#ACLSApp-Area-ViewFactionVehicles").fadeIn(500);
+                $("#ACLSApp-Area-Overview").fadeOut(100);
+                $("#ACLSApp-Area-ViewDispatches").fadeOut(100);
+                break;
+            case "ACLSApp-Area-ViewDispatches":
+                $("#ACLSApp-Area-ViewDispatches").fadeIn(500);
+                $("#ACLSApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#ACLSApp-Area-Overview").fadeOut(100);
+                break;
+            case "LSPDApp-Area-Overview":
+                $("#LSPDApp-Area-Overview").fadeIn(500);
+                $("#LSPDApp-Area-SearchPerson").fadeOut(100);
+                $("#LSPDApp-Area-SearchVehiclePlate").fadeOut(100);
+                $("#LSPDApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#LSPDApp-Area-SearchLicense").fadeOut(100);
+                $("#LSPDApp-Area-ViewDispatches").fadeOut(100);
+                break;
+            case "LSPDApp-Area-SearchPerson":
+                $("#LSPDApp-Area-SearchPerson").fadeIn(500);
+                $("#LSPDApp-Area-Overview").fadeOut(100);
+                $("#LSPDApp-Area-SearchVehiclePlate").fadeOut(100);
+                $("#LSPDApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#LSPDApp-Area-SearchLicense").fadeOut(100);
+                $("#LSPDApp-Area-ViewDispatches").fadeOut(100);
+                break;
+            case "LSPDApp-Area-SearchVehiclePlate":
+                $("#LSPDApp-Area-SearchVehiclePlate").fadeIn(500);
+                $("#LSPDApp-Area-Overview").fadeOut(100);
+                $("#LSPDApp-Area-SearchPerson").fadeOut(100);
+                $("#LSPDApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#LSPDApp-Area-SearchLicense").fadeOut(100);
+                $("#LSPDApp-Area-ViewDispatches").fadeOut(100);
+                break;
+            case "LSPDApp-Area-ViewFactionVehicles":
+                $("#LSPDApp-Area-ViewFactionVehicles").fadeIn(500);
+                $("#LSPDApp-Area-Overview").fadeOut(100);
+                $("#LSPDApp-Area-SearchPerson").fadeOut(100);
+                $("#LSPDApp-Area-SearchVehiclePlate").fadeOut(100);
+                $("#LSPDApp-Area-SearchLicense").fadeOut(100);
+                $("#LSPDApp-Area-ViewDispatches").fadeOut(100);
+                break;
+            case "LSPDApp-Area-SearchLicense":
+                $("#LSPDApp-Area-SearchLicense").fadeIn(500);
+                $("#LSPDApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#LSPDApp-Area-Overview").fadeOut(100);
+                $("#LSPDApp-Area-SearchPerson").fadeOut(100);
+                $("#LSPDApp-Area-SearchVehiclePlate").fadeOut(100);
+                $("#LSPDApp-Area-ViewDispatches").fadeOut(100);
+                break;
+            case "LSPDApp-Area-ViewDispatches":
+                $("#LSPDApp-Area-ViewDispatches").fadeIn(500);
+                $("#LSPDApp-Area-SearchLicense").fadeOut(100);
+                $("#LSPDApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#LSPDApp-Area-Overview").fadeOut(100);
+                $("#LSPDApp-Area-SearchPerson").fadeOut(100);
+                $("#LSPDApp-Area-SearchVehiclePlate").fadeOut(100);
+                break;
+            case "JusticeApp-Area-Overview":
+                $("#JusticeApp-Area-Overview").fadeIn(500);
+                $("#JusticeApp-Area-SearchPerson").fadeOut(100);
+                $("#JusticeApp-Area-SearchVehiclePlate").fadeOut(100);
+                $("#JusticeApp-Area-SearchLicense").fadeOut(100);
+                $("#JusticeApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#JusticeApp-Area-GiveWeaponLicense").fadeOut(100);
+                $("#JusticeApp-Area-ViewBankTransactions").fadeOut(100);
+                break;
+            case "JusticeApp-Area-SearchPerson":
+                $("#JusticeApp-Area-SearchPerson").fadeIn(500);
+                $("#JusticeApp-Area-Overview").fadeOut(100);
+                $("#JusticeApp-Area-SearchVehiclePlate").fadeOut(100);
+                $("#JusticeApp-Area-SearchLicense").fadeOut(100);
+                $("#JusticeApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#JusticeApp-Area-GiveWeaponLicense").fadeOut(100);
+                $("#JusticeApp-Area-ViewBankTransactions").fadeOut(100);
+                break;
+            case "JusticeApp-Area-SearchVehiclePlate":
+                $("#JusticeApp-Area-SearchVehiclePlate").fadeIn(500);
+                $("#JusticeApp-Area-Overview").fadeOut(100);
+                $("#JusticeApp-Area-SearchPerson").fadeOut(100);
+                $("#JusticeApp-Area-SearchLicense").fadeOut(100);
+                $("#JusticeApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#JusticeApp-Area-GiveWeaponLicense").fadeOut(100);
+                $("#JusticeApp-Area-ViewBankTransactions").fadeOut(100);
+                break;
+            case "JusticeApp-Area-SearchLicense":
+                $("#JusticeApp-Area-SearchLicense").fadeIn(500);
+                $("#JusticeApp-Area-SearchVehiclePlate").fadeOut(100);
+                $("#JusticeApp-Area-Overview").fadeOut(100);
+                $("#JusticeApp-Area-SearchPerson").fadeOut(100);
+                $("#JusticeApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#JusticeApp-Area-GiveWeaponLicense").fadeOut(100);
+                $("#JusticeApp-Area-ViewBankTransactions").fadeOut(100);
+                break;
+            case "JusticeApp-Area-ViewFactionVehicles":
+                $("#JusticeApp-Area-ViewFactionVehicles").fadeIn(500);
+                $("#JusticeApp-Area-SearchLicense").fadeOut(100);
+                $("#JusticeApp-Area-SearchVehiclePlate").fadeOut(100);
+                $("#JusticeApp-Area-Overview").fadeOut(100);
+                $("#JusticeApp-Area-SearchPerson").fadeOut(100);
+                $("#JusticeApp-Area-GiveWeaponLicense").fadeOut(100);
+                $("#JusticeApp-Area-ViewBankTransactions").fadeOut(100);
+                break;
+            case "JusticeApp-Area-GiveWeaponLicense":
+                $("#JusticeApp-Area-GiveWeaponLicense").fadeIn(500);
+                $("#JusticeApp-Area-SearchLicense").fadeOut(100);
+                $("#JusticeApp-Area-SearchVehiclePlate").fadeOut(100);
+                $("#JusticeApp-Area-Overview").fadeOut(100);
+                $("#JusticeApp-Area-SearchPerson").fadeOut(100);
+                $("#JusticeApp-Area-ViewFactionVehicles").fadeOut(100);
+                $("#JusticeApp-Area-ViewBankTransactions").fadeOut(100);
+                break;
+            case "JusticeApp-Area-ViewBankTransactions":
+                $("#JusticeApp-Area-ViewBankTransactions").fadeIn(500);
+                $("#JusticeApp-Area-GiveWeaponLicense").fadeOut(100);
+                $("#JusticeApp-Area-SearchLicense").fadeOut(100);
+                $("#JusticeApp-Area-SearchVehiclePlate").fadeOut(100);
+                $("#JusticeApp-Area-Overview").fadeOut(100);
+                $("#JusticeApp-Area-SearchPerson").fadeOut(100);
+                $("#JusticeApp-Area-ViewFactionVehicles").fadeOut(100);
+                break;
+            case "EventsApp-Area-Overview":
+                $("#EventsApp-Area-Overview").fadeIn(500);
+                $("#EventsApp-Area-CreateEvent").fadeOut(100);
+                break;
+            case "EventsApp-Area-CreateEvent":
+                $("#EventsApp-Area-CreateEvent").fadeIn(500);
+                $("#EventsApp-Area-Overview").fadeOut(100);
+                break;
+        }
+    }
+
+    //Notizen App Funktionen
+    function NotesAppAddNotesToList(noteArray) {
+        var NoteListHTML = "",
+            noteArray = JSON.parse(noteArray);
+
+        for (var i in noteArray) {
+            var nText = noteArray[i].text.replace(/<br>/g, '&#10;');
+            NoteListHTML += `<li class='list-group-item note ${noteArray[i].color}'>` +
+                `<textarea class='title' spellcheck='false' disabled>${noteArray[i].title}</textarea><hr style='border-color: #2b2a2a54'>` +
+                `<textarea class='text' spellcheck='false' disabled>${nText}</textarea>` +
+                `<button type='button' class='btn btn-delete' onclick='NotesAppDeleteNote(${noteArray[i].id});'><i class='fas fa-trash'></i></button></li>`;
+        }
+
+        NoteListHTML += "<li class='list-group-item newnote' onclick='openSubWindow(`NotesApp-Area-NewNote`);'><i class='fas fa-plus'></i></li>";
+
+        $("#NotesApp-List").html(NoteListHTML);
+    }
+
+    function NotesAppCreateNewNote() {
+        var title = $("#NewNote-Title").val(),
+            text = $("#NewNote-Text").val(),
+            titleVerify = title.replace(/^\s+|\s+$/g, ""),
+            textVerify = text.replace(/^\s+|\s+$/g, ""),
+            title = title.replace(/\r?\n/g, '<br>'),
+            text = text.replace(/\r?\n/g, '<br>');
+        if (titleVerify.length <= 0 || textVerify.length <= 0) return;
+
+        openSubWindow("NotesApp-Area-Overview");
+        alt.emit('Client:Tablet:NotesAppNewNote', title, text, selectedNoteColor);
+        $("#NewNote-Title").val("");
+        $("#NewNote-Text").val("");
+    }
+
+    function NotesAppDeleteNote(noteid) {
+        if (noteid == 0 || noteid == undefined) return;
+        alt.emit('Client:Tablet:NotesAppDeleteNote', noteid);
+    }
+
+    function selectNoteColor(color, el) {
+        selectedNoteColor = color;
+        $("#NotesApp-NewNote-ColorText").html(color);
+        $("#NotesApp-NewNote-ColorText").css("color", $(el).css('backgroundColor'));
+        $("#NotesApp-Area-NewNote-NewNoteExample").css("backgroundColor", $(el).css('backgroundColor'));
+    }
+
+    //Internet-App: Fahrzeugshop Funktionen
+    function selectVehicleColor(color, el) {
+        selectedVehStoreColor = color;
+        $("#InternetApp-Area-VehicleStore-ColorText").html(color);
+        $("#InternetApp-Area-VehicleStore-ColorText").css("color", $(el).css('backgroundColor'));
+    }
+
+    function SetInternetAppVehicleStoreContent(vehstoreArray) {
+        var VehStoreHTML = "";
+        vehstoreArray = JSON.parse(vehstoreArray);
+
+        for (var i in vehstoreArray) {
+            VehStoreHTML += `<li class='list-group-item'><p class='title'>${vehstoreArray[i].name}</p><img src='../utils/img/vehicles/${vehstoreArray[i].hash}.png'><p class='desc'><b>Hersteller:</b> ${vehstoreArray[i].manufactor}</p><p class='desc'><b>Treibstoff:</b> ${vehstoreArray[i].fueltype}</p><p class='desc'><b>Tankgröße:</b> ${vehstoreArray[i].fuellimit} Liter</p><p class='desc'><b>Kofferraum:</b> ${vehstoreArray[i].storage}kg</p><p class='desc'><b>Sitzplätze:</b> ${vehstoreArray[i].seats}</p>` +
+                "<button type='button' class='btn btn-black btn-circle btn-sm' onclick='selectVehicleColor(`schwarz`, this);'></button>" +
+                "<button type='button' class='btn btn-white btn-circle btn-sm' onclick='selectVehicleColor(`weiß`, this);'></button>" +
+                "<button type='button' class='btn btn-primary btn-circle btn-sm' onclick='selectVehicleColor(`blau`, this);'></button>" +
+                "<button type='button' class='btn btn-red btn-circle btn-sm' onclick='selectVehicleColor(`rot`, this);'></button>" +
+                "<button type='button' class='btn btn-green btn-circle btn-sm' onclick='selectVehicleColor(`grün`, this);'></button>" +
+                "<button type='button' class='btn btn-yellow btn-circle btn-sm' onclick='selectVehicleColor(`gelb`, this);'></button><br>" +
+                `<button type='button' class='btn btn-vehstore' onclick='VehStoreBuyVehicleOnline(${vehstoreArray[i].hash}, ${vehstoreArray[i].shopId});'>Kaufen (${vehstoreArray[i].price}$)</button></li>`;
+        }
+
+        $("#InternetApp-Area-VehicleStore-List").html(VehStoreHTML);
+    }
+
+    function VehStoreBuyVehicleOnline(hash, shopId) {
+        if (hash == undefined || hash == 0 || shopId <= 0) return;
+        showArea("HomeApp-Area");
+        alt.emit('Client:Tablet:VehicleStoreBuyVehicle', `${hash}`, shopId, selectedVehStoreColor);
+    }
+
+    //Internet-App: App-Store Funktionen
+    function AppStoreInstallUninstallApp(action, appname) {
+        if (action != "uninstall" && action != "install") return;
+        showArea("HomeApp-Area");
+        alt.emit('Client:Tablet:AppStoreInstallUninstallApp', action, appname);
+    }
+
+    function SetInternetAppAppStoreContent(appArray) {
+        var appStoreHTML = "",
+            homeAppList = "",
+            appcounter = 0;
+        appArray = JSON.parse(appArray);
+
+        homeAppList += "<li class='list-group-item' onclick='showArea(`InternetApp-Area`);'><img src='img/appicons/globe.png'><br><span>Internet</span></li><li class='list-group-item'><img src='img/appicons/gmail.png'><br><span>E-Mail</span></li><li class='list-group-item' onclick='showArea(`TutorialApp-Area`);'><img src='img/appicons/tutorial.png'><br><span>Tutorial</span></li>";
+
+        for (var i in appArray) {
+            if (appArray[i].weather == true) {
+                //hat die Wetter App
+                if (appcounter == 3 || appcounter == 5) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                appStoreHTML += "<li class='list-group-item uninstall' onclick='AppStoreInstallUninstallApp(`uninstall`, `weather`);'><img src='img/appicons/weather.png'><p class='title'>Wetter</p><p class='description'>Wetter einsehen</p></li>";
+                homeAppList += "<li class='list-group-item'><img src='img/appicons/weather.png'><br><span>Wetter</span></li>";
+                appcounter++;
+            } else {
+                //hat die Wetter App nicht
+                appStoreHTML += "<li class='list-group-item install' onclick='AppStoreInstallUninstallApp(`install`, `weather`);'><img src='img/appicons/weather.png'><p class='title'>Wetter</p><p class='description'>Wetter einsehen</p></li>";
+            }
+
+            if (appArray[i].news == true) {
+                //hat die News App
+                if (appcounter == 3 || appcounter == 5) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                appStoreHTML += "<li class='list-group-item uninstall' onclick='AppStoreInstallUninstallApp(`uninstall`, `news`);'><img src='img/appicons/text-lines.png'><p class='title'>News</p><p class='description'>Nachrichten einsehen</p></li>";
+                homeAppList += "<li class='list-group-item'><img src='img/appicons/text-lines.png'><br><span>News</span></li>";
+                appcounter++;
+            } else {
+                //hat die News App nicht
+                appStoreHTML += "<li class='list-group-item install' onclick='AppStoreInstallUninstallApp(`install`, `news`);'><img src='img/appicons/text-lines.png'><p class='title'>News</p><p class='description'>Nachrichten einsehen</p></li>";
+            }
+
+            if (appArray[i].banking == true) {
+                //hat die Banking App
+                if (appcounter == 3 || appcounter == 5) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                appStoreHTML += "<li class='list-group-item uninstall' onclick='AppStoreInstallUninstallApp(`uninstall`, `banking`);'><img src='img/appicons/cash.png'><p class='title'>Banking</p><p class='description'>Konto online verwalten</p></li>";
+                homeAppList += "<li class='list-group-item' onclick='showArea(`BankingApp-Area`);'><img src='img/appicons/cash.png'><br><span>Banking</span></li>";
+                appcounter++;
+            } else {
+                //hat die Banking App nicht
+                appStoreHTML += "<li class='list-group-item install' onclick='AppStoreInstallUninstallApp(`install`, `banking`);'><img src='img/appicons/cash.png'><p class='title'>Banking</p><p class='description'>Konto online verwalten</p></li>";
+            }
+
+            if (appArray[i].lifeinvader == true) {
+                //hat die Lifeinvader App                
+                if (appcounter == 3 || appcounter == 5) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                appStoreHTML += "<li class='list-group-item uninstall' onclick='AppStoreInstallUninstallApp(`uninstall`, `lifeinvader`);'><img src='img/appicons/lifeinvader.png'><p class='title'>Lifeinvader</p><p class='description'>Werbung einsehen & erstellen</p></li>";
+                homeAppList += "<li class='list-group-item'><img src='img/appicons/lifeinvader.png'><br><span>Lifeinvader</span></li>";
+                appcounter++;
+            } else {
+                //hat die Lifeinvader App nicht
+                appStoreHTML += "<li class='list-group-item install'onclick='AppStoreInstallUninstallApp(`install`, `lifeinvader`);'><img src='img/appicons/lifeinvader.png'><p class='title'>Lifeinvader</p><p class='description'>Werbung einsehen & erstellen</p></li>";
+            }
+
+            if (appArray[i].vehicles == true) {
+                //hat die Fahrzeuge App
+                if (appcounter == 3 || appcounter == 5) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                appStoreHTML += "<li class='list-group-item uninstall' onclick='AppStoreInstallUninstallApp(`uninstall`, `vehicles`);'><img src='img/appicons/car.png'><p class='title'>Fahrzeuge</p><p class='description'>Eigene Fahrzeugübersicht</p></li>";
+                homeAppList += "<li class='list-group-item' onclick='showArea(`VehiclesApp-Area`);'><img src='img/appicons/car.png'><br><span>Fahrzeuge</span></li>";
+                appcounter++;
+            } else {
+                //hat die Fahrzeuge App nicht
+                appStoreHTML += "<li class='list-group-item install' onclick='AppStoreInstallUninstallApp(`install`, `vehicles`);'><img src='img/appicons/car.png'><p class='title'>Fahrzeuge</p><p class='description'>Eigene Fahrzeugübersicht</p></li>";
+            }
+
+            if (appArray[i].notices == true) {
+                //hat die Notice App
+                if (appcounter == 3 || appcounter == 5) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                appStoreHTML += "<li class='list-group-item uninstall' onclick='AppStoreInstallUninstallApp(`uninstall`, `notices`);'><img src='img/appicons/post-it.png'><p class='title'>Notizen</p><p class='description'>Notizen halt.</p></li>";
+                homeAppList += "<li class='list-group-item' onclick='showArea(`NotesApp-Area`);'><img src='img/appicons/post-it.png'><br><span>Notizen</span></li>";
+                appcounter++;
+            } else {
+                //hat die Notice  App nicht
+                appStoreHTML += "<li class='list-group-item install' onclick='AppStoreInstallUninstallApp(`install`, `notices`);'><img src='img/appicons/post-it.png'><p class='title'>Notizen</p><p class='description'>Notizen halt.</p></li>";
+            }
+
+            if (appArray[i].events == true) {
+                //hat die Events App
+                if (appcounter == 3 || appcounter == 5) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                appStoreHTML += "<li class='list-group-item uninstall' onclick='AppStoreInstallUninstallApp(`uninstall`, `events`);'><img src='img/appicons/calendar.png'><p class='title'>Events</p><p class='description'>Events einsehen & erstellen</p></li>";
+                homeAppList += "<li class='list-group-item' onclick='showArea(`EventsApp-Area`);'><img src='img/appicons/calendar.png'><br><span>Events</span></li>";
+                appcounter++;
+            } else {
+                //hat die Events App nicht
+                appStoreHTML += "<li class='list-group-item install' onclick='AppStoreInstallUninstallApp(`install`, `events`);'><img src='img/appicons/calendar.png'><p class='title'>Events</p><p class='description'>Events einsehen & erstellen</p></li>";
+            }
+
+            if (appArray[i].company == true) {
+                //hat die Unternehmen App
+                if (appcounter == 3 || appcounter == 5) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                homeAppList += "<li class='list-group-item' onclick='showArea(`CompanyApp-Area`);'><img src='img/appicons/price-tag.png'><br><span>Unternehmen</span></li>";
+                appcounter++;
+            }
+
+            if (appArray[i].factionmanager == true) {
+                if (appcounter == 3 || appcounter == 5) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                homeAppList += "<li class='list-group-item' onclick='showArea(`FactionManagerApp-Area`);'><img src='img/appicons/price-tag.png'><br><span>Frakmanager</span></li>";
+                appcounter++;
+            }
+
+            homeAppList += "<li class='list-group-item'><img src='img/appicons/gear.png'><br><span>Einstellungen</span></li>";
+
+            if (appArray[i].lspdapp == true) {
+                if (appcounter == 3 || appcounter == 5 || appcounter == 10) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                homeAppList += "<li class='list-group-item' onclick='showArea(`LSPDApp-Area`);'><img src='img/appicons/pdsiren.png'><br><span>LSPD App</span></li>";
+                appcounter++;
+            }
+
+            if (appArray[i].MDapp == true) {
+                if (appcounter == 3 || appcounter == 5 || appcounter == 10) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                homeAppList += "<li class='list-group-item' onclick='showArea(`MDApp-Area`);'><img src='img/appicons/pdsiren.png'><br><span>MD App</span></li>";
+                appcounter++;
+            }
+
+            if (appArray[i].aclsapp == true) {
+                if (appcounter == 3 || appcounter == 5 || appcounter == 10) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                homeAppList += "<li class='list-group-item' onclick='showArea(`ACLSApp-Area`);'><img src='img/appicons/pdsiren.png'><br><span>ACLS App</span></li>";
+                appcounter++;
+            }
+
+            if (appArray[i].justiceapp == true) {
+                if (appcounter == 3 || appcounter == 5 || appcounter == 10) {
+                    homeAppList += "<li class='list-group-item hide'></li><li class='list-group-item hide'></li>";
+                }
+                homeAppList += "<li class='list-group-item' onclick='showArea(`JusticeApp-Area`);'><img src='img/appicons/law-book.png'><br><span>Justiz App</span></li>";
+                appcounter++;
+            }
+        }
+        appcounter++;
+        appcounter++;
+
+        $("#AppStore-List").html(appStoreHTML);
+        $("#HomeApp-AppList").html(homeAppList);
+    }
+
+    //Banking-App Funktionen
+    $("#createNewBankTransaction").click(function() { //Neue Transaktion: Button (final)
+        var transactiontext = $("#bankingapp-transactiontext").val().replace(/^\s+|\s+$/g, "");
+        var targetBankNumber = $("#bankingapp-banknumber").val();
+        var moneyAmount = $("#bankingapp-moneyamount").val();
+
+        if (targetBankNumber == "" || isNaN(targetBankNumber)) {
+            showError("BankingApp-Area-NewTransactionArea", "Du hast keine gültige Kontonummer angegeben.");
+            return;
+        }
+
+        if (transactiontext.length <= 0) {
+            showError("BankingApp-Area-NewTransactionArea", "Du hast keinen Verwendungszweck angegeben.");
+            return;
+        }
+
+        if (moneyAmount == "" || isNaN(moneyAmount)) {
+            showError("BankingApp-Area-NewTransactionArea", "Du hast keinen gültigen Betrag angegeben.");
+            return;
+        }
+
+        showError("BankingApp-Area-NewTransactionArea", "none");
+        openSubWindow("BankingApp-Area-Overview");
+        $("#bankingapp-banknumber").val("");
+        $("#bankingapp-moneyamount").val("");
+        $("#bankingapp-transactiontext").val("");
+        alt.emit('Client:Tablet:BankingAppnewTransaction', targetBankNumber, transactiontext, moneyAmount);
+    });
+
+    function SetBankingAppContent(bankArray, historieArray) {
+        var bankInfoHTML = "",
+            bankingHistorieHTML = "";
+        bankArray = JSON.parse(bankArray);
+        historieArray = JSON.parse(historieArray);
+
+        $("#bankingapp-overview-header").html(`Bankkonto von ${bankArray[0].charname}`);
+        bankInfoHTML += `<b>Filiale: </b> ${bankArray[0].banksubdivision}<br><b>Kontonummer: </b> ${bankArray[0].banknumber}<br><b>Kontostand: </b> ${bankArray[0].bankmoney}$<br>`;
+        $("#bankingapp-overview-text").html(bankInfoHTML);
+
+        for (var i in historieArray) {
+            if (historieArray[i].type == "Einzahlung" || historieArray[i].type == "Eingehende Überweisung") {
+                bankingHistorieHTML += "<div class='card text-white green'>";
+            } else {
+                bankingHistorieHTML += "<div class='card text-white red'>";
+            }
+
+            bankingHistorieHTML += `<div class='card-header'>Aktivität vom ${historieArray[i].date} ${historieArray[i].time} Uhr</div><div class='card-body'><h6 class='card-title'>${historieArray[i].type}</h6><p class='card-text'>`;
+
+            if (historieArray[i].type == "Einzahlung" || historieArray[i].type == "Auszahlung") {
+                bankingHistorieHTML += `<b>Standort: </b> ${historieArray[i].location}<br><b>Betrag: </b> ${historieArray[i].moneyamount}<br></p></div></div>`;
+            } else if (historieArray[i].type == "Eingehende Überweisung" || historieArray[i].type == "Ausgehende Überweisung") {
+                if (historieArray[i].type == "Eingehende Überweisung") {
+                    bankingHistorieHTML += `<b>Kontonummer (von): </b> ${historieArray[i].banknumber}<br>`;
+                } else {
+                    bankingHistorieHTML += `<b>Kontonummer (an): </b> ${historieArray[i].banknumber}<br>`;
+                }
+                bankingHistorieHTML += `<b>Verwendungszweck: </b> ${historieArray[i].text}<br><b>Betrag: </b> ${historieArray[i].moneyamount}<br></p></div></div>`;
+            }
+        }
+
+        $("#bankapp-bankhistory-list").html(bankingHistorieHTML);
+    }
+
+    //Events-App Funktionen
+    $("#createEventbtn").click(function() {
+        var titleValue = $("#eventsapp-title").val().replace(/^\s+|\s+$/g, "");
+        var callNumberValue = $("#eventsapp-callnumber").val();
+        var locationValue = $("#eventsapp-location").val().replace(/^\s+|\s+$/g, "");
+        var eventTypeValue = $("#eventsapp-eventtype").val().replace(/^\s+|\s+$/g, "");
+        var informationValue = $("#eventsapp-info").val().replace(/^\s+|\s+$/g, "");
+        var eventDate = $("#eventsapp-date").val();
+        var isValidTime = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test($("#eventsapp-clock").val());
+
+        if (titleValue.length <= 0) {
+            showError("EventsApp-Area-CreateEvent", "Du hast keinen Titel angegeben.");
+            return;
+        }
+
+        if (isNaN(callNumberValue)) {
+            showError("EventsApp-Area-CreateEvent", "Die Telefonnummer darf nur aus Zahlen bestehen.");
+            return;
+        }
+
+        if (eventDate.length < 10 || !isValidDate(eventDate)) {
+            showError("EventsApp-Area-CreateEvent", "Das angegebene Datum ist ungültig (Format: dd.mm.yyy)");
+            return;
+        }
+
+        if (isValidTime == false) {
+            showError("EventsApp-Area-CreateEvent", "Die angegebene Uhrzeit ist ungültig (Format: hh:mm)");
+            return;
+        }
+
+        if (locationValue.length <= 0) {
+            showError("EventsApp-Area-CreateEvent", "Du hast keinen Standort angegeben.");
+            return;
+        }
+
+        if (eventTypeValue.length <= 0) {
+            showError("EventsApp-Area-CreateEvent", "Du hast keine Art der Veranstaltung angegeben.");
+            return;
+        }
+
+        if (informationValue.length <= 0) {
+            showError("EventsApp-Area-CreateEvent", "Du hast keine weiteren Informationen angegeben.");
+            return;
+        }
+
+        var newEventArray = [];
+
+        newEventArray.push({
+            "title": titleValue,
+            "callnumber": callNumberValue,
+            "date": eventDate,
+            "time": $("#eventsapp-clock").val(),
+            "location": locationValue,
+            "type": eventTypeValue,
+            "moreinfo": informationValue
+        });
+
+
+        showError("EventsApp-Area-CreateEvent", "none");
+        openSubWindow("EventsApp-Area-Overview");
+        alt.emit('Client:Tablet:EventsAppNewEntry', titleValue, callNumberValue, eventDate, $("#eventsapp-clock").val(), locationValue, eventTypeValue, informationValue);
+        $("#eventsapp-title").val("");
+        $("#eventsapp-callnumber").val("");
+        $("#eventsapp-location").val("");
+        $("#eventsapp-eventtype").val("");
+        $("#eventsapp-info").val("");
+        $("#eventsapp-date").val("");
+        $("#eventsapp-clock").val("");
+    });
+
+    function SetEventsAppEventEntrys(eventsArray) {
+        var eventEntryHTML = "";
+        eventsArray = JSON.parse(eventsArray);
+        for (var i in eventsArray) {
+            eventEntryHTML += `<div class='card text-white border-left-warning'>` +
+                `<div class='card-header'>Event am: ${eventsArray[i].date} ${eventsArray[i].time} Uhr</div>` +
+                `<div class='card-body'>` +
+                `<h6 class='card-title'>${eventsArray[i].title}</h6>` +
+                `<p class='card-text'>` +
+                `<b>Veranstalter:</b> ${eventsArray[i].owner}<br>` +
+                `<b>Telefonnr.:</b> ${eventsArray[i].callnumber}<br>` +
+                `<b>Standort:</b> ${eventsArray[i].location}<br>` +
+                `<b>Art der Veranstaltung:</b> ${eventsArray[i].eventtype}<br>` +
+                `<b>Weitere Informationen:</b> ${eventsArray[i].info}</p></div></div>`;
+        }
+
+        $("#event-entry-list").html(eventEntryHTML);
+    }
+
+    //VehiclesApp Funktionen
+    function VehiclesAppLocateVehicle(posX, posY) {
+        if (posX != null && posY != null) {
+            alt.emit('Client:Tablet:LocateVehicle', posX, posY);
+        }
+    }
+
+    function SetVehiclesAppListEntrys(vehicleArray) {
+        var VehiclesAppEntryHTML = "";
+        vehicleArray = JSON.parse(vehicleArray);
+        for (var i in vehicleArray) {
+            VehiclesAppEntryHTML += `<tr><th scope='row'>${vehicleArray[i].id}</th><td>${vehicleArray[i].name}</td><td>${vehicleArray[i].plate}</td><td>${vehicleArray[i].lastgarage}</td>`;
+
+            if (vehicleArray[i].parkstate == true) {
+                //Eingeparkt
+                VehiclesAppEntryHTML += "<td>In der Garage</td>";
+            } else if (vehicleArray[i].parkstate == false) {
+                //Ausgeparkt
+                VehiclesAppEntryHTML += "<td>Unterwegs</td>";
+            }
+
+            if (vehicleArray[i].hasgps == true) {
+                //hat GPS
+                VehiclesAppEntryHTML += `<td><button class='btn' onclick='VehiclesAppLocateVehicle(${vehicleArray[i].posX}, ${vehicleArray[i].posY});'><i class='fas fa-search'></i></button></td></tr>`;
+            } else if (vehicleArray[i].hasgps == false) {
+                //hat kein GPS
+                VehiclesAppEntryHTML += "<td>Kein GPS vorhanden</td></tr>";
+            }
+        }
+
+        if (VehiclesAppEntryHTML != "") {
+            $("#VehiclesApp-VehicleList").html(VehiclesAppEntryHTML);
+        }
+    }
+
+    $("#companyAppInviteNewMember").click(function() { //Mitarbeiter einstellen (Unternehmen)
+        var charName = $("#companyapp-name").val().replace(/^\s+|\s+$/g, "");
+
+        if (charName.length <= 0 || globalSelectedCompanyID == 0) {
+            return;
+        }
+
+        openSubWindow("CompanyApp-Area-Overview");
+        $("#companyapp-name").val("");
+        alt.emit('Client:Tablet:CompanyAppInviteNewMember', charName, globalSelectedCompanyID);
+    });
+
+    function CompanyAppLeaveCompany() {
+        if (globalSelectedCompanyID == undefined || globalSelectedCompanyID <= 0) return;
+        globalSelectedCompanyID = 0;
+        showArea("HomeApp-Area");
+        alt.emit('Client:Tablet:CompanyAppLeaveCompany');
+    }
+
+    function SetCompanyAppContent(companyId, infoArray, memberArray) {
+        var companyAppHTML = "",
+            infoArray = JSON.parse(infoArray),
+            memberArray = JSON.parse(memberArray);
+        globalSelectedCompanyID = companyId;
+
+        for (var i in infoArray) {
+            $("#companyapp-overview-header").html(`${infoArray[i].companyName} (${companyId})`);
+            $("#companyapp-overview-text").html(`<b>Geschäftsführer: </b>${infoArray[i].ownerName}<br><b>Mitarbeiter: </b>${infoArray[i].memberAmount}<br><b>Unternehmen-ID: </b>${companyId}<br>`);
+        }
+
+        for (var i in memberArray) {
+            companyAppHTML += `<li class='list-group-item'><div class='container left'><p><b>Vor- / Nachname</b></p><p>${memberArray[i].charName} - ${memberArray[i].rank}</p></div>` +
+                `<div class='container mid'><p><b>Einstellungsdatum</b></p><p>${memberArray[i].date} - ${memberArray[i].time} Uhr</p></div>` +
+                "<div class='container right'><p><b>Rang setzen</b></p>" +
+                "<button class='btn btn-sm red' onclick='CompanyAppRankAction(0, " + memberArray[i].charId + ");'>Mitarbeiter</button>" +
+                "<button class='btn btn-sm red' onclick='CompanyAppRankAction(1, " + memberArray[i].charId + ");'>Stelv. Chef</button>" +
+                "<button class='btn btn-sm red' onclick='CompanyAppRankAction(1337, " + memberArray[i].charId + ");'>Entlassen</button></div></li>";
+        }
+
+        $("#CompanyApp-Area-ViewAllMembers-List").html(companyAppHTML);
+    }
+
+    function CompanyAppRankAction(rankId, charId) {
+        if (charId <= 0 || charId == undefined || charId == null) return;
+        alt.emit("Client:Tablet:CompanyAppRankAction", rankId, charId);
+    }
+
+    $("#factionmanagerAppInviteNewMember").click(function() { //Mitarbeiter einstellen (Fraktion)
+        var charName = $("#factionmanagerapp-name").val().replace(/^\s+|\s+$/g, "");
+        var dienstnummer = $("#factionmanagerapp-dienstnummer").val();
+
+        if (charName.length <= 0 || globalSelectedFactionManagerFactionid == 0 || charName == "") {
+            return;
+        }
+
+        if (isNaN(dienstnummer) || dienstnummer == "") {
+            return;
+        }
+
+        openSubWindow("FactionManagerApp-Area-Overview");
+        $("#factionmanagerapp-name").val("");
+        $("#factionmanagerapp-dienstnummer").val("");
+        alt.emit('Client:Tablet:FactionManagerAppInviteNewMember', charName, dienstnummer, globalSelectedFactionManagerFactionid);
+        globalSelectedFactionManagerFactionid = 0;
+    });
+
+    function FactionManagerRankAction(action, charid) {
+        if (action != "rankup" && action != "rankdown" && action != "remove") return;
+        if (charid <= 0 || charid == undefined) return;
+        alt.emit("Client:Tablet:FactionManagerRankAction", action, charid);
+    }
+
+    function FactionManagerSetRankPaycheck(rankId, htmlElem) {
+        if (rankId <= 0 || htmlElem == null || htmlElem == undefined) return;
+        var inputElem = $(htmlElem).parent().find("input");
+        var inputVal = $(inputElem).val();
+        if (inputVal == "" || inputVal == "" || inputVal < 1) return;
+        alt.emit("Client:Tablet:FactionManagerSetRankPaycheck", rankId, inputVal);
+    }
+
+    function SetFactionManagerAppContent(factionId, infoArray, memberArray, rankArray) {
+        var factionManagerMemberHTML = "",
+            factionManagerRankHTML = "",
+            infoArray = JSON.parse(infoArray),
+            memberArray = JSON.parse(memberArray),
+            rankArray = JSON.parse(rankArray);
+        if (factionId == 0) return;
+        globalSelectedFactionManagerFactionid = factionId;
+
+        for (var i in infoArray) {
+            $("#factionmanagerapp-overview-header").html(`${infoArray[i].factionName} (${factionId})`);
+            $("#factionmanagerapp-overview-text").html(`<b>Fraktionsleitung: </b>${infoArray[i].factionOwner}<br><b>Kontostand: </b>${infoArray[i].factionBalance}$<br><b>Mitarbeiter: </b>${infoArray[i].factionMemberCount}<br>`);
+        }
+
+        for (var i in memberArray) {
+            factionManagerMemberHTML += `<li class='list-group-item'><div class='container left'><p><b>Vor- / Nachname</b></p><p>${memberArray[i].serviceNumber} - ${memberArray[i].charName}</p></div>` +
+                `<div class='container mid'><p><b>Rank</b></p><p>${memberArray[i].rank}</p></div><div class='container midright'><p><b>Letzte Rangänderung</b></p><p>${memberArray[i].date}</p></div>` +
+                `<div class='container right'><p><b>Verwaltung</b></p>` +
+                "<button type='button' onclick='FactionManagerRankAction(`rankup`, " + memberArray[i].charId + ");' class='btn btn-sm btn-rankup'><i class='far fa-arrow-alt-circle-up'></i></button>" +
+                "<button type='button' onclick='FactionManagerRankAction(`rankdown`, " + memberArray[i].charId + ");'class='btn btn-sm btn-rankdown'><i class='far fa-arrow-alt-circle-down'></i></button>" +
+                "<button type='button' onclick='FactionManagerRankAction(`remove`, " + memberArray[i].charId + ");'class='btn btn-sm btn-rankremove'><i class='fas fa-times'></i></button></div></li>";
+        }
+
+        for (var i in rankArray) {
+            factionManagerRankHTML += `<li class='list-group-item'><div class='container left'><p><b>Rank-ID</b></p><p>${rankArray[i].rankId}</p></div>` +
+                `<div class='container mid'><p><b>Rangname</b></p><p>${rankArray[i].rankName}</p></div>` +
+                `<div class='container midright'><p><b>Gehalt</b></p><p>${rankArray[i].rankCurPaycheck}$</p></div><div class='container right'><p><b>Neues Gehalt</b></p><input type='number' placeholder='Neues Gehalt..' spellcheck='false' onkeypress='return event.charCode >= 48 && event.charCode <= 57'>` +
+                "<button onclick='FactionManagerSetRankPaycheck(" + rankArray[i].rankId + ", this);' type='btn' style='margin-top: 0; padding: .08rem .5rem;' class='btn btn-sm btn-factionManagerHov'>Setzen</button></div></li>";
+        }
+
+        $("#FactionManagerApp-Area-ViewAllMembers-List").html(factionManagerMemberHTML);
+        $("#FactionManagerApp-Area-RankManage-List").html(factionManagerRankHTML);
+    }
+
+    function SetFactionAppContent(dutyMemberCount, dispatchCount) {
+        $("#LSPDApp-Area-Overview-DispatchCount").html(`${dispatchCount}`);
+        $("#MDApp-Area-Overview-DispatchCount").html(`${dispatchCount}`);
+        $("#ACLSApp-Area-Overview-DispatchCount").html(`${dispatchCount}`);
+
+        $("#LSPDApp-Area-Overview-DutyMemberCount").html(`${dutyMemberCount}`);
+        $("#JusticeApp-Area-Overview-DutyMemberCount").html(`${dutyMemberCount}`);
+        $("#MDApp-Area-Overview-DutyMemberCount").html(`${dutyMemberCount}`);
+        $("#ACLSApp-Area-Overview-DutyMemberCount").html(`${dutyMemberCount}`);
+    }
+
+    function SetLSPDAppPersonSearchData(charName, gender, birthdate, birthplace, address, job, mainBankAcc, firstJoinDate) {
+        $("#LSPDApp-Area-SearchPerson-charName").html(`${charName}`);
+        $("#JusticeApp-Area-SearchPerson-charName").html(`${charName}`);
+        $("#LSPDApp-Area-SearchPerson-gender").html(`${gender}`);
+        $("#JusticeApp-Area-SearchPerson-gender").html(`${gender}`);
+        $("#LSPDApp-Area-SearchPerson-birthdate").html(`${birthdate}`);
+        $("#JusticeApp-Area-SearchPerson-birthdate").html(`${birthdate}`);
+        $("#LSPDApp-Area-SearchPerson-birthplace").html(`${birthplace}`);
+        $("#JusticeApp-Area-SearchPerson-birthplace").html(`${birthplace}`);
+        $("#LSPDApp-Area-SearchPerson-address").html(`${address}`);
+        $("#JusticeApp-Area-SearchPerson-address").html(`${address}`);
+        $("#LSPDApp-Area-SearchPerson-job").html(`${job}`);
+        $("#JusticeApp-Area-SearchPerson-job").html(`${job}`);
+        $("#LSPDApp-Area-SearchPerson-mainBankAccNr").html(`${mainBankAcc}`);
+        $("#JusticeApp-Area-SearchPerson-mainBankAccNr").html(`${mainBankAcc}`);
+        $("#LSPDApp-Area-SearchPerson-firstJoinDate").html(`${firstJoinDate}`);
+        $("#JusticeApp-Area-SearchPerson-firstJoinDate").html(`${firstJoinDate}`);
+    }
+
+    function LSPDAppSearchPerson() {
+        var charName = $("#LSPDApp-Area-SearchPerson-InputName").val().replace(/^\s+|\s+$/g, "");
+        if (charName.length <= 0 || charName == "") return;
+        alt.emit("Client:Tablet:LSPDAppSearchPerson", charName);
+    }
+
+    function JusticeAppSearchPerson() {
+        var charName = $("#JusticeApp-Area-SearchPerson-InputName").val().replace(/^\s+|\s+$/g, "");
+        if (charName.length <= 0 || charName == "") return;
+        alt.emit("Client:Tablet:LSPDAppSearchPerson", charName);
+    }
+
+    function SetLSPDAppSearchVehiclePlateData(owner, name, manufactor, buydate, trunk, maxfuel, tax, fueltype) {
+        $("#LSPDApp-Area-SearchVehiclePlate-charName").html(`${owner}`);
+        $("#JusticeApp-Area-SearchVehiclePlate-charName").html(`${owner}`);
+        $("#LSPDApp-Area-SearchVehiclePlate-vehName").html(`${name}`);
+        $("#JusticeApp-Area-SearchVehiclePlate-vehName").html(`${name}`);
+        $("#LSPDApp-Area-SearchVehiclePlate-manufactor").html(`${manufactor}`);
+        $("#JusticeApp-Area-SearchVehiclePlate-manufactor").html(`${manufactor}`);
+        $("#LSPDApp-Area-SearchVehiclePlate-buydate").html(`${buydate}`);
+        $("#JusticeApp-Area-SearchVehiclePlate-buydate").html(`${buydate}`);
+        $("#LSPDApp-Area-SearchVehiclePlate-trunk").html(`${trunk}`);
+        $("#JusticeApp-Area-SearchVehiclePlate-trunk").html(`${trunk}`);
+        $("#LSPDApp-Area-SearchVehiclePlate-fuel").html(`${maxfuel}`);
+        $("#JusticeApp-Area-SearchVehiclePlate-fuel").html(`${maxfuel}`);
+        $("#LSPDApp-Area-SearchVehiclePlate-taxes").html(`${tax}`);
+        $("#JusticeApp-Area-SearchVehiclePlate-taxes").html(`${tax}`);
+        $("#LSPDApp-Area-SearchVehiclePlate-fueltype").html(`${fueltype}`);
+        $("#JusticeApp-Area-SearchVehiclePlate-fueltype").html(`${fueltype}`);
+    }
+
+    function LSPDAppSearchVehiclePlate() {
+        var plate = $("#LSPDApp-Area-SearchVehiclePlate-InputPlate").val();
+        if (plate == "" || plate.length <= 0) return;
+        var newPlate = plate.replace(" ", "-");
+        alt.emit("Client:Tablet:LSPDAppSearchVehiclePlate", newPlate.toUpperCase());
+    }
+
+    function JusticeAppSearchVehiclePlate() {
+        var plate = $("#JusticeApp-Area-SearchVehiclePlate-InputPlate").val();
+        if (plate == "" || plate.length <= 0) return;
+        var newPlate = plate.replace(" ", "-");
+        alt.emit("Client:Tablet:LSPDAppSearchVehiclePlate", newPlate.toUpperCase());
+    }
+
+    function SetLSPDAppLicenseSearchData(charName, licArray) {
+        var licHTML = "",
+            licArray = JSON.parse(licArray);
+
+        licHTML += `<div class='container'><p><b>Name der Person:</b>${charName}</p></div>`;
+
+        for (var i in licArray) {
+            var hasPkw = "Nicht vorhanden",
+                hasLKW = "Nicht vorhanden",
+                hasBike = "Nicht vorhanden",
+                hasBoat = "Nicht vorhanden",
+                hasFly = "Nicht vorhanden",
+                hasHelicopter = "Nicht vorhanden",
+                hasPassengerTransport = "Nicht vorhanden",
+                hasWeaponLicense = "Nicht vorhanden";
+            if (licArray[i].PKW) hasPkw = "Vorhanden";
+            if (licArray[i].LKW) hasLKW = "Vorhanden";
+            if (licArray[i].Bike) hasBike = "Vorhanden";
+            if (licArray[i].Boat) hasBoat = "Vorhanden";
+            if (licArray[i].Fly) hasFly = "Vorhanden";
+            if (licArray[i].Helicopter) hasHelicopter = "Vorhanden";
+            if (licArray[i].PassengerTransport) hasPassengerTransport = "Vorhanden";
+            if (licArray[i].weaponlicense) hasWeaponLicense = "Vorhanden";
+
+            licHTML += `<div class='container'><p><b>${licArray[i].pkwName}:</b>${hasPkw}<button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "pkw");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
+            licHTML += `<div class='container'><p><b>${licArray[i].lkwName}:</b>${hasLKW}<button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "lkw");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
+            licHTML += `<div class='container'><p><b>${licArray[i].bikeName}:</b>${hasBike}<button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "bike");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
+            licHTML += `<div class='container'><p><b>${licArray[i].boatName}:</b>${hasBoat}<button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "boat");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
+            licHTML += `<div class='container'><p><b>${licArray[i].flyName}:</b>${hasFly}<button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "fly");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
+            licHTML += `<div class='container'><p><b>${licArray[i].heliName}:</b>${hasHelicopter}<button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "helicopter");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
+            licHTML += `<div class='container'><p><b>${licArray[i].passengerTransportName}:</b>${hasPassengerTransport}<button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "passengertransport");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
+            licHTML += `<div class='container'><p><b>Waffenschein:</b>${hasWeaponLicense}<button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "weaponlicense");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
+        }
+
+        $("#JusticeApp-Area-SearchLicense-List").html(licHTML);
+        $("#LSPDApp-Area-SearchLicense-List").html(licHTML);
+    }
+
+    function SetJusticeAppSearchedBankAccounts(bankArray) {
+        var accHTML = "",
+            bankArray = JSON.parse(bankArray);
+
+        for (var i in bankArray) {
+            accHTML += `<li class='list-group-item'><p>${bankArray[i].accountNumber} (${bankArray[i].money}$)</p><button onclick='JusticeAppViewBankTransactions(${bankArray[i].accountNumber});' type='button' class='btn btn-sm btn-danger'><i class='fas fa-check'></i></button></li>`;
+        }
+
+        $("#JusticeApp-Area-ViewBankTransactions-AccountList").html(accHTML);
+    }
+
+    function SetJusticeAppBankTransactions(paperArray) {
+        var paperHTML = "",
+            paperArray = JSON.parse(paperArray);
+
+        for (var i in paperArray) {
+            paperHTML += `<li class='list-group-item'><div class='container left'><p><b>Art</b></p><p>${paperArray[i].type}</p></div><div class='container left'><p><b>Von/Zu</b></p><p>${paperArray[i].banknumber} (${paperArray[i].moneyamount})</p></div>` +
+                `<div class='container left'><p><b>Standort</b></p><p>${paperArray[i].location}</p></div><div class='container left text'><p><b>Text</b></p><p>${paperArray[i].text}</p></div></li>`;
+        }
+
+        $("#JusticeApp-Area-ViewBankTransactions-HistoryList").html(paperHTML);
+    }
+
+    function JusticeAppViewBankTransactions(accNumber) {
+        if (accNumber.length <= 0 || accNumber == undefined || accNumber == null) return;
+        alt.emit("Client:Tablet:JusticeAppViewBankTransactions", accNumber);
+    }
+
+    function LSPDAppTakeLicense(charName, lic) {
+        if (charName == "" || charName.length <= 0 || lic == "" || lic.length <= 0) return;
+        if (lic != "pkw" && lic != "lkw" && lic != "bike" && lic != "boat" && lic != "fly" && lic != "helicopter" && lic != "passengertransport" && lic != "weaponlicense") return;
+        alt.emit("Client:Tablet:LSPDAppTakeLicense", charName, lic);
+    }
+
+    function LSPDAppSearchLicense() {
+        var charName = $("#LSPDApp-Area-SearchLicense-InputName").val().replace(/^\s+|\s+$/g, "");
+        if (charName.length <= 0 || charName == "") return;
+        alt.emit("Client:Tablet:LSPDAppSearchLicense", charName);
+    }
+
+    function JusticeAppSearchLicense() {
+        var charName = $("#JusticeApp-Area-SearchLicense-InputName").val().replace(/^\s+|\s+$/g, "");
+        if (charName.length <= 0 || charName == "") return;
+        alt.emit("Client:Tablet:LSPDAppSearchLicense", charName);
+    }
+
+    function JusticeAppGiveWeaponLicense() {
+        var charName = $("#JusticeApp-Area-GiveWeaponLicense-InputName").val().replace(/^\s+|\s+$/g, "");
+        if (charName.length <= 0 || charName == "") return;
+        alt.emit("Client:Tablet:JusticeAppGiveWeaponLicense", charName);
+        openSubWindow("JusticeApp-Area-Overview");
+    }
+
+    function JusticeAppSearchBankAccounts() {
+        var charName = $("#JusticeApp-Area-ViewBankTransactions-InputName").val().replace(/^\s+|\s+$/g, "");
+        if (charName.length <= 0) return;
+        alt.emit("Client:Tablet:JusticeAppSearchBankAccounts", charName);
+    }
+
+    function SetFactionAppViewFactionVehicleData(vehicleArray) {
+        var viewFactionHTML = "",
+            vehicleArray = JSON.parse(vehicleArray);
+
+        for (var i in vehicleArray) {
+            viewFactionHTML += `<div class='container'><div class='left'><img src='../utils/img/vehicles/${vehicleArray[i].vehHash}.png'></div><div class='leftmid name'><p class='name'><b>Fahrzeugname</b></p><p>${vehicleArray[i].vehName}</p></div>` +
+                `<div class='leftmid'><p class='name'><b>Kennzeichen</b></p><p>${vehicleArray[i].vehPlate}</p></div><div class='leftmid flex'>` +
+                `<button type='button' onclick='VehiclesAppLocateVehicle(${vehicleArray[i].vehPosX}, ${vehicleArray[i].vehPosY});' class='btn btn-success'><i class='fas fa-search'></i></button></div></div>`;
+        }
+
+        $("#JusticeApp-Area-ViewFactionVehicles-List").html(viewFactionHTML);
+        $("#LSPDApp-Area-ViewFactionVehicles-List").html(viewFactionHTML);
+        $("#MDApp-Area-ViewFactionVehicles-List").html(viewFactionHTML);
+        $("#ACLSApp-Area-ViewFactionVehicles-List").html(viewFactionHTML);
+    }
+
+    function SetTutorialAppContent(entryArray) {
+        var tutHTML = "",
+            entryArray = JSON.parse(entryArray);
+
+        for (var i in entryArray) {
+            if (entryArray[i].openTablet) {
+                $("#TutorialApp-OpenTablet").css({
+                    background: 'repeating-linear-gradient( 30deg, #29f38838, #2bbb6f57 10px, #217a4b8f 10px, #217a4b8f 20px)'
+                });
+            } else {
+                $("#TutorialApp-OpenTablet").css({
+                    background: 'repeating-linear-gradient( 30deg, #b31b1b9e, #e024246b 10px, #af1e1e82 10px, #af1e1e82 20px)'
+                });
+            }
+
+            if (entryArray[i].openInventory) {
+                $("#TutorialApp-OpenInventory").css({
+                    background: 'repeating-linear-gradient( 30deg, #29f38838, #2bbb6f57 10px, #217a4b8f 10px, #217a4b8f 20px)'
+                });
+            } else {
+                $("#TutorialApp-OpenInventory").css({
+                    background: 'repeating-linear-gradient( 30deg, #b31b1b9e, #e024246b 10px, #af1e1e82 10px, #af1e1e82 20px)'
+                });
+            }
+
+            if (entryArray[i].createBankAccount) {
+                $("#TutorialApp-createBankAccount").css({
+                    background: 'repeating-linear-gradient( 30deg, #29f38838, #2bbb6f57 10px, #217a4b8f 10px, #217a4b8f 20px)'
+                });
+            } else {
+                $("#TutorialApp-createBankAccount").css({
+                    background: 'repeating-linear-gradient( 30deg, #b31b1b9e, #e024246b 10px, #af1e1e82 10px, #af1e1e82 20px)'
+                });
+            }
+
+            if (entryArray[i].buyVehicle) {
+                $("#TutorialApp-buyVehicle").css({
+                    background: 'repeating-linear-gradient( 30deg, #29f38838, #2bbb6f57 10px, #217a4b8f 10px, #217a4b8f 20px)'
+                });
+            } else {
+                $("#TutorialApp-buyVehicle").css({
+                    background: 'repeating-linear-gradient( 30deg, #b31b1b9e, #e024246b 10px, #af1e1e82 10px, #af1e1e82 20px)'
+                });
+            }
+
+            if (entryArray[i].useGarage) {
+                $("#TutorialApp-useGarage").css({
+                    background: 'repeating-linear-gradient( 30deg, #29f38838, #2bbb6f57 10px, #217a4b8f 10px, #217a4b8f 20px)'
+                });
+            } else {
+                $("#TutorialApp-useGarage").css({
+                    background: 'repeating-linear-gradient( 30deg, #b31b1b9e, #e024246b 10px, #af1e1e82 10px, #af1e1e82 20px)'
+                });
+            }
+
+            if (entryArray[i].acceptJob) {
+                $("#TutorialApp-acceptJob").css({
+                    background: 'repeating-linear-gradient( 30deg, #29f38838, #2bbb6f57 10px, #217a4b8f 10px, #217a4b8f 20px)'
+                });
+            } else {
+                $("#TutorialApp-acceptJob").css({
+                    background: 'repeating-linear-gradient( 30deg, #b31b1b9e, #e024246b 10px, #af1e1e82 10px, #af1e1e82 20px)'
+                });
+            }
+
+            if (entryArray[i].hasIdentityCard) {
+                $("#TutorialApp-GetIdentitycard").css({
+                    background: 'repeating-linear-gradient( 30deg, #29f38838, #2bbb6f57 10px, #217a4b8f 10px, #217a4b8f 20px)'
+                });
+            } else {
+                $("#TutorialApp-GetIdentitycard").css({
+                    background: 'repeating-linear-gradient( 30deg, #b31b1b9e, #e024246b 10px, #af1e1e82 10px, #af1e1e82 20px)'
+                });
+            }
+        }
+    }
+
+    function SendDispatchToFaction(factionId) {
+        if (factionId <= 0 || factionId == undefined) return;
+        var msg = $("#DispatchApp-dispatchTextField").val();
+        if (!isEmptyOrSpaces(msg)) {
+            if (msg.length <= 64) {
+                showArea("HomeApp-Area");
+                $("#DispatchApp-dispatchTextField").html(``);
+                alt.emit("Client:Tablet:sendDispatchToFaction", factionId, msg);
+            } else {
+                //Nachricht darf nur 64 Zeichen lang sein
+                alt.emit("Client:HUD:sendNotification", 4, 2500, "Die Nachricht darf nicht länger als 64 Zeichen sein.");
+            }
+        } else {
+            //Nachricht darf nicht leer sein
+            alt.emit("Client:HUD:sendNotification", 4, 2500, "Die Nachricht darf nicht leer sein");
+        }
+    }
+
+    function setFactionDispatches(factionId, dispatchArray) {
+        var dispatchHTML = "",
+            dispatchArray = JSON.parse(dispatchArray);
+
+        for (var i in dispatchArray) {
+            if (dispatchArray[i].senderCharId == 0) {
+                dispatchHTML += `<div class='container'><div class='left'><p class='title'>Absender</p><p>${dispatchArray[i].altname}</p></div><div class='left leftmid'><p class='title'>Nachricht</p><p>${dispatchArray[i].message}</p></div>` +
+                `<div class='left'><button type='button' onclick='VehiclesAppLocateVehicle(${dispatchArray[i].posX}, ${dispatchArray[i].posY});' class='btn btn-success'><i class='fas fa-search'></i></button><button type='button' onclick='DeleteDispatch(${dispatchArray[i].factionId}, ${dispatchArray[i].senderCharId});' class='btn btn-danger'><i class='fas fa-times'></i></button></div></div>`;
+            } else {
+                dispatchHTML += `<div class='container'><div class='left'><p class='title'>Absender</p><p>${dispatchArray[i].senderName}</p></div><div class='left leftmid'><p class='title'>Nachricht</p><p>${dispatchArray[i].message}</p></div>` +
+                `<div class='left'><button type='button' onclick='VehiclesAppLocateVehicle(${dispatchArray[i].posX}, ${dispatchArray[i].posY});' class='btn btn-success'><i class='fas fa-search'></i></button><button type='button' onclick='DeleteDispatch(${dispatchArray[i].factionId}, ${dispatchArray[i].senderCharId});' class='btn btn-danger'><i class='fas fa-times'></i></button></div></div>`;
+            }
+        }
+
+        if (factionId == 1) {
+            $("#LSPDApp-Area-ViewDispatches-List").html(dispatchHTML);
+        } else if (factionId == 4) {
+            $("#MDApp-Area-ViewDispatches-List").html(dispatchHTML);
+        } else if (factionId == 5) {
+            $("#ACLSApp-Area-ViewDispatches-List").html(dispatchHTML);
+        }
+    }
+
+    function DeleteDispatch(factionId, senderId) {
+        if (factionId <= 0 || senderId < 0) return;
+        alt.emit("Client:Tablet:DeleteFactionDispatch", factionId, senderId);
+    }
+
+    // Generelle Funktionen
+    function updateTime() {
+        let datetime = new Date();
+        let hours = datetime.getHours(),
+            minutes = datetime.getMinutes(),
+            day = datetime.getDate(),
+            month = datetime.getMonth(),
+            year = datetime.getFullYear(),
+            tagInWoche = datetime.getDay(),
+            wochentag = new Array("Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"),
+            monat = new Array("Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember");
+        document.getElementById("time").innerHTML = `${hours > 9 ? hours : `0` + hours}:${minutes > 9 ? minutes : `0` + minutes} Uhr`;
+        document.getElementById("datetime").innerHTML = `${hours > 9 ? hours : `0` + hours}:${minutes > 9 ? minutes : `0` + minutes} Uhr`;
+        document.getElementById("datedate").innerHTML = `${wochentag[tagInWoche]}, den ${day}. ${monat[month]} ${year}`;
+
+        setTimeout(updateTime, 10000);
+    }
+
+    function isEmptyOrSpaces(str) {
+        return str === null || str.match(/^ *$/) !== null;
+    }
+
+    function isValidDate(date) {
+        var temp = date.split('.');
+        var d = new Date(temp[1] + '/' + temp[0] + '/' + temp[2]);
+        return (d && (d.getMonth() + 1) == temp[1] && d.getDate() == Number(temp[0]) && d.getFullYear() == Number(temp[2]));
+    }
+
+    function showError(area, errorMSG) {
+        switch(area) {
+            case "EventsApp-Area-CreateEvent": 
+                if(errorMSG != "none") {
+                    $("#EventsApp-CreateEvent-Error").fadeIn(800);
+                    $("#EventsApp-CreateEvent-Error").html(errorMSG);
+                } else {
+                    $("#EventsApp-CreateEvent-Error").fadeOut(800);
+                    $("#EventsApp-CreateEvent-Error").html("");
+                }
+            break;
+            case "BankingApp-Area-NewTransactionArea": 
+                if(errorMSG != "none") {
+                    $("#BankingApp-NewTransactionArea-Error").fadeIn(800);
+                    $("#BankingApp-NewTransactionArea-Error").html(errorMSG);
+                } else {
+                    $("#BankingApp-NewTransactionArea-Error").fadeOut(800);
+                    $("#BankingApp-NewTransactionArea-Error").html("");
+                }
+            break;
+        }
+    }
+
+    function playDispatchAudio(path) {
+        dispatchAudio = new Audio(path);
+        dispatchAudio.play();
+    }
+
+    function stopDispatchAudio() {
+        if(dispatchAudio != null) {
+            dispatchAudio.pause();
+            dispatchAudio = null;
+        } else {
+            return false;
+        }
+    }
+
+    //Alt:on Events
+    alt.on("CEF:Tablet:openCEF", () => {
+         $(".TabletBG").hide();
+         $(".TabletBG").fadeIn(1000);
+         showArea("HomeApp-Area");
+    });
+    
+    alt.on("CEF:Tablet:showTabletArea", (area) => {
+        showArea(area);
+    });
+
+    alt.on("CEF:Tablet:SetEventsAppEventEntrys", (eventsArray) => {
+        SetEventsAppEventEntrys(eventsArray);
+    });
+
+    alt.on("CEF:Tablet:SetBankingAppContent", (bankArray, historieArray) => {
+        SetBankingAppContent(bankArray, historieArray);
+    });
+
+    alt.on("CEF:Tablet:SetVehiclesAppContent", (vehicleArray) => {
+        SetVehiclesAppListEntrys(vehicleArray);
+    });
+
+    alt.on("CEF:Tablet:SetInternetAppAppStoreContent", (appArray) => {
+        SetInternetAppAppStoreContent(appArray);
+    });
+
+    alt.on("CEF:Tablet:SetVehicleStoreAppContent", (vehStoreArray) => {
+        SetInternetAppVehicleStoreContent(vehStoreArray);
+    });
+
+    alt.on("CEF:Tablet:NotesAppAddNotesContent", (noteArray) => {
+        NotesAppAddNotesToList(noteArray);
+    });
+
+    alt.on("CEF:Tablet:SetCompanyAppContent", (companyId, infoArray, memberArray) => {
+        SetCompanyAppContent(companyId, infoArray, memberArray);
+    });
+
+    alt.on("CEF:Tablet:SetFactionManagerAppContent", (factionId, infoArray, memberArray, rankArray) => {
+        SetFactionManagerAppContent(factionId, infoArray, memberArray, rankArray);
+    });
+
+    alt.on("CEF:Tablet:SetFactionAppContent", (dutyMemberCount, dispatchCount, vehicleArray) => {
+        SetFactionAppContent(dutyMemberCount, dispatchCount);
+        SetFactionAppViewFactionVehicleData(vehicleArray);
+    });
+
+    alt.on("CEF:Tablet:SetLSPDAppPersonSearchData", (charName, gender, birthdate, birthplace, address, job, mainBankAcc, firstJoinDate) => {
+        SetLSPDAppPersonSearchData(charName, gender, birthdate, birthplace, address, job, mainBankAcc, firstJoinDate);
+    });
+
+    alt.on("CEF:Tablet:SetLSPDAppSearchVehiclePlateData", (owner, name, manufactor, buydate, trunk, maxfuel, tax, fueltype) => {
+        SetLSPDAppSearchVehiclePlateData(owner, name, manufactor, buydate, trunk, maxfuel, tax, fueltype);
+    });
+
+    alt.on("CEF:Tablet:SetLSPDAppLicenseSearchData", (charName, licArray) => {
+        SetLSPDAppLicenseSearchData(charName, licArray);
+    });
+
+    alt.on("CEF:Tablet:SetJusticeAppSearchedBankAccounts", (array) => {
+        SetJusticeAppSearchedBankAccounts(array);
+    });
+
+    alt.on("CEF:Tablet:SetJusticeAppBankTransactions", (array) => {
+        SetJusticeAppBankTransactions(array);
+    });
+
+    alt.on("CEF:Tablet:SetTutorialAppContent", (array) => {
+        SetTutorialAppContent(array);
+    });
+
+    alt.on("CEF:Tablet:SetDispatches", (factionid, dispatchArray) => {
+        setFactionDispatches(factionid, dispatchArray);
+    });
+
+    alt.on("CEF:Tablet:playDispatchSound", (filePath) => {
+        playDispatchAudio(filePath);
+        setTimeout(() => {
+            stopDispatchAudio();
+        }, 10000);        
+    })   
+</script>
+
+</html>

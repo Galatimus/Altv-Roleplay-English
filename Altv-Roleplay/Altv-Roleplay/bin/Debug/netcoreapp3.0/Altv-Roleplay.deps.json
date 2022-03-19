@@ -1,0 +1,69 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Altv-Roleplay/1.0.0": {
+        "dependencies": {
+          "AltV.Net": "1.13.0",
+          "AltV.Net.Async": "1.13.1"
+        },
+        "runtime": {
+          "Altv-Roleplay.dll": {}
+        }
+      },
+      "AltV.Net/1.13.0": {
+        "runtime": {
+          "lib/netcoreapp3.0/AltV.Net.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "AltV.Net.Async/1.13.1": {
+        "dependencies": {
+          "AltV.Net": "1.13.0",
+          "System.Threading.Channels": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/AltV.Net.Async.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "System.Threading.Channels/4.5.0": {}
+    }
+  },
+  "libraries": {
+    "Altv-Roleplay/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AltV.Net/1.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2I1fXIjT8OtGl4yWeLU1djndmAvlegYnw2c2bYwMOzLVOywZd92eCsG3DvyJhgS8hsZ/O/OQSyIXf/9aqWJx5A==",
+      "path": "altv.net/1.13.0",
+      "hashPath": "altv.net.1.13.0.nupkg.sha512"
+    },
+    "AltV.Net.Async/1.13.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hV9VKse3x02SNky5SfyGEfzi7iTb9OqNN6lkg32puAZ/Cp689vSu4jLhT9vODESkLuG9zbqNWa6gUIuvd+3h0Q==",
+      "path": "altv.net.async/1.13.1",
+      "hashPath": "altv.net.async.1.13.1.nupkg.sha512"
+    },
+    "System.Threading.Channels/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MEH06N0rIGmRT4LOKQ2BmUO0IxfvmIY/PaouSq+DFQku72OL8cxfw8W99uGpTCFf2vx2QHLRSh374iSM3asdTA==",
+      "path": "system.threading.channels/4.5.0",
+      "hashPath": "system.threading.channels.4.5.0.nupkg.sha512"
+    }
+  }
+}

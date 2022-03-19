@@ -1,0 +1,629 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PM';
+    src: url('../utils/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PT';
+    src: url('../utils/fonts/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSR';
+    src: url('../utils/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('../utils/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+body {
+    user-select: none;
+    background: none;
+    overflow-y: hidden;
+}
+
+.boxa {
+    float: left;
+    margin-top: -35;
+    margin-left: -35;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 360;
+    margin-bottom: -35;
+    width: 300;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    background-image: url(polygonal-abstract-red-dark-background-eo-1280x1024.jpg);
+    background-position: center;
+    background-size: 150%;
+    /* background-image: linear-gradient(to right, #5969e7 0%, #9e55ce 100%); */
+}
+
+.box {
+    opacity: 0;
+    width: 850px;
+    height: 360;
+    padding: 35px;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 1px 4px 22px rgba(25, 25, 25, 0.8) !important;
+    padding-bottom: 12px;
+}
+
+.Pic {
+    min-width: 150px;
+    height: 150px;
+    margin-bottom: 10;
+    margin-top: 100;
+}
+
+.alphatext {
+    color: #d2d2d2;
+    text-align: left;
+    margin-left: -35px;
+    margin-top: -35px;
+    background: rgba(0, 0, 0, 0.25);
+    max-width: 115px;
+    font-size: 0.95rem;
+    border-top-left-radius: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 8px;
+    border-bottom-right-radius: 2px;
+    border: 1px solid #00000040;
+    border-top: none;
+    border-left: none;
+}
+
+hr.cut {
+    margin-top: 1.45px;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #00000063;
+    width: 550px;
+    margin-left: -35px;
+}
+
+div#SexArea>p.title {
+    font-family: sans-serif;
+    color: #d2d2d2;
+    font-size: 1.45rem;
+    font-weight: bold;
+    margin-bottom: -0.5rem;
+}
+
+.box2 {
+    background: rgba(110, 110, 110, 0);
+    margin-left: -35px;
+    margin-right: -35px;
+    margin-top: -16px;
+    z-index: 100;
+    padding: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #00000000;
+    margin-bottom: 1rem;
+}
+
+div#SexArea>img.charsex {
+    width: 250px;
+    height: 210px;
+    margin-bottom: 1rem;
+    margin-left: -18px;
+    filter: grayscale(1);
+    transition: all 0.5s ease-in-out;
+}
+
+div#SexArea>img.charsex:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+div#SexArea>img.charsex.g {
+    margin-left: 16px;
+}
+
+div#SexArea>img.charsex.m {
+    margin-left: -52px;
+}
+
+div.box2>div#SexArea>span.chartitle {
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: 2px 2px #000000cf;
+    margin-top: 45px;
+}
+
+div.box2>div#SexArea>span.chartitle.left {
+    float: left;
+    padding-left: 140px;
+    margin-top: -15;
+}
+
+
+div.box2>div#SexArea>span.chartitle.right {
+    float: right;
+    padding-right: 105px;
+    margin-top: -15;
+}
+
+div#SexArea {
+    margin-bottom: 2rem;
+}
+
+hr.cut.charsex {
+    margin-left: -15px;
+    width: 600px;
+    margin-top: -16px;
+    margin-bottom: 0.5rem;
+}
+
+div.box>p.info {
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: -50px;
+}
+
+
+/* charcreatorbox CSS */
+
+.charcreatorbox {
+    opacity: 0;
+    width: 400px;
+    padding: 35px;
+    padding-left: 20px;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 215px;
+    transform: translate(-50%, -50%);
+    background: #2e3440;
+    border-radius: 6px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    padding-bottom: 12px;
+}
+
+#charcreatorsecondbox {
+    opacity: 0;
+    width: 400px;
+    padding: 35px;
+    padding-left: 20px;
+    position: absolute;
+    z-index: 100;
+    top: 40%;
+    right: 15px;
+    transform: translate(0%, -50%);
+    background: #2e3440;
+    border-radius: 6px;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    padding-bottom: 12px;
+}
+
+
+/* Dropdown fuer Char Editor */
+
+div#creatorarea>.dropdown>.dropdown-caption>i.fas.fa-angle-double-right.dropdown,
+div#charcreatorsecondbox>.dropdown>.dropdown-caption>i.fas.fa-angle-double-right.dropdown {
+    background: linear-gradient(to left, rgba(201, 16, 16, 0.8) 0%, rgba(140, 140, 140, 0.8) 100%);
+    font-size: 1rem;
+    padding-left: 7px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+    margin-right: 0.25rem;
+}
+
+div#creatorarea>p.title,
+div#charcreatorsecondbox>p.title {
+    text-align: center;
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    margin-top: -10px;
+}
+
+div#creatorarea>div.dropdown>div.dropdown-content>div.subboxcontent,
+div#charcreatorsecondbox>div.dropdown>div.dropdown-content>div.subboxcontent {
+    background: #2e3440;
+    padding-left: 8px;
+    padding-top: 6px;
+    border-bottom: 1px solid #252525;
+}
+
+div#creatorarea>div.dropdown>div.dropdown-content>div.subboxcontent>p,
+div#charcreatorsecondbox>div.dropdown>div.dropdown-content>div.subboxcontent>p {
+    color: #d2d2d2;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.05rem;
+}
+
+div#creatorarea>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel {
+    margin-bottom: -0.8rem;
+}
+
+div#creatorarea>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel>form>input.slider {
+    opacity: 0.5;
+    -webkit-appearance: none;
+    width: 298px;
+    height: 15px;
+    background: #1a1f27;
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    border-radius: 2px;
+}
+
+div#creatorarea>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel>form>input.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 20px;
+    background: linear-gradient(to left, rgba(201, 16, 16, 0.8) 0%, rgba(140, 140, 140, 0.8) 100%);
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+div#creatorarea>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel>form>output.numberfield {
+    display: inline-block;
+    background: #1a1f27;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #d2d2d2;
+    font-size: 0.85rem;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-radius: 4px;
+    margin-left: 10px;
+    top: -4px;
+    position: relative;
+}
+
+div#creatorarea>.dropdown,
+div#charcreatorsecondbox>.dropdown {
+    width: 360px;
+}
+
+div#creatorarea>.dropdown .dropdown-caption,
+div#charcreatorsecondbox>.dropdown .dropdown-caption {
+    display: block;
+    box-sizing: border-box;
+    padding: 15px;
+    transition: all .25 ease;
+}
+
+div#creatorarea>.dropdown .dropdown-selector,
+div#charcreatorsecondbox>.dropdown .dropdown-selector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+
+div#creatorarea>.dropdown .dropdown-content,
+div#charcreatorsecondbox>.dropdown .dropdown-content {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    max-height: 0;
+    opacity: .5;
+    transition: all .25s ease;
+    overflow: hidden;
+}
+
+div#creatorarea>.dropdown .dropdown-content li,
+div#charcreatorsecondbox>.dropdown .dropdown-content li {
+    list-style: none;
+    display: block;
+    padding: 15px;
+}
+
+div#creatorarea>.dropdown .dropdown-selector:checked~.dropdown-content,
+div#charcreatorsecondbox>.dropdown .dropdown-selector:checked~.dropdown-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+div#creatorarea>.dropdown,
+div#charcreatorsecondbox>.dropdown {
+    font-family: Proxima Nova, Arial, sans-serif;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+div#creatorarea>.dropdown .dropdown-caption,
+div#charcreatorsecondbox>.dropdown .dropdown-caption {
+    line-height: 20px;
+    padding: 5px 10px;
+    color: #d2d2d2;
+    background: #1a1f27;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 2px;
+}
+
+div#creatorarea>.dropdown .dropdown-caption:after,
+div#charcreatorsecondbox>.dropdown .dropdown-caption:after {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+    right: 17px;
+}
+
+div#creatorarea>.dropdown-selector:checked~.dropdown-caption:before,
+div#charcreatorsecondbox>.dropdown-selector:checked~.dropdown-caption:before {
+    -webkit-transform: rotateZ(135deg);
+    transform: rotateZ(135deg);
+}
+
+div#creatorarea>.dropdown-selector:checked~.dropdown-caption:after,
+div#charcreatorsecondbox>.dropdown-selector:checked~.dropdown-caption:after {
+    -webkit-transform: rotateZ(-135deg);
+    transform: rotateZ(-135deg);
+}
+
+button.movebtn {
+    background-color: #1c294a96;
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+    border-radius: 2px;
+}
+
+div#charcreatorsecondbox>div.dropdown>div.dropdown-content>div.subboxcontent {
+    display: flow-root;
+}
+
+div#charcreatorsecondbox>div.dropdown>div.dropdown-content>div.subboxcontent>p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    padding-left: 10px;
+}
+
+button.clothbtn {
+    background-color: #2e3440;
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-radius: 2px;
+    width: 4vw;
+}
+
+button.clothbtn:hover {
+    background-image: linear-gradient(to left, rgba(201, 16, 16, 0.8) 0%, rgba(140, 140, 140, 0.8) 100%);
+    color: #fff;
+}
+
+button.movebtn.small {
+    font-size: 1.2rem;
+    padding: 8.8px 15px;
+}
+
+button.movebtn:hover,
+div.finish>button.donebtn:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+input#vornameinput,
+input#nachnameinput {
+    border: none;
+    background: #1a1f27;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #bdbbbb;
+    font-family: PT;
+    font-weight: 600;
+    font-size: 0.9rem;
+    height: 35px;
+    width: 320px;
+    margin-left: 0.6rem;
+    margin-top: -0.5rem;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0px 0px 2px #23634000 !important;
+}
+
+input#vornameinput::placeholder,
+input#nachnameinput::placeholder {
+    color: #888787;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #d2d2d2;
+    margin-right: 0.6rem;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 6px;
+    border-radius: 2px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background: none;
+}
+
+input[type="date"],
+focus {
+    color: #95a5a6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+input[type="date"] {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-appearance: none;
+    font-family: sans-serif !important;
+    font-size: 0.9rem !important;
+}
+
+div.finish {
+    display: flex;
+    justify-content: center;
+}
+
+div.finish>button.donebtn {
+    background-image: linear-gradient(to left, rgba(201, 16, 16, 0.8) 0%, rgba(140, 140, 140, 0.8) 100%);
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    border-radius: 2px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 2rem;
+    opacity: 0.6;
+}
+
+input#birthday {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #c5c5c5;
+    background-color: #1a1f27;
+    border: 0.05vw none #ccc;
+    border-radius: 4px;
+    height: 35px;
+    width: 320px;
+    margin-left: 0.6rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* date picker */
+
+.datepicker {
+    background: rgba(44, 44, 44, 0.8);
+    color: #fff;
+}
+
+th.datepicker-switch {
+    color: #e6e6e6;
+    font-family: PT;
+    font-size: 0.9rem;
+}
+
+th.datepicker-switch:hover,
+th.next:hover,
+th.prev:hover,
+span.year:hover,
+span.month:hover,
+td.day:hover {
+    color: #fff;
+    background: rgba(88, 88, 88, 0.8) !important;
+}
+
+th.next,
+th.prev {
+    color: #e6e6e6;
+}
+
+span.year,
+span.month,
+td.day {
+    color: #e6e6e6;
+    font-family: PT;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#charerror {
+    text-align: center;
+    color: #b55050;
+    font-family: PEL;
+    font-weight: bold;
+    margin-top: 0.8rem;
+    margin-bottom: -0.5rem;
+}
+
+#charrotationslider {
+    opacity: 0;
+    top: 10px;
+    left: 425px;
+    width: 1070px;
+    height: auto;
+}
+
+.inputcustom {
+    position: fixed;
+    background: rgba(120, 120, 120, 0);
+    color: white;
+    -webkit-appearance: none;
+    border-radius: 0.3vw;
+    outline: none;
+    margin: 0;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.inputcustom:hover {
+    cursor: grab;
+}
+
+.inputcustom:active {
+    cursor: grabbing;
+}
+
+.inputcustom::-webkit-slider-thumb:hover {
+    background: rgba(0, 0, 0, 0);
+}
+
+.inputcustom::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.2vw;
+    height: 98.0vh;
+    border-radius: 50vw;
+    border: 0.06vw solid rgba(0, 0, 0, 0);
+    background: rgba(120, 120, 120, 0);
+}
+
+.inputcustom::-moz-range-thumb {
+    width: 0.2vw;
+    height: 98.0vh;
+    border-radius: 50vw;
+    border: 0.06vw solid rgba(0, 0, 0, 0);
+    background: rgba(120, 120, 120, 0);
+}

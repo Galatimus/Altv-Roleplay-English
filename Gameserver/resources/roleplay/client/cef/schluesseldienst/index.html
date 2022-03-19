@@ -1,0 +1,126 @@
+<!-- Schluesseldienst #CFgt6$1 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukas Schluesseldienst</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="Schluesseldienst-main" style="display: none;">
+        <p class="closebtn" onclick="closeJobcenterCEF();"><i class="fas fa-times"></i></p>
+        <h2 id="Schluesseldienst-title">Schlüsseldienst</h2>
+
+        <hr class="hr0">
+        <div class="Info">
+            <span class="Info">Schlüssel nachmachen</span>
+            <input class="change" id="ReCreateSchluesselCEF-Plate" value=""  type="text" spellcheck="false" placeholder="kennzeichen...">
+            
+            <span class="Info2" style="opacity: .5;">Dauer: 30 Sekunden</span>
+            <button class="change" type="button" id="ReCreateSchluesselCEF-button">Nachmachen</button>
+        </div>
+        <hr class="hr1">
+        <div class="Info2">
+            <span class="Info">Schlüssel austauschen</span>
+            <input class="remove" id="DeleteSchluesselCEF-Plate" type="text" spellcheck="false" placeholder="kennzeichen...">
+            <span class="Info2" style="opacity: .5;">Dauer: 45 Sekunden</span>
+            <button class="remove" type="button" id="DeleteSchluesselCEF-button">Austauschen</button>
+        </div>
+        <hr class="hr2">
+        <div class="Info3">
+            <span class="Informa"><b style="color: white;">Nachmachen:</b> Gebe ein Kennzeichen von einem Fahrzeug an, von dem <b style="color: #f1f1f1; opacity: .8;">ein</b> Schlüssel nachgemacht werden soll</span>
+            <br>
+            <span class="Informa"><b style="color: white;">Info:</b> Nur <b style="color: #f1f1f1; opacity: .8;">1</b> Fahrzeugschlüssel</span>
+            <br>
+            <span class="Informa"><b style="color: white;">Kosten:</b> $ 350,-</span>
+            <br>
+            <br>
+            <span class="Informa"><b style="color: white;">Austauschen:</b> Gebe ein Kennzeichen von einem Fahrzeug an, von dem das Schloss <b style="color: #f1f1f1; opacity: .8;"> ausgetauscht</b> werden soll.</span>
+            <br>
+            <span class="Informa"><b style="color: white;">Info:</b> Es werden <b>alle</b> vorhandenen Schlüssel entfernt</span>
+            <br>
+            <span class="Informa"><b style="color: white;">Kosten:</b> $ 750,-</span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/anime.min.js"></script>
+    <script src="https://kit.fontawesome.com/640357ffb4.js"></script>
+    <script src="https://kit.fontawesome.com/f25e534c46.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script defer src="../utils/fontawesome/js/all.js"></script>
+</body>
+<script>
+
+    let plate = 0;
+    let platevalue = 0;
+
+    function closeJobcenterCEF() {
+        $("#Schluesseldienst-main").fadeOut(250, function() {});
+        alt.emit("Client:schluesseldienst:destroyCEF");
+        document.getElementById("Schluesseldienst-main").style.display = "none";
+    }
+
+    function openschluesseldienstMenu() {
+            document.getElementById("Schluesseldienst-main").style.display = "block";
+    }
+
+    $("#ReCreateSchluesselCEF-button").click(function() {
+        var plate = $("#ReCreateSchluesselCEF-Plate").val().replace(/^\s+|\s+$/g, "");
+            var newPlate = plate.replace(" ", "-");
+
+        // if (platevalue.length <= 0) {
+        //     showError("Du hast kein Kennzeichen eingegeben.");
+        //     return;
+        // }
+
+        alt.emit('Client:schluesseldienst:ReCreateSchluessel', newPlate);
+        closeJobcenterCEF();
+    });
+
+    $("#DeleteSchluesselCEF-button").click(function() {
+        var plate2 = $("#DeleteSchluesselCEF-Plate").val().replace(/^\s+|\s+$/g, "");
+            var newPlate2 = plate2.replace(" ", "-");
+
+        // if (platevalue.length <= 0) {
+        //     showError("Du hast kein Kennzeichen eingegeben.");
+        //     return;
+        // }
+
+        alt.emit('Client:schluesseldienst:DeleteSchluesselCEF', newPlate2);
+        closeJobcenterCEF();
+    });
+
+    // function VehicleLicensingCEFAction(action, vehPlate, htmlElem) {
+    //     if (vehPlate == "" || htmlElem == undefined || vehPlate == undefined || action == undefined || action == "") return;
+    //     if (action != "anmelden" && action != "abmelden") return;
+    //     var inputElem1 = $(htmlElem).parent().find("ReCreateSchluesselCEF-Plate");
+    //     var inputVal1 = $(inputElem1).val().replace(/^\s+|\s+$/g, "");
+    //     var inputElem2 = $(htmlElem).parent().find("DeleteSchluesselCEF-Plate");
+    //     var inputVal2 = $(inputElem2).val().replace(/^\s+|\s+$/g, "");
+    //     closeJobcenterCEF();
+    //     if (action == "anmelden") {
+    //         if (inputVal1 == "" || inputVal1.length <= 0) return;
+    //         var newPlate = inputVal1.replace(" ", "-");
+    //         alt.emit('Client:schluesseldienst:ReCreateSchluessel', vehPlate);
+    //     } else if (action == "abmelden") {
+    //         if (inputVal2 == "" || inputVal2.length <= 0) return;
+    //         var newPlate = inputVal2.replace(" ", "-");
+    //         alt.emit("Client:schluesseldienst:DeleteSchluesselCEF", vehPlate);
+    //     }
+    // }
+
+
+</script>
+
+<script type="text/javascript">
+    alt.on("CEF:schluesseldienst:OpenMenu", () => {
+        openschluesseldienstMenu();
+    });
+</script>
+
+</html>

@@ -1,0 +1,336 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../utils/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../utils/toastr.min.css">
+    <link rel="stylesheet" href="../utils/mdb/css/mdb-sass.css">
+    <script type="text/javascript" src="../utils/colorpicker.js"></script>
+    <title>HUD</title>
+</head>
+
+<body>
+    <!-- Storage HUD -->
+    <div id="storageHUD">
+        <div>
+            <span onclick="closeStorageCef();"><i class="fas fa-times"></i></span>
+            <p class="title">INVENTAR</p>
+            <ul class="list-group" id="storageHUD-InvList"></ul>
+            <hr>
+            <input id="storageHUDinvAmount" type="number" value="1" placeholder="Anzahl..">
+            <button class="btn btn-sm btn-success" onclick="switchItemToStorage()"><i class="fas fa-check" style="margin-right: 5px"></i>INS LAGER LEGEN</button>
+        </div>
+        <div>
+            <span onclick="closeStorageCef();"><i class="fas fa-times"></i></span>
+            <p class="title">LAGER</p>
+            <ul class="list-group" id="storageHUD-storageList"></ul>
+            <hr>
+            <input id="storageHUDstorageAmount" type="number" value="1" placeholder="Anzahl..">
+            <button class="btn btn-sm btn-success" onclick="switchItemToInventoryFromStorage();"><i class="fas fa-check" style="margin-right: 5px"></i>INS INVENTAR LEGEN</button>
+        </div>
+    </div>
+
+    <!-- Dynasty8 Storage HUD -->
+    <div id="dynasty8HUD-Storages">
+        <div>
+            <span onclick="closeDynasty8Cef('storages');"><i class="fas fa-times"></i></span>
+            <p class="title">MEINE LAGERHALLEN</p>
+            <ul class="list-group" id="dynasty8HUD-Storages-MyList"></ul>
+        </div>
+        <div>
+            <span onclick="closeDynasty8Cef('storages');"><i class="fas fa-times"></i></span>
+            <p class="title">LAGERHALLEN ZUM VERKAUF</p>
+            <ul class="list-group" id="dynasty8HUD-Storages-List"></ul>
+        </div>
+    </div>
+
+    <!-- Labor HUD -->
+    <div id="laborHUD">
+        <div>
+            <span onclick="closeLaborCef();"><i class="fas fa-times"></i></span>
+            <p class="title">INVENTAR</p>
+            <ul class="list-group" id="LaborHUD-InvList">
+                <li class="list-group-item invitem" onclick="selectItemInv(this, 'Apfel');">
+                    <img src="../utils/img/inv/Apfel.png" style="width: 32;">
+                    <p>Apfel</p>
+                    <p>5x</p>
+                </li>
+                <li class="list-group-item invitem" onclick="selectItemInv(this, 'Birne');">
+                    <img src="../utils/img/inv/Apfel.png" style="width: 32;">
+                    <p>Birne</p>
+                    <p>3x</p>
+                </li>
+            </ul>
+            <hr>
+            <input id="invAmount" type="number" value="1" placeholder="Anzahl..">
+            <button class="btn btn-sm btn-success" onclick="switchItemToLabor()"><i class="fas fa-check" style="margin-right: 5px"></i>INS LABOR LEGEN</button>
+        </div>
+        <div>
+            <span onclick="closeLaborCef();"><i class="fas fa-times"></i></span>
+            <p class="title">LABOR</p>
+            <ul class="list-group" id="LaborHUD-LaborList">
+                <li class="list-group-item laboritem" onclick="selectItemLabor(this, 'Apfel');">
+                    <img src="../utils/img/inventory/Apfel.png" style="width: 32;">
+                    <p>Apfel</p>
+                    <p>5x</p>
+                </li>
+                <li class="list-group-item laboritem" onclick="selectItemLabor(this, 'Birne');">
+                    <img src="../utils/img/inventory/Apfel.png" style="width: 32;">
+                    <p>Birne</p>
+                    <p>3x</p>
+                </li>
+            </ul>
+            <hr>
+            <input id="laborAmount" type="number" value="1" placeholder="Anzahl..">
+            <button class="btn btn-sm btn-success" onclick="switchItemToInventory();"><i class="fas fa-check" style="margin-right: 5px"></i>INS INVENTAR LEGEN</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/mdb/js/mdb.min.js"></script>
+    <script src="../utils/anime.min.js"></script>
+    <script src="../utils/toastr.js"></script>
+    <script defer src="../utils/fontawesome/js/all.js"></script>
+</body>
+
+<script>
+    // Dynasty8
+    function openDynasty8HUD(type, myItems, freeItems) {
+        let myHtml = "",
+            freeHtml = "",
+            count = 0;
+        myItems = JSON.parse(myItems);
+        freeItems = JSON.parse(freeItems);
+
+        if (type == "storages") {
+            for (var i in freeItems) {
+                freeHtml += "<li class='list-group-item'><p class='title'>Lagerhalle " + freeItems[i].id + "<span onclick='dynastyBuyStorage(" + freeItems[i].id + ");'><i class='fas fa-dollar-sign'></i></span><span onclick='locatePosition(" + freeItems[i].pos.X + ", " + freeItems[i].pos.Y + ");'><i class='fas fa-map'></i></span></p>" +
+                    "<div class='container'>" +
+                    "<img class='mainPic' src='../utils/img/dynasty8/ltdshop1.png'><img src='../utils/img/dynasty8/ltdshop1.png' onclick='dynasty8HPic(this, `ltdshop1.png`);'><img src='../utils/img/dynasty8/ltdshop2.png' onclick='dynasty8HPic(this, `ltdshop2.png`);'><img src='../utils/img/dynasty8/ltdshop3.png' onclick='dynasty8HPic(this, `ltdshop3.png`);'><img src='../utils/img/dynasty8/ltdshop4.png' onclick='dynasty8HPic(this, `ltdshop4.png`);'>";
+                freeHtml += "</div><br><p class='desc'>Lagerkapazität: <font>" + freeItems[i].maxSize + "kg</font></p><p class='desc'>Preis: <font>" + numberWithCommas(freeItems[i].price) + "$</font></p></li>";
+            }
+
+            for (var i in myItems) {
+                myHtml += "<li class='list-group-item'><p class='title'>Lagerhalle " + myItems[i].id + "<span onclick='dynastySellStorage(" + myItems[i].id + ");'><i class='fas fa-dollar-sign'></i></span><span onclick='locatePosition(" + myItems[i].pos.X + ", " + myItems[i].pos.Y + ");'><i class='fas fa-map'></i></span></p><div class='container'>" +
+                    "<img class='mainPic' src='../utils/img/dynasty8/ltdshop1.png'>";
+                myHtml += "</div><p class='desc'>Lagerkapazität: <font>" + myItems[i].maxSize + "kg</font></p><p class='desc'>Verkaufspreis: <font>" + numberWithCommas(myItems[i].price / 2) + "$</font></p></li>";
+            }
+
+            $("#dynasty8HUD-Storages-List").html(freeHtml);
+            $("#dynasty8HUD-Storages-MyList").html(myHtml);
+            $("#dynasty8HUD-Storages").css("display", "flex");
+            $("#dynasty8HUD-Storages").fadeTo(250, 1, function() {
+                $("#dynasty8HUD-Storages").show();
+            });
+        }
+    }
+
+    function dynastyBuyStorage(storageId) {
+        if (storageId == undefined || storageId <= 0) return;
+        alt.emit("Client:Dynasty:buyStorage", storageId);
+        closeDynasty8Cef('storages');
+    }
+
+    function dynastySellStorage(storageId) {
+        if (storageId == undefined || storageId <= 0) return;
+        alt.emit("Client:Dynasty:sellStorage", storageId);
+        closeDynasty8Cef('storages');
+    }
+
+    function locatePosition(x, y) {
+        alt.emit("Client:Utilities:locatePos", x, y);
+    }
+
+    function dynasty8HPic(htmlElem, newPic) {
+        var parent = $(htmlElem).parent();
+        var snew = $(parent).find("img.mainPic");
+        $(snew).attr("src", `../utils/img/dynasty8/${newPic}`);
+    }
+
+    function closeDynasty8Cef(type) {
+        alt.emit("Client:Dynasty8:destroy");
+        switch (type) {
+            case "storages":
+                $("#dynasty8HUD-Storages").fadeTo(250, 0, function() {
+                    $("#dynasty8HUD-Storages").css("display", "none");
+                    $("#dynasty8HUD-Storages").hide();
+                });
+                break;
+        }
+    }
+
+    // Storage HUD
+    let $activeStorageInvItem = undefined,
+        $activeStorageStorageItem = undefined,
+        $storageType = undefined,
+        $storageIdentifierId = undefined;
+
+    function openStorageHUD(storageType, storageIdentifierId, invItems, storageItems) {
+        $activeStorageInvItem = undefined;
+        $activeStorageStorageItem = undefined;
+        $storageType = storageType;
+        $storageIdentifierId = storageIdentifierId;
+        invItems = JSON.parse(invItems);
+        storageItems = JSON.parse(storageItems);
+        let invHTML = "",
+            storageHTML = "";
+
+        for (var i in invItems)
+            invHTML += `<li class='list-group-item storageInvitem' onclick='selectStorageItemInv(this, "` + invItems[i].itemName + `");'><img src='../utils/img/inventory/${invItems[i].itemName}.png'><p>${invItems[i].itemName}</p><p>${invItems[i].itemAmount}x</p></li>`;
+
+        for (var i in storageItems)
+            storageHTML += `<li class='list-group-item storageStorageItem' onclick='selectStorageItemStorage(this, "` + storageItems[i].itemName + `");'><img src='../utils/img/inventory/${storageItems[i].itemName}.png'><p>${storageItems[i].itemName}</p><p>${storageItems[i].itemAmount}x</p></li>`;
+
+        $("#storageHUD-InvList").html(invHTML);
+        $("#storageHUD-storageList").html(storageHTML);
+        $("#storageHUD").css("display", "flex");
+
+        $("#storageHUD").fadeTo(250, 1, function() {
+            $("#storageHUD").show();
+        });
+    }
+
+    function selectStorageItemInv(html, itemname) {
+        if (html == undefined || itemname.length <= 0) return;
+        $("li.storageInvitem").removeClass("actives");
+        $(html).addClass("actives");
+        $activeStorageInvItem = itemname;
+    }
+
+    function selectStorageItemStorage(html, itemname) {
+        if (html == undefined || itemname.length <= 0) return;
+        $("li.storageStorageItem").removeClass("actives");
+        $(html).addClass("actives");
+        $activeStorageStorageItem = itemname;
+    }
+
+    function switchItemToStorage() {
+        if ($activeStorageInvItem == undefined || $storageType == undefined || $storageIdentifierId == undefined) return;
+        let amount = $("#storageHUDinvAmount").val();
+        if (amount <= 0) return;
+        alt.emit("Client:Storage:switchItemToStorage", $storageType, $storageIdentifierId, $activeStorageInvItem, amount);
+        closeStorageCef();
+    }
+
+    function switchItemToInventoryFromStorage() {
+        if ($activeStorageStorageItem == undefined || $storageType == undefined || $storageIdentifierId == undefined) return;
+        let amount = $("#storageHUDstorageAmount").val();
+        if (amount <= 0) return;
+        alt.emit("Client:Storage:switchItemToInventory", $storageType, $storageIdentifierId, $activeStorageStorageItem, amount);
+        closeStorageCef();
+    }
+
+    function closeStorageCef() {
+        $activeStorageInvItem = undefined;
+        $activeStorageStorageItem = undefined;
+        $storageType = undefined;
+        $storageIdentifierId = undefined;
+        alt.emit("Client:Storage:destroy");
+        $("#storageHUD").fadeTo(250, 0, function() {
+            $("#storageHUD").css("display", "none");
+            $("#storageHUD").hide();
+            $("li.storageStorageItem").removeClass("actives");
+            $("li.storageInvitem").removeClass("actives");
+            $("#storageHUDstorageAmount").val('1');
+            $("#storageHUDinvAmount").val('1');
+        });
+    }
+
+    //Labor HUD
+    let $activeInvItem = undefined,
+        $activeLaborItem = undefined;
+
+    function openLaborHud(invItems, laborItems) {
+        invItems = JSON.parse(invItems);
+        laborItems = JSON.parse(laborItems);
+        let inventoryHTML = "",
+            laborHTML = "";
+
+        for (var i in invItems)
+            inventoryHTML += `<li class='list-group-item invitem' onclick='selectItemInv(this, "` + invItems[i].itemName + `");'><img src='../utils/img/inventory/${invItems[i].itemName}.png'><p>${invItems[i].itemName}</p><p>${invItems[i].itemAmount}x</p></li>`;
+
+        for (var i in laborItems)
+            laborHTML += `<li class='list-group-item laboritem' onclick='selectItemLabor(this, "` + laborItems[i].itemName + `");'><img src='../utils/img/inventory/${laborItems[i].itemName}.png'><p>${laborItems[i].itemName}</p><p>${laborItems[i].itemAmount}x</p></li>`;
+
+        $("#LaborHUD-InvList").html(inventoryHTML);
+        $("#LaborHUD-LaborList").html(laborHTML);
+        $("#laborHUD").css("display", "flex");
+
+        $("#laborHUD").fadeTo(250, 1, function() {
+            $("#laborHUD").show();
+        });
+    }
+
+    function selectItemInv(html, itemname) {
+        if (html == undefined || itemname.length <= 0) return;
+        $("li.invitem").removeClass("actives");
+        $(html).addClass("actives");
+        $activeInvItem = itemname;
+    }
+
+    function selectItemLabor(html, itemname) {
+        if (html == undefined || itemname.length <= 0) return;
+        $("li.laboritem").removeClass("actives");
+        $(html).addClass("actives");
+        $activeLaborItem = itemname;
+    }
+
+    function switchItemToInventory() {
+        if ($activeLaborItem == undefined) return;
+        let amount = $("#laborAmount").val();
+        if (amount <= 0) return;
+        alt.emit("Client:Labor:switchItemToInventory", $activeLaborItem, amount);
+        closeLaborCef();
+    }
+
+    function switchItemToLabor() {
+        if ($activeInvItem == undefined) return;
+        let amount = $("#invAmount").val();
+        if (amount <= 0) return;
+        alt.emit("Client:Labor:switchItemToLabor", $activeInvItem, amount);
+        closeLaborCef();
+    }
+
+    function closeLaborCef() {
+        $activeLaborItem = undefined;
+        $activeInvItem = undefined;
+        alt.emit("Client:Labor:destroy");
+        $("#laborHUD").fadeTo(250, 0, function() {
+            $("#laborHUD").css("display", "none");
+            $("#laborHUD").hide();
+            $("li.laboritem").removeClass("actives");
+            $("li.invitem").removeClass("actives");
+            $("#laborAmount").val('1');
+            $("#invAmount").val('1');
+        });
+    }
+
+    function numberWithCommas(x) {
+        let numberwithComma = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return numberwithComma.replace(/,/g, '.');
+    }
+</script>
+<script type="text/javascript">
+    if ('alt' in window) {
+        alt.on("CEF:Labor:openLabor", (invItems, laborItems) => {
+            openLaborHud(invItems, laborItems);
+        });
+
+        alt.on("CEF:Storage:openStorage", (type, id, invitems, storageitems) => {
+            openStorageHUD(type, id, invitems, storageitems);
+        });
+
+        alt.on("CEF:Dynasty8:openDynasty8HUD", (type, myItems, freeItems) => {
+            openDynasty8HUD(type, myItems, freeItems);
+        });
+    }
+</script>
+
+</html>

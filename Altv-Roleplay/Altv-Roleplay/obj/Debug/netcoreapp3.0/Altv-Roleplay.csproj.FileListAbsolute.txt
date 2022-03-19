@@ -1,0 +1,6 @@
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\bin\Debug\netcoreapp3.0\Altv-Roleplay.deps.json
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\bin\Debug\netcoreapp3.0\Altv-Roleplay.dll
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\netcoreapp3.0\Altv-Roleplay.csprojAssemblyReference.cache
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\netcoreapp3.0\Altv-Roleplay.csproj.CoreCompileInputs.cache
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\netcoreapp3.0\Altv-Roleplay.AssemblyInfoInputs.cache
+D:\Alt-V Server\Mappe\AltV-Roleplay\Altv-Roleplay\obj\Debug\netcoreapp3.0\Altv-Roleplay.AssemblyInfo.cs

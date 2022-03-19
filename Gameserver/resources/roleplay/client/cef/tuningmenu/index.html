@@ -1,0 +1,518 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-CompatiB1le" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timo's Tuning Menu</title>
+
+        <script src="./colorpicker.js"></script>
+        <link rel="stylesheet" type="text/css" href="./colorpicker.css" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="tuningmenu-main" class="tuningmenu-main"> 
+            <p id="tuningmenu-content-closebutton" onclick="closeMenu()">Schliessen</p>
+            <div id="draggable" class="tuningmenu-titlesection">Tuningmenu</div>
+            <div id="tuningmenu-undertitlesection"></div>
+
+            <div class="tuningmenu-content tuningmenu-content-chooseundercategory" id="tuningmenu-content-chooseundercategory">
+                <div class="tuningmenu-undercategory">
+                    <p class="tuningmenu-undercategory-text">Exterior</p>
+                    <img class="tuningmenu-undercategory-img" src="./img_exterior.png">
+
+                    <p class="tuningmenu-undercategory-choose" onclick="chooseCategory('exterior')">Auswählen</p>
+                </div>
+                <div class="tuningmenu-undercategory">
+                    <p class="tuningmenu-undercategory-text">Interior</p>
+                    <img class="tuningmenu-undercategory-img" src="./img_interior.png">
+
+                    <p class="tuningmenu-undercategory-choose" onclick="chooseCategory('interior')">Auswählen</p>
+                </div>
+                <div class="tuningmenu-undercategory">
+                    <p class="tuningmenu-undercategory-text">Performance</p>
+                    <img class="tuningmenu-undercategory-img" src="./img_performance_misc.png">
+
+                    <p class="tuningmenu-undercategory-choose" onclick="chooseCategory('performance')">Auswählen</p>
+                </div>
+            </div>
+            
+            <div class="tuningmenu-content" id="tuningmenu-content-exterior">
+                <p id="tuningmenu-content-backbutton" onclick="goBack()">Zurück</p>
+
+                <div class="tuningmenu-contents">
+                    <div class="tuningmenu-exterior-cat-primarycolor tuningmenu-exterior-colorpickers">
+                        <div id="container">
+                            <div id="default1" class="cp cp-default"></div>
+                
+                            <div class="clrleftcat">
+                                <label>Primärfarbe</label>
+                                <br>
+                                <select id="primaryPaintSelection" onchange="changePaintType('primary')">
+                                    <option value="0">Normal</option>
+                                    <option value="15">Pearl</option>
+                                    <option value="21">Matt</option>
+                                    <option value="118">Metallic</option>
+                                    <option value="120">Chrom</option>
+                                </select>
+    
+                                <div id="primary" class="leftcat-equip" onclick="equipSelectedTuneItem(this)">
+                                    <label>Lackieren</label>
+                                </div>
+
+                                <div class="leftcat-resetcolor" onclick="resetColor('primary')">
+                                    <label>Zurücksetzen</label>
+                                </div>
+                            </div>
+                            <div class="io">
+                                <div class="clr_r clrdiv">
+                                    <label>R:</label>
+                                    <input id="rgb_r_1" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+    
+                                <div class="clr_g clrdiv">
+                                    <label>G:</label>
+                                    <input id="rgb_g_1" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+    
+                                <div class="clr_b clrdiv">
+                                    <label>B:</label>
+                                    <input id="rgb_b_1" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="tuningmenu-exterior-cat-secondarycolor tuningmenu-exterior-colorpickers">
+                        <div id="container">
+                            <div id="default2" class="cp cp-default"></div>
+                
+                            <div class="clrleftcat">
+                                <label>Sekundärfarbe</label>
+                                <br>
+                                <select id="secondaryPaintSelection" onchange="changePaintType('secondary')">
+                                    <option value="0">Normal</option>
+                                    <option value="21">Matt</option>
+                                    <option value="118">Metallic</option>
+                                    <option value="120">Chrom</option>
+                                </select>
+
+                                <div id="secondary" class="leftcat-equip" onclick="equipSelectedTuneItem(this)">
+                                    <label>Lackieren</label>
+                                </div>
+
+                                <div class="leftcat-resetcolor" onclick="resetColor('secondary')">
+                                    <label>Zurücksetzen</label>
+                                </div>
+                            </div>
+                            <div class="io">
+                                <div class="clr_r clrdiv">
+                                    <label>R:</label>
+                                    <input id="rgb_r_2" type="number" value="" onkeyup="onCpInputPress(this)"/><br>
+                                </div>
+    
+                                <div class="clr_g clrdiv">
+                                    <label>G:</label>
+                                    <input id="rgb_g_2" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+    
+                                <div class="clr_b clrdiv">
+                                    <label>B:</label>
+                                    <input id="rgb_b_2" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="tuningmenu-exterior-cat-underfloor tuningmenu-exterior-colorpickers">
+                        <div id="container">
+                            <div id="default3" class="cp cp-default"></div>
+                
+                            <div class="clrleftcat">
+                                <label>Unterboden</label>
+    
+                                <div id="underfloor" class="leftcat-equip" onclick="equipSelectedTuneItem(this)" style="margin-top: 6vh;">
+                                    <label>Ausrüsten</label>
+                                </div>
+
+                                <div class="leftcat-resetcolor" onclick="resetColor('underfloor')" style="margin-top: 4vh;">
+                                    <label>Zurücksetzen</label>
+                                </div>
+                            </div>
+                            <div class="io">
+                                <div class="clr_r clrdiv">
+                                    <label>R:</label>
+                                    <input id="rgb_r_3" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+    
+                                <div class="clr_g clrdiv">
+                                    <label>G:</label>
+                                    <input id="rgb_g_3" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+    
+                                <div class="clr_b clrdiv">
+                                    <label>B:</label>
+                                    <input id="rgb_b_3" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="tuningmenu-exterior-cat-tyresmoke tuningmenu-exterior-colorpickers">
+                        <div id="container">
+                            <div id="default4" class="cp cp-default"></div>
+                
+                            <div class="clrleftcat">
+                                <label>Reifenrauch</label>
+    
+                                <div id="tyresmoke" class="leftcat-equip" onclick="equipSelectedTuneItem(this)" style="margin-top: 6vh;">
+                                    <label>Ausrüsten</label>
+                                </div>
+
+                                <div class="leftcat-resetcolor" onclick="resetColor('tyresmoke')" style="margin-top: 4vh;">
+                                    <label>Zurücksetzen</label>
+                                </div>
+                            </div>
+                            <div class="io">
+                                <div class="clr_r clrdiv">
+                                    <label>R:</label>
+                                    <input id="rgb_r_4" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+    
+                                <div class="clr_g clrdiv">
+                                    <label>G:</label>
+                                    <input id="rgb_g_4" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+    
+                                <div class="clr_b clrdiv">
+                                    <label>B:</label>
+                                    <input id="rgb_b_4" type="number" value="" onkeypress="onCpInputPress(this)"/><br>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                    <!-- OTHER DIVS -->
+
+                    <div id='tuningmenu-content-othercats-exterior'>
+
+                    </div>
+                </div>
+            </div>
+
+        
+
+            <div class="tuningmenu-content" id="tuningmenu-content-interior">
+                <p style="margin-top: -9.95vh;" class="tuningmenu-content-backbutton" id="tuningmenu-content-interior-backbutton" onclick="goBack()">Zurück</p>
+                <div id='tuningmenu-content-othercats-interior'>
+
+                </div>
+            </div>
+
+            <div class="tuningmenu-content" id="tuningmenu-content-performance">
+                <p style="margin-top: -9.95vh;" class="tuningmenu-content-backbutton" id="tuningmenu-content-performance-backbutton" onclick="goBack()">Zurück</p>
+                <div id='tuningmenu-content-othercats-performance'>
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        let mods = ["Spoiler","vordere Stoßstange","hintere Stoßstange","Seitenschweller","Auspuff","Fahrgestell","Kühlergrill","Motorhaube","linker Kotflügel","rechter Kotflügel","Dach","Motor","Bremsen","Getriebe","Hupe","Federung","Panzerung","-","Turbo","-","Reifenrauch","-","Xenon-Licht","vordere Reifen","hintere Reifen","Kennzeichenhalter","Kennzeichenfarbe","Autoverkleidung","Autoverzierungen","-","Tacho Design","Türinnenraum","Sitze","Lenkrad","Schalthebel","Autoplatten","Hutablage","Kofferraum","Hydraulik","Motorblock","Luftfilter","Domstrebe","Bogenabdeckung","Antenne","Außenteile","Tank","Türe","hintere Hydraulik","Lackierung", "-","Radtyp","Räder", "Reifenfarbe", "Fenstertönung","Kennzeichenfarbe","-","-","-","-","-","-","-","-","Pearl-Effekt","-","Extramod 1","Extramod 2","Extramod 3","Extramod 4","Extramod 5","Extramod 6","Extramod 7","Extramod 8","Extramod 9","Extramod 10","Extramod 11","Extramod 12","Extramod 13","Extramod 14","Extramod 15","Innenraumfarbe","Neon", "-", "-", "-", "-", "-", "-", "Scheinwerfer"]; 
+        let interiorMods = [5, 30, 31, 32, 33, 34, 35, 36, 37, 80];
+        let performanceMods = [11, 12, 13, 15, 18]
+        let prices = []
+
+        let oldPrimaryColor = "#ffffff";
+        let oldSecondaryColor = "#ffffff";
+        let oldUnderfloorColor = "#ffffff";
+        let oldtyresmokeColor = "#ffffff";
+
+        let currentPossibleMods = [];
+        let currentInstalledMods = [];
+
+        function chooseCategory(cat) {
+            document.getElementById("tuningmenu-undertitlesection").innerHTML = cat;
+            document.getElementById("tuningmenu-content-chooseundercategory").style.display = "none";
+            document.getElementById(`tuningmenu-content-${cat}`).style.display = "block";
+        }
+
+        function goBack() {
+            ["exterior", "interior", "performance"].forEach((cat) => {
+                document.getElementById(`tuningmenu-content-${cat}`).style.display = "none";
+                document.getElementById("tuningmenu-undertitlesection").innerHTML = "";
+                document.getElementById("tuningmenu-content-chooseundercategory").style.display = "block";
+            })
+        }
+
+        function closeMenu() {
+            alt.emit("Client:Tuningmenu:CloseMenu");
+        }
+
+        function equipSelectedTuneItem(element) {
+            let type,
+                index;
+
+            if (element.id != "other") {
+                if (element.id == "primary") alt.emit("Client:Tuningmenu:EquipRGBTuneItem", 100, iR1.value, iG1.value, iB1.value, document.getElementById("primaryPaintSelection").value);
+                else if (element.id == "secondary") alt.emit("Client:Tuningmenu:EquipRGBTuneItem", 200, iR2.value, iG2.value, iB2.value, document.getElementById("secondaryPaintSelection").value);
+                else if (element.id == "underfloor") alt.emit("Client:Tuningmenu:EquipRGBTuneItem", 300, iR3.value, iG3.value, iB3.value, 0);
+                else if (element.id == "tyresmoke") alt.emit("Client:Tuningmenu:EquipRGBTuneItem", 400, iR4.value, iG4.value, iB4.value, 0);
+            } else {
+                let type = mods.indexOf(element.parentNode.querySelector("p").innerHTML),
+                    index = element.parentNode.querySelector("num").innerHTML;
+
+                alt.emit("Client:Tuningmenu:EquipTuneItem", type, index);
+            }
+        }
+
+        function resetColor(cat) {
+            if (cat == "primary") updateColorPicker1(oldPrimaryColor);
+            else if (cat == "secondary") updateColorPicker2(oldSecondaryColor);
+            else if (cat == "underfloor") updateColorPicker3(oldUnderfloorColor);
+            else if (cat == "tyresmoke") updateColorPicker4(oldtyresmokeColor);
+        }
+
+        function showcaseColor(cat) {
+            if (cat == "primary") alt.emit("Client:Tuningmenu:ShowcaseColor", cat, iR1.value, iG1.value, iB1.value);
+            else if (cat == "secondary") alt.emit("Client:Tuningmenu:ShowcaseColor", cat, iR2.value, iG2.value, iB2.value);
+            else if (cat == "underfloor") alt.emit("Client:Tuningmenu:ShowcaseColor", cat, iR3.value, iG3.value, iB3.value);
+            else if (cat == "tyresmoke") alt.emit("Client:Tuningmenu:ShowcaseColor", cat, iR4.value, iG4.value, iB4.value);
+        }
+
+        function changePaintType(cat) {
+            alt.emit("Client:Tuningmenu:ShowcasePaintType", cat, cat == "primary" ? document.getElementById("primaryPaintSelection").value : document.getElementById("secondaryPaintSelection").value);
+        }
+
+        function clickSelectorArrow(element) {
+            let title = element.parentNode.parentNode.querySelector("p").innerHTML;
+            let modType = mods.indexOf(title);
+            let number = element.parentNode.querySelector("num").innerHTML;
+            let endnumber = element.parentNode.querySelector("endnumber").innerHTML;
+            let direction = element.parentNode.querySelector("i") == element ? "left" : "right";
+
+            if (direction == "left") {
+                if (number <= 0) element.parentNode.querySelector("num").innerHTML = endnumber;
+                else element.parentNode.querySelector("num").innerHTML = parseInt(number) - 1;
+            } else if (direction == "right") {
+                if (number == endnumber) element.parentNode.querySelector("num").innerHTML = 0;
+                else element.parentNode.querySelector("num").innerHTML = parseInt(number) + 1;
+            }
+
+            alt.emit("Client:Tuningmenu:ShowcasePart", modType, element.parentNode.querySelector("num").innerHTML);
+        }
+
+        function openMenu(possibleMods, installedMods, modPrices) {
+            currentPossibleMods = possibleMods;
+            currentInstalledMods = installedMods;
+            prices = modPrices;
+
+            oldPrimaryColor = rgb2hex(installedMods[56], installedMods[57], installedMods[58]);
+            updateColorPicker1(oldPrimaryColor);
+
+            oldSecondaryColor = rgb2hex(installedMods[60], installedMods[61], installedMods[62]);
+            updateColorPicker2(oldSecondaryColor);
+
+            oldUnderfloorColor = rgb2hex(installedMods[82], installedMods[83], installedMods[84]);
+            updateColorPicker3(oldUnderfloorColor);
+
+            oldtyresmokeColor = rgb2hex(installedMods[85], installedMods[86], installedMods[87]);
+            updateColorPicker4(oldtyresmokeColor);
+
+
+            let exteriorElem = document.getElementById("tuningmenu-content-othercats-exterior"),
+                interiorElem = document.getElementById("tuningmenu-content-othercats-interior"),
+                performanceElem = document.getElementById("tuningmenu-content-othercats-performance"),
+                exteriorHTML = "",
+                interiorHTML = "",
+                performanceHTML = "";
+
+            mods.forEach(a => {
+                if (a != "-" && !a.includes("Extramod") && possibleMods[mods.indexOf(a)] > 0) {
+                    if (interiorMods.indexOf(mods.indexOf(a)) != -1) interiorHTML += `<div class='tuningmenu-exterior-othercat'> <p class='tuningmenu-exterior-othercat-title'>${a}</p> <div class="arrows"> <i onclick='clickSelectorArrow(this)' class='arrow arrow-left'></i> <p><num id='number'>${installedMods[mods.indexOf(a)]}</num> / <endnumber>${possibleMods[mods.indexOf(a)]}</endnumber></p> <i onclick='clickSelectorArrow(this)' class='arrow arrow-right'></i> </div><div id="other" class="leftcat-equip" onclick="equipSelectedTuneItem(this)" style="margin-top: 4vh;"><label>Ausrüsten - $${prices[mods.indexOf(a)]}</label></div></div>`
+                    else if (performanceMods.indexOf(mods.indexOf(a)) != -1) performanceHTML += `<div class='tuningmenu-exterior-othercat'> <p class='tuningmenu-exterior-othercat-title'>${a}</p> <div class="arrows"> <i onclick='clickSelectorArrow(this)' class='arrow arrow-left'></i> <p><num id='number'>${installedMods[mods.indexOf(a)]}</num> / <endnumber>${possibleMods[mods.indexOf(a)]}</endnumber></p> <i onclick='clickSelectorArrow(this)' class='arrow arrow-right'></i> </div><div id="other" class="leftcat-equip" onclick="equipSelectedTuneItem(this)" style="margin-top: 4vh;"><label>Ausrüsten - $${prices[mods.indexOf(a)]}</label></div></div>`;
+                    else exteriorHTML += `<div class='tuningmenu-exterior-othercat'> <p class='tuningmenu-exterior-othercat-title'>${a}</p> <div class="arrows"> <i onclick='clickSelectorArrow(this)' class='arrow arrow-left'></i> <p><num id='number'>${installedMods[mods.indexOf(a)]}</num> / <endnumber>${possibleMods[mods.indexOf(a)]}</endnumber></p> <i onclick='clickSelectorArrow(this)' class='arrow arrow-right'></i> </div><div id="other" class="leftcat-equip" onclick="equipSelectedTuneItem(this)" style="margin-top: 4vh;"><label>Ausrüsten - $${prices[mods.indexOf(a)]}</label></div></div>`;
+                } 
+            });
+
+            document.getElementById("primaryPaintSelection").value = `${installedMods[55]}`;
+            document.getElementById("secondaryPaintSelection").value = `${installedMods[59]}`;
+
+            console.log(document.getElementById("primaryPaintSelection").value)
+
+            exteriorElem.innerHTML = exteriorHTML;
+            interiorElem.innerHTML = interiorHTML;
+            performanceElem.innerHTML = performanceHTML;
+        }
+
+        function changeViewMode(state) {
+            let maindiv = document.getElementById("tuningmenu-main");
+
+            if (!state) maindiv.style.opacity = 1;
+            else maindiv.style.opacity = 0.5;
+        }
+
+        /*      COLOR PICKER        */
+
+        var cpDefault1 = ColorPicker(document.getElementById('default1'), updateInputs1);
+        var cpDefault2 = ColorPicker(document.getElementById('default2'), updateInputs2);
+        var cpDefault3 = ColorPicker(document.getElementById('default3'), updateInputs3);
+        var cpDefault4 = ColorPicker(document.getElementById('default4'), updateInputs4);
+
+        var iR1 = document.getElementById('rgb_r_1');
+        var iG1 = document.getElementById('rgb_g_1');
+        var iB1 = document.getElementById('rgb_b_1');
+
+        var iR2 = document.getElementById('rgb_r_2');
+        var iG2 = document.getElementById('rgb_g_2');
+        var iB2 = document.getElementById('rgb_b_2');
+
+        var iR3 = document.getElementById('rgb_r_3');
+        var iG3 = document.getElementById('rgb_g_3');
+        var iB3 = document.getElementById('rgb_b_3');
+
+        var iR4 = document.getElementById('rgb_r_4');
+        var iG4 = document.getElementById('rgb_g_4');
+        var iB4 = document.getElementById('rgb_b_4');
+
+        function updateInputs1(hex) {
+            var rgb = ColorPicker.hex2rgb(hex);
+            iR1.value = rgb.r;
+            iG1.value = rgb.g;
+            iB1.value = rgb.b;
+
+            showcaseColor("primary");
+        }
+
+        function updateInputs2(hex) {
+            var rgb = ColorPicker.hex2rgb(hex);
+            iR2.value = rgb.r;
+            iG2.value = rgb.g;
+            iB2.value = rgb.b;
+
+            showcaseColor("secondary");
+        }
+
+        function updateInputs3(hex) {
+            var rgb = ColorPicker.hex2rgb(hex);
+            iR3.value = rgb.r;
+            iG3.value = rgb.g;
+            iB3.value = rgb.b;
+
+            showcaseColor("underfloor");
+        }
+
+        function updateInputs4(hex) {
+            var rgb = ColorPicker.hex2rgb(hex);
+            iR4.value = rgb.r;
+            iG4.value = rgb.g;
+            iB4.value = rgb.b;
+
+            showcaseColor("tyresmoke");
+        }
+
+        function updateColorPicker1(hex) {
+            cpDefault1.setHex(hex);
+        }
+
+        function updateColorPicker2(hex) {
+            cpDefault2.setHex(hex);
+        }
+
+        function updateColorPicker3(hex) {
+            cpDefault3.setHex(hex);
+        }
+
+        function updateColorPicker4(hex) {
+            cpDefault4.setHex(hex);
+        }
+
+        function rgb2hex(r, g, b) {
+            try {
+                var rHex = parseInt(r).toString(16).padStart(2, '0');
+                var gHex = parseInt(g).toString(16).padStart(2, '0');
+                var bHex = parseInt(b).toString(16).padStart(2, '0');
+            } catch (e) {
+                return false;
+            }
+            if (rHex.length > 2 || gHex.length > 2 || bHex.length > 2) return false;
+            return '#' + rHex + gHex + bHex;
+        }
+
+        function onCpInputPress(element) {
+            setTimeout(() => {
+                if (element == iR1) updateColorPicker1(ColorPicker.rgb2hex({ r: iR1.value, g: iG1.value, b: iB1.value }));
+                else if (element == iG1) updateColorPicker1(ColorPicker.rgb2hex({ r: iR1.value, g: iG1.value, b: iB1.value }));
+                else if (element ==iB1) updateColorPicker1(ColorPicker.rgb2hex({ r: iR1.value, g: iG1.value, b: iB1.value }));
+
+                else if (element == iR2) updateColorPicker2(ColorPicker.rgb2hex({ r: iR2.value, g: iG2.value, b: iB2.value }));
+                else if (element == iG2) updateColorPicker2(ColorPicker.rgb2hex({ r: iR2.value, g: iG2.value, b: iB2.value }));
+                else if (element == iB2) updateColorPicker2(ColorPicker.rgb2hex({ r: iR2.value, g: iG2.value, b: iB2.value }));
+
+                else if (element == iR3) updateColorPicker3(ColorPicker.rgb2hex({ r: iR3.value, g: iG3.value, b: iB3.value }));
+                else if (element == iG3) updateColorPicker3(ColorPicker.rgb2hex({ r: iR3.value, g: iG3.value, b: iB3.value }));
+                else if (element == iB3) updateColorPicker3(ColorPicker.rgb2hex({ r: iR3.value, g: iG3.value, b: iB3.value }));
+
+                else if (element == iR4) updateColorPicker4(ColorPicker.rgb2hex({ r: iR4.value, g: iG4.value, b: iB4.value }));
+                else if (element == iG4) updateColorPicker4(ColorPicker.rgb2hex({ r: iR4.value, g: iG4.value, b: iB4.value }));
+                else if (element == iB4) updateColorPicker4(ColorPicker.rgb2hex({ r: iR4.value, g: iG4.value, b: iB4.value }));
+            }, 5);
+        }
+
+        /* DRAGGABLE */ 
+
+        let draggable = document.getElementById("draggable"),
+            maindiv = document.getElementById("tuningmenu-main"),
+            isMouseDown,
+            initX,
+            initY,
+            height = draggable.offsetHeight,
+            width = draggable.offsetWidth;
+
+        draggable.addEventListener('mousedown', function(e) {
+            isMouseDown = true;
+            document.body.classList.add('no-select');
+            initX = e.offsetX;
+            initY = e.offsetY;
+        })
+
+        draggable.addEventListener('mousemove', function(e) {
+            if (isMouseDown) {
+                let cx = e.clientX - initX,
+                    cy = e.clientY - initY;
+
+                if (cx < 0) cx = 0;
+                
+                if (cy < 0) cy = 0;
+                
+                if (window.innerWidth - e.clientX + initX < width) cx = window.innerWidth - width;
+                
+                if (e.clientY > window.innerHeight - height+ initY) cy = window.innerHeight - height;
+                
+                maindiv.style.left = cx + 'px';
+                maindiv.style.top = cy + 'px';
+                maindiv.style.marginLeft = 0 + 'vh';
+            }
+        })
+
+        draggable.addEventListener('mouseup', function() {
+            isMouseDown = false;
+            document.body.classList.remove('no-select');
+        })
+    </script>
+
+    <script type="text/javascript">
+        alt.on("CEF:Tuningmenu:OpenMenu", (possibleMods, installedMods, modPrices) => {
+            openMenu(possibleMods, installedMods, modPrices);
+        });
+
+        alt.on("viewModeActive", (state) => {
+            changeViewMode(state);
+        });
+    </script>
+</html>

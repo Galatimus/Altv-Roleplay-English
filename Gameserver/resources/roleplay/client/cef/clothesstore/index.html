@@ -1,0 +1,873 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timo's Clothesstore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="clothesstore-main" style="display: none;">
+        <h2 id="clothesstore-title">Kleiderladen</h2>
+
+        <div class="scrolldiv">
+            <div id="clothesstore-item-oberbekleidung" class="clothesstore-item-div">
+                <p id="title-oberbekleidung" class="undertitle">Oberbekleidung</p>
+                <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/shirt.png">
+                    <button onclick="pressButton('left', 'oberbekleidung')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'oberbekleidung')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-oberbekleidung-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-oberbekleidung-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Oberbekleidung')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('oberbekleidung')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+
+            <div id="clothesstore-item-körper" class="clothesstore-item-div">
+                <p id="title-körper" class="undertitle">Körper</p>
+                <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/torso.png">
+                    <button onclick="pressButton('left', 'körper')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'körper')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-körper-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-körper-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Körper')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('körper')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <div id="clothesstore-item-unterbekleidung" class="clothesstore-item-div">
+                <p id="title-unterbekleidung" class="undertitle">Unterbekleidung</p>
+                <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/undershirt.png">
+                    <button onclick="pressButton('left', 'unterbekleidung')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'unterbekleidung')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-unterbekleidung-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-unterbekleidung-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Unterbekleidung')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('unterbekleidung')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <!--<div id="clothesstore-item-taschen" class="clothesstore-item-div">
+                <p id="title-taschen" class="undertitle">Taschen</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/undershirt.png">
+                    <button onclick="pressButton('left', 'taschen')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'taschen')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-taschen-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-taschen-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Taschen')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('taschen')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>-->
+    
+            <div id="clothesstore-item-accessories" class="clothesstore-item-div">
+                <p id="title-accessories" class="undertitle">Accessories</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/necklace.png">
+                    <button onclick="pressButton('left', 'accessories')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'accessories')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-accessories-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-accessories-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Accessories')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('accessories')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <div id="clothesstore-item-westen" class="clothesstore-item-div">
+                <p id="title-westen" class="undertitle">Westen</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/Weste.png">
+                    <button onclick="pressButton('left', 'westen')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'westen')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-westen-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-westen-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Westen')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('westen')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <div id="clothesstore-item-hosen" class="clothesstore-item-div">
+                <p id="title-hosen" class="undertitle">Hosen</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/jeans.png">
+                    <button onclick="pressButton('left', 'hosen')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'hosen')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-hosen-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-hosen-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Hosen')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('hosen')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <div id="clothesstore-item-schuhe" class="clothesstore-item-div">
+                <p id="title-schuhe" class="undertitle">Schuhe</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/shoes.png">
+                    <button onclick="pressButton('left', 'schuhe')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'schuhe')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-schuhe-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-schuhe-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Schuhe')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('schuhe')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <div id="clothesstore-item-masken" class="clothesstore-item-div">
+                <p id="title-masken" class="undertitle">Masken</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/Maske.png">
+                    <button onclick="pressButton('left', 'masken')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'masken')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-masken-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-masken-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Masken')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('masken')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <div id="clothesstore-item-hüte" class="clothesstore-item-div">
+                <p id="title-hüte" class="undertitle">Hüte</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/witch-hat.png">
+                    <button onclick="pressButton('left', 'hüte')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'hüte')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-hüte-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-hüte-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Hüte')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('hüte')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <div id="clothesstore-item-brillen" class="clothesstore-item-div">
+                <p id="title-brillen" class="undertitle">Brillen</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/sun-glasses.png">
+                    <button onclick="pressButton('left', 'brillen')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'brillen')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-brillen-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-brillen-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Brillen')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('brillen')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <div id="clothesstore-item-ohrringe" class="clothesstore-item-div">
+                <p id="title-ohrringe" class="undertitle">Ohrringe</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/earrings.png">
+                    <button onclick="pressButton('left', 'ohrringe')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'ohrringe')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-ohrringe-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-ohrringe-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Ohrringe')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('ohrringe')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <div id="clothesstore-item-uhren" class="clothesstore-item-div">
+                <p id="title-uhren" class="undertitle">Uhren</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/smartwatch.png">
+                    <button onclick="pressButton('left', 'uhren')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'uhren')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-uhren-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-uhren-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Uhren')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('uhren')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <div id="clothesstore-item-armbänder" class="clothesstore-item-div">
+                <p id="title-armbänder" class="undertitle">Armbänder</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/bracelet.png">
+                    <button onclick="pressButton('left', 'armbänder')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'armbänder')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-armbänder-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-armbänder-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Armbänder')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('armbänder')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
+    
+            <!--<div id="clothesstore-item-embleme" class="clothesstore-item-div">
+                <p id="title-embleme" class="undertitle">Embleme</p>
+               <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/undershirt.png">
+                    <button onclick="pressButton('left', 'embleme')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'embleme')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-embleme-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-embleme-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Embleme')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('embleme')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+    <div id="clothesstore-texture-menu" style="display: none;">
+        <h2 id="texturemenu-title">Farbenauswahl Unterbekleidung</h2>
+
+        <div class="clothesstore-texture-menu-maindiv">
+            <button onclick="pressTextureButton('left')" class="texturearrow textureleft"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+            <button onclick="pressTextureButton('right')" class="texturearrow textureright"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+
+            <input id="clothesstore-texture-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-texture-maxinputvalue">/??</asdas>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/f25e534c46.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script defer src="../utils/fontawesome/js/all.js"></script>
+</body>
+<script type="text/javascript" src="clothes_male.js"></script>
+<script type="text/javascript" src="clothes_female.js"></script>
+<script>
+    let categories = ["oberbekleidung", "körper", "unterbekleidung", "taschen", "accessories", "westen", "hosen", "schuhe", "masken", "hüte", "brillen", "ohrringe", "uhren", "armbänder", "embleme"];
+    let currentcategory = "main";
+
+    let count_male = { accessories: 0, armbänder: 0, brillen: 0, embleme: 0, hosen: 0, hüte: 0, masken: 0, oberbekleidung: 0, ohrringe: 0, schuhe: 0, taschen: 0, uhren: 0, unterbekleidung: 0, westen: 0, körper: 0 }
+    let count_female = { accessories: 0, armbänder: 0, brillen: 0, embleme: 0, hosen: 0, hüte: 0, masken: 0, oberbekleidung: 0, ohrringe: 0, schuhe: 0, taschen: 0, uhren: 0, unterbekleidung: 0, westen: 0, körper: 0 }
+
+    count_male.accessories = count_male.accessories- 1, count_male.armbänder = count_male.armbänder- 1, count_male.brillen = count_male.brillen- 1, count_male.embleme = count_male.embleme- 1, count_male.hosen = count_male.hosen- 1, count_male.hüte = count_male.hüte- 1, count_male.masken = count_male.masken- 1, count_male.oberbekleidung = count_male.oberbekleidung- 1, count_male.ohrringe = count_male.ohrringe- 1, count_male.schuhe = count_male.schuhe- 1, count_male.taschen = count_male.taschen- 1, count_male.uhren = count_male.uhren- 1, count_male.unterbekleidung = count_male.unterbekleidung- 1, count_male.westen = count_male.westen- 1, count_male.körper = count_male.körper- 1;
+    count_female.accessories = count_female.accessories- 1, count_female.armbänder = count_female.armbänder- 1, count_female.brillen = count_female.brillen- 1, count_female.embleme = count_female.embleme- 1, count_female.hosen = count_female.hosen- 1, count_female.hüte = count_female.hüte- 1, count_female.masken = count_female.masken- 1, count_female.oberbekleidung = count_female.oberbekleidung- 1, count_female.ohrringe = count_female.ohrringe- 1, count_female.schuhe = count_female.schuhe- 1, count_female.taschen = count_female.taschen- 1, count_female.uhren = count_female.uhren- 1, count_female.unterbekleidung = count_female.unterbekleidung- 1, count_female.westen = count_female.westen- 1, count_female.körper = count_female.körper- 1;
+    let gender = 0;
+
+    setCount()
+
+    categories.forEach(a => {
+        $(`#clothesstore-item-${a}-input`).bind("paste cut keydown delete",function(e) {
+            setTimeout(() => {
+                if(document.getElementById(`clothesstore-item-${a}-input`).value == "") document.getElementById(`clothesstore-item-${a}-input`).value = 0;
+                document.getElementById(`clothesstore-item-${a}-input`).value = parseInt(document.getElementById(`clothesstore-item-${a}-input`).value);
+                if (gender == 1 && $(this).val() > eval("count_male." + a)) document.getElementById(`clothesstore-item-${a}-input`).value = eval("count_male." + a);
+                else if (gender == 2 && $(this).val() > eval("count_female." + a)) document.getElementById(`clothesstore-item-${a}-input`).value = eval("count_female." + a);
+                setTextureCount(document.getElementById("texturemenu-title").innerHTML.replace('Farbenauswahl ', ''), true);
+                previewCloth(a);
+            }, 5);
+        })
+    })
+
+    $(`#clothesstore-texture-input`).bind("paste cut keydown delete",function(e) {
+        setTimeout(() => {
+            if(document.getElementById(`clothesstore-texture-input`).value == "") document.getElementById(`clothesstore-texture-input`).value = 0;
+            document.getElementById(`clothesstore-texture-input`).value = parseInt(document.getElementById(`clothesstore-texture-input`).value);
+            if ($(this).val() > parseInt(document.getElementById("clothesstore-texture-maxinputvalue").innerHTML.replace(/\\|\//g,''))) document.getElementById(`clothesstore-texture-input`).value = parseInt(document.getElementById("clothesstore-texture-maxinputvalue").innerHTML.replace(/\\|\//g,''));
+            previewCloth("textures");
+        }, 5);
+    })
+
+    function selectClothesCategory(cat) {
+        if (gender == 0) return;
+        currentcategory = cat;
+        document.getElementById("clothesstore-main-list").style.display = "none";
+        if (gender == 1) document.getElementById(`clothesstore-${cat}-list male`).style.display = "block";
+        else if (gender == 2) document.getElementById(`clothesstore-${cat}-list female`).style.display = "block";
+    }
+
+    
+    function openClothesMenu(usergender) {
+        if (gender == usergender && document.getElementById("clothesstore-main").style.display == "block") 
+        {
+            document.getElementById("clothesstore-main").style.display = "none"; 
+            document.getElementById("clothesstore-texture-menu").style.display = "block";
+        }
+        else if (gender == usergender) document.getElementById("clothesstore-main").style.display = "block";
+        else {
+            gender = usergender;
+            document.getElementById("clothesstore-main").style.display = "block";
+
+            categories.forEach(a => {
+                if (usergender == 1 && document.getElementById(`clothesstore-item-${a}-maxinputvalue`) != null) {
+                    document.getElementById(`clothesstore-item-${a}-maxinputvalue`).innerHTML = `/${eval('count_male.' + a)}`
+                } else if (usergender == 2 && document.getElementById(`clothesstore-item-${a}-maxinputvalue`) != null) {
+                    document.getElementById(`clothesstore-item-${a}-maxinputvalue`).innerHTML = `/${eval('count_female.' + a)}`
+                }
+            })
+        }
+    }
+
+
+    function previewCloth(clothesType) {
+        let previewComponentId = 0,
+            previewDrawableId = 0,
+            previewTextureId = 0,
+            isProp = false;
+        
+        if (clothesType == "textures") {
+            switch (document.getElementById("texturemenu-title").innerHTML.replace('Farbenauswahl ', '').toLowerCase()) {
+                case "oberbekleidung":
+                    previewComponentId = 11;
+                    previewDrawableId = document.getElementById(`clothesstore-item-oberbekleidung-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "körper":
+                    previewComponentId = 3;
+                    previewDrawableId = document.getElementById(`clothesstore-item-körper-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "unterbekleidung":
+                    previewComponentId = 8;
+                    previewDrawableId = document.getElementById(`clothesstore-item-unterbekleidung-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "taschen":
+                    previewComponentId = 5;
+                    previewDrawableId = document.getElementById(`clothesstore-item-taschen-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "accessories":
+                    previewComponentId = 7;
+                    previewDrawableId = document.getElementById(`clothesstore-item-accessories-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "westen":
+                    previewComponentId = 9;
+                    previewDrawableId = document.getElementById(`clothesstore-item-westen-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "hosen":
+                    previewComponentId = 4;
+                    previewDrawableId = document.getElementById(`clothesstore-item-hosen-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "schuhe":
+                    previewComponentId = 6;
+                    previewDrawableId = document.getElementById(`clothesstore-item-schuhe-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "masken":
+                    previewComponentId = 1;
+                    previewDrawableId = document.getElementById(`clothesstore-item-masken-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "hüte":
+                    isProp = true;
+                    previewComponentId = 0;
+                    previewDrawableId = document.getElementById(`clothesstore-item-hüte-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "brillen":
+                    isProp = true;
+                    previewComponentId = 1;
+                    previewDrawableId = document.getElementById(`clothesstore-item-brillen-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "ohrringe":
+                    isProp = true;
+                    previewComponentId = 2;
+                    previewDrawableId = document.getElementById(`clothesstore-item-ohrringe-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "uhren":
+                    isProp = true;
+                    previewComponentId = 6;
+                    previewDrawableId = document.getElementById(`clothesstore-item-uhren-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "armbänder":
+                    isProp = true;
+                    previewComponentId = 7;
+                    previewDrawableId = document.getElementById(`clothesstore-item-armbänder-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "embleme":
+                    previewComponentId = 10;
+                    previewDrawableId = document.getElementById(`clothesstore-item-embleme-input`).value;
+                    previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            switch (clothesType) {
+                case "oberbekleidung":
+                    previewComponentId = 11;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "körper":
+                    previewComponentId = 3;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "unterbekleidung":
+                    previewComponentId = 8;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "taschen":
+                    previewComponentId = 5;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "accessories":
+                    previewComponentId = 7;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "westen":
+                    previewComponentId = 9;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "hosen":
+                    previewComponentId = 4;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "schuhe":
+                    previewComponentId = 6;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "masken":
+                    previewComponentId = 1;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "hüte":
+                    isProp = true;
+                    previewComponentId = 0;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "brillen":
+                    isProp = true;
+                    previewComponentId = 1;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "ohrringe":
+                    isProp = true;
+                    previewComponentId = 2;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "uhren":
+                    isProp = true;
+                    previewComponentId = 6;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "armbänder":
+                    isProp = true;
+                    previewComponentId = 7;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                case "embleme":
+                    previewComponentId = 10;
+                    previewDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                    if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) previewTextureId = document.getElementById('clothesstore-texture-input').value;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        alt.emit('Client:Clothesstore:PreviewCloth', isProp, previewComponentId, previewDrawableId, previewTextureId);
+
+        if (gender == 1 && previewComponentId == 11) {
+            for (var a in clothes_male) {
+                if (clothes_male[a].ComponentId == previewComponentId && clothes_male[a].DrawableId == previewDrawableId && clothes_male[a].TextureId == previewTextureId && parseInt(clothes_male[a].BestTorsoDrawable) != -1) alt.emit('Client:Clothesstore:PreviewCloth', false, 3, parseInt(clothes_male[a].BestTorsoDrawable), parseInt(clothes_male[a].BestTorsoTexture));
+            }
+        } else if (gender == 2 && previewComponentId == 11) {
+            for (var a in clothes_female) {
+                if (clothes_female[a].ComponentId == previewComponentId && clothes_female[a].DrawableId == previewDrawableId && clothes_female[a].TextureId == previewTextureId && parseInt(clothes_female[a].BestTorsoDrawable) != -1) alt.emit('Client:Clothesstore:PreviewCloth', false, 3, parseInt(clothes_female[a].BestTorsoDrawable), parseInt(clothes_female[a].BestTorsoTexture));
+            }
+        }
+    }
+
+    function pressButton(direction, clothesType) {
+        if (direction == "left" && document.getElementById(`clothesstore-item-${clothesType}-input`).value != null && gender != 0) {
+            if (gender == 1 && document.getElementById(`clothesstore-item-${clothesType}-input`).value == 0) document.getElementById(`clothesstore-item-${clothesType}-input`).value = eval("count_male." + clothesType);
+            else if (gender == 2 && document.getElementById(`clothesstore-item-${clothesType}-input`).value == 0) document.getElementById(`clothesstore-item-${clothesType}-input`).value = eval("count_female." + clothesType);
+            else document.getElementById(`clothesstore-item-${clothesType}-input`).value = parseInt(document.getElementById(`clothesstore-item-${clothesType}-input`).value) - 1;
+            if (document.getElementById("clothesstore-texture-menu").style.display == "block" && document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) setTextureCount(clothesType, true);
+            previewCloth(clothesType);
+        } else if (direction == "right" && document.getElementById(`clothesstore-item-${clothesType}-input`).value != null && gender != 0) {
+            if (gender == 1 && document.getElementById(`clothesstore-item-${clothesType}-input`).value == eval("count_male." + clothesType) || gender == 2 && document.getElementById(`clothesstore-item-${clothesType}-input`).value == eval("count_female." + clothesType)) document.getElementById(`clothesstore-item-${clothesType}-input`).value = 0;
+            else document.getElementById(`clothesstore-item-${clothesType}-input`).value = parseInt(document.getElementById(`clothesstore-item-${clothesType}-input`).value) + 1
+            if (document.getElementById("clothesstore-texture-menu").style.display == "block" && document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) setTextureCount(clothesType, true);
+            previewCloth(clothesType);
+        }
+    }
+
+    function pressTextureButton(direction) {
+        if (direction == "left" && document.getElementById(`clothesstore-texture-input`).value != null && gender != 0) {
+            if (document.getElementById(`clothesstore-texture-input`).value == 0) document.getElementById(`clothesstore-texture-input`).value = parseInt(document.getElementById("clothesstore-texture-maxinputvalue").innerHTML.replace(/\\|\//g,''));
+            else document.getElementById(`clothesstore-texture-input`).value = parseInt(document.getElementById(`clothesstore-texture-input`).value) - 1;
+            previewCloth("textures");
+        } else if (direction == "right" && document.getElementById(`clothesstore-texture-input`).value != null && gender != 0) {
+            if (document.getElementById(`clothesstore-texture-input`).value == parseInt(document.getElementById("clothesstore-texture-maxinputvalue").innerHTML.replace(/\\|\//g,''))) document.getElementById(`clothesstore-texture-input`).value = 0;
+            else document.getElementById(`clothesstore-texture-input`).value = parseInt(document.getElementById(`clothesstore-texture-input`).value) + 1;
+            previewCloth("textures");
+        }
+    }
+
+    function openTextureMenu(textureMenuTitleText) {
+        if (document.getElementById("clothesstore-texture-menu").style.display == "none") {
+            setTextureCount(textureMenuTitleText, false);
+            document.getElementById("texturemenu-title").innerHTML = `Farbenauswahl ${textureMenuTitleText}`;
+            document.getElementById("clothesstore-texture-menu").style.display = "block";
+        } else if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${textureMenuTitleText}`) document.getElementById("clothesstore-texture-menu").style.display = "none";
+        else {
+            setTextureCount(textureMenuTitleText, false);
+            document.getElementById("texturemenu-title").innerHTML = `Farbenauswahl ${textureMenuTitleText}`;
+        }
+
+        if (document.getElementById("clothesstore-texture-input").value > parseInt(document.getElementById("clothesstore-texture-maxinputvalue").innerHTML.replace(/\\|\//g,''))) document.getElementById("clothesstore-texture-input").value = parseInt(document.getElementById("clothesstore-texture-maxinputvalue").innerHTML.replace(/\\|\//g,''));
+    }
+
+    function buyCloth(clothesType) {
+        let buyComponentId = 0,
+            buyDrawableId = 0,
+            buyTextureId = 0,
+            isProp = false;
+        
+        switch (clothesType) {
+            case "oberbekleidung":
+               buyComponentId = 11;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "körper":
+                buyComponentId = 3;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+
+                break;
+            case "unterbekleidung":
+                buyComponentId = 8;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "taschen":
+                buyComponentId = 5;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "accessories":
+                buyComponentId = 7;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "westen":
+                buyComponentId = 9;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "hosen":
+                buyComponentId = 4;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "schuhe":
+                buyComponentId = 6;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "masken":
+                buyComponentId = 1;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "hüte":
+                isProp = true;
+                buyComponentId = 0;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "brillen":
+                isProp = true;
+                buyComponentId = 1;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "ohrringe":
+                isProp = true;
+                buyComponentId = 2;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value; 
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "uhren":
+                isProp = true;
+                buyComponentId = 6;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "armbänder":
+                isProp = true;
+                buyComponentId = 7;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            case "embleme":
+                buyComponentId = 10;
+                buyDrawableId = document.getElementById(`clothesstore-item-${clothesType.toLowerCase()}-input`).value;
+                if (document.getElementById("texturemenu-title").innerHTML == `Farbenauswahl ${clothesType.charAt(0).toUpperCase() + clothesType.slice(1)}`) buyTextureId = document.getElementById('clothesstore-texture-input').value;
+                break;
+            default:
+                break;
+        };
+
+        let clothId = 0;
+
+        if (gender == 1) {
+            for (var a in clothes_male) {
+                if (clothes_male[a].ComponentId == buyComponentId && clothes_male[a].DrawableId == buyDrawableId && clothes_male[a].TextureId == buyTextureId) clothId = clothes_male[a].Id;
+            }
+        } else if (gender == 2) {
+            for (var a in clothes_female) {
+                if (clothes_female[a].ComponentId == buyComponentId && clothes_female[a].DrawableId == buyDrawableId && clothes_female[a].TextureId == buyTextureId) clothId = clothes_female[a].Id;
+            }
+        }
+
+        alt.emit('Client:Clothesstore:BuyCloth', clothId, isProp);
+
+        if (gender == 1 && buyComponentId == 11) {
+            for (var a in clothes_male) {
+                if (clothes_male[a].ComponentId == buyComponentId && clothes_male[a].DrawableId == buyDrawableId && clothes_male[a].TextureId == buyTextureId && parseInt(clothes_male[a].BestTorsoDrawable) != -1) alt.emit('Client:Clothesstore:SetPerfectTorso', clothes_male[a].BestTorsoDrawable, clothes_male[a].BestTorsoTexture);
+            }
+        } else if (gender == 2 && buyComponentId == 11) {
+            for (var a in clothes_female) {
+                if (clothes_female[a].ComponentId == buyComponentId && clothes_female[a].DrawableId == buyDrawableId && clothes_female[a].TextureId == buyTextureId && parseInt(clothes_female[a].BestTorsoDrawable) != -1) alt.emit('Client:Clothesstore:SetPerfectTorso', clothes_female[a].BestTorsoDrawable, clothes_female[a].BestTorsoTexture);
+            }
+        }
+    }
+
+    function setTextureCount(current_category, isSpecial) {
+        let TextureComponentId, TextureDrawableId = 0;
+        let isProp = false;
+
+        switch (current_category.toLowerCase()) {
+            case "oberbekleidung":
+                TextureComponentId = 11;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "körper":
+                TextureComponentId = 3;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "unterbekleidung":
+                TextureComponentId = 8;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "taschen":
+                TextureComponentId = 5;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "accessories":
+                TextureComponentId = 7;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "westen":
+                TextureComponentId = 9;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "hosen":
+                TextureComponentId = 4;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "schuhe":
+                TextureComponentId = 6;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "masken":
+                TextureComponentId = 1;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "hüte":
+                isProp = true;
+                TextureComponentId = 0;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "brillen":
+                isProp = true;
+                TextureComponentId = 1;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "ohrringe":
+                isProp = true;
+                TextureComponentId = 2;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "uhren":
+                isProp = true;
+                TextureComponentId = 6;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "armbänder":
+                isProp = true;
+                TextureComponentId = 7;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            case "embleme":
+                TextureComponentId = 10;
+                TextureDrawableId = document.getElementById(`clothesstore-item-${current_category.toLowerCase()}-input`).value;
+                break;
+            default:
+                break;
+        }
+
+        if (gender != 1 && gender != 2) return;
+        let count = 0;
+
+        if (gender == 1) {
+            for (var a in clothes_male) {
+                if (clothes_male[a] != undefined && !isProp && clothes_male[a].Type == "cloth" && clothes_male[a].ComponentId == TextureComponentId && clothes_male[a].DrawableId == TextureDrawableId) count ++;
+                else if (clothes_male[a] != undefined && isProp && clothes_male[a].Type == "prop" && clothes_male[a].ComponentId == TextureComponentId && clothes_male[a].DrawableId == TextureDrawableId) count ++;
+            }
+
+            document.getElementById("clothesstore-texture-maxinputvalue").innerHTML = `/${count}`
+        } else if (gender == 2) {
+            for (var a in clothes_female) {
+                if (clothes_female[a] != undefined && !isProp && clothes_female[a].Type == "cloth" && clothes_female[a].ComponentId == TextureComponentId && clothes_female[a].DrawableId == TextureDrawableId) count ++;
+                else if (clothes_female[a] != undefined && isProp && clothes_female[a].Type == "prop" && clothes_female[a].ComponentId == TextureComponentId && clothes_female[a].DrawableId == TextureDrawableId) count ++;
+            }
+
+            document.getElementById("clothesstore-texture-maxinputvalue").innerHTML = `/${count}`
+        } 
+
+        if (isSpecial && document.getElementById(`clothesstore-texture-input`).value > count) document.getElementById(`clothesstore-texture-input`).value = count;
+    }
+
+    function setCount() {
+        for (var a in clothes_male) {
+            if (clothes_male[a].TextureId != 0) continue;
+            if (clothes_male[a].Type == "cloth") {
+                switch (clothes_male[a].ComponentId) {
+                    case "1":
+                        count_male.masken += 1;
+                        break;
+                    case "3":
+                        count_male.körper += 1;
+                        break;
+                    case "4":
+                        count_male.hosen += 1;
+                        break;
+                    case "5":
+                        count_male.taschen += 1;
+                        break;
+                    case "6":
+                        count_male.schuhe += 1;
+                        break;
+                    case "7":
+                        count_male.accessories += 1;
+                        break;
+                    case "8":
+                        count_male.unterbekleidung += 1;
+                        break;
+                    case "9":
+                        count_male.westen += 1;
+                        break;
+                    case "10":
+                        count_male.embleme += 1;
+                        break;
+                    case "11":
+                        count_male.oberbekleidung += 1;
+                        break;
+                    default:
+                        break;
+                }
+            } else if (clothes_male[a].Type == "prop") {
+                switch (clothes_male[a].ComponentId) {
+                    case "0":
+                        count_male.hüte += 1;
+                        break;
+                    case "1":
+                        count_male.brillen += 1;
+                        break;
+                    case "2":
+                        count_male.ohrringe += 1;
+                        break;
+                    case "6":
+                        count_male.uhren += 1;
+                        break;
+                    case "7":
+                        count_male.armbänder += 1;
+                        break;
+                    default:
+                        break;
+                }  
+            }
+        }
+
+        for (var a in clothes_female) {
+            if (clothes_female[a].TextureId != 0) continue;
+            if (clothes_female[a].Type == "cloth") {
+                switch (clothes_female[a].ComponentId) {
+                    case "1":
+                        count_female.masken += 1;
+                        break;
+                    case "3":
+                        count_female.körper += 1;
+                        break;
+                    case "4":
+                        count_female.hosen += 1;
+                        break;
+                    case "5":
+                        count_female.taschen += 1;
+                        break;
+                    case "6":
+                        count_female.schuhe += 1;
+                        break;
+                    case "7":
+                        count_female.accessories += 1;
+                        break;
+                    case "8":
+                        count_female.unterbekleidung += 1;
+                        break;
+                    case "9":
+                        count_female.westen += 1;
+                        break;
+                    case "10":
+                        count_female.embleme += 1;
+                        break;
+                    case "11":
+                        count_female.oberbekleidung += 1;
+                        break;
+                    default:
+                        break;
+                }
+            } else if (clothes_female[a].Type == "prop") {
+                switch (clothes_female[a].ComponentId) {
+                    case "0":
+                        count_female.hüte += 1;
+                        break;
+                    case "1":
+                        count_female.brillen += 1;
+                        break;
+                    case "2":
+                        count_female.ohrringe += 1;
+                        break;
+                    case "6":
+                        count_female.uhren += 1;
+                        break;
+                    case "7":
+                        count_female.armbänder += 1;
+                        break;
+                    default:
+                        break;
+                }  
+            }
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    alt.on("CEF:Clothesstore:OpenMenu", (usergender) => {
+        openClothesMenu(usergender);
+    });
+    alt.on("CEF:Clothesstore:CloseMenu", (usergender) => {
+        CloseMenu(usergender);
+    });
+</script>
+
+</html>

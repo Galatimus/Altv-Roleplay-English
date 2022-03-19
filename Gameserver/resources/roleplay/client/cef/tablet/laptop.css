@@ -1,0 +1,83 @@
+
+div#Laptop {
+    opacity: 0;
+    display: none;
+}
+/* Laptop */
+
+div.Laptop {
+    position: absolute;
+    background: url(../utils/img/LaptopBackground.png);
+    background-repeat: no-repeat;
+    background-size: 75% 100%;
+    background-position: 50% 0%;
+    height: 100%;
+    width: 100%;
+}
+
+div#Laptop>div.LaptopSafezone {
+    position: absolute;
+    height: 60%;
+    left: 21.3%;
+    width: 57.1%;
+    top: 17.9%;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox>ul {
+    position: absolute;
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 1;
+    padding-inline-start: 0;
+    width: 95%;
+    height: 90%;
+    top: 5%;
+    left: 2.5%;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox>ul>li {
+    position: relative;
+    float: left;
+    height: 19.5%;
+    width: 7%;
+    margin-top: 3%;
+    margin-left: 6%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox>ul>li>img {
+    position: absolute;
+    width: 32px;
+    top: 14px;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox>ul>li>span.name {
+    background-color: rgb(253 253 253 / 9%);
+    position: absolute;
+    width: 3.8vw;
+    top: 0vw;
+    text-align: center;
+    font-size: 80%;
+    font-family: PEL;
+    text-shadow: 0px 0px 8px #000000;
+    color: white;
+    padding-top: 3vw;
+    padding-bottom: 0.1vw;
+    border-radius: 0.2vw;
+}
+
+div#Laptop>div.LaptopSafezone>div.Laptop-Home-AreaBox>ul>li>div.cutline {
+    position: absolute;
+    background: #676767;
+    height: 1%;
+    width: 100%;
+    top: 55%;
+}

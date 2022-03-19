@@ -1,0 +1,390 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.tuningmenu-main {
+    background-color: #505050;
+    width: 75vh;
+    height: 50vh;
+    margin-left: 50vh;
+    border-radius: 1vh;
+    position: relative;
+    z-index: 1;
+}
+
+.tuningmenu-main::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    content: "";
+    background-color: #1f1f1f;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+}
+
+.tuningmenu-titlesection {
+    font-size: 5vh;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2vh;
+    text-align: center;
+    padding-top: 2vh;
+}
+
+#tuningmenu-undertitlesection {
+    font-size: 2vh;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5vh;
+    text-align: center;
+    margin-top: -0.3vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tuningmenu-content-chooseundercategory {
+    margin-left: 5vh;
+}
+
+.tuningmenu-undercategory {
+    background-color: #1f1f1f;
+    width: 18vh;
+    height: 34.5vh;
+    display: inline-block;
+    margin-top: 5vh;
+    margin-left: 2.65vh;
+    border-radius: 2vh;
+}
+
+.tuningmenu-undercategory-img {
+    position: absolute;
+    width: 14vh;
+    margin-left: 2vh;
+    margin-top: 5vh;
+}
+
+.tuningmenu-undercategory-text {
+    font-size: 1.25vh;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5vh;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.tuningmenu-undercategory-choose {
+    color: black;
+    text-align: center;
+    margin-top: 26.5vh;
+    background-color: white;
+    border-radius: 2vh;
+    width: 15vh;
+    height: 2vh;
+    text-transform: uppercase;
+    letter-spacing: 0.2vh;
+    font-size: 1.25vh;
+    padding-top: 0.78vh;
+    margin-left: 1.5vh;
+}
+
+.tuningmenu-undercategory-choose:hover, #tuningmenu-content-backbutton:hover, #tuningmenu-content-closebutton:hover, .tuningmenu-content-backbutton {
+    cursor: pointer;
+}
+
+#tuningmenu-content-backbutton {
+    color: white;
+    margin-top: -10vh;
+    background-color: #505050;
+    width: 7.6vh;
+    height: 2vh;
+    padding-top: 0.5vh;
+    border-top-left-radius: 1vh;
+    padding-left: 1vh;
+    font-size: 1.5vh;
+    text-transform: uppercase;
+    letter-spacing: 0.1vh;
+    position: absolute;
+}
+
+.tuningmenu-content-backbutton {
+    color: white;
+    margin-top: -7.7vh;
+    background-color: #505050;
+    width: 7.6vh;
+    height: 2vh;
+    padding-top: 0.5vh;
+    border-top-left-radius: 1vh;
+    padding-left: 1vh;
+    font-size: 1.5vh;
+    text-transform: uppercase;
+    letter-spacing: 0.1vh;
+    position: absolute;
+}
+
+#tuningmenu-content-closebutton {
+    color: white;
+    margin-top: 0vh;
+    background-color: #505050;
+    width: 11.5vh;
+    height: 2vh;
+    padding-top: 0.5vh;
+    border-top-right-radius: 1vh;
+    padding-left: 1vh;
+    font-size: 1.5vh;
+    text-transform: uppercase;
+    letter-spacing: 0.1vh;
+    position: absolute;
+    margin-left: 62.5vh;
+}
+
+.tuningmenu-content {
+    display: none;
+}
+
+#tuningmenu-content-chooseundercategory {
+    display: block;
+}
+
+.tuningmenu-exterior-colorpickers {
+    background-color: #1f1f1f;
+    width: 71vh;
+    height: 22.5vh;
+    display:inline-block;
+    margin-top: 1vh;
+    margin-left: 2vh;
+    border-radius: 2vh;
+}
+
+.tuningmenu-contents {
+    height: 39vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 2.25vh;
+}
+
+#tuningmenu-content-othercats-interior, #tuningmenu-content-othercats-performance {
+    height: 39vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 2.25vh;
+}   
+
+.tuningmenu-exterior-othercat {
+    background-color: #1f1f1f;
+    width: 34.5vh;
+    height: 18.5vh;
+    display: inline-block;
+    margin-top: 1vh;
+    margin-left: 2vh;
+    border-radius: 2vh;
+}
+
+.tuningmenu-exterior-othercat-title {
+    color: white;
+    letter-spacing: 0.2vh;
+    text-transform: uppercase;
+    font-size: 2.3vh;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.arrows {
+    width: 102px;
+    margin-left: 11.5vh;
+}
+
+.arrows p {
+    color: white;
+    width: 8.4vh;
+    margin-top: 4.4vh;
+    text-align: center;
+    font-size: 1.1vh;
+}
+
+
+/*      COLOR PICKER        */
+
+#container {
+    overflow: hidden;
+}
+ 
+.io {    
+    clear: both;
+    color: white;
+    margin-left: 37vh;
+    display: inline-block;
+    margin-top: -10000000vh;
+}
+
+.io input {
+    width: 5vh;
+    margin-left: 3vh;
+    font-size: 1.4vh;
+}
+
+.io label {
+    font-size: 1.4vh;
+    width: 3vh;
+    margin-top: 0.15vh;
+}
+.cp-default .picker {
+    width: 18vh;
+    height: 18vh;
+}
+
+input {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    text-align: right;
+    width: 4vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.clrdiv {
+    border-radius: 0.5vh;
+    border: solid white 1vh;
+    margin-bottom: 3vh;
+    margin-top: 1.5vh;
+    background-color: white;
+    color: black;
+    font-size: 2vh;
+}
+
+.clrleftcat {
+    color: white;
+    text-align: center;
+    width: 37vh;
+    display: inline-block;
+    margin-top: -28.75vh;
+}
+
+.clrleftcat label {
+    letter-spacing: 0.2vh;
+    text-transform: uppercase;
+    font-size: 2vh;
+}
+
+.leftcat-equip:hover, .leftcat-equip label:hover, .leftcat-resetcolor:hover, .leftcat-resetcolor label:hover {
+    cursor: pointer;
+}
+
+.leftcat-equip {
+    border-radius: 0.5vh;
+    border: solid #17e108 1vh;
+    margin-top: 2vh;
+    background-color: #17e108;
+    color: black;
+    font-size: 2vh;
+    width: 17vh;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.leftcat-equip label {
+    letter-spacing: 0.06vh;
+    text-transform: uppercase;
+    font-size: 1.5vh;
+}
+
+.leftcat-resetcolor {
+    border-radius: 0.5vh;
+    border: solid white 1vh;
+    margin-top: 3vh;
+    background-color: white;
+    color: black;
+    font-size: 2vh;
+    width: 13vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.leftcat-resetcolor label {
+    letter-spacing: 0.06vh;
+    text-transform: uppercase;
+    font-size: 1.5vh;
+}
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.6vh;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #505050;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1f1f1f;
+}
+
+/* DROPDOWN */
+
+select {
+    width: 11vh;
+    height: 3.2vh;
+    font-size: 1.5vh;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 0.75vh;
+    color: black;
+    appearance: none;
+    text-align-last: center;
+    transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+    margin-top: 2.2vh;
+    text-transform: uppercase;
+    letter-spacing: 0.06vh;
+}
+
+select:hover,
+select:focus {
+    color: white;
+    background-color: black;
+}
+
+/* ARROWS */
+
+.arrow {
+    border: solid white;
+    border-width: 0 0.75vh 0.75vh 0;
+    padding: 1.5vh;
+    color: white;
+    float: left;
+    margin-top: -1.3vh;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow-right {
+    transform: rotate(-45deg);
+    margin-left: 7.6vh;
+    margin-top: -3.81vh;
+}
+
+.arrow-left {
+    transform: rotate(135deg);
+}

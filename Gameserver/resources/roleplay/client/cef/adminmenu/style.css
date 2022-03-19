@@ -1,0 +1,100 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.adminmenu-main {
+    width: 45vh;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    margin-top: 20vh;
+    background: rgba(12, 12, 14, 0.95);
+    text-align: center;
+    border-radius: 8px;
+    clip-path: polygon(98% 2%, 100% 49%, 98% 98%, 2% 98%, 0 51%, 2% 2%);
+}
+
+
+.adminmenu-main>hr {
+    margin-top: -1rem;
+    border-bottom: none;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to left, rgba(201, 16, 16, 0.8) 0%, rgba(140, 140, 140, 0.8) 100%);
+    border-image-slice: 1;
+    border-right: none;
+    border-left: none;
+}
+
+.adminmenu-main, .adminmenu-player-list, .adminmenu-online-list, .adminmenu-misc-list, .adminmenu-server-list, .adminmenu-peds-list, .adminmenu-fahrzeug-list, .adminmenu-online_action-list, ::-webkit-scrollbar  {
+    display: none;
+}
+
+.adminmenu-main-list-item {
+    font-size: 3vh;
+    text-decoration: none;
+    color: #849493;
+}
+
+li {
+    
+    list-style-type: none;
+    margin-right: 5vh;
+    font-size: 2vh;
+}
+
+.adminmenu-main-title {
+    font-size: 4vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    background-image:linear-gradient(90deg,rgba(201, 16, 16, 0.8),rgba(201, 16, 16, 0.8),rgba(140, 140, 140, 0.8),rgba(140, 140, 140, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 8px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; 
+}
+
+.selected {
+    background-image:linear-gradient(90deg,rgba(201, 16, 16, 0.8),rgba(201, 16, 16, 0.8),rgba(140, 140, 140, 0.8),rgba(140, 140, 140, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hr-bottom {
+    margin-bottom: 3.5vh;
+}
+
+.adminmenu-list {
+    max-height: 35vh;
+    overflow-y: scroll;
+}
+
+.adminmenu-input {
+  width: 80%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #a1a1a1;
+  padding: 7px 0;
+  background: transparent;
+  text-align: center;
+  margin-right: 1vh;
+  padding-top: 0.4vh; 
+  margin-bottom: 1vh;
+}
+
+.selectedinput {
+    padding-bottom: 6px;  
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to left,rgba(201, 16, 16, 0.8) 0%, rgba(140, 140, 140, 0.8));
+    border-image-slice: 1;
+}

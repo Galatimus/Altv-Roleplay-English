@@ -1,0 +1,329 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-user-select:none;
+  -moz-user-select:-moz-none;
+  -ms-user-select:none;
+  user-select:none;
+  -webkit-user-drag: none;
+}
+
+#clothesstore-main {
+  width: 50vh;
+  height: 75vh;
+  margin-top: 10vh;
+  margin-left: 2vh;
+  background: #000000;
+  border-radius: 1vh;
+}
+#clothesstore-t-box {
+  background: linear-gradient(to right, rgba(201, 16, 16, 0.8) 0%, rgba(140, 140, 140, 0.8) 100%);
+  width: 50vh;
+  height: 6.5vh;
+  border-top-left-radius: 1vh;
+  border-top-right-radius: 1vh;
+}
+
+#clothesstore-title {
+  font-size: 3vh;
+  color: white;
+  text-align: center;
+  padding-top: 2vh;
+  margin-top: -7vh;
+  margin-bottom: 8vh;
+}
+
+#clothesstore-main-list-item {
+  list-style: none;
+  color: white;
+  background-color: #000000;
+  width: 45vh;
+  height: 3vh;
+  margin-bottom: 1vh;
+  text-align: center;
+  margin-left: -0.7vh;
+  font-size: 2vh;
+  padding-top: 0.7vh;
+  border-radius: 0vh;
+}
+
+#clothesstore-main-list-item:hover {
+  cursor: pointer;
+}
+
+#clothesstore-main-list, .male, .female {
+  overflow-y: scroll;
+  max-height: 57vh;
+  margin-top: -3vh;
+  margin-left: 3vh;
+}
+
+::-webkit-scrollbar {
+  width: 0.6vh;
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d6d6d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(85, 85, 85);
+}
+
+.fa-arrow-alt-circle-left {
+  color: white;
+  font-size: 3.5vh;
+  padding-bottom: 2vh;
+}
+
+.fa-arrow-alt-circle-left:hover {
+  cursor: pointer;
+}
+
+h2 {
+  margin-block-start: -4vh;
+  margin-block-end: 5.75vh;
+}
+
+.male, .female {
+  max-height: 62.5vh;
+  margin-top: -8.5vh;
+}
+
+.undertitle {
+  color: white;
+  margin-top: 3vh;
+}
+
+input {
+ outline: none;
+ background-color: transparent;
+ color: white;
+ border: none;
+ text-align: right;
+ width: 4vh;
+}
+
+asdas {
+  color: white;
+  font: 400 1.5vh Arial;
+  margin-top: 3.05vh;
+}
+
+.undertitle {
+font-size: 2vh;
+text-align: center;
+}
+
+.clothesstore-item-input {
+margin-left: -16.35vh;
+margin-top: 1vh;
+font-size: 1.5vh;
+}
+
+.clothesstore-item-maindiv {
+margin-left: 14.7vh;
+margin-top: -1vh;
+}
+
+.clothesstore-item-img {
+width: 4.5vh;
+margin-left: -10.5vh;
+}
+
+.maindiv-bg {
+background-color: #212121;
+width: 45vh;
+height: 9vh;
+margin-left: -12.5vh;
+margin-top: -8.4vh;
+margin-bottom: -1.5vh;
+}
+
+.scrolldiv {
+overflow-y: scroll;
+height: 55vh;
+margin-top: -3vh;
+}
+
+.clothesstore-item-div {
+margin-top: 2.3vh;
+}
+
+#clothesstore-item-oberbekleidung {
+margin-top: 4vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+button {
+-webkit-appearance: none;
+background: transparent;
+border: 0;
+outline:0;
+}
+
+svg {
+  width: 3vh;
+  height: 4vh;
+}
+
+.arrow {
+cursor: pointer;
+}
+
+.left {
+margin-left: 4vh;
+}
+
+.right {
+margin-left: 15vh;
+}
+
+.left:hover polyline,
+.left:focus polyline {
+stroke-width: 3;
+}
+
+.left:active polyline {
+stroke-width: 6;
+transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+stroke-width: 3;
+}
+
+.right:active polyline {
+stroke-width: 6;
+transition: all 100ms ease-in-out;
+}
+
+polyline {
+transition: all 250ms ease-in-out;
+}
+
+p {
+margin-block-end: 0em;
+margin-inline-end: 0px;
+display: block;
+margin-block-start: 1em;
+margin-inline-start: 0px;
+}
+
+.clothesshop-icon {
+margin-left: 27.25vh;
+margin-top: -6.4vh;
+font-size: 1.75vh;
+--fa-secondary-color: rgb(255, 0, 0);
+color: black;
+background-color: white;
+border: white solid 0.5vh;
+border-radius: 3vh;
+position: relative;
+}
+
+.clothesshop-icon-scnd {
+margin-left: 27.25vh;
+margin-top: -7.6vh;
+font-size: 1.75vh;
+--fa-secondary-color: rgb(255, 0, 0);
+color: black;
+background-color: white;
+border: white solid 0.5vh;
+border-radius: 3vh;
+position: relative;
+}
+
+
+.clothesshop-icon:hover, .clothesshop-icon-scnd:hover {
+cursor: pointer;
+}
+
+#clothesstore-item-oberbekleidung {
+margin-top: -2vh;
+}
+
+
+
+
+/* TEXTURE MENU */
+#clothesstore-texture-menu {
+width: 40vh;
+height: 11vh;
+background: linear-gradient(to right, rgba(201, 16, 16, 0.8) 0%, rgba(140, 140, 140, 0.8) 120%);
+position: absolute;
+margin-left: 7.1vh;
+border-radius: 0.8vh;
+margin-top: -9vh;
+}
+
+#texturemenu-title {
+margin-top: 1vh;
+text-align: center;
+color: white;
+font-size: 1.4vh;
+}
+
+.clothesstore-texture-menu-maindiv {
+background-color: #212121;
+margin: auto;
+width: 40vh;
+height: 8vh;
+margin-top: -5vh;
+border-bottom-left-radius: 0.8vh;
+border-bottom-right-radius: 0.8vh;
+}
+
+.texturearrow {
+cursor: pointer;
+margin-top: 2vh;
+}
+
+.textureleft {
+margin-left: 8vh;
+}
+
+.textureright {
+margin-left: 15vh;
+}
+
+.textureleft:hover polyline,
+.textureleft:focus polyline {
+stroke-width: 3;
+}
+
+.textureleft:active polyline {
+stroke-width: 6;
+transition: all 100ms ease-in-out;
+}
+
+.textureright:hover polyline,
+.textureright:focus polyline {
+stroke-width: 3;
+}
+
+.textureright:active polyline {
+stroke-width: 6;
+transition: all 100ms ease-in-out;
+}
+
+#clothesstore-texture-input {
+position: absolute;
+margin-top: 3vh;
+}
+
+#clothesstore-texture-maxinputvalue {
+position: absolute;
+margin-left: -12.5vh;
+}
