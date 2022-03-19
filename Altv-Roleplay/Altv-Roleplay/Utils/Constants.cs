@@ -10,7 +10,7 @@ namespace Altv_Roleplay.Utils
             public static string User = "root";
             public static string Password = "";
             public static string Port = "3306";
-            public static string Database = "test";
+            public static string Database = "altv-english";
         }
 
         public static class Positions

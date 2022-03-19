@@ -192,11 +192,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Git-Hub\\Altv-Roleplay\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
+      "projectUniqueName": "E:\\Git-Hub\\Altv-Roleplay-English\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
       "projectName": "SaltyChat.Server",
-      "projectPath": "E:\\Git-Hub\\Altv-Roleplay\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
+      "projectPath": "E:\\Git-Hub\\Altv-Roleplay-English\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
       "packagesPath": "C:\\Users\\mauke\\.nuget\\packages\\",
-      "outputPath": "E:\\Git-Hub\\Altv-Roleplay\\Altv-Roleplay\\SaltyServer\\obj\\",
+      "outputPath": "E:\\Git-Hub\\Altv-Roleplay-English\\Altv-Roleplay\\SaltyServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Programme\\Microsoft Visual Studio\\Shared\\NuGetPackages"

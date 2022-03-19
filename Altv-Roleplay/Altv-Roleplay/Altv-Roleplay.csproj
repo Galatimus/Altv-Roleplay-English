@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..//../Gameserver/resources/roleplay</OutputPath>
+    <OutputPath>E:\Git-Hub\Altv-Roleplay-English\Gameserver\resources\roleplay</OutputPath>
     <WarningLevel>5</WarningLevel>
   </PropertyGroup>
 
